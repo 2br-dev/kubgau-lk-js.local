@@ -9,17 +9,22 @@ import { EditRounded } from "@mui/icons-material"
 import toggleTheme from "../../../../components/toggleTheme"
 import "dayjs/locale/ru"
 import "./styles.scss"
+import React from "react"
 
 /**
  * Фильтры групп
  * @param props Параметры компонента
  * @returns React.Node
  */
-export default function GroupFilters(props) {
+function GroupFilters(props) {
   const handleSetPair = (e, pair) => {
     if (pair !== null) {
       props.pairSetter(pair)
     }
+  }
+
+  const handleSetTheme = (e) => {
+    props.themeSetter(e.target.value);
   }
 
   return (
@@ -28,8 +33,7 @@ export default function GroupFilters(props) {
         <Grid container spacing={2}>
           <Grid item xl={5} lg={4}>
             <TextField
-              value={props.theme}
-              onInput={props.themeSetter}
+              onInput={handleSetTheme}
               sx={{ width: "100%" }}
               variant="standard"
               placeholder="Тема занятия"
@@ -92,3 +96,5 @@ export default function GroupFilters(props) {
     </Card>
   )
 }
+
+export default GroupFilters;

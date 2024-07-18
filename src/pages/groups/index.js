@@ -266,7 +266,7 @@ import {
 	  setTheme(newVal)
   
 	  // Вывод фильтров в консоль
-	  showFilters()
+	//   showFilters()
 	}
   
 	// Дата
