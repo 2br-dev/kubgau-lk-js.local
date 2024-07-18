@@ -1,0 +1,17 @@
+.banner{
+	border: 1px solid #FF1744;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	border-radius: 4px;
+
+	& p{
+		margin: 0
+	}
+
+	&.error{
+		background-color: #FFCDD2;
+		color: #FF1744;
+	}
+}

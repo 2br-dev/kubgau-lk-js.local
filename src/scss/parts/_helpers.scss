@@ -1,0 +1,16 @@
+body{
+
+	& .icon-block{
+		
+		display: flex;
+		align-items: center;
+
+		& svg{
+			margin-right: 10px;
+		}
+	}
+
+	& button{
+		font-weight: 500;
+	}
+}

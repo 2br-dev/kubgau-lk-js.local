@@ -1,0 +1,35 @@
+.filters-wrapper{
+	display: flex;
+	flex-grow: 1;
+	align-items: baseline;
+
+	& > *{
+		padding: 10px;
+
+		& h3{
+			margin: 0;
+			font-weight: 400;
+		}
+	}
+
+	& .disciplines{
+
+		width: 100px;
+		max-width: 500px;
+		flex-grow: 1;
+	}
+	
+	& .courses{
+
+		width: 30px;
+		max-width: 200px;
+		flex-grow: 1;
+	}
+
+	& .search{
+
+		width: 30px;
+		max-width: 200px;
+		flex-grow: 1;
+	}
+}

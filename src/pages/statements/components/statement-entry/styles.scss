@@ -1,0 +1,15 @@
+
+tr{
+	
+	& .actions-wrapper{
+		display: inline-flex;
+		opacity: .3;
+		transition: opacity .2s ease-in-out;
+	}
+
+	&:hover{
+		.actions-wrapper{
+			opacity: 1;
+		}
+	}
+}

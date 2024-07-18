@@ -1,0 +1,362 @@
+[
+	{
+		"name": "ИТ 2201",
+		"students": [
+			{
+				"fullname": "Белосохов Андрей Александрович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 2,
+					"total": 26,
+					"percentage": 7
+				},
+				"values": []
+			},
+			{
+				"fullname": "Власов Никита Евгеньевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 0,
+					"total": 26,
+					"percentage": 0
+				},
+				"values": [
+					{
+						"value": 3,
+						"name": "Тестирование"
+					}
+				]
+			},
+			{
+				"fullname": "Гендин Николай Суренович",
+				"comment": "Текст комментария, как правило небольшой, чтобы поместился в ячейку таблицы",
+				"isHere": false,
+				"skipping": {
+					"current": 6,
+					"total": 26,
+					"percentage": 23
+				},
+				"values": [
+					{
+						"value": 5,
+						"name": "Тестирование"
+					},
+					{
+						"value": 5,
+						"name": "Лабораторная работа"
+					}
+				]
+			},
+			{
+				"fullname": "Голосун Иван Владимирович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": []
+			},
+			{
+				"fullname": "Гулаков Сергей Юрьевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": [
+					{
+						"value": 4,
+						"name": "Расчётно-графическая работа"
+					}
+				]
+			},
+			{
+				"fullname": "Денисенко Александр Владимирович",
+				"comment": "Узнать, что происходит",
+				"isHere": false,
+				"skipping": {
+					"current": 20,
+					"total": 26,
+					"percentage": 77
+				},
+				"values": []
+			}
+		]
+	},
+	{
+		"name": "ИТ 2202",
+		"students": [
+			{
+				"fullname": "Белосохов Андрей Александрович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 2,
+					"total": 26,
+					"percentage": 7
+				},
+				"values": []
+			},
+			{
+				"fullname": "Власов Никита Евгеньевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 0,
+					"total": 26,
+					"percentage": 0
+				},
+				"values": [
+					{
+						"value": 3,
+						"name": "Тестирование"
+					}
+				]
+			},
+			{
+				"fullname": "Гендин Николай Суренович",
+				"comment": "Текст комментария, как правило небольшой, чтобы поместился в ячейку таблицы",
+				"isHere": false,
+				"skipping": {
+					"current": 6,
+					"total": 26,
+					"percentage": 23
+				},
+				"values": [
+					{
+						"value": 5,
+						"name": "Тестирование"
+					},
+					{
+						"value": 5,
+						"name": "Лабораторная работа"
+					}
+				]
+			},
+			{
+				"fullname": "Голосун Иван Владимирович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": []
+			},
+			{
+				"fullname": "Гулаков Сергей Юрьевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": [
+					{
+						"value": 4,
+						"name": "Расчётно-графическая работа"
+					}
+				]
+			},
+			{
+				"fullname": "Денисенко Александр Владимирович",
+				"comment": "Узнать, что происходит",
+				"isHere": false,
+				"skipping": {
+					"current": 22,
+					"total": 26,
+					"percentage": 84
+				},
+				"values": []
+			}
+		]
+	},
+	{
+		"name": "ИТ 2203",
+		"students": [
+			{
+				"fullname": "Белосохов Андрей Александрович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 2,
+					"total": 26,
+					"percentage": 7
+				},
+				"values": []
+			},
+			{
+				"fullname": "Власов Никита Евгеньевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 0,
+					"total": 26,
+					"percentage": 0
+				},
+				"values": [
+					{
+						"value": 3,
+						"name": "Тестирование"
+					}
+				]
+			},
+			{
+				"fullname": "Гендин Николай Суренович",
+				"comment": "Текст комментария, как правило небольшой, чтобы поместился в ячейку таблицы",
+				"isHere": false,
+				"skipping": {
+					"current": 6,
+					"total": 26,
+					"percentage": 23
+				},
+				"values": [
+					{
+						"value": 5,
+						"name": "Тестирование"
+					},
+					{
+						"value": 5,
+						"name": "Лабораторная работа"
+					}
+				]
+			},
+			{
+				"fullname": "Голосун Иван Владимирович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": []
+			},
+			{
+				"fullname": "Гулаков Сергей Юрьевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": [
+					{
+						"value": 4,
+						"name": "Расчётно-графическая работа"
+					}
+				]
+			},
+			{
+				"fullname": "Денисенко Александр Владимирович",
+				"comment": "Узнать, что происходит",
+				"isHere": false,
+				"skipping": {
+					"current": 20,
+					"total": 26,
+					"percentage": 77
+				},
+				"values": []
+			}
+		]
+	},
+	{
+		"name": "ИТ 2204",
+		"students": [
+			{
+				"fullname": "Белосохов Андрей Александрович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 2,
+					"total": 26,
+					"percentage": 7
+				},
+				"values": []
+			},
+			{
+				"fullname": "Власов Никита Евгеньевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 0,
+					"total": 26,
+					"percentage": 0
+				},
+				"values": [
+					{
+						"value": 3,
+						"name": "Тестирование"
+					}
+				]
+			},
+			{
+				"fullname": "Гендин Николай Суренович",
+				"comment": "Текст комментария, как правило небольшой, чтобы поместился в ячейку таблицы",
+				"isHere": false,
+				"skipping": {
+					"current": 6,
+					"total": 26,
+					"percentage": 23
+				},
+				"values": [
+					{
+						"value": 5,
+						"name": "Тестирование"
+					},
+					{
+						"value": 5,
+						"name": "Лабораторная работа"
+					}
+				]
+			},
+			{
+				"fullname": "Голосун Иван Владимирович",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": []
+			},
+			{
+				"fullname": "Гулаков Сергей Юрьевич",
+				"comment": "",
+				"isHere": false,
+				"skipping": {
+					"current": 4,
+					"total": 26,
+					"percentage": 15
+				},
+				"values": [
+					{
+						"value": 4,
+						"name": "Расчётно-графическая работа"
+					}
+				]
+			},
+			{
+				"fullname": "Денисенко Александр Владимирович",
+				"comment": "Узнать, что происходит",
+				"isHere": false,
+				"skipping": {
+					"current": 22,
+					"total": 26,
+					"percentage": 84
+				},
+				"values": []
+			}
+		]
+	}
+]

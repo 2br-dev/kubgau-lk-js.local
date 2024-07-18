@@ -1,0 +1,43 @@
+.popup-menu-wrapper{
+
+	background-color: #fff;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 4px 16px rgba(black, .2);
+
+	& .value{
+
+		padding: .5em 1em;
+
+		& [role="group"]{
+			display: flex;
+
+			& button{
+				flex-grow: 1;
+				font-size: 16px;
+			}
+		}
+	}
+
+	& .menu-header{
+		padding: .5em 1em;
+		font-weight: bold;
+	}
+
+	& .actions{
+		display: flex;
+		justify-content: space-between;
+		padding: .2em;
+
+		& span{
+			display: block;
+		}
+	}
+}
+
+.student-value{
+
+	&:not(:first-of-type){
+		margin-left: 30px;
+	}
+}

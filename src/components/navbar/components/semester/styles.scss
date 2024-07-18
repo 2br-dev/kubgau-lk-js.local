@@ -1,0 +1,10 @@
+.semester{
+
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	& .logo{
+		margin-right: 10px;
+	}
+}

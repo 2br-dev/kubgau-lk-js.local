@@ -1,0 +1,170 @@
+[
+	{
+		"id": 1,
+		"name": "Алгоритмизация и программирование",
+		"course": "ПИ - 1Б",
+		"lections": {
+			"current": 22,
+			"total": 30,
+			"list": [
+				"ПИ2101",
+				"ПИ2102",
+				"ПИ2103",
+				"ПИ2104"
+			]
+		},
+		"seminars": null,
+		"labs": {
+			"current": 20.5,
+			"total": 30,
+			"list": [
+				{
+					"group": "ПИ2301 - подгр. 1",
+					"current": 20,
+					"total": 30
+				},
+				{
+					"group": "ПИ2302 - подгр. 1",
+					"current": 20,
+					"total": 30
+				},
+				{
+					"group": "ПИ2303 - подгр. 1",
+					"current": 22,
+					"total": 30
+				},
+				{
+					"group": "ПИ2304 - подгр. 1",
+					"current": 20,
+					"total": 30
+				}
+			]
+		}
+	},
+	{
+		"id": 2,
+		"name": "Алгоритмы и структуры данных",
+		"course": "БИ - 2Б",
+		"lections": {
+			"current": 24,
+			"total": 32,
+			"list": [
+				"БИ2201",
+				"БИ2202"
+			]
+		},
+		"seminars": null,
+		"labs": {
+			"current": 22,
+			"total": 30,
+			"list": [
+				{
+					"group": "БИ2201 - подгр. 1",
+					"current": 22,
+					"total": 30
+				},
+				{
+					"group": "БИ2202 - подгр. 1",
+					"current": 22,
+					"total": 30
+				}
+			]
+		}
+	},
+	{
+		"id": 3,
+		"name": "Информационные системы в управлении и финансовой деятельности",
+		"course": "ПИ - 4Б",
+		"lections": null,
+		"seminars": null,
+		"labs": {
+			"current": 30,
+			"total": 44,
+			"list": [
+				{
+					"group": "ПИ2003 - подгр. 2",
+					"current": 30,
+					"total": 44
+				}
+			]
+		}
+	},
+	{
+		"id": 4,
+		"name": "Корпоративные информационные системы",
+		"course": "ИТ - 4Б",
+		"lections": null,
+		"seminars": null,
+		"labs": {
+			"current": 10.66,
+			"total": 22,
+			"list": [
+				{
+					"group": "ИТ2001 - подгр. 2",
+					"current": 10,
+					"total": 22
+				},
+				{
+					"group": "ИТ2002 - подгр. 2",
+					"current": 12,
+					"total": 22
+				},
+				{
+					"group": "ИТ2003 - подгр. 2",
+					"current": 10,
+					"total": 22
+				}
+			]
+		}
+	},
+	{
+		"id": 5,
+		"name": "Корпоративные информационные системы",
+		"course": "БИ - 3Б",
+		"lections": null,
+		"seminars": null,
+		"labs": {
+			"current": 32,
+			"total": 32,
+			"list": [
+				{
+					"group": "БИ2102",
+					"current": 32,
+					"total": 32
+				}
+			]
+		}
+	},
+	{
+		"id": 6,
+		"name": "Разработка бизнес-приложений",
+		"course": "ПИ - 4Б",
+		"lections": {
+			"current": 22,
+			"total": 24,
+			"list": [
+				"ПИ2001",
+				"ПИ2002",
+				"ПИ2003",
+				"ПИ2004"
+			]
+		},
+		"seminars": null,
+		"labs": {
+			"current": 20,
+			"total": 30,
+			"list": [
+				{
+					"group": "ПИ2001 - подгр. 1",
+					"current": 20,
+					"total": 30
+				},
+				{
+					"group": "ПИ2002 - подгр. 1",
+					"current": 20,
+					"total": 30
+				}
+			]
+		}
+	}
+]

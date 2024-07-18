@@ -1,0 +1,71 @@
+@import './parts/helpers';
+@import './parts/typography';
+
+body{
+
+	min-height: 100vh;
+
+	.container{
+		width: 75%;
+		max-width: 1900px;
+		margin: auto;
+
+		@media(max-width: 1600px){
+			width: 90%;
+		}
+	}
+
+	& .App{
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		color: #333;
+
+		& main{
+
+			flex-grow: 1;
+			
+			& section{
+				padding: 2vmax 0;
+			}
+			
+			& .MuiPaper-root{
+				box-shadow: 0 4px 46px -16px rgba(12, 21, 97, 0.051); 
+				border-radius: 10px;
+				
+				&:not(:last-of-type){
+					margin-bottom: 2vmax;
+				}
+			}
+
+			& .pin{
+				position: sticky;
+				top: 100px;
+			}
+
+			& table{
+
+				& thead{
+
+					& th{
+						border-bottom: 2px solid black;
+						padding-bottom: 0;
+						font-size: 14px;
+					}
+				}
+
+				& tbody{
+
+					& td{
+						font-size: clamp(16px, 3vw, 18px);
+
+						& .icon-button{
+							width: 40px;
+							height: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

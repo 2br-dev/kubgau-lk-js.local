@@ -1,0 +1,15 @@
+.cab-header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.courses-filters{
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+
+	.toggler-wrapper{
+		padding: 8px;
+	}
+}

@@ -1,0 +1,39 @@
+.filters-wrapper{
+
+	margin-top: 20px;
+	
+	& .filters-card-content{
+		padding-bottom: 1em !important;
+
+		& input{
+			line-height: 2em !important;
+			height: 2em !important;
+			display: block;
+		}
+	}
+
+	& .pair-setup{
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-left: 40px;
+	
+		& .icon-block{
+			margin-right: 20px;
+		}
+	
+		& .buttons-wrapper{
+	
+			flex-grow: 1;
+	
+			& [role="group"]{
+				width: 100%;
+			}
+	
+			& button{
+				flex-grow: 1;
+			}
+		}
+	}
+}

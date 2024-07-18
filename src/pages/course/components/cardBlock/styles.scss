@@ -1,0 +1,17 @@
+.card-action{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+.groups-wrapper{
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+	& .group{
+		font-size: clamp(16px, 3vw, 18px);
+	}
+}

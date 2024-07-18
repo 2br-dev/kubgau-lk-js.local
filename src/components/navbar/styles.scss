@@ -1,0 +1,29 @@
+header{
+
+	padding: 12px 0;
+	background-color: rgba(#f0f5fd, .7);
+	backdrop-filter: blur(10px);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+
+	& .menu-wrapper{
+		display: flex;
+		align-items: center;
+
+		& > *{
+			margin-right: 20px;
+		}
+	}
+
+	& .right-align{
+		justify-content: flex-end;
+		height: 100%;
+	}
+
+	& .link{
+		display: flex;
+		text-decoration: none;
+		color: rgba(black, .87);
+	}
+}

@@ -1,0 +1,182 @@
+[
+	{
+		"name": "Курсовые по алгоритмическому и объектно-ориентированному программирование",
+		"code": "ПИз - 1Б",
+		"groups": [
+			{
+				"indicator": "closed",
+				"group": "ПИз1701",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 20,
+					"total": 20,
+					"closeDate": "7 мая 2018 г."
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-177"
+			},
+			{
+				"indicator": "closed",
+				"group": "ПИз1701",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 20,
+					"total": 20,
+					"closeDate": "18 июня 2018 г."
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-460"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИз1701",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 12,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИз1702",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 18,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-02-178"
+			},
+			{
+				"indicator": "outdated",
+				"group": "ПИз1702",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 20,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-02-351"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИз1702",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 10,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-02-461"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИЗ1721",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 10,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1"
+			}
+		]
+	},
+	{
+		"name": "Курсовые по алгоритмическому и объектно-ориентированному программирование",
+		"code": "ПИ - 1П",
+		"groups": [
+			{
+				"indicator": "opened",
+				"group": "ПИз1701",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 10,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-177"
+			},
+			{
+				"indicator": "closed",
+				"group": "ПИз1701",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 20,
+					"total": 20,
+					"closeDate": "12 мая 2018 г."
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-460"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИз1701",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 12,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИз1702",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 18,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-02-178"
+			},
+			{
+				"indicator": "outdated",
+				"group": "ПИз1702",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 20,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-02-351"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИз1702",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 10,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-02-461"
+			},
+			{
+				"indicator": "opened",
+				"group": "ПИЗ1721",
+				"date": "7 мая 2018 12:00",
+				"status": {
+					"current": 10,
+					"total": 20,
+					"closeDate": null
+				},
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1"
+			}
+		]
+	}
+]

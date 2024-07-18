@@ -1,0 +1,19 @@
+.navbar-info{
+
+	padding: 10px 0;
+
+	&.info{
+		background-color: #359DFD;
+		color: #fff;
+	}
+	
+	&.warning{
+		background-color: #FFD54F;
+	}
+	
+	&.error{
+		background-color: #e7002e;
+		color: #fff;
+	}
+
+}
