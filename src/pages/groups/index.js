@@ -83,7 +83,7 @@ import {
 		let path = Array.from(e.nativeEvent.composedPath());
 
 		let buttons = path.filter((e) => {
-			return e.tagName === "A" || e.tagName === "BUTTON"
+			return e.tagName === "A" || e.tagName === "BUTTON" || e.tagName === "LI"
 		});
 
 		if(!buttons.length){
