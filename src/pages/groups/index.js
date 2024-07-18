@@ -72,6 +72,27 @@ import {
 	const [studentId, setStudentId] = useState(-1)
 	const [groupId, setGroupId] = useState(-1)
 	const navigate = useNavigate()
+
+	// Переключение студента по клику на строке таблицы
+	const toggleStudentHere = (e) => {
+		let element = e.currentTarget;
+		let studentId = parseInt(element.getAttribute("data-id"));
+		let groupId = parseInt(element.getAttribute("data-group-id"));
+		let student = data[groupId].students[studentId];
+		let isHere = student.isHere;
+		let path = Array.from(e.nativeEvent.composedPath());
+
+		let buttons = path.filter((e) => {
+			return e.tagName === "A" || e.tagName === "BUTTON"
+		});
+
+		if(!buttons.length){
+
+			let newData = [...data];
+			newData[groupId].students[studentId].isHere = !isHere;
+			setData(newData);
+		}
+	}
   
 	// Прокрутка до группы
 	const handleGroupClick = e => {
@@ -467,7 +488,7 @@ import {
 							  }
   
 							  return (
-								<TableRow key={studentIndex} hover>
+								<TableRow key={studentIndex} data-group-id={sectionIndex} data-id={studentIndex} hover onClick={toggleStudentHere}>
 								  <TableCell>{studentIndex + 1}</TableCell>
 								  <TableCell>
 									<Tooltip
@@ -542,6 +563,10 @@ import {
 					</Card>
 				  )
 				})}
+				<div className="save-wrapper">
+					<Button variant="outlined">Отмена</Button>
+					<Button variant="contained">Сохранить</Button>
+				</div>
 			  </Grid>
 			  <Grid item lg={1} />
 			  <Grid item lg={2}>

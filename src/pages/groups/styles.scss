@@ -8,6 +8,10 @@ table{
 	& .values{
 		display: flex;
 	}
+
+	& tr{
+		cursor: pointer;
+	}
 }
 
 .modal-wrapper{
@@ -49,5 +53,19 @@ table{
 		& .modal{
 			transform: none;
 		}
+	}
+}
+
+.save-wrapper{
+	position: sticky;
+	bottom: 0;
+	background-color: rgba(#FAFCFF, .7);
+	backdrop-filter: blur(10px);
+	z-index: 2;
+	padding: 20px;
+	text-align: center;
+
+	& button:not(:last-of-type){
+		margin-right: 20px;
 	}
 }
