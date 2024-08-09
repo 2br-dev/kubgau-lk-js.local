@@ -54,7 +54,6 @@ const Semester = () => {
 					disableClearable
 					blurOnSelect
 					sx={{
-						width: '210px',
 						fontFamily: "Wix Madefor Text"
 					}}
 					onChange={handleInputChange}

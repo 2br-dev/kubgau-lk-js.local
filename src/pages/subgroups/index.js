@@ -6,7 +6,10 @@ import { useState, useEffect } from "react";
 function Subgroups(){
 
 	const [ groups, setGroups ] = useState([]);
-	const [ group, setGroup ] = useState({});
+	const [ group, setGroup ] = useState({
+		name: "",
+		students: []
+	});
 	const [ groupId, setGroupId ] = useState(0);
 
 	useEffect(() => {
@@ -33,6 +36,7 @@ function Subgroups(){
 						<CardContent>
 							<div className="subgroup-header">
 								<Tabs value={groupId} onChange={switchGroup}>
+									debugger;
 									{groups.map((g, index) => (
 										<Tab value={index} key={index} label={ g.name } />
 									))}

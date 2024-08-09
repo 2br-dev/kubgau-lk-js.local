@@ -14,5 +14,13 @@
 }
 
 .semesters{
-	max-width: 220px;
+	width: 250px;
+
+	@media(max-width: 600px){
+		width: 210px;
+	}
+}
+
+#placement-popper{
+	z-index: 3;
 }

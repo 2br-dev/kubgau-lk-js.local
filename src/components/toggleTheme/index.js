@@ -9,7 +9,7 @@ const toggleTheme = createTheme({
           backgroundColor: "#ffffff",
           border: "1px solid #42A5F5 !important",
           fontSize: "16px",
-          fontFamily: "Wix Madefor Display",
+          fontFamily: "Wix Madefor Text",
           "&.Mui-selected": {
             color: "#fff",
             backgroundColor: "#42A5F5"
