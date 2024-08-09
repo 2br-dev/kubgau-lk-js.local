@@ -13,6 +13,10 @@ body{
 		@media(max-width: 1600px){
 			width: 90%;
 		}
+
+		@media(max-width: 600px){
+			width: calc(100% - 20px);
+		}
 	}
 
 	& .App{
@@ -43,7 +47,9 @@ body{
 				top: 100px;
 			}
 
-			& table{
+			& .simple-table{
+
+				width: 100%;
 
 				& thead{
 

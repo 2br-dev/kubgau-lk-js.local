@@ -8,160 +8,163 @@ import {
 	TableBody,
 	Button,
 	IconButton,
-	Tooltip
-  } from "@mui/material"
-  import {
+	Tooltip,
+	TableContainer
+	} from "@mui/material"
+	import {
 	CircleRounded,
 	EditRounded,
 	LockRounded,
 	PrintRounded,
 	ReceiptLongRounded
-  } from "@mui/icons-material"
-  import progressControl from "../../../../components/progressControl"
-  import "./styles.scss"
-  
-  function StatementEntry(props) {
+	} from "@mui/icons-material"
+	import progressControl from "../../../../components/progressControl"
+	import "./styles.scss"
+	
+	function StatementEntry(props) {
 	let control = (
-	  <Card>
-		<CardContent>Нет данных</CardContent>
-	  </Card>
+		<Card>
+			<CardContent>Нет данных</CardContent>
+		</Card>
 	)
-  
+	
 	if (props.data !== null) {
-	  control = (
+		control = (
 		<>
-		  {props.data.map((el, index) => {
+			{props.data.map((el, index) => {
 			return (
-			  <Card key={index}>
+				<Card key={index}>
 				<CardContent>
-				  <h2>
-					{el.name} <span className="code">{el.code}</span>
-				  </h2>
-				  <Table sx={{ width: "100%" }}>
+					<h2>
+						{el.name} <span className="code">{el.code}</span>
+					</h2>
+					<TableContainer>
+
+					<Table className="simple-table">
 					<TableHead>
-					  <TableRow>
+						<TableRow>
 						<TableCell sx={{ width: "26%" }} colSpan={2}>
-						  Группа/студент
+							Группа/студент
 						</TableCell>
 						<TableCell sx={{ width: "15%" }}>
-						  Дата проведения
+							Дата проведения
 						</TableCell>
 						<TableCell sx={{ width: "25%" }}>Статус</TableCell>
 						<TableCell sx={{ width: "15%" }}>Тип сдачи</TableCell>
 						<TableCell sx={{ width: "15%" }}>
-						  Номер ведомости
+							Номер ведомости
 						</TableCell>
 						<TableCell sx={{ width: "15%", textAlign: "right" }}>
-						  Действия
+							Действия
 						</TableCell>
-					  </TableRow>
+						</TableRow>
 					</TableHead>
 					<TableBody>
-					  {el.groups.map((row, index) => {
+						{el.groups.map((row, index) => {
 						// Индикатор ведомости
 						let indicator = null
-  
+	
 						// Ячейка статуса
 						let statusControl = null
-  
+	
 						// Действия
 						let actions = null
-  
+	
 						switch (row.indicator) {
-						  // Ведомость открыта
-						  case "opened":
+							// Ведомость открыта
+							case "opened":
 							indicator = (
-							  <CircleRounded sx={{ color: "#00BFA5" }} />
+								<CircleRounded sx={{ color: "#00BFA5" }} />
 							)
 							statusControl = progressControl(
-							  row.status.current,
-							  row.status.total
+								row.status.current,
+								row.status.total
 							)
 							actions = (
-							  <span className="actions-wrapper">
+								<span className="actions-wrapper">
 								<Tooltip
-								  placement="top"
-								  title="Редактировать ведомость"
+									placement="top"
+									title="Редактировать ведомость"
 								>
-								  <IconButton aria-label="Редактировать ведомость">
+									<IconButton aria-label="Редактировать ведомость">
 									<EditRounded />
-								  </IconButton>
+									</IconButton>
 								</Tooltip>
 								<Tooltip
-								  placement="top"
-								  title="Печать справочной ведомости"
+									placement="top"
+									title="Печать справочной ведомости"
 								>
-								  <IconButton aria-label="Печать справочной ведомости">
+									<IconButton aria-label="Печать справочной ведомости">
 									<ReceiptLongRounded />
-								  </IconButton>
+									</IconButton>
 								</Tooltip>
-							  </span>
+								</span>
 							)
 							break
-						  // Ведомость закрыта
-						  case "closed":
+							// Ведомость закрыта
+							case "closed":
 							indicator = <LockRounded sx={{ color: "#939393" }} />
 							statusControl = <>Закрыта {row.status.closeDate}</>
 							actions = (
-							  <span className="actions-wrapper">
+								<span className="actions-wrapper">
 								<Tooltip
-								  placement="top"
-								  title="Печать справочной ведомости"
+									placement="top"
+									title="Печать справочной ведомости"
 								>
-								  <IconButton aria-label="Печать справочной ведомости">
+									<IconButton aria-label="Печать справочной ведомости">
 									<ReceiptLongRounded />
-								  </IconButton>
+									</IconButton>
 								</Tooltip>
 								<Tooltip placement="top" title="Печать ведомости">
-								  <IconButton aria-label="Печать ведомости">
+									<IconButton aria-label="Печать ведомости">
 									<PrintRounded />
-								  </IconButton>
+									</IconButton>
 								</Tooltip>
-							  </span>
+								</span>
 							)
 							break
-						  // Ведомость просрочена
-						  case "outdated":
+							// Ведомость просрочена
+							case "outdated":
 							indicator = (
-							  <CircleRounded sx={{ color: "#FF1744" }} />
+								<CircleRounded sx={{ color: "#FF1744" }} />
 							)
 							statusControl = (
-							  <Button
-								variant="contained"
-								sx={{ boxShadow: "none" }}
-							  >
-								Закрыть
-							  </Button>
+								<Button
+									variant="contained"
+									sx={{ boxShadow: "none" }}
+								>
+									Закрыть
+								</Button>
 							)
 							actions = (
-							  <span className="actions-wrapper">
+								<span className="actions-wrapper">
 								<Tooltip
-								  placement="top"
-								  title="Редактировать ведомость"
+									placement="top"
+									title="Редактировать ведомость"
 								>
-								  <IconButton aria-label="Редактировать ведомость">
+									<IconButton aria-label="Редактировать ведомость">
 									<EditRounded />
-								  </IconButton>
+									</IconButton>
 								</Tooltip>
 								<Tooltip
-								  placement="top"
-								  title="Печать справочной ведомости"
+									placement="top"
+									title="Печать справочной ведомости"
 								>
-								  <IconButton aria-label="Печать справочной ведомости">
+									<IconButton aria-label="Печать справочной ведомости">
 									<ReceiptLongRounded />
-								  </IconButton>
+									</IconButton>
 								</Tooltip>
-							  </span>
+								</span>
 							)
 							break
-						  // По умолчанию
-						  default:
+							// По умолчанию
+							default:
 							indicator = <></>
 							break
 						}
-  
+	
 						return (
-						  <TableRow key={index} hover>
+							<TableRow key={index} hover>
 							<TableCell>{indicator}</TableCell>
 							<TableCell>{row.group}</TableCell>
 							<TableCell>{row.date}</TableCell>
@@ -169,21 +172,22 @@ import {
 							<TableCell>{row.type}</TableCell>
 							<TableCell>{row.statementNum}</TableCell>
 							<TableCell> {actions} </TableCell>
-						  </TableRow>
+							</TableRow>
 						)
-					  })}
+						})}
 					</TableBody>
-				  </Table>
+					</Table>
+					</TableContainer>
 				</CardContent>
-			  </Card>
+				</Card>
 			)
-		  })}
+			})}
 		</>
-	  )
+		)
 	}
-  
+	
 	return control
-  }
-  
-  export default StatementEntry
-  
+	}
+	
+	export default StatementEntry
+	

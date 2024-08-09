@@ -8,10 +8,13 @@ import {
   import InfoPanel from "../../components/info_panel"
   import { InfoClass } from "../../components/info_panel/interfaces"
   import { useState, useEffect } from "react"
-  import { Grid, Snackbar, Tooltip } from "@mui/material"
   import GroupFilters from "./components/group_filters"
   import { useNavigate } from "react-router-dom"
   import {
+	Grid, 
+	Snackbar, 
+	TableContainer, 
+	Tooltip,
 	Card,
 	CardContent,
 	Table,
@@ -413,152 +416,154 @@ import {
 		  </div>
 		  <div className="container">
 			<Grid
-			  container
-			  className="filters-wrapper"
-			  sx={{ alignItems: "unset" }}
+				container
+				className="filters-wrapper"
+				sx={{ alignItems: "unset" }}
 			>
 			  <Grid item lg={9}>
 				<GroupFilters
-				  theme={theme}
-				  date={date}
-				  pair={pair}
-				  themeSetter={themeSetter}
-				  dateSetter={dateSetter}
-				  pairSetter={pairSetter}
+					theme={theme}
+					date={date}
+					pair={pair}
+					themeSetter={themeSetter}
+					dateSetter={dateSetter}
+					pairSetter={pairSetter}
 				/>
 				{data?.map((group, sectionIndex) => {
 				  return (
 					<Card key={sectionIndex} id={"group-" + (sectionIndex + 1)}>
 					  <CardContent>
 						<h2 style={{ marginTop: 0 }}>{group.name}</h2>
-						<Table>
-						  <TableHead>
-							<TableRow>
-							  <TableCell colSpan={3}>ФИО</TableCell>
-							  <TableCell data-group={sectionIndex}>
-								<StyledSwitch onChange={switchAll} />
-							  </TableCell>
-							  <TableCell>Посещаемость</TableCell>
-							  <TableCell>Пропуски</TableCell>
-							  <TableCell>Оценка</TableCell>
-							  <TableCell sx={{ textAlign: "right" }}>
-								Добавить оценку
-							  </TableCell>
-							</TableRow>
-						  </TableHead>
-						  <TableBody>
-							{group.students.map((student, studentIndex) => {
-							  let skipping = (
-								<TableCell>
-								  {student.skipping.current}/
-								  {student.skipping.total}
+						<TableContainer>
+							<Table className="simple-table">
+							<TableHead>
+								<TableRow>
+								<TableCell colSpan={3}>ФИО</TableCell>
+								<TableCell data-group={sectionIndex}>
+									<StyledSwitch onChange={switchAll} />
 								</TableCell>
-							  )
-							  let skippingPercent = (
-								<TableCell>
-								  {student.skipping.percentage}%
+								<TableCell>Посещаемость</TableCell>
+								<TableCell>Пропуски</TableCell>
+								<TableCell>Оценка</TableCell>
+								<TableCell sx={{ textAlign: "right" }}>
+									Добавить оценку
 								</TableCell>
-							  )
-							  let commentTooltip =
-								student.comment === ""
-								  ? "Добавить комментарий"
-								  : "Изменить комментарий"
-							  let commentIcon =
-								student.comment === "" ? (
-								  <AddCommentRounded />
-								) : (
-								  <EditRounded />
-								)
-							  let isHere = student.isHere
-  
-							  if (student.skipping) {
-								if (student.skipping.percentage >= 50) {
-								  skipping = (
-									<TableCell sx={{ color: "#FF1744" }}>
-									  {student.skipping.current}/
-									  {student.skipping.total}{" "}
-									</TableCell>
-								  )
-								  skippingPercent = (
-									<TableCell sx={{ color: "#FF1744" }}>
-									  {student.skipping.percentage}%
-									</TableCell>
-								  )
-								}
-							  }
-  
-							  return (
-								<TableRow key={studentIndex} data-group-id={sectionIndex} data-id={studentIndex} hover onClick={toggleStudentHere}>
-								  <TableCell>{studentIndex + 1}</TableCell>
-								  <TableCell>
-									<Tooltip
-									  title={commentTooltip}
-									  placement="top"
-									>
-									  <IconButton
-										onClick={openCommentModal}
-										data-studentid={studentIndex}
-										data-groupid={sectionIndex}
-									  >
-										{commentIcon}
-									  </IconButton>
-									</Tooltip>
-								  </TableCell>
-								  <TableCell>
-									<div className="name">{student.fullname}</div>
-									<div className="comment">
-									  {student.comment}
-									</div>
-								  </TableCell>
-								  <TableCell>
-									<div
-									  data-group={sectionIndex}
-									  data-student={studentIndex}
-									>
-									  <StyledSwitch
-										onChange={hereSwitcher}
-										checked={isHere}
-									  />
-									</div>
-								  </TableCell>
-								  {skipping}
-								  {skippingPercent}
-								  <TableCell>
-									<div className="values">
-									  {student.values.map((value, valueIndex) => {
-										return (
-										  <ValueMenu
-											sectionId={sectionIndex}
-											valueId={valueIndex}
-											studentId={studentIndex}
-											name={value.name}
-											key={valueIndex}
-											value={value.value}
-											type={EMenuType.UPDATE}
-											content={<span>{value.value}</span>}
-											changeHandler={valueSetter}
-											removeHandler={valueRemover}
-										  />
-										)
-									  })}
-									</div>
-								  </TableCell>
-								  <TableCell sx={{ textAlign: "right" }}>
-									<ValueMenu
-									  sectionId={sectionIndex}
-									  studentId={studentIndex}
-									  valueId={-1}
-									  type={EMenuType.CREATE}
-									  value={-1}
-									  content={<AddRounded />}
-									  changeHandler={valueSetter}
-									/>
-								  </TableCell>
 								</TableRow>
-							  )
-							})}
-						  </TableBody>
-						</Table>
+							</TableHead>
+							<TableBody>
+								{group.students.map((student, studentIndex) => {
+								let skipping = (
+									<TableCell>
+									{student.skipping.current}/
+									{student.skipping.total}
+									</TableCell>
+								)
+								let skippingPercent = (
+									<TableCell>
+									{student.skipping.percentage}%
+									</TableCell>
+								)
+								let commentTooltip =
+									student.comment === ""
+									? "Добавить комментарий"
+									: "Изменить комментарий"
+								let commentIcon =
+									student.comment === "" ? (
+									<AddCommentRounded />
+									) : (
+									<EditRounded />
+									)
+								let isHere = student.isHere
+	
+								if (student.skipping) {
+									if (student.skipping.percentage >= 50) {
+									skipping = (
+										<TableCell sx={{ color: "#FF1744" }}>
+										{student.skipping.current}/
+										{student.skipping.total}{" "}
+										</TableCell>
+									)
+									skippingPercent = (
+										<TableCell sx={{ color: "#FF1744" }}>
+										{student.skipping.percentage}%
+										</TableCell>
+									)
+									}
+								}
+	
+								return (
+									<TableRow key={studentIndex} data-group-id={sectionIndex} data-id={studentIndex} hover onClick={toggleStudentHere}>
+									<TableCell>{studentIndex + 1}</TableCell>
+									<TableCell>
+										<Tooltip
+										title={commentTooltip}
+										placement="top"
+										>
+										<IconButton
+											onClick={openCommentModal}
+											data-studentid={studentIndex}
+											data-groupid={sectionIndex}
+										>
+											{commentIcon}
+										</IconButton>
+										</Tooltip>
+									</TableCell>
+									<TableCell>
+										<div className="name">{student.fullname}</div>
+										<div className="comment">
+										{student.comment}
+										</div>
+									</TableCell>
+									<TableCell>
+										<div
+										data-group={sectionIndex}
+										data-student={studentIndex}
+										>
+										<StyledSwitch
+											onChange={hereSwitcher}
+											checked={isHere}
+										/>
+										</div>
+									</TableCell>
+									{skipping}
+									{skippingPercent}
+									<TableCell>
+										<div className="values">
+										{student.values.map((value, valueIndex) => {
+											return (
+											<ValueMenu
+												sectionId={sectionIndex}
+												valueId={valueIndex}
+												studentId={studentIndex}
+												name={value.name}
+												key={valueIndex}
+												value={value.value}
+												type={EMenuType.UPDATE}
+												content={<span>{value.value}</span>}
+												changeHandler={valueSetter}
+												removeHandler={valueRemover}
+											/>
+											)
+										})}
+										</div>
+									</TableCell>
+									<TableCell sx={{ textAlign: "right" }}>
+										<ValueMenu
+										sectionId={sectionIndex}
+										studentId={studentIndex}
+										valueId={-1}
+										type={EMenuType.CREATE}
+										value={-1}
+										content={<AddRounded />}
+										changeHandler={valueSetter}
+										/>
+									</TableCell>
+									</TableRow>
+								)
+								})}
+							</TableBody>
+							</Table>
+						</TableContainer>
 					  </CardContent>
 					</Card>
 				  )

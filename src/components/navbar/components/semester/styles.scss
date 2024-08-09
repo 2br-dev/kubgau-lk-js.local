@@ -3,8 +3,16 @@
 	display: flex;
 	align-items: center;
 	position: relative;
+	flex-shrink: 0;
 
-	& .logo{
-		margin-right: 10px;
+	.semester-icon{
+
+		@media(max-width: 600px){
+			display: none;
+		}
 	}
+}
+
+.semesters{
+	max-width: 220px;
 }

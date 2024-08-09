@@ -14,48 +14,6 @@ table{
 	}
 }
 
-.modal-wrapper{
-	border: 1px solid red;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1000;
-	background-color: rgba(#fff, .85);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: opacity .4s;
-	opacity: 0;
-	pointer-events: none;
-	
-	& .modal{
-		padding: 20px;
-		width: 40vw;
-		max-width: 500px;
-		background-color: #fff;
-		box-shadow: 0 4px 46px  rgba(12, 21, 97, 0.051);
-		transition: transform .4s;
-		transform: translateY(40px);
-
-		& .modal-footer{
-			display: flex;
-			justify-content: space-between;
-			margin-top: 20px;
-		}
-	}
-
-	&.open{
-		opacity: 1;
-		pointer-events: all;
-
-		& .modal{
-			transform: none;
-		}
-	}
-}
-
 .save-wrapper{
 	position: sticky;
 	bottom: 0;
@@ -66,13 +24,17 @@ table{
 	text-align: center;
 
 	& button:not(:last-of-type){
-		margin-right: 20px;
+		margin-right: clamp(2px, 2vw, 20px);
 	}
 }
 
 .filters-wrapper{
 
 	margin-top: 20px;
+
+	& > *{
+		max-width: 100%;
+	}
 	
 	& .filters-card-content{
 		padding-bottom: 1em !important;

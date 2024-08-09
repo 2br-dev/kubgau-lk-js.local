@@ -12,7 +12,7 @@ header{
 		align-items: center;
 
 		& > *{
-			margin-right: 20px;
+			margin-right: 10px;
 		}
 	}
 
@@ -25,5 +25,28 @@ header{
 		display: flex;
 		text-decoration: none;
 		color: rgba(black, .87);
+		align-items: center;
+	}
+
+	& .logo-wrapper{
+		overflow: hidden;
+
+		@media(max-width: 1000px){
+			width: 24px;
+			flex-shrink: 0;
+		}
+	}
+
+	& .help{
+		@media(max-width: 1000px){
+			display: none;
+		}
+	}
+
+	.username{
+
+		@media(max-width: 1000px){
+			display: none;
+		}
 	}
 }

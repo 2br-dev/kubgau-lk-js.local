@@ -14,6 +14,7 @@ import DetailsBlock from "../detailsBlock"
 import React from "react"
 import { Grid } from "@mui/material"
 import "./styles.scss"
+import { useNavigate } from "react-router-dom";
 
 /**
  * Сворачиваемая строка таблицы
@@ -23,10 +24,11 @@ import "./styles.scss"
  * @returns React.Node
  */
 function CollapsibleRow(props) {
+  
   const { row } = props
-
   const [anchorEl, setAnchorEl] = useState(null)
   const menuOpen = Boolean(anchorEl)
+  const navigate = useNavigate();
 
   // Отображение меню курса
   const handleMenuOpen = e => {
@@ -53,6 +55,10 @@ function CollapsibleRow(props) {
       // Callback
       props.toggler(!props.isOpen, row.id)
     }
+  }
+
+  let openJournals = () => {
+    navigate("/main/journal");
   }
 
   let lectionControl = progressControl(
@@ -122,7 +128,7 @@ function CollapsibleRow(props) {
             }}
           >
             <MenuItem>Список тем</MenuItem>
-            <MenuItem>Журнал</MenuItem>
+            <MenuItem onClick={openJournals.bind(this)}>Журнал</MenuItem>
             <MenuItem>Подгруппы</MenuItem>
             <MenuItem>Пропуски студентов</MenuItem>
           </Menu>

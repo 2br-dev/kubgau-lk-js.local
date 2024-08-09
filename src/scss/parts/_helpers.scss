@@ -13,4 +13,70 @@ body{
 	& button{
 		font-weight: 500;
 	}
+
+	& .modal-wrapper{
+		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1000;
+		background-color: rgba(#fff, .85);
+		transition: opacity .4s;
+		opacity: 0;
+		pointer-events: none;
+		
+		& .modal{
+			width: 60%;
+			min-width: 280px;
+			max-width: 600px;
+			max-height: 90vh;
+			overflow: auto;
+			padding: 20px;
+			position: absolute;
+			background-color: #fff;
+			box-shadow: 0 4px 46px  rgba(12, 21, 97, 0.051);
+			border-radius: 10px;
+			top: 50%;
+			left: 50%;
+			transition: transform .4s;
+			transform: translate(-50%, calc(-50% + 40px));
+		}
+
+		& .modal-header{
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+	
+			& .name{
+				font-weight: 600;
+				font-size: clamp(18px, 3vw, 21px);
+			}
+		}
+
+		&.open{
+			opacity: 1;
+			pointer-events: all;
+	
+			& .modal{
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		& .modal-footer{
+			
+			display: flex;
+			justify-content: space-between;
+			margin-top: 20px;
+			padding-top: 10px;
+			border-top: 1px solid #ccc;
+
+			& span{
+				display: block;
+			}
+		}
+	}
 }

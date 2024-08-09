@@ -11,5 +11,17 @@
 
 	.toggler-wrapper{
 		padding: 8px;
+
+		@media(max-width: 1200px){
+			display: none;
+		}
+	}
+}
+
+
+.hide-modal{
+
+	@media(max-width: 1200px){
+		display: none;
 	}
 }

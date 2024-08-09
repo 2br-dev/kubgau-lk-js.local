@@ -4,4 +4,11 @@ body{
 		color: #000;
 		text-decoration: none;
 	}
+
+	& .mobile-help{
+
+		@media(min-width: 1000px){
+			display: none;
+		}
+	}
 }

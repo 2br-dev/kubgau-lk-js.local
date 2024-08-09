@@ -1,0 +1,2321 @@
+{
+	"students": [
+		{
+			"id": 1,
+			"name": "Афанасенко Снежана Владимировна",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		},
+		{
+			"id": 2,
+			"name": "Борисенко Виктор Михайлович",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "absent",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "absent",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		},
+		{
+			"id": 3,
+			"name": "Демкова Виктория Андреевна",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "soft-absent",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 3
+						}
+					]
+				},
+				{
+					"class": "soft-absent",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "8 октября 2022 г. (первая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "8 октября 2022 г. (первая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 3
+						}
+					]
+				},
+				{
+					"class": "soft-absent",
+					"date": "14 октября 2022 г. (первая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "22 октября 2022 г. (первая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "28 октября 2022 г. (первая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 3
+						}
+					]
+				},
+				{
+					"class": "soft-absent",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "soft-absent",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"absent_reason": "Уважительная причина",
+					"absent_doc": "Справка",
+					"absent_link": "spravka.doc",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		},
+		{
+			"id": 4,
+			"name": "Демченко Даниил Павлович",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		},
+		{
+			"id": 5,
+			"name": "Денисов Артём Андреевич",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 3
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 3
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 3
+						},
+						{
+							"type": "Лабораторная работа",
+							"value": 2
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		},
+		{
+			"id": 6,
+			"name": "Королёв Илья Юрьевич",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						},
+						{
+							"type": "Лабораторная работа",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 4,
+			"middle_common_value": 4.2
+		},
+		{
+			"id": 7,
+			"name": "Кротенко Дарья Олеговна",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		},
+		{
+			"id": 8,
+			"name": "Кушнаренко Матвей Сергеевич",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 4
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		},
+		{
+			"id": 9,
+			"name": "Лазько Владислав Викторович",
+			"teacher": "Крамаренко Т.А.",
+			"days": [
+				{
+					"class": "",
+					"date": "16 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "24 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "30 сентября 2022 г. (вторая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": [
+						{
+							"type": "Тестирование",
+							"value": 5
+						}
+					]
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "8 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "14 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "22 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "28 октября 2022 г. (первая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "5 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "11 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "19 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "25 ноября 2022 г. (четвёртая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "3 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "9 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "17 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "23 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				},
+				{
+					"class": "",
+					"date": "29 декабря 2022 г. (пятая пара)",
+					"comment":"",
+					"absent_reason": null,
+					"absent_doc": "",
+					"absent_link": "",
+					"values": []
+				}
+			],
+			"middle_value": 5,
+			"middle_common_value": 5
+		}
+	],
+	"header": [
+		{
+			"group": [
+				{
+					"title": "№",
+					"content": []
+				},
+				{
+					"title": "Группа/студент",
+					"content": []
+				}
+			]
+		},
+		{
+			"group": [
+				{
+					"title": "Сентябрь",
+					"content": [16, 24, 24, 30]
+				}
+			]
+		},
+		{
+			"group": [
+				{
+					"title": "Октябрь",
+					"content": [8, 8, 14, 22, 28]
+				}
+			]
+		},
+		{
+			"group": [
+				{
+					"title": "Ноябрь",
+					"content": [5, 5, 11, 11, 19, 19, 25]
+				}
+			]
+		},
+		{
+			"group": [
+				{
+					"title": "Декабрь",
+					"content": [3, 3, 9, 17, 17, 23, 29, 29]
+				}
+			]
+		},
+		{
+			"group": [
+				{
+					"title": "Ср. балл",
+					"content": []
+				},
+				{
+					"title": "Общ. ср. балл",
+					"content": []
+				}
+			]
+		}
+	],
+	"footer": [
+		{
+			"span": 1,
+			"content": ""
+		},
+		{
+			"span": 1,
+			"content": "Посещаемость, %"
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		},
+		{
+			"span": 1,
+			"content": 96
+		}
+	]
+}

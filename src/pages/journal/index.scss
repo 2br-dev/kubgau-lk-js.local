@@ -1,0 +1,280 @@
+@mixin leftStickyColumn($left, $color){
+	position: relative;
+	position: sticky;
+	left: $left;
+	z-index: 2;
+	background-color: #fff;
+	
+	&:after{
+		content: '';
+		display: block;
+		width: 1px;
+		background-color: $color;
+		position: absolute;
+		top: -1px;
+		right: 0;
+		height: calc(100% + 2px);
+		z-index: 3;
+	}
+}
+	
+@mixin rightStickyColumn($right, $color){
+
+	@media(min-width: 1200px){
+
+		position: relative;
+		position: sticky;
+		right: $right;
+		z-index: 2;
+		background-color: #fff;
+		text-align: center;
+		
+		&:after{
+			content: '';
+			display: block;
+			width: 1px;
+			background-color: $color;
+			position: absolute;
+			top: -1px;
+			left: 0;
+			height: calc(100% + 2px);
+			z-index: 3;
+		}
+	}
+}
+	
+body{
+
+	main#journal{
+
+		.fogged{
+			color: #aaa;
+		}
+	
+		.back-link{
+			display: flex;
+			align-items: center;
+	
+			& span{
+				margin-left: 30px;
+				color: #939393;
+			}
+		}
+		
+		colgroup{
+			border-right: 1px solid #ccc;
+		}
+		
+		.card-header{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 1vmax;
+	
+			& h2{
+				margin-top: 0;
+			}
+		}
+		 
+		& .table-wrapper{
+			overflow-x: auto;
+			overflow-y: hidden;
+			
+			&::-webkit-scrollbar{
+				height: 8px;
+				width: 8px;
+				background-color: #efefef;
+				border-radius: 8px;
+			}
+			
+			&::-webkit-scrollbar-thumb{
+				background-color: #aaa;
+				border-radius: 8px;
+			}
+		}
+		
+		& .complex-table{
+			width: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+			
+			& th, & td{
+				padding: 12px;
+				text-align: center;
+				font-weight: normal;
+	
+				&.absent{
+					background-color: #FFBBCF;
+	
+					&.highlight{
+						background-color: #FFA2BE;
+					}
+					
+					&.extra-highlight{
+						background-color: #ff8cae;
+					}
+				}
+	
+				&.soft-absent{
+					background-color: #FFF9C4;
+	
+					&.highlight{
+						background-color: #FFF387;
+					}
+					
+					&.extra-highlight{
+						background-color: #ffee56;
+					}
+				}
+			}
+	
+			& th:not(.summary){
+				font-size: 16px;
+			}
+	
+			& td{
+	
+				& span{
+					font-size: clamp(16px, 3vw, 18px);
+				}
+			}
+			
+			& thead{
+			
+				position: relative;
+				z-index: 3;
+				background-color: #fff;
+				
+				& tr{
+					& th{
+					text-align: center;
+					background-color: #fff;
+				}
+					
+					&:last-of-type{
+						border-bottom: 2px solid black;
+					}
+				}
+			
+				& > tr:first-of-type{
+					& > th{
+					
+						&:first-of-type{
+							position: sticky;
+							left: 0;
+							z-index: 2;
+							background-color: #fff;
+							
+							& + th{ 
+								@include leftStickyColumn(0, black);
+								text-align: left;
+							}
+						}
+						
+						&:nth-last-child(-2n + 2){
+							@include rightStickyColumn(63px, black);
+						}
+						
+						&:nth-last-child(-2n + 1){
+							@include rightStickyColumn(0, transparent)				
+						}
+					}
+				}
+			}
+			
+			& tbody{
+				& tr{
+					
+					border-top: 1px solid #ccc;
+					
+					& th{
+						text-align: left;
+						background-color: #fff;
+						white-space: nowrap;
+	
+						&:nth-child(2){
+							@media(max-width: 800px){
+								max-width: 40vw;
+								white-space: normal;
+							}
+						}
+						
+						&:nth-last-child(-2n + 1){
+							@include rightStickyColumn(0, #ccc);
+						}
+						
+						&:nth-last-child(-2n + 2){
+							@include rightStickyColumn(63px, black);
+						}
+						
+						&:first-of-type{
+							position: sticky;
+							left: 0;
+							background-color: #fff;
+							z-index: 2;
+							
+							& + th{
+								@include leftStickyColumn(0, black);
+							}
+						}
+					}
+					
+					& td{
+						white-space: nowrap;
+					}
+				}
+			
+				& td{
+					position: relative;
+					transition: background-color .2s;
+						
+					&:hover:before{
+						opacity: 1;
+					}
+					
+					&.highlight{
+						background-color: rgba(black, .05);
+					}
+					
+					&.extra-highlight{
+						background-color: rgba(black, .1);
+					}
+				}
+			}
+			
+			& tfoot{
+			
+				position: relative;
+				z-index: 3;
+				background-color: #fff;
+				
+				& tr{
+					
+					border-top: 2px solid black;
+					
+					& th{
+			
+						background-color: #fff;
+						
+						&:first-of-type{
+	
+							& + th{
+								@include leftStickyColumn(0, black);
+							}
+						}
+						
+						&:last-of-type{
+							@include rightStickyColumn(0px, black);
+						}
+					}
+					& td{
+						text-align: center;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+}
