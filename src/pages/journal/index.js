@@ -5,10 +5,13 @@ import { ChevronLeftRounded } from "@mui/icons-material";
 import { Card, CardContent, Checkbox, FormControlLabel, Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ValueModal from "./components/value_modal";
+import DateModal from "./components/date_modal";
 
 function Journal(){
 
-
+	// Инициализация
+	let my_table = useRef(null);
+	const navigate = useNavigate();
 	const [headerData, setHeaderData] = useState([
 		{
 			group: [
@@ -28,14 +31,18 @@ function Journal(){
 		}
 	])
 	const [tooltips, setTooltips] = useState(true);
-	let my_table = useRef(null);
-	const navigate = useNavigate();
-
 	const [isStudentOpen, setIsStudentOpen] = useState(false);
 	const [day, setDay] = useState(null);
 	const [student, setStudent] = useState(null);
+	const [event, setEvent] = useState({
+		pair: 1,
+		date: null,
+		theme: ""
+	})
+	const [eventOpen, setEventOpen] = useState(false);
 	
 
+	// Получение данных
 	useEffect(() => {
 		fetch("/data/student_values.json")
 			.then(res => res.json())
@@ -46,6 +53,7 @@ function Journal(){
 			});
 	}, [])
 
+	// Сохранение студента
 	const updateStudent = (newStudent) => {
 		setIsStudentOpen(false);
 		setStudent(student);
@@ -57,6 +65,7 @@ function Journal(){
 		setStudents(newStudents);
 	}
 
+	// Открытие студента
 	const openStudent = (e) => {
 
 		let studentId = parseInt(e.currentTarget.dataset['student']);
@@ -73,11 +82,13 @@ function Journal(){
 		})
 	}
 
+	// Закрытие студента
 	const closeStudent = (defaultStudent) => {
 		setIsStudentOpen(false);
 		setStudent(defaultStudent);
 	}
 
+	// Получение оценок
 	const getValues = (day, index) => {
 		if(day.values.length === 0){
 			return <span key={index} className="fogged">–</span>
@@ -99,6 +110,31 @@ function Journal(){
 		}
 	}
 
+	// Открытие урока
+	const openEvent = e => {
+		let el = e.target;
+		let day = parseInt(el.dataset['day']);
+		let month = parseInt(el.dataset['group']);
+		let lessonData = headerData[month].group[0].content[day];
+		lessonData.month = month;
+		setEvent(lessonData);
+		setTimeout(() => {
+			setEventOpen(true);
+		})
+	}
+
+	// Закрытие урока
+	const closeEvent = (defaultEvent) => {
+		setEvent(defaultEvent);
+		setEventOpen(false);
+	}
+
+	// Сохранение урока
+	const saveEvent = (event) => {
+		debugger;
+	}
+
+	// Подсветка строки
 	const highlight = (e) => {
 		e.target.classList.add('extra-highlight');
 		let row = e.target.parentElement;
@@ -118,6 +154,7 @@ function Journal(){
 
 	}
 
+	// Сброс подсветки строки
 	const resetHighlight = (e) => {
 		my_table.current.querySelectorAll('td').forEach((cell) => {
 			cell.classList?.remove('highlight');
@@ -125,14 +162,17 @@ function Journal(){
 		})
 	}
 
+	// Отображение тултипов
 	const handleCheck = (e) => {
 		setTooltips(e.target.checked);
 	}
 
+	// Возврат на предыдущий экран
 	const back = () => {
 		navigate(-1);
 	}
 
+	// DOM
 	return(
 		<main id="journal">
 			<section>
@@ -206,7 +246,7 @@ function Journal(){
 														return group.content.map((cell, index3) => {
 
 															return (
-																<th key={index3}>{cell}</th>
+																<th onClick={openEvent} data-group={index} data-day={index3} key={index3}>{cell.day}</th>
 															)
 														})
 													})
@@ -263,7 +303,8 @@ function Journal(){
 					</Card>
 				</div>
 			</section>
-			<ValueModal day={day} student={student} open={isStudentOpen} handleSave={updateStudent} handleClose={closeStudent} />
+			<ValueModal day={day} student={student} open={isStudentOpen} saveHandler={updateStudent} closeHandler={closeStudent} />
+			<DateModal event={event} open={eventOpen} saveHandler={saveEvent} closeHandler={closeEvent} />
 		</main>
 	)
 }

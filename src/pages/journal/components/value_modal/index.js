@@ -14,14 +14,6 @@ function ValueModal(props){
 	useEffect(() => {
 		let newStudentString = JSON.stringify(props.student);
 		let newStudent = JSON.parse(newStudentString);
-		if(newStudent){
-			if(newStudent.days[props.day].values.length === 0){
-				newStudent.days[props.day].values.push({
-					value: 5,
-					type: "Тестирование"
-				})
-			}
-		}
 		setStudent(newStudent);
 	}, [props.student, props.day])
 
@@ -53,8 +45,18 @@ function ValueModal(props){
 		}
 	}))
 
+	const addEmptyButton = () => {
+		if(student){
+			let vals = student.days[props.day].values;
+			if(vals.length === 0){
+				return <Button onClick={addValue}>Добавить оценку</Button>
+			}
+			return <></>;
+		}
+	}
+
 	const closeModal = () => {
-		props.handleClose(originalStudent);
+		props.closeHandler(originalStudent);
 	}
 
 	const setPresenceState = e => {
@@ -68,7 +70,7 @@ function ValueModal(props){
 	const saveStudent = () => {
 		let newStudent = {...student};
 		setStudent(newStudent);
-		props.handleSave(student);
+		props.saveHandler(student);
 	}
 
 	const handleValue = (e, newVal) => {
@@ -170,7 +172,7 @@ function ValueModal(props){
 						</ThemeProvider>
 					</div>
 					<div className="value-actions">
-						{student.days[props.day].values.length > 1 ? <Button variant="text" sx={{color: 'red'}} data-value={index} onClick={removeVal} >Удалить</Button> : <span></span>}
+						<Button variant="text" sx={{color: 'red'}} data-value={index} onClick={removeVal} >Удалить</Button>
 						<Button variant="text" disabled={student.days[props.day].values.length >= 3} onClick={addValue}>Добавить</Button>
 					</div>
 				</div>
@@ -184,7 +186,11 @@ function ValueModal(props){
 		let absent_doc = day.absent_doc;
 		let absent_link = day.absent_link;
 
-		if(absent_reason === "" && absent_doc === "" && absent_link === ""){
+		if(
+			(absent_reason === "" || absent_reason === null) && 
+			(absent_doc === "" || absent_doc === null) && 
+			(absent_link === "" || absent_link === null)
+		){
 			return "absent";
 		}
 
@@ -248,7 +254,6 @@ function ValueModal(props){
 		let newStudent = {...student};
 		newStudent.days[props.day].values = [];
 		setStudent(newStudent);
-		props.handleSave(newStudent);
 	}
 
 	const reason = () => {
@@ -297,6 +302,7 @@ function ValueModal(props){
 							<StyledSwitch checked={date("class")===""} onChange={setPresenceState} />
 						</div>
 					</div>
+					{ addEmptyButton() }
 					{ values() }
 					{ reason() }
 				</div>

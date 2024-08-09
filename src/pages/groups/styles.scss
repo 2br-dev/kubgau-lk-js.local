@@ -51,7 +51,10 @@ table{
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		margin-left: 40px;
+
+		@media(min-width: 900px){
+			margin-left: 40px;
+		}
 	
 		& .icon-block{
 			margin-right: 20px;
