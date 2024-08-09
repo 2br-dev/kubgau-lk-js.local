@@ -74,6 +74,7 @@ function ValueModal(props){
 	}
 
 	const handleValue = (e, newVal) => {
+		if(newVal === null) return;
 		let newStudent = {...student};
 		let newVals = newStudent.days[props.day].values;
 		let currentVal = parseInt(e.target.dataset['value']);

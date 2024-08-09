@@ -31,7 +31,7 @@ function GroupFilters(props) {
 		<Card className="filters-card">
 			<CardContent className="filters-card-content">
 				<Grid container spacing={2}>
-					<Grid item xl={5} lg={4} md="4" sm={6} xs={12}>
+					<Grid item xl={5} lg={4} md={4} sm={6} xs={12}>
 						<TextField
 							onInput={handleSetTheme}
 							sx={{ width: "100%" }}

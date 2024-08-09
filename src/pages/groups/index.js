@@ -4,13 +4,13 @@ import {
 	AddCommentRounded,
 	CloseRounded,
 	EditRounded
-  } from "@mui/icons-material"
-  import InfoPanel from "../../components/info_panel"
-  import { InfoClass } from "../../components/info_panel/interfaces"
-  import { useState, useEffect } from "react"
-  import GroupFilters from "./components/group_filters"
-  import { useNavigate } from "react-router-dom"
-  import {
+	} from "@mui/icons-material"
+	import InfoPanel from "../../components/info_panel"
+	import { InfoClass } from "../../components/info_panel/interfaces"
+	import { useState, useEffect } from "react"
+	import GroupFilters from "./components/group_filters"
+	import { useNavigate } from "react-router-dom"
+	import {
 	Grid, 
 	Snackbar, 
 	TableContainer, 
@@ -27,27 +27,27 @@ import {
 	List,
 	ListItemButton,
 	Switch
-  } from "@mui/material"
-  import ValueMenu from "./components/value_menu"
-  import { EMenuType } from "./components/value_menu/interfaces"
-  import "./styles.scss"
-  import CommentModal from "./components/comment_modal"
-  import styled from "@emotion/styled"
-  
-  const StyledSwitch = styled(Switch)(({ theme }) => ({
+	} from "@mui/material"
+	import ValueMenu from "./components/value_menu"
+	import { EMenuType } from "./components/value_menu/interfaces"
+	import "./styles.scss"
+	import CommentModal from "./components/comment_modal"
+	import styled from "@emotion/styled"
+	
+	const StyledSwitch = styled(Switch)(({ theme }) => ({
 	"& .MuiSwitch-switchBase": {
-	  "&.Mui-checked": {
+		"&.Mui-checked": {
 		color: "#fff",
 		"& + .MuiSwitch-track": {
-		  backgroundColor: "#00BFA5",
-		  opacity: 1
+			backgroundColor: "#00BFA5",
+			opacity: 1
 		}
-	  }
+		}
 	},
 	"& .MuiSwitch-track": {
-	  backgroundColor: "#FF1744",
-	  opacity: 1,
-	  "&::before, &::after": {
+		backgroundColor: "#FF1744",
+		opacity: 1,
+		"&::before, &::after": {
 		content: '""',
 		position: "absolute",
 		top: "50%",
@@ -55,14 +55,14 @@ import {
 		width: 16,
 		height: 16,
 		backgroundSize: "contain"
-	  }
+		}
 	},
 	"& .MuiSwitch-thumb": {
-	  backgroundColor: "#D9D9D9"
+		backgroundColor: "#D9D9D9"
 	}
-  }))
-  
-  export default function GroupsPage() {
+	}))
+	
+	export default function GroupsPage() {
 	const [panelOpen, setPanelOpen] = useState(true)
 	const [theme, setTheme] = useState("")
 	const [date, setDate] = useState(null)
@@ -96,331 +96,331 @@ import {
 			setData(newData);
 		}
 	}
-  
+	
 	// Прокрутка до группы
 	const handleGroupClick = e => {
-	  let groupIndex = e.target.dataset["group"]
-	  let link = "#group-" + groupIndex
-	  let element = document.querySelector(link)
-	  let top = element.offsetTop
-	  window.scrollTo({ top: top - 110, behavior: "smooth" })
+		let groupIndex = e.target.dataset["group"]
+		let link = "#group-" + groupIndex
+		let element = document.querySelector(link)
+		let top = element.offsetTop
+		window.scrollTo({ top: top - 110, behavior: "smooth" })
 	}
-  
+	
 	// Закрытие модального окна комментария
 	const closeCommentModal = () => {
-	  setCommentModalOpen("")
+		setCommentModalOpen("")
 	}
-  
+	
 	// Задание текста комментария в данных
 	const setCommentField = (groupId, studentId, comment) => {
-	  // Сохранение данных перед вносом комментариев
-	  let newData = [...data]
-  
-	  localStorage.setItem("prevGroupsData", JSON.stringify(data))
-  
-	  if (data) {
+		// Сохранение данных перед вносом комментариев
+		let newData = [...data]
+	
+		localStorage.setItem("prevGroupsData", JSON.stringify(data))
+	
+		if (data) {
 		let group = data[groupId]
-  
+	
 		if (group) {
-		  let student = group.students[studentId]
-  
-		  if (student) {
+			let student = group.students[studentId]
+	
+			if (student) {
 			student.comment = comment
 			setData(newData)
-  
+	
 			setCommentModalOpen("")
 			setSnackbarMessage("Комментарий изменён!")
 			setSnackbarOpen(true)
-  
+	
 			// Закрываем уведомление через 2 секунды
 			setTimeout(() => {
-			  setSnackbarOpen(false)
+				setSnackbarOpen(false)
 			}, 2000)
-		  }
+			}
 		}
-	  }
+		}
 	}
-  
+	
 	// Открытие модального окна комментария
 	const openCommentModal = e => {
-	  let button = e.currentTarget
-	  let studentId = button.dataset["studentid"]
+		let button = e.currentTarget
+		let studentId = button.dataset["studentid"]
 		? parseInt(button.dataset["studentid"])
 		: -1
-	  let groupId = button.dataset["groupid"]
+		let groupId = button.dataset["groupid"]
 		? parseInt(button.dataset["groupid"])
 		: -1
-  
-	  setGroupId(groupId)
-	  setStudentId(studentId)
-  
-	  if (data !== null) {
+	
+		setGroupId(groupId)
+		setStudentId(studentId)
+	
+		if (data !== null) {
 		let student = data[groupId].students[studentId]
 		if (student) {
-		  setComment(student.comment)
+			setComment(student.comment)
 		}
-	  }
-  
-	  setCommentModalOpen(" open")
+		}
+	
+		setCommentModalOpen(" open")
 	}
-  
+	
 	// Удаление оценки
 	const valueRemover = (sectionId, studentId, valueId) => {
-	  let oldData
-	  const newData = (oldData = [...data])
-	  const section = newData[sectionId]
-	  const student = section.students[studentId]
-  
-	  // Сохраняем данные для возможной отмены
-	  localStorage.setItem("prevGroupsData", JSON.stringify(oldData))
-  
-	  student.values.splice(valueId, 1)
-	  setData(newData)
-	  setSnackbarMessage("Оценка удалена!")
-	  setSnackbarOpen(true)
-  
-	  setTimeout(() => {
+		let oldData
+		const newData = (oldData = [...data])
+		const section = newData[sectionId]
+		const student = section.students[studentId]
+	
+		// Сохраняем данные для возможной отмены
+		localStorage.setItem("prevGroupsData", JSON.stringify(oldData))
+	
+		student.values.splice(valueId, 1)
+		setData(newData)
+		setSnackbarMessage("Оценка удалена!")
+		setSnackbarOpen(true)
+	
+		setTimeout(() => {
 		setSnackbarOpen(false)
 		localStorage.removeItem("prevGroupsData")
-	  }, 2000)
+		}, 2000)
 	}
-  
+	
 	// Откат изменений
 	const handleCancel = () => {
-	  let prevGroupsData = localStorage.getItem("prevGroupsData") || ""
-	  let prevData = JSON.parse(prevGroupsData)
-	  setData(prevData)
-	  setSnackbarOpen(false)
+		let prevGroupsData = localStorage.getItem("prevGroupsData") || ""
+		let prevData = JSON.parse(prevGroupsData)
+		setData(prevData)
+		setSnackbarOpen(false)
 	}
-  
+	
 	const cancelAction = (
-	  <>
+		<>
 		<Button
-		  onClick={handleCancel}
-		  sx={{ color: "yellow", marginRight: "10px" }}
+			onClick={handleCancel}
+			sx={{ color: "yellow", marginRight: "10px" }}
 		>
-		  Отмена
+			Отмена
 		</Button>
 		<IconButton onClick={() => setSnackbarOpen(false)}>
-		  <CloseRounded sx={{ color: "#ffffff" }} />
+			<CloseRounded sx={{ color: "#ffffff" }} />
 		</IconButton>
-	  </>
+		</>
 	)
-  
+	
 	// Установка оценки
 	const valueSetter = (sectionId, studentId, valueId, val, name) => {
-	  localStorage.setItem("prevGroupsData", JSON.stringify(data))
-	  const newData = [...data]
-	  const section = newData[sectionId]
-	  const student = section.students[studentId]
-	  const value = student.values[valueId]
-  
-	  // Если оценка была, меняем её
-	  if (value) {
+		localStorage.setItem("prevGroupsData", JSON.stringify(data))
+		const newData = [...data]
+		const section = newData[sectionId]
+		const student = section.students[studentId]
+		const value = student.values[valueId]
+	
+		// Если оценка была, меняем её
+		if (value) {
 		value.value = val
 		value.name = name ? name : ""
-  
+	
 		setSnackbarMessage("Оценка изменена!")
-	  } else {
+		} else {
 		// Иначе создаём её
 		if (name != null) {
-		  let value = {
+			let value = {
 			name: name,
 			value: val
-		  }
-  
-		  setSnackbarMessage("Оценка проставлена!")
-  
-		  // Закрываем уведомление через 2 секунды
-		  setTimeout(() => {
+			}
+	
+			setSnackbarMessage("Оценка проставлена!")
+	
+			// Закрываем уведомление через 2 секунды
+			setTimeout(() => {
 			setSnackbarOpen(false)
-		  }, 2000)
-  
-		  student.values.push(value)
+			}, 2000)
+	
+			student.values.push(value)
 		} else {
-		  alert("Укажите тип оценки!")
+			alert("Укажите тип оценки!")
 		}
-	  }
-  
-	  setSnackbarOpen(true)
-  
-	  setData(newData)
+		}
+	
+		setSnackbarOpen(true)
+	
+		setData(newData)
 	}
-  
+	
 	// Отработка кнопки "Назад"
 	const back = () => {
-	  navigate(-1)
+		navigate(-1)
 	}
-  
+	
 	// Установка состояния панели
 	const setter = (value, id) => {
-	  let state = {
+		let state = {
 		panelId: id,
 		opened: value
-	  }
-  
-	  let stateString = JSON.stringify(state)
-	  localStorage.setItem("panelState", stateString)
-	  setPanelOpen(value)
+		}
+	
+		let stateString = JSON.stringify(state)
+		localStorage.setItem("panelState", stateString)
+		setPanelOpen(value)
 	}
-  
+	
 	// Тема
 	const themeSetter = newVal => {
-	  setTheme(newVal)
-  
-	  // Вывод фильтров в консоль
-	//   showFilters()
+		setTheme(newVal)
+	
+		// Вывод фильтров в консоль
+	//	 showFilters()
 	}
-  
+	
 	// Дата
 	const dateSetter = newVal => {
-	  setDate(newVal)
-  
-	  // Вывод фильтров в консоль
-	  showFilters()
+		setDate(newVal)
+	
+		// Вывод фильтров в консоль
+		showFilters()
 	}
-  
+	
 	/**
 	 * Пара
 	 * @param {number} newVal Новое значение
 	 */
 	const pairSetter = newVal => {
-	  setPair(newVal)
-  
-	  // Вывод фильтров в консоль
-	  showFilters()
+		setPair(newVal)
+	
+		// Вывод фильтров в консоль
+		showFilters()
 	}
-  
+	
 	/**
 	 * Вывод фильтров в консоль
 	 */
 	const showFilters = () => {
-	  let data = {
+		let data = {
 		theme: theme,
 		date: date,
 		pair: pair
-	  }
-  
-	  console.table(data)
+		}
+	
+		console.table(data)
 	}
-  
+	
 	// Получение данных
 	const getData = async () => {
-	  await fetch("/data/groups.json")
+		await fetch("/data/groups.json")
 		.then(res => res.json())
 		.then(data => setData(data))
 		.catch(error => console.error(error))
 	}
-  
+	
 	/**
 	 * Монтаж компонента
 	 */
 	useEffect(() => {
-	  // Состояние информационной панели
-	  let stateString = localStorage.getItem("panelState")
-  
-	  // Чтение состояния информационной панели из localStorage
-	  if (stateString) {
+		// Состояние информационной панели
+		let stateString = localStorage.getItem("panelState")
+	
+		// Чтение состояния информационной панели из localStorage
+		if (stateString) {
 		let state = JSON.parse(stateString)
 		setter(state.opened, state.panelId)
-	  } else {
+		} else {
 		setter(true, "statement-page-info")
-	  }
-  
-	  getData()
+		}
+	
+		getData()
 	}, [])
-  
+	
 	const hereSwitcher = (e, value) => {
-	  const dataHolder =
+		const dataHolder =
 		e.currentTarget.parentElement?.parentElement?.parentElement
-	  const groupId = parseInt(dataHolder?.dataset["group"] || "-1")
-	  const studentId = parseInt(dataHolder?.dataset["student"] || "-1")
-  
-	  let newData = [...data]
-  
-	  if (data) {
+		const groupId = parseInt(dataHolder?.dataset["group"] || "-1")
+		const studentId = parseInt(dataHolder?.dataset["student"] || "-1")
+	
+		let newData = [...data]
+	
+		if (data) {
 		let student = newData[groupId].students[studentId]
 		student.isHere = value
-	  }
-  
-	  setData(newData)
+		}
+	
+		setData(newData)
 	}
-  
+	
 	const switchAll = e => {
-	  const dataHolder =
+		const dataHolder =
 		e.currentTarget.parentElement?.parentElement?.parentElement
-	  const groupId = parseInt(dataHolder?.dataset["group"] || "-1")
-	  let el = e.target
-	  let value = el.checked
-  
-	  if (data) {
+		const groupId = parseInt(dataHolder?.dataset["group"] || "-1")
+		let el = e.target
+		let value = el.checked
+	
+		if (data) {
 		let newData = [...data]
-  
+	
 		let group = newData[groupId]
 		group.students.forEach(student => {
-		  student.isHere = value
+			student.isHere = value
 		})
-  
+	
 		setData(newData)
-	  }
+		}
 	}
-  
+	
 	return (
-	  <main>
+	<main>
 		<section>
-		  <div className="container">
+			<div className="container">
 			<a href="#!" onClick={back} className="icon-block">
-			  <ChevronLeftRounded />
-			  Назад
+				<ChevronLeftRounded />
+				Назад
 			</a>
 			<InfoPanel
-			  id="groups-info-panel"
-			  title="Алгоритмизация и программирование"
-			  open={panelOpen}
-			  message={
-				<div>
-				  <ol>
-					<li>
-					  <strong>Основная оценка</strong> предназначена для отражения
-					  результатов работы обучающегося на занятии (устный ответ,
-					  защита доклада/реферата, работа на занятии). Выставляется
-					  непосредственно во время переклички в период 7-ми
-					  дней. Исправление или удаление оценки осуществляется ТОЛЬКО
-					  сотрудниками Центра ИТ через служебную записку, подписанную
-					  начальником УМУ.
-					</li>
-					<li>
-					  <strong>Дополнительная оценка</strong> предназначена для
-					  отражения результатов работы всей группы обучающихся
-					  (проведение тестирования, защиты лабораторных работ,
-					  контрольных работ, домашнего задания, расчетно-графических
-					  работ и другого). Если дополнительная оценка выставлена хотя
-					  бы одному обучающемуся, то всем остальным также должна быть
-					  выставлена оценка. Оценка может быть выставлена в период
-					  14-ти дней даже студентам, которые отсутствовали на
-					  занятии. Исправление или удаление оценки осуществляется
-					  ТОЛЬКО сотрудниками Центра ИТ через служебную записку,
-					  подписанную начальником УМУ.
-					</li>
-				  </ol>
-				</div>
-			  }
-			  type={InfoClass.INFO}
-			  setter={setter}
-			  subtitle={
-				<>
-				  Семинрар №2 <span className="fogged">(из 5)</span>
-				</>
-			  }
+				id="groups-info-panel"
+				title="Алгоритмизация и программирование"
+				open={panelOpen}
+				message={
+					<div>
+						<ol>
+							<li>
+								<strong>Основная оценка</strong> предназначена для отражения
+								результатов работы обучающегося на занятии (устный ответ,
+								защита доклада/реферата, работа на занятии). Выставляется
+								непосредственно во время переклички в период 7-ми
+								дней. Исправление или удаление оценки осуществляется ТОЛЬКО
+								сотрудниками Центра ИТ через служебную записку, подписанную
+								начальником УМУ.
+							</li>
+							<li>
+								<strong>Дополнительная оценка</strong> предназначена для
+								отражения результатов работы всей группы обучающихся
+								(проведение тестирования, защиты лабораторных работ,
+								контрольных работ, домашнего задания, расчетно-графических
+								работ и другого). Если дополнительная оценка выставлена хотя
+								бы одному обучающемуся, то всем остальным также должна быть
+								выставлена оценка. Оценка может быть выставлена в период
+								14-ти дней даже студентам, которые отсутствовали на
+								занятии. Исправление или удаление оценки осуществляется
+								ТОЛЬКО сотрудниками Центра ИТ через служебную записку,
+								подписанную начальником УМУ.
+							</li>
+						</ol>
+					</div>
+				}
+				type={InfoClass.INFO}
+				setter={setter}
+				subtitle={
+					<>
+						Семинрар №2 <span className="fogged">(из 5)</span>
+					</>
+				}
 			/>
-		  </div>
-		  <div className="container">
+		</div>
+		<div className="container">
 			<Grid
 				container
 				className="filters-wrapper"
 				sx={{ alignItems: "unset" }}
 			>
-			  <Grid item lg={9}>
+				<Grid item lg={9}>
 				<GroupFilters
 					theme={theme}
 					date={date}
@@ -430,9 +430,9 @@ import {
 					pairSetter={pairSetter}
 				/>
 				{data?.map((group, sectionIndex) => {
-				  return (
+					return (
 					<Card key={sectionIndex} id={"group-" + (sectionIndex + 1)}>
-					  <CardContent>
+						<CardContent>
 						<h2 style={{ marginTop: 0 }}>{group.name}</h2>
 						<TableContainer>
 							<Table className="simple-table">
@@ -564,52 +564,52 @@ import {
 							</TableBody>
 							</Table>
 						</TableContainer>
-					  </CardContent>
+						</CardContent>
 					</Card>
-				  )
+					)
 				})}
 				<div className="save-wrapper">
 					<Button variant="outlined">Отмена</Button>
 					<Button variant="contained">Сохранить</Button>
 				</div>
-			  </Grid>
-			  <Grid item lg={1} />
-			  <Grid item lg={2}>
+				</Grid>
+				<Grid item lg={1} />
+				<Grid item lg={2}>
 				<div className="pin">
-				  <h2>Группы</h2>
-				  <List>
+					<h2>Группы</h2>
+					<List>
 					{data?.map((group, groupIndex) => {
-					  return (
+						return (
 						<ListItemButton
-						  key={groupIndex}
-						  data-group={groupIndex + 1}
-						  onClick={handleGroupClick}
+							key={groupIndex}
+							data-group={groupIndex + 1}
+							onClick={handleGroupClick}
 						>
-						  {group.name}
+							{group.name}
 						</ListItemButton>
-					  )
+						)
 					})}
-				  </List>
+					</List>
 				</div>
-			  </Grid>
+				</Grid>
 			</Grid>
-		  </div>
+			</div>
 		</section>
 		<Snackbar
-		  open={snackbarOpen}
-		  anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-		  message={snackbarMessage}
-		  action={cancelAction}
+			open={snackbarOpen}
+			anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+			message={snackbarMessage}
+			action={cancelAction}
 		/>
 		<CommentModal
-		  openClass={commentModalOpen}
-		  comment={comment}
-		  groupId={groupId}
-		  studentId={studentId}
-		  setter={setCommentField}
-		  closeSetter={closeCommentModal}
+			openClass={commentModalOpen}
+			comment={comment}
+			groupId={groupId}
+			studentId={studentId}
+			setter={setCommentField}
+			closeSetter={closeCommentModal}
 		/>
-	  </main>
+		</main>
 	)
-  }
-  
+	}
+	

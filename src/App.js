@@ -8,6 +8,7 @@ import StatementsPage from './pages/statements';
 import { createTheme, ThemeProvider } from '@mui/material';
 import GroupsPage from './pages/groups';
 import Journal from './pages/journal';
+import Subgroups from './pages/subgroups';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
 							<Route path="statements" element={ <StatementsPage /> } />
 							<Route path="groups" element={ <GroupsPage /> } />
 							<Route path="journal" element={ <Journal /> } />
+							<Route path="subgroups" element={ <Subgroups /> } />
 						</Route>
 					</Routes>
 				</Router>

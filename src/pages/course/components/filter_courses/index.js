@@ -151,7 +151,7 @@ function FilterCourses(props) {
 					sx={{ fontFamily: "Wix Madefor Text" }}
 					onClick={toggleCollapse}
 				>
-					{props.globalCollapse ? <span>Развернуть </span> : <span>Свернуть</span> }<span className="hide-modal">все дисциплины</span>
+					{props.globalCollapse ? <span>Развернуть </span> : <span>Свернуть</span> }<span style={{marginLeft: '3px'}} className="hide-modal">все дисциплины</span>
 				</Button>
 			</div>
 		</div>

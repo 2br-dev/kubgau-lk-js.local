@@ -1,17 +1,15 @@
 import { Fragment, useEffect, useRef } from "react";
 import { useState } from "react";
 import './index.scss';
-import { ChevronLeftRounded } from "@mui/icons-material";
 import { Card, CardContent, Checkbox, FormControlLabel, Tooltip } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import ValueModal from "./components/value_modal";
 import DateModal from "./components/date_modal";
+import PageHeader from "../../components/pageHeader";
 
 function Journal(){
 
 	// Инициализация
 	let my_table = useRef(null);
-	const navigate = useNavigate();
 	const [headerData, setHeaderData] = useState([
 		{
 			group: [
@@ -183,24 +181,12 @@ function Journal(){
 		setTooltips(e.target.checked);
 	}
 
-	// Возврат на предыдущий экран
-	const back = () => {
-		navigate(-1);
-	}
-
 	// DOM
 	return(
 		<main id="journal">
 			<section>
 				<div className="container">
-					<div className="back-link">
-						<a href="#!" onClick={back} className="icon-block">
-							<ChevronLeftRounded />
-							Назад
-						</a>
-						<span>Журнал посещаемости</span>
-					</div>
-					<h1>Программирование</h1>
+					<PageHeader header="Программирование" subheader="Журнал посещаемости" backLink={true} />
 					<Card>
 						<CardContent>
 							<div className="card-header">

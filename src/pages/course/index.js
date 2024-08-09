@@ -15,6 +15,7 @@ import FilterCourses from "./components/filter_courses"
 import { useNavigate } from "react-router-dom"
 import store from "../../store"
 import "./styles.scss"
+import PageHeader from "../../components/pageHeader"
 
 /** Страница курсов  */
 function CoursePage() {
@@ -132,11 +133,7 @@ function CoursePage() {
 						errors={errors}
 						errorCallback={errorCallback}
 					/>
-					<div className="cab-header">
-						<div className="header-wrapper">
-							<h1>Список курсов</h1>
-						</div>
-					</div>
+					<PageHeader header="Список курсов" />
 					<Card>
 						<CardContent>
 							<div className="courses-filters">
@@ -153,7 +150,7 @@ function CoursePage() {
 										sx={{ fontFamily: "Wix Madefor Text" }}
 										onClick={toggleCollapse}
 									>
-										{globalCollapse ? <span>Развернуть </span> : <span>Свернуть </span>} <span className="hide-modal">все дисциплины</span>
+										{globalCollapse ? <span>Развернуть </span> : <span>Свернуть </span>} <span style={{marginLeft: '3px'}} className="hide-modal">все дисциплины</span>
 									</Button>
 								</div>
 							</div>
