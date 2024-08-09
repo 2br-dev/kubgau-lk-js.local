@@ -11,7 +11,9 @@ function DateModal(props){
 	const [ event, setEvent ] = useState({
 		theme: "",
 		date: dayjs('1 dec 1980'),
-		pair: '1'
+		pair: '1',
+		groupId: null,
+		dayId: null
 	})
 
 	useEffect(() => {
@@ -19,7 +21,9 @@ function DateModal(props){
 			let newEvent = JSON.parse(JSON.stringify({
 				theme: props.event.theme,
 				date: null,
-				pair: props.event.pair
+				pair: props.event.pair,
+				dayId: props.event.dayId,
+				groupId: props.event.groupId
 			}));
 			newEvent.date = dayjs(new Date(props.event.date));
 			setEvent(newEvent);
@@ -35,13 +39,17 @@ function DateModal(props){
 	}
 
 	const updateTheme = (e) => {
-
+		setEvent(prevEvent => ({ ...prevEvent, theme: e.target.value }));
 	}
 
 	const updateDate = (e) => {
 		let newEvent = {...event};
 		newEvent.date = e;
 		setEvent(newEvent);
+	}
+
+	const save = () => {
+		props.saveHandler(event);
 	}
 
 	return(		
@@ -90,8 +98,8 @@ function DateModal(props){
 					</Grid>
 				</div>
 				<div className="modal-footer">
-					<Button variant="text" sx={{color: 'red'}}>Удалить</Button>
-					<Button variant="text">Сохранить</Button>
+					<span />
+					<Button variant="text" onClick={save}>Сохранить</Button>
 				</div>
 			</div>
 		</div>

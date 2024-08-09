@@ -36,6 +36,8 @@ function Journal(){
 	const [student, setStudent] = useState(null);
 	const [event, setEvent] = useState({
 		pair: 1,
+		groupId: null,
+		dayId: null,
 		date: null,
 		theme: ""
 	})
@@ -116,8 +118,10 @@ function Journal(){
 		let day = parseInt(el.dataset['day']);
 		let month = parseInt(el.dataset['group']);
 		let lessonData = headerData[month].group[0].content[day];
-		lessonData.month = month;
+		lessonData.dayId = day;
+		lessonData.groupId = month;
 		setEvent(lessonData);
+
 		setTimeout(() => {
 			setEventOpen(true);
 		})
@@ -131,7 +135,19 @@ function Journal(){
 
 	// Сохранение урока
 	const saveEvent = (event) => {
-		debugger;
+		let day = event.date.$D;
+		let month = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july', 'aug', 'sept', 'oct', 'nov', 'dec'][event.date.$M];
+		let year = event.date.$y;
+
+		let newHeaderData = [...headerData];
+		let group = newHeaderData[event.groupId];
+		let dayEntry = group.group[0].content[event.dayId];
+		dayEntry.day = day;
+		dayEntry.date = day + ` ${month} ` + year;
+		dayEntry.pair = parseInt(event.pair);
+
+		setHeaderData(headerData);
+		setEventOpen(false);
 	}
 
 	// Подсветка строки
