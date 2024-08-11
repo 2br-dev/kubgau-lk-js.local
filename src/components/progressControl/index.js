@@ -37,17 +37,17 @@ const progressControl = (current, total) => {
     percent = Math.round((current / total) * 100)
 
     if (percent < 100) {
-      control = <BorderLinearProgress variant="determinate" value={percent} />
+      control = <BorderLinearProgress className="screen" variant="determinate" value={percent} />
     } else {
       control = (
-        <FullBorderLinearProgress variant="determinate" value={percent} />
+        <FullBorderLinearProgress className="screen" variant="determinate" value={percent} />
       )
     }
     return (
       <div className="progress-wrapper">
         <div className="progressbar-wrapper">{control}</div>
         <div className="icon-block">
-          <QueryBuilderRounded />
+          <QueryBuilderRounded className="screen" />
           <div>
             {Math.round(current)}/{Math.round(total)}
           </div>

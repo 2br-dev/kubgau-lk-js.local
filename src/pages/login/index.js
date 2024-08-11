@@ -32,6 +32,7 @@ function LoginScreen() {
       let user = {
         login: login,
         fullname: "Татьяна Анатольевна",
+		shortName: "Крамаренко А.В",
         role: "admin"
       }
 

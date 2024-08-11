@@ -1,9 +1,23 @@
 .back-link{
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 
 	& span{
 		margin-left: 30px;
 		color: #939393;
 	}
+}
+
+.header-wrapper{
+	width: 100%;
+}
+
+.header-control{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
 }

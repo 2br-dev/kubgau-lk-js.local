@@ -29,7 +29,7 @@ function PageHeader(props){
 	const backLink = () => {
 		if(props.backLink){
 			return(
-				<div className="back-link">
+				<div className="back-link screen">
 					<a href="#!" onClick={back} className="icon-block">
 						<ChevronLeftRounded />
 						Назад
@@ -46,7 +46,10 @@ function PageHeader(props){
 		<div className="cab-header">
 			<div className="header-wrapper">
 				{ backLink() }
-				{ headerControl() }
+				<div className="header-control">
+					{ headerControl() }
+					{ props.suffix }
+				</div>
 			</div>
 		</div>
 	)

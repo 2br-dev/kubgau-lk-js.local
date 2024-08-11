@@ -79,4 +79,32 @@ body{
 			}
 		}
 	}
+
+	& .screen{
+
+		@media print{
+			display: none !important;
+		}
+	}
+
+	& .print{
+
+		@media screen{
+			display: none !important;
+		}
+	}
+
+	@media print{
+
+		.MUI-paper
+
+		th{
+			font-size: 8pt !important;
+		}
+
+		td{
+			padding-top: 6px !important;
+			padding-bottom: 6px !important;
+		}
+	}
 }

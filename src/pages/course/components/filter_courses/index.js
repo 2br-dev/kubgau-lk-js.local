@@ -92,7 +92,7 @@ function FilterCourses(props) {
 
 	// Рендер компонента
 	return (
-		<div className="filters-wrapper">
+		<div className="filters-wrapper screen">
 			<div className="title">
 				<h3>Фильтры</h3>
 			</div>

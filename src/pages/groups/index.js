@@ -35,31 +35,31 @@ import {
 	import styled from "@emotion/styled"
 	
 	const StyledSwitch = styled(Switch)(({ theme }) => ({
-	"& .MuiSwitch-switchBase": {
-		"&.Mui-checked": {
-		color: "#fff",
-		"& + .MuiSwitch-track": {
-			backgroundColor: "#00BFA5",
-			opacity: 1
+		"& .MuiSwitch-switchBase": {
+			"&.Mui-checked": {
+			color: "#fff",
+			"& + .MuiSwitch-track": {
+				backgroundColor: "#00BFA5",
+				opacity: 1
+			}
+			}
+		},
+		"& .MuiSwitch-track": {
+			backgroundColor: "#FF1744",
+			opacity: 1,
+			"&::before, &::after": {
+			content: '""',
+			position: "absolute",
+			top: "50%",
+			transform: "translateY(-50%)",
+			width: 16,
+			height: 16,
+			backgroundSize: "contain"
+			}
+		},
+		"& .MuiSwitch-thumb": {
+			backgroundColor: "#D9D9D9"
 		}
-		}
-	},
-	"& .MuiSwitch-track": {
-		backgroundColor: "#FF1744",
-		opacity: 1,
-		"&::before, &::after": {
-		content: '""',
-		position: "absolute",
-		top: "50%",
-		transform: "translateY(-50%)",
-		width: 16,
-		height: 16,
-		backgroundSize: "contain"
-		}
-	},
-	"& .MuiSwitch-thumb": {
-		backgroundColor: "#D9D9D9"
-	}
 	}))
 	
 	export default function GroupsPage() {
@@ -366,7 +366,7 @@ import {
 	}
 	
 	return (
-	<main>
+	<main id="groups">
 		<section>
 			<div className="container">
 			<a href="#!" onClick={back} className="icon-block">

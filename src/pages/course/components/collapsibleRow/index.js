@@ -123,12 +123,8 @@ function CollapsibleRow(props) {
 						}}
 					>
 						<MenuItem>Список тем</MenuItem>
-						<MenuItem>
-							<Link to='/main/journal'>Журнал</Link>
-						</MenuItem>
-						<MenuItem>
-							<Link to='/main/subgroups'>Подгруппы</Link>
-						</MenuItem>
+						<MenuItem component={Link} to="/main/journal">Журнал</MenuItem>
+						<MenuItem component={Link} to='/main/subgroups'>Подгруппы</MenuItem>
 						<MenuItem>Пропуски студентов</MenuItem>
 					</Menu>
 				</TableCell>

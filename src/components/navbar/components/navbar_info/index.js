@@ -25,7 +25,7 @@ function NavbarInfo(props) {
   }
 
   return (
-    <div className={"navbar-info " + props.type}>
+    <div className={"navbar-info screen " + props.type}>
       <div className="container icon-block">
         {icon} {props.message}
       </div>

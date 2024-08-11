@@ -5,7 +5,9 @@ import {
 	TableBody,
 	TableHead,
 	TableRow,
-	TableCell
+	TableCell,
+	Menu,
+	MenuItem,
 } from "@mui/material"
 import { useEffect, useState } from "react"
 import CollapsibleRow from "./components/collapsibleRow"
@@ -19,9 +21,11 @@ import PageHeader from "../../components/pageHeader"
 
 /** Страница курсов  */
 function CoursePage() {
-	let [courses, setCourses] = useState([])
-	let [cStates, setCStates] = useState([])
-	let [globalCollapse, setGlobalCollapse] = useState(true)
+	const [courses, setCourses] = useState([])
+	const [cStates, setCStates] = useState([])
+	const [globalCollapse, setGlobalCollapse] = useState(true)
+	const [anchorEl, setAnchorEl] = useState(null)
+	const open = Boolean(anchorEl)
 
 	let [disciplines, setDisciplines] = useState([])
 	let [coursesList, setCoursesList] = useState([])
@@ -103,18 +107,15 @@ function CoursePage() {
 		console.table(value)
 	}
 
-	/**
-	 * Переход на семестр, содержащий ошибки
-	 * @param semester
-	 */
-	const errorCallback = semester => {
+	// Переход на семестр, содержащий ошибки
+	const handleMenuClick = e => {
+		let semester = e.currentTarget.textContent;
 		store.dispatch({ type: "write", payload: semester })
 		navigate("/main/statements")
 	}
 
 	// Заглушка - рыбные ошибки
 	let message = "У вас есть незакрытые ведомости, пожалуйста, закройте их!"
-	let title = "Незакрытые ведомости"
 	let errors = [
 		"2 семестр 2017/2018 г.",
 		"1 семестр 2018/2019 г.",
@@ -122,16 +123,69 @@ function CoursePage() {
 		"1 семестр 2022/2023 г."
 	]
 
+	// Закрытие меню ошибок
+	const handleClose = () => {
+		setAnchorEl(null)
+	}
+
+	// Обработчик клика меню ошибок
+	const handleClick = e => {
+		setAnchorEl(e.currentTarget)
+	}
+
+	// Контрол со списком ошибок
+	const errorControl = (
+		<div className="actions">
+			<Button
+				variant="text"
+				aria-controls={open ? "errors" : undefined}
+				aria-expanded={open ? "true" : undefined}
+				aria-haspopup="true"
+				sx={{
+					marginRight: "0 !important",
+					backgroundColor: "#ffffffcc",
+					color: "#FF1744",
+					"&:hover": {
+						backgroundColor: "#ffffffff"
+					}
+				}}
+				onClick={handleClick}
+			>
+				Незакрытые ведомости
+			</Button>
+			<Menu
+				id="errors"
+				anchorEl={anchorEl}
+				open={open}
+				onClose={handleClose}
+				anchorOrigin={{
+					vertical: "bottom",
+					horizontal: "right"
+				}}
+				transformOrigin={{
+					horizontal: "right",
+					vertical: "top"
+				}}
+			>
+				{errors.map((value, index) => {
+					return (
+						<MenuItem key={index} onClick={handleMenuClick}>
+							{value}
+						</MenuItem>
+					)
+				})}
+			</Menu>
+		</div>
+	)
+
 	// Рендер компонента
 	return (
-		<main>
+		<main id="courses">
 			<section>
 				<div className="container">
 					<ErrorBanner
 						message={message}
-						errorsTitle={title}
-						errors={errors}
-						errorCallback={errorCallback}
+						control={errorControl}
 					/>
 					<PageHeader header="Список курсов" />
 					<Card>
@@ -156,7 +210,7 @@ function CoursePage() {
 							</div>
 							<TableContainer>
 								<Table
-									className="simple-table"
+									className="simple-table screen"
 									sx={{
 
 										borderSpacing: 0,
@@ -190,6 +244,28 @@ function CoursePage() {
 												/>
 											)
 										})}
+									</TableBody>
+								</Table>
+								<Table className="print simple-table">
+									<TableHead>
+										<TableRow>
+											<TableCell>Дисциплины</TableCell>
+											<TableCell>Курс</TableCell>
+											<TableCell>Лекции</TableCell>
+											<TableCell>Семинары</TableCell>
+											<TableCell>Лаб. занятия</TableCell>
+										</TableRow>
+									</TableHead>
+									<TableBody>
+										{courses.map((row, index) => (
+											<TableRow key={index}>
+												<TableCell>{ row.name }</TableCell>
+												<TableCell>{ row.course }</TableCell>
+												<TableCell>{ row.lections?.current || 0 } / { row.lections?.total || 0 }</TableCell>
+												<TableCell>{ row.seminars?.current || 0 } / { row.seminars?.total || 0 }</TableCell>
+												<TableCell>{ row.labs?.current } / { row.labs.total }</TableCell>
+											</TableRow>
+										))}
 									</TableBody>
 								</Table>
 							</TableContainer>

@@ -11,7 +11,7 @@ import "./styles.scss"
 const Navbar = () => {
 	return (
 		<>
-			<header>
+			<header className="screen">
 				<div className="container">
 					<Grid container spacing={2}>
 						<Grid item lg={8} md={8} sm={10} xs={11}>
