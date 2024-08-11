@@ -1,23 +1,23 @@
-import MainPage from './pages/main/';
-import './scss/master.scss';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginScreen from './pages/login/';
-import CoursePage from './pages/course';
-import StatementsPage from './pages/statements';
+import MainPage from "./pages/main/";
+import "./scss/master.scss";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginScreen from "./pages/login/";
+import CoursePage from "./pages/course";
+import StatementsPage from "./pages/statements";
 
-import { createTheme, ThemeProvider } from '@mui/material';
-import GroupsPage from './pages/groups';
-import Journal from './pages/journal';
-import Subgroups from './pages/subgroups';
+import { createTheme, ThemeProvider } from "@mui/material";
+import GroupsPage from "./pages/groups";
+import Journal from "./pages/journal";
+import Subgroups from "./pages/subgroups";
+import Statement from "./pages/statement";
 
 function App() {
-
 	// Установка шрифта для приложения
 	const theme = createTheme({
 		typography: {
-			fontFamily: 'Wix Madefor Text',
-		}
-	})
+			fontFamily: "Wix Madefor Text",
+		},
+	});
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -26,12 +26,19 @@ function App() {
 				<Router>
 					<Routes>
 						<Route path="/" element={<LoginScreen />} />
-						<Route path="/main" element={<MainPage />} >
-							<Route path="courses" element={ <CoursePage /> } />
-							<Route path="statements" element={ <StatementsPage /> } />
-							<Route path="groups" element={ <GroupsPage /> } />
-							<Route path="journal" element={ <Journal /> } />
-							<Route path="subgroups" element={ <Subgroups /> } />
+						<Route path="/main" element={<MainPage />}>
+							<Route path="courses" element={<CoursePage />} />
+							<Route
+								path="statements"
+								element={<StatementsPage />}
+							/>
+							<Route path="groups" element={<GroupsPage />} />
+							<Route path="journal" element={<Journal />} />
+							<Route path="subgroups" element={<Subgroups />} />
+							<Route
+								path="statement/:type"
+								element={<Statement />}
+							/>
 						</Route>
 					</Routes>
 				</Router>

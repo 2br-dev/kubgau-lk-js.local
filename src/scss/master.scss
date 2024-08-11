@@ -1,75 +1,70 @@
-@import './parts/helpers';
-@import './parts/typography';
+@import "./parts/helpers";
+@import "./parts/typography";
 
-body{
-
+body {
 	min-height: 100vh;
 
-	.container{
+	.container {
 		width: 75%;
 		max-width: 1900px;
 		margin: auto;
 
-		@media(max-width: 1600px){
+		@media (max-width: 1600px) {
 			width: 90%;
 		}
 
-		@media(max-width: 600px){
+		@media (max-width: 600px) {
 			width: calc(100% - 20px);
 		}
 
-		@media print{
+		@media print {
 			width: 100%;
 		}
 	}
 
-	& .App{
+	& .App {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		color: #333;
 
-		& main{
-
+		& main {
 			flex-grow: 1;
-			
-			& section{
+
+			& section {
 				padding: 2vmax 0;
 			}
-			
-			& .MuiPaper-root{
-				box-shadow: 0 4px 46px -16px rgba(12, 21, 97, 0.051); 
+
+			& .MuiPaper-root {
+				box-shadow: 0 4px 46px -16px rgba(12, 21, 97, 0.051);
 				border-radius: 10px;
-				
-				&:not(:last-of-type){
+
+				&:not(:last-of-type) {
 					margin-bottom: 2vmax;
 				}
 			}
 
-			& .pin{
+			& .pin {
 				position: sticky;
 				top: 100px;
 			}
 
-			& .simple-table{
-
+			& .simple-table {
 				width: 100%;
 
-				& thead{
-
-					& th{
+				& thead {
+					& th {
 						border-bottom: 2px solid black;
 						padding-bottom: 0;
 						font-size: 14px;
 					}
 				}
 
-				& tbody{
-
-					& td{
+				& tbody {
+					& td {
 						font-size: clamp(16px, 3vw, 18px);
 
-						& .icon-button{
+						& .icon-button {
 							width: 40px;
 							height: 40px;
 						}

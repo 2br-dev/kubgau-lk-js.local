@@ -13,7 +13,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-177"
+				"statementNum": "Л-18-01-177",
+				"statementUrl": "/main/statement/exam"
 			},
 			{
 				"indicator": "closed",
@@ -25,7 +26,8 @@
 					"closeDate": "8 мая 2018 г."
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-460"
+				"statementNum": "Л-18-01-460",
+				"statementUrl": "/main/statement/exam"
 			},
 			{
 				"indicator": "opened",
@@ -37,7 +39,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-460/1"
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/exam"
 			},
 			{
 				"indicator": "opened",
@@ -49,7 +52,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-02-178"
+				"statementNum": "Л-18-02-178",
+				"statementUrl": "/main/statement/exam"
 			},
 			{
 				"indicator": "outdated",
@@ -61,7 +65,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-02-351"
+				"statementNum": "Л-18-02-351",
+				"statementUrl": "/main/statement/exam"
 			},
 			{
 				"indicator": "opened",
@@ -73,7 +78,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-02-461"
+				"statementNum": "Л-18-02-461",
+				"statementUrl": "/main/statement/exam"
 			},
 			{
 				"indicator": "opened",
@@ -85,7 +91,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-460/1"
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/exam"
 			}
 		]
 	},
@@ -103,7 +110,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-177"
+				"statementNum": "Л-18-01-177",
+				"statementUrl": "/main/statement/exams"
 			},
 			{
 				"indicator": "closed",
@@ -115,7 +123,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-460"
+				"statementNum": "Л-18-01-460",
+				"statementUrl": "/main/statement/exams"
 			},
 			{
 				"indicator": "opened",
@@ -127,7 +136,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-460/1"
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/exams"
 			},
 			{
 				"indicator": "opened",
@@ -139,7 +149,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-02-178"
+				"statementNum": "Л-18-02-178",
+				"statementUrl": "/main/statement/exams"
 			},
 			{
 				"indicator": "outdated",
@@ -151,7 +162,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-02-351"
+				"statementNum": "Л-18-02-351",
+				"statementUrl": "/main/statement/exams"
 			},
 			{
 				"indicator": "opened",
@@ -163,7 +175,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-02-461"
+				"statementNum": "Л-18-02-461",
+				"statementUrl": "/main/statement/exams"
 			},
 			{
 				"indicator": "opened",
@@ -175,7 +188,8 @@
 					"closeDate": null
 				},
 				"type": "Основная",
-				"statementNum": "Л-18-01-460/1"
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/exams"
 			}
 		]
 	}

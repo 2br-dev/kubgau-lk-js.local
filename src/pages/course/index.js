@@ -1,4 +1,4 @@
-import { Card, CardContent, Button } from "@mui/material"
+import { Card, CardContent, Button } from "@mui/material";
 import {
 	TableContainer,
 	Table,
@@ -8,29 +8,29 @@ import {
 	TableCell,
 	Menu,
 	MenuItem,
-} from "@mui/material"
-import { useEffect, useState } from "react"
-import CollapsibleRow from "./components/collapsibleRow"
-import React from "react"
-import ErrorBanner from "../../components/error_banner"
-import FilterCourses from "./components/filter_courses"
-import { useNavigate } from "react-router-dom"
-import store from "../../store"
-import "./styles.scss"
-import PageHeader from "../../components/pageHeader"
+} from "@mui/material";
+import { useEffect, useState } from "react";
+import CollapsibleRow from "./components/collapsibleRow";
+import React from "react";
+import ErrorBanner from "../../components/error_banner";
+import FilterCourses from "./components/filter_courses";
+import { useNavigate } from "react-router-dom";
+import store from "../../store";
+import "./styles.scss";
+import PageHeader from "../../components/pageHeader";
 
 /** Страница курсов  */
 function CoursePage() {
-	const [courses, setCourses] = useState([])
-	const [cStates, setCStates] = useState([])
-	const [globalCollapse, setGlobalCollapse] = useState(true)
-	const [anchorEl, setAnchorEl] = useState(null)
-	const open = Boolean(anchorEl)
+	const [courses, setCourses] = useState([]);
+	const [cStates, setCStates] = useState([]);
+	const [globalCollapse, setGlobalCollapse] = useState(true);
+	const [anchorEl, setAnchorEl] = useState(null);
+	const open = Boolean(anchorEl);
 
-	let [disciplines, setDisciplines] = useState([])
-	let [coursesList, setCoursesList] = useState([])
+	let [disciplines, setDisciplines] = useState([]);
+	let [coursesList, setCoursesList] = useState([]);
 
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		/**
@@ -39,37 +39,37 @@ function CoursePage() {
 		const dataFetch = async () => {
 			// Получение данных
 			const data = await // Заглушка - локальный JSON
-			(await fetch("/data/main_courses.json")).json()
+			(await fetch("/data/main_courses.json")).json();
 
 			// Инициализация состояний
-			let states = [] // Состояние строк (развёрнуто/свёрнуто, ID строки)
-			let disciplines = [] // Автозаполнение для фильтра дисциплин
-			let coursesList = [] // Автозаполнение для фильтра курсов
+			let states = []; // Состояние строк (развёрнуто/свёрнуто, ID строки)
+			let disciplines = []; // Автозаполнение для фильтра дисциплин
+			let coursesList = []; // Автозаполнение для фильтра курсов
 
 			// Получение состояний
-			data.forEach(el => {
-				states.push({ id: el.id, is_open: false })
+			data.forEach((el) => {
+				states.push({ id: el.id, is_open: false });
 
 				// Читаем доступные дисциплины
-				disciplines.push(el.name)
+				disciplines.push(el.name);
 
 				// Читаем доступные курсы
-				coursesList.push(el.course)
-			})
+				coursesList.push(el.course);
+			});
 
 			// Только уникальные
-			disciplines = [...new Set(disciplines)]
-			coursesList = [...new Set(coursesList)]
+			disciplines = [...new Set(disciplines)];
+			coursesList = [...new Set(coursesList)];
 
 			// Установка состояний
-			setCStates(states)
-			setCourses(data)
-			setDisciplines(disciplines)
-			setCoursesList(coursesList)
-		}
+			setCStates(states);
+			setCourses(data);
+			setDisciplines(disciplines);
+			setCoursesList(coursesList);
+		};
 
-		dataFetch()
-	}, [])
+		dataFetch();
+	}, []);
 
 	/**
 	 * Переключение открытости строки
@@ -77,61 +77,61 @@ function CoursePage() {
 	 * @param id - идентификатор строки
 	 */
 	const toggler = (is_open, id) => {
-		let states = [...cStates]
-		let state = states.filter(c => {
-			return c.id === id
-		})
-		state[0].is_open = is_open
-		setCStates(states)
-	}
+		let states = [...cStates];
+		let state = states.filter((c) => {
+			return c.id === id;
+		});
+		state[0].is_open = is_open;
+		setCStates(states);
+	};
 
 	/**
 	 * Переключение открытости всех строк
 	 */
 	const toggleCollapse = () => {
-		setGlobalCollapse(!globalCollapse)
+		setGlobalCollapse(!globalCollapse);
 
-		let states = [...cStates]
-		states.forEach(c => {
-			c.is_open = globalCollapse
-		})
+		let states = [...cStates];
+		states.forEach((c) => {
+			c.is_open = globalCollapse;
+		});
 
-		setCStates(states)
-	}
+		setCStates(states);
+	};
 
 	/**
 	 * Применение фильтров
 	 * @param value - Фильтры, переданные хуком
 	 */
-	const handleApply = value => {
-		console.table(value)
-	}
+	const handleApply = (value) => {
+		console.table(value);
+	};
 
 	// Переход на семестр, содержащий ошибки
-	const handleMenuClick = e => {
+	const handleMenuClick = (e) => {
 		let semester = e.currentTarget.textContent;
-		store.dispatch({ type: "write", payload: semester })
-		navigate("/main/statements")
-	}
+		store.dispatch({ type: "write", payload: semester });
+		navigate("/main/statements");
+	};
 
 	// Заглушка - рыбные ошибки
-	let message = "У вас есть незакрытые ведомости, пожалуйста, закройте их!"
+	let message = "У вас есть незакрытые ведомости, пожалуйста, закройте их!";
 	let errors = [
 		"2 семестр 2017/2018 г.",
 		"1 семестр 2018/2019 г.",
 		"2 семестр 2018/2019 г.",
-		"1 семестр 2022/2023 г."
-	]
+		"1 семестр 2022/2023 г.",
+	];
 
 	// Закрытие меню ошибок
 	const handleClose = () => {
-		setAnchorEl(null)
-	}
+		setAnchorEl(null);
+	};
 
 	// Обработчик клика меню ошибок
-	const handleClick = e => {
-		setAnchorEl(e.currentTarget)
-	}
+	const handleClick = (e) => {
+		setAnchorEl(e.currentTarget);
+	};
 
 	// Контрол со списком ошибок
 	const errorControl = (
@@ -146,8 +146,8 @@ function CoursePage() {
 					backgroundColor: "#ffffffcc",
 					color: "#FF1744",
 					"&:hover": {
-						backgroundColor: "#ffffffff"
-					}
+						backgroundColor: "#ffffffff",
+					},
 				}}
 				onClick={handleClick}
 			>
@@ -160,11 +160,11 @@ function CoursePage() {
 				onClose={handleClose}
 				anchorOrigin={{
 					vertical: "bottom",
-					horizontal: "right"
+					horizontal: "right",
 				}}
 				transformOrigin={{
 					horizontal: "right",
-					vertical: "top"
+					vertical: "top",
 				}}
 			>
 				{errors.map((value, index) => {
@@ -172,21 +172,18 @@ function CoursePage() {
 						<MenuItem key={index} onClick={handleMenuClick}>
 							{value}
 						</MenuItem>
-					)
+					);
 				})}
 			</Menu>
 		</div>
-	)
+	);
 
 	// Рендер компонента
 	return (
 		<main id="courses">
 			<section>
 				<div className="container">
-					<ErrorBanner
-						message={message}
-						control={errorControl}
-					/>
+					<ErrorBanner message={message} control={errorControl} />
 					<PageHeader header="Список курсов" />
 					<Card>
 						<CardContent>
@@ -204,7 +201,17 @@ function CoursePage() {
 										sx={{ fontFamily: "Wix Madefor Text" }}
 										onClick={toggleCollapse}
 									>
-										{globalCollapse ? <span>Развернуть </span> : <span>Свернуть </span>} <span style={{marginLeft: '3px'}} className="hide-modal">все дисциплины</span>
+										{globalCollapse ? (
+											<span>Развернуть </span>
+										) : (
+											<span>Свернуть </span>
+										)}{" "}
+										<span
+											style={{ marginLeft: "3px" }}
+											className="hide-modal"
+										>
+											все дисциплины
+										</span>
 									</Button>
 								</div>
 							</div>
@@ -212,22 +219,37 @@ function CoursePage() {
 								<Table
 									className="simple-table screen"
 									sx={{
-
 										borderSpacing: 0,
-										borderCollapse: "collapse"
+										borderCollapse: "collapse",
 									}}
 									aria-label="simple table"
 								>
 									<TableHead>
 										<TableRow>
-											<TableCell sx={{ width: "47%" }} colSpan={2}>
+											<TableCell
+												sx={{ width: "47%" }}
+												colSpan={2}
+											>
 												Дисциплины
 											</TableCell>
-											<TableCell sx={{ width: "12%" }}>Курс</TableCell>
-											<TableCell sx={{ width: "12%" }}>Лекции</TableCell>
-											<TableCell sx={{ width: "12%" }}>Семинары</TableCell>
-											<TableCell sx={{ width: "12%" }}>Лаб. занятия</TableCell>
-											<TableCell sx={{ width: "5%", textAlign: "right" }}>
+											<TableCell sx={{ width: "12%" }}>
+												Курс
+											</TableCell>
+											<TableCell sx={{ width: "12%" }}>
+												Лекции
+											</TableCell>
+											<TableCell sx={{ width: "12%" }}>
+												Семинары
+											</TableCell>
+											<TableCell sx={{ width: "12%" }}>
+												Лаб. занятия
+											</TableCell>
+											<TableCell
+												sx={{
+													width: "5%",
+													textAlign: "right",
+												}}
+											>
 												Действия
 											</TableCell>
 										</TableRow>
@@ -238,11 +260,13 @@ function CoursePage() {
 												<CollapsibleRow
 													row={row}
 													key={index}
-													isOpen={cStates[index].is_open}
+													isOpen={
+														cStates[index].is_open
+													}
 													toggler={toggler}
 													index={index}
 												/>
-											)
+											);
 										})}
 									</TableBody>
 								</Table>
@@ -259,11 +283,24 @@ function CoursePage() {
 									<TableBody>
 										{courses.map((row, index) => (
 											<TableRow key={index}>
-												<TableCell>{ row.name }</TableCell>
-												<TableCell>{ row.course }</TableCell>
-												<TableCell>{ row.lections?.current || 0 } / { row.lections?.total || 0 }</TableCell>
-												<TableCell>{ row.seminars?.current || 0 } / { row.seminars?.total || 0 }</TableCell>
-												<TableCell>{ row.labs?.current } / { row.labs.total }</TableCell>
+												<TableCell>
+													{row.name}
+												</TableCell>
+												<TableCell>
+													{row.course}
+												</TableCell>
+												<TableCell>
+													{row.lections?.current || 0}{" "}
+													/ {row.lections?.total || 0}
+												</TableCell>
+												<TableCell>
+													{row.seminars?.current || 0}{" "}
+													/ {row.seminars?.total || 0}
+												</TableCell>
+												<TableCell>
+													{row.labs?.current} /{" "}
+													{row.labs.total}
+												</TableCell>
 											</TableRow>
 										))}
 									</TableBody>
@@ -274,7 +311,7 @@ function CoursePage() {
 				</div>
 			</section>
 		</main>
-	)
+	);
 }
 
-export default CoursePage
+export default CoursePage;

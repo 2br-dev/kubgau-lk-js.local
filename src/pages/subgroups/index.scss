@@ -1,74 +1,69 @@
-main#subgroups{
+main#subgroups {
+	& .banner {
+		margin-bottom: 20px;
+	}
 
-    & .banner{
-        margin-bottom: 20px;
-    }
+	& .subgroup-header {
+		margin-bottom: 20px;
+	}
 
-    & .subgroup-header{
-        margin-bottom: 20px;
-    }
+	& .non-attach-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
 
-    & .non-attach-wrapper{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+	& .card-actions-wrapper {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		position: sticky;
+		bottom: 0;
+		z-index: 2;
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 46px -16px rgba(12, 21, 97, 0.051);
+		box-sizing: border-box;
 
-    & .card-actions-wrapper{
+		& .right-side {
+			& button:last-of-type {
+				margin-left: 10px;
+			}
+		}
 
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        position: sticky;
-        bottom: 0;
-        z-index: 2;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 46px -16px rgba(12, 21, 97, 0.051);
-        box-sizing: border-box;
+		&.mobile {
+			justify-content: center;
 
-        & .right-side{
+			@media (min-width: 400px) {
+				display: none;
+			}
+		}
 
-            & button:last-of-type{
-                margin-left: 10px;
-            }
-        }
+		&.desktop {
+			@media (max-width: 399px) {
+				display: none;
+			}
+		}
+	}
 
-        &.mobile{
-            justify-content: center;
+	& .filters {
+		&.mobile {
+			display: none;
+		}
 
-            @media(min-width: 400px){
-                display: none;
-            }
-        }
+		&.desktop {
+			display: flex;
+		}
 
-        &.desktop{
+		@media (max-width: 400px) {
+			&.desktop {
+				display: none;
+			}
 
-            @media(max-width: 399px){
-                display: none;
-            }
-        }
-    }
-
-    & .filters{
-
-        &.mobile{
-            display: none;
-        }
-
-        &.desktop{
-            display: flex;
-        }
-
-        @media(max-width: 400px){
-            &.desktop{
-                display: none;
-            }
-
-            &.mobile{
-                display: flex;
-            }
-        }
-    }
+			&.mobile {
+				display: flex;
+			}
+		}
+	}
 }

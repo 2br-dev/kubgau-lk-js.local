@@ -2,7 +2,6 @@ import Navbar from "../components/navbar";
 import { Outlet } from "react-router-dom";
 
 const MainScreen = () => {
-
 	return (
 		<main>
 			{/* Навигационное меню */}
@@ -11,6 +10,6 @@ const MainScreen = () => {
 			<Outlet />
 		</main>
 	);
-}
+};
 
 export default MainScreen;

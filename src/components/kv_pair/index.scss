@@ -1,0 +1,27 @@
+.kv-pair {
+	display: table-row;
+	padding-bottom: 15px;
+
+	& .key,
+	& .value {
+		display: table-cell;
+		padding-bottom: 10px;
+	}
+
+	& .key {
+		font-size: 14px;
+		padding-right: 20px;
+		color: #939393;
+	}
+
+	@media (max-width: 310px) {
+		display: block;
+		margin-bottom: 10px;
+
+		& .key,
+		& .value {
+			display: block;
+			padding-bottom: 0;
+		}
+	}
+}

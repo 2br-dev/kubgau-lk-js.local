@@ -1,6 +1,6 @@
-import { Autocomplete, Button, TextField } from "@mui/material"
-import { useState } from "react"
-import "./styles.scss"
+import { Autocomplete, Button, TextField } from "@mui/material";
+import { useState } from "react";
+import "./styles.scss";
 
 /**
  * Форма фильтров страницы курсов
@@ -12,9 +12,9 @@ import "./styles.scss"
  */
 function FilterCourses(props) {
 	// Инициализация состояний
-	const [selectedDiscipline, setSelectedDiscipline] = useState("")
-	const [selectedCourse, setSelectedCourse] = useState("")
-	const [searchText, setSearchText] = useState("")
+	const [selectedDiscipline, setSelectedDiscipline] = useState("");
+	const [selectedCourse, setSelectedCourse] = useState("");
+	const [searchText, setSearchText] = useState("");
 
 	/**
 	 * Изменение выбранной дисциплины
@@ -23,17 +23,17 @@ function FilterCourses(props) {
 	 */
 	const handleDisciplineChange = (event, value) => {
 		if (value !== null) {
-			setSelectedDiscipline(value)
+			setSelectedDiscipline(value);
 		} else {
-			setSelectedDiscipline("")
+			setSelectedDiscipline("");
 		}
 		let filters = {
 			discipline: value,
 			course: selectedCourse,
-			search: searchText
-		}
-		props.handleApply(filters)
-	}
+			search: searchText,
+		};
+		props.handleApply(filters);
+	};
 
 	/**
 	 * Изменение выбранного курса
@@ -42,53 +42,53 @@ function FilterCourses(props) {
 	 */
 	const handleCourseChange = (event, value) => {
 		if (value !== null) {
-			setSelectedCourse(value)
+			setSelectedCourse(value);
 		} else {
-			setSelectedCourse("")
+			setSelectedCourse("");
 		}
 		let filters = {
 			discipline: selectedDiscipline,
 			course: value,
-			search: searchText
-		}
-		props.handleApply(filters)
-	}
+			search: searchText,
+		};
+		props.handleApply(filters);
+	};
 
 	/**
 	 * Изменение текста строки поиска
 	 */
-	const handleSearchTextChange = event => {
-		let textbox = event.target
-		let value = textbox.value
+	const handleSearchTextChange = (event) => {
+		let textbox = event.target;
+		let value = textbox.value;
 
-		setSearchText(value)
+		setSearchText(value);
 		let filters = {
 			discipline: selectedDiscipline,
 			course: selectedCourse,
-			search: value
-		}
+			search: value,
+		};
 
-		props.handleApply(filters)
-	}
+		props.handleApply(filters);
+	};
 
 	const toggleCollapse = () => {
 		props.toggleCollapse?.();
-	}
+	};
 
 	/**
 	 * Сброс формы
 	 */
 	const resetForm = () => {
-		setSelectedDiscipline("")
-		setSelectedCourse("")
-		setSearchText("")
+		setSelectedDiscipline("");
+		setSelectedCourse("");
+		setSearchText("");
 		let filters = {
 			discipline: "",
 			course: "",
-			search: ""
-		}
-		props.handleApply(filters)
-	}
+			search: "",
+		};
+		props.handleApply(filters);
+	};
 
 	// Рендер компонента
 	return (
@@ -104,7 +104,7 @@ function FilterCourses(props) {
 					value={selectedDiscipline}
 					onChange={handleDisciplineChange}
 					freeSolo={true}
-					renderInput={params => (
+					renderInput={(params) => (
 						<TextField
 							{...params}
 							variant="standard"
@@ -122,7 +122,7 @@ function FilterCourses(props) {
 					value={selectedCourse}
 					freeSolo={true}
 					onChange={handleCourseChange}
-					renderInput={params => (
+					renderInput={(params) => (
 						<TextField
 							{...params}
 							placeholder="Все курсы"
@@ -151,11 +151,18 @@ function FilterCourses(props) {
 					sx={{ fontFamily: "Wix Madefor Text" }}
 					onClick={toggleCollapse}
 				>
-					{props.globalCollapse ? <span>Развернуть </span> : <span>Свернуть</span> }<span style={{marginLeft: '3px'}} className="hide-modal">все дисциплины</span>
+					{props.globalCollapse ? (
+						<span>Развернуть </span>
+					) : (
+						<span>Свернуть</span>
+					)}
+					<span style={{ marginLeft: "3px" }} className="hide-modal">
+						все дисциплины
+					</span>
 				</Button>
 			</div>
 		</div>
-	)
+	);
 }
 
-export default FilterCourses
+export default FilterCourses;

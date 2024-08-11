@@ -1,76 +1,71 @@
-main#groups{
-
-	table{
-	
-		& .comment{
+main#groups {
+	table {
+		& .comment {
 			font-size: 14px;
 			color: #777;
 		}
-	
-		& .values{
+
+		& .values {
 			display: flex;
 		}
-	
-		& tr{
+
+		& tr {
 			cursor: pointer;
 		}
 	}
-	
-	.save-wrapper{
+
+	.save-wrapper {
 		position: sticky;
 		bottom: 0;
-		background-color: rgba(#FAFCFF, .7);
+		background-color: rgba(#fafcff, 0.7);
 		backdrop-filter: blur(10px);
 		z-index: 2;
 		padding: 20px;
 		text-align: center;
-	
-		& button:not(:last-of-type){
+
+		& button:not(:last-of-type) {
 			margin-right: clamp(2px, 2vw, 20px);
 		}
 	}
-	
-	.filters-wrapper{
-	
+
+	.filters-wrapper {
 		margin-top: 20px;
-	
-		& > *{
+
+		& > * {
 			max-width: 100%;
 		}
-		
-		& .filters-card-content{
+
+		& .filters-card-content {
 			padding-bottom: 1em !important;
-	
-			& input{
+
+			& input {
 				line-height: 2em !important;
 				height: 2em !important;
 				display: block;
 			}
 		}
-	
-		& .pair-setup{
-	
+
+		& .pair-setup {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
-	
-			@media(min-width: 900px){
+
+			@media (min-width: 900px) {
 				margin-left: 40px;
 			}
-		
-			& .icon-block{
+
+			& .icon-block {
 				margin-right: 20px;
 			}
-		
-			& .buttons-wrapper{
-		
+
+			& .buttons-wrapper {
 				flex-grow: 1;
-		
-				& [role="group"]{
+
+				& [role="group"] {
 					width: 100%;
 				}
-		
-				& button{
+
+				& button {
 					flex-grow: 1;
 				}
 			}

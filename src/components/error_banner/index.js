@@ -1,15 +1,14 @@
-import "./styles.scss"
+import "./styles.scss";
 
 function ErrorBanner(props) {
-	
 	return (
 		<div className="banner error screen">
 			<div className="message">
 				<p>{props.message}</p>
 			</div>
-			{ props.control }
+			{props.control}
 		</div>
-	)
+	);
 }
 
-export default ErrorBanner
+export default ErrorBanner;

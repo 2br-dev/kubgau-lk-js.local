@@ -1,34 +1,30 @@
-main#groups{
-
-	.filters-wrapper{
-	
+main#groups {
+	.filters-wrapper {
 		margin-top: 20px;
-		
-		& .filters-card-content{
+
+		& .filters-card-content {
 			padding-bottom: 1em !important;
-	
-			& input{
+
+			& input {
 				line-height: 2em !important;
 				height: 2em !important;
 				display: block;
 			}
 		}
-	
-		& .pair-setup{
-	
+
+		& .pair-setup {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
-		
-			& .buttons-wrapper{
-		
+
+			& .buttons-wrapper {
 				flex-grow: 1;
-		
-				& [role="group"]{
+
+				& [role="group"] {
 					width: 100%;
 				}
-		
-				& button{
+
+				& button {
 					flex-grow: 1;
 				}
 			}

@@ -1,25 +1,25 @@
-import { ChevronLeftRounded } from "@mui/icons-material"
-import { useNavigate } from "react-router-dom"
-import InfoPanel from "../../components/info_panel"
-import { InfoClass } from "../../components/info_panel/interfaces"
-import { useState, useEffect } from "react"
-import { Box, Tabs, Tab } from "@mui/material"
-import StatementEntry from "./components/statement-entry"
-import React from "react"
+import { ChevronLeftRounded } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+import InfoPanel from "../../components/info_panel";
+import { InfoClass } from "../../components/info_panel/interfaces";
+import { useState, useEffect } from "react";
+import { Box, Tabs, Tab } from "@mui/material";
+import StatementEntry from "./components/statement-entry";
+import React from "react";
 
 /**
  * Страница ведомостей
  */
 function StatementsPage() {
-	const [panelOpened, setPanelOpened] = useState(false)
-	const [tabValue, setTabValue] = useState(0)
-	const [data, setData] = useState(null)
-	const navigate = useNavigate()
+	const [panelOpened, setPanelOpened] = useState(false);
+	const [tabValue, setTabValue] = useState(0);
+	const [data, setData] = useState(null);
+	const navigate = useNavigate();
 
 	// Отработка кнопки "Назад"
 	const back = () => {
-		navigate(-1)
-	}
+		navigate(-1);
+	};
 
 	/**
 	 * Установка состояния панели
@@ -29,34 +29,34 @@ function StatementsPage() {
 	const setter = (value, id) => {
 		let state = {
 			panelId: id,
-			opened: value
-		}
+			opened: value,
+		};
 
-		let stateString = JSON.stringify(state)
-		localStorage.setItem("panelState", stateString)
-		setPanelOpened(value)
-	}
+		let stateString = JSON.stringify(state);
+		localStorage.setItem("panelState", stateString);
+		setPanelOpened(value);
+	};
 
 	// Заглушка – перечень локальных JSON
 	const sources = [
 		"/data/statements_tests.json",
 		"/data/statements_courses.json",
-		"/data/statements_exams.json"
-	]
+		"/data/statements_exams.json",
+	];
 
 	/**
 	 * Получение данных
 	 * @param {number} tabIndex Индекс выбранной вкладки
 	 */
-	const dataFetch = tabIndex => {
-		let sourceIndex = tabIndex === undefined ? tabValue : tabIndex
+	const dataFetch = (tabIndex) => {
+		let sourceIndex = tabIndex === undefined ? tabValue : tabIndex;
 
-		let source = sources[sourceIndex]
+		let source = sources[sourceIndex];
 
 		fetch(source)
-			.then(res => res.json())
-			.then(data => setData(data))
-	}
+			.then((res) => res.json())
+			.then((data) => setData(data));
+	};
 
 	/**
 	 * Монтирование компонента
@@ -66,27 +66,27 @@ function StatementsPage() {
 		 * Получение данных при загрузке компонента
 		 */
 		const dataFetch = () => {
-			let source = "/data/statements_tests.json"
+			let source = "/data/statements_tests.json";
 
 			fetch(source)
-				.then(res => res.json())
-				.then(data => setData(data))
-		}
+				.then((res) => res.json())
+				.then((data) => setData(data));
+		};
 
 		// Состояние информационной панели
-		let stateString = localStorage.getItem("panelState")
+		let stateString = localStorage.getItem("panelState");
 
 		// Чтение состояния информационной панели из localStorage
 		if (stateString) {
-			let state = JSON.parse(stateString)
-			setter(state.opened, state.panelId)
+			let state = JSON.parse(stateString);
+			setter(state.opened, state.panelId);
 		} else {
-			setter(true, "statement-page-info")
+			setter(true, "statement-page-info");
 		}
 
 		// Вызов функции получения данных
-		dataFetch()
-	}, [])
+		dataFetch();
+	}, []);
 
 	/**
 	 * Обработчик переключения вкладок
@@ -94,9 +94,9 @@ function StatementsPage() {
 	 * @param newValue Новый индекс вкладки
 	 */
 	const handleTabChange = (event, newValue) => {
-		setTabValue(newValue)
-		dataFetch(newValue)
-	}
+		setTabValue(newValue);
+		dataFetch(newValue);
+	};
 
 	// Рендер компонента
 	return (
@@ -129,7 +129,7 @@ function StatementsPage() {
 				</div>
 			</section>
 		</main>
-	)
+	);
 }
 
-export default StatementsPage
+export default StatementsPage;

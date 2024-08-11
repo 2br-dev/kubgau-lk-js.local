@@ -1,11 +1,10 @@
-table{
-
-	& .comment{
+table {
+	& .comment {
 		font-size: 14px;
 		color: #777;
 	}
 
-	& .values{
+	& .values {
 		display: flex;
 	}
 }

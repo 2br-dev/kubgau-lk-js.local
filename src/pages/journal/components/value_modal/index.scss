@@ -1,73 +1,53 @@
-#value-modal{
-
-	& .kv-pair{
-		display: table-row;
-	
-		& .key, & .value{
-			display: table-cell;
-			padding-bottom: 15px;
-		}
-	
-		& .key{
-			font-size: 14px;
-			padding-right: 20px;
-			color: #939393;
-		}
-	}
-	
-	& .value-wrapper{
-	
+#value-modal {
+	& .value-wrapper {
 		margin-bottom: 20px;
-	
-		& .value-type{
+
+		& .value-type {
 			margin-bottom: 20px;
 		}
-	
-		& .value{
+
+		& .value {
 			margin-bottom: 20px;
 		}
-	
-		& .value-actions{
-	
-			& span{
+
+		& .value-actions {
+			& span {
 				display: block;
 			}
-	
+
 			display: flex;
 			justify-content: space-between;
 		}
 	}
 
-	& .reasons{
-
-		&.hide{
+	& .reasons {
+		&.hide {
 			display: none;
 		}
 	}
 
-	& .reason-block{
+	& .reason-block {
 		margin-bottom: 20px;
 
-		& .file-wrapper{
+		& .file-wrapper {
 			display: flex;
 			justify-content: space-between;
 			min-height: 40px;
 
-			& .clear-file{
-
-				&.hide{
+			& .clear-file {
+				&.hide {
 					display: none;
 				}
 			}
 		}
 
-		& .file-label{
+		& .file-label {
 			width: 100%;
 			cursor: pointer;
 			display: flex;
 			align-items: center;
 
-			& svg{
+			& svg {
 				margin-right: 8px;
 			}
 		}

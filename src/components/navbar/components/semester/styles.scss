@@ -1,26 +1,24 @@
-.semester{
-
+.semester {
 	display: flex;
 	align-items: center;
 	position: relative;
 	flex-shrink: 0;
 
-	.semester-icon{
-
-		@media(max-width: 600px){
+	.semester-icon {
+		@media (max-width: 600px) {
 			display: none;
 		}
 	}
 }
 
-.semesters{
+.semesters {
 	width: 250px;
 
-	@media(max-width: 600px){
-		width: 210px;
+	@media (max-width: 600px) {
+		width: 220px;
 	}
 }
 
-#placement-popper{
+#placement-popper {
 	z-index: 3;
 }

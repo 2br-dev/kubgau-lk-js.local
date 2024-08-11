@@ -1,27 +1,25 @@
-.cab-header{
+.cab-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.courses-filters{
+.courses-filters {
 	display: flex;
 	align-items: baseline;
 	justify-content: space-between;
 
-	.toggler-wrapper{
+	.toggler-wrapper {
 		padding: 8px;
 
-		@media(max-width: 1200px){
+		@media (max-width: 1200px) {
 			display: none;
 		}
 	}
 }
 
-
-.hide-modal{
-
-	@media(max-width: 1200px){
+.hide-modal {
+	@media (max-width: 1200px) {
 		display: none;
 	}
 }

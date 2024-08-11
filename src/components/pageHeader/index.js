@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ChevronLeftRounded } from "@mui/icons-material";
-import './index.scss';
+import "./index.scss";
 
 /**
  * @param {string} header - Заголовок страницы
@@ -8,27 +8,26 @@ import './index.scss';
  * @param {React.Element} prefix - Контрол в заголовке
  * @param {React.Element} suffix - Контрол справа от заголовка
  * @param {boolean} backLink - Кнопка "назад"
- * @returns 
+ * @returns
  */
-function PageHeader(props){
-
+function PageHeader(props) {
 	const navigate = useNavigate();
 
 	const back = () => {
 		navigate(-1);
-	}
+	};
 
 	const headerControl = () => {
-		if(typeof props.header === "string"){
+		if (typeof props.header === "string") {
 			return <h1>{props.header}</h1>;
-		}else{
+		} else {
 			return props.header;
 		}
-	}
+	};
 
 	const backLink = () => {
-		if(props.backLink){
-			return(
+		if (props.backLink) {
+			return (
 				<div className="back-link screen">
 					<a href="#!" onClick={back} className="icon-block">
 						<ChevronLeftRounded />
@@ -36,23 +35,23 @@ function PageHeader(props){
 					</a>
 					<span>{props.subheader}</span>
 				</div>
-			)
+			);
 		}
 
 		return <></>;
-	}
-	
+	};
+
 	return (
 		<div className="cab-header">
 			<div className="header-wrapper">
-				{ backLink() }
+				{backLink()}
 				<div className="header-control">
-					{ headerControl() }
-					{ props.suffix }
+					{headerControl()}
+					{props.suffix}
 				</div>
 			</div>
 		</div>
-	)
+	);
 }
 
 export default PageHeader;

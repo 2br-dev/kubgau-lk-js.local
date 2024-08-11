@@ -1,12 +1,12 @@
-@mixin leftStickyColumn($left, $color){
+@mixin leftStickyColumn($left, $color) {
 	position: relative;
 	position: sticky;
 	left: $left;
 	z-index: 2;
 	background-color: #fff;
-	
-	&:after{
-		content: '';
+
+	&:after {
+		content: "";
 		display: block;
 		width: 1px;
 		background-color: $color;
@@ -17,20 +17,18 @@
 		z-index: 3;
 	}
 }
-	
-@mixin rightStickyColumn($right, $color){
 
-	@media(min-width: 1200px){
-
+@mixin rightStickyColumn($right, $color) {
+	@media (min-width: 1200px) {
 		position: relative;
 		position: sticky;
 		right: $right;
 		z-index: 2;
 		background-color: #fff;
 		text-align: center;
-		
-		&:after{
-			content: '';
+
+		&:after {
+			content: "";
 			display: block;
 			width: 1px;
 			background-color: $color;
@@ -42,233 +40,224 @@
 		}
 	}
 }
-	
-body{
 
-	main#journal{
-
-		.fogged{
+body {
+	main#journal {
+		.fogged {
 			color: #aaa;
 		}
-	
-		.back-link{
+
+		.back-link {
 			display: flex;
 			align-items: center;
-	
-			& span{
+
+			& span {
 				margin-left: 30px;
 				color: #939393;
 			}
 		}
-		
-		colgroup{
+
+		colgroup {
 			border-right: 1px solid #ccc;
 		}
-		
-		.card-header{
+
+		.card-header {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: baseline;
 			margin-bottom: 1vmax;
-	
-			& h2{
+
+			& h2 {
 				margin-top: 0;
 			}
 		}
-		 
-		& .table-wrapper{
+
+		& .table-wrapper {
 			overflow-x: auto;
 			overflow-y: hidden;
-			
-			&::-webkit-scrollbar{
+
+			&::-webkit-scrollbar {
 				height: 8px;
 				width: 8px;
 				background-color: #efefef;
 				border-radius: 8px;
 			}
-			
-			&::-webkit-scrollbar-thumb{
+
+			&::-webkit-scrollbar-thumb {
 				background-color: #aaa;
 				border-radius: 8px;
 			}
 		}
-		
-		& .complex-table{
+
+		& .complex-table {
 			width: 100%;
 			border-spacing: 0;
 			border-collapse: collapse;
-			
-			& th, & td{
+
+			& th,
+			& td {
 				padding: 12px;
 				text-align: center;
 				font-weight: normal;
-	
-				&.absent{
-					background-color: #FFBBCF;
-	
-					&.highlight{
-						background-color: #FFA2BE;
+
+				&.absent {
+					background-color: #ffbbcf;
+
+					&.highlight {
+						background-color: #ffa2be;
 					}
-					
-					&.extra-highlight{
+
+					&.extra-highlight {
 						background-color: #ff8cae;
 					}
 				}
-	
-				&.soft-absent{
-					background-color: #FFF9C4;
-	
-					&.highlight{
-						background-color: #FFF387;
+
+				&.soft-absent {
+					background-color: #fff9c4;
+
+					&.highlight {
+						background-color: #fff387;
 					}
-					
-					&.extra-highlight{
+
+					&.extra-highlight {
 						background-color: #ffee56;
 					}
 				}
 			}
-	
-			& th:not(.summary){
+
+			& th:not(.summary) {
 				font-size: 16px;
 			}
-	
-			& td{
-	
-				& span{
+
+			& td {
+				& span {
 					font-size: clamp(16px, 3vw, 18px);
 				}
 			}
-			
-			& thead{
-			
+
+			& thead {
 				position: relative;
 				z-index: 3;
 				background-color: #fff;
-				
-				& tr{
-					& th{
-					text-align: center;
-					background-color: #fff;
-				}
-					
-					&:last-of-type{
+
+				& tr {
+					& th {
+						text-align: center;
+						background-color: #fff;
+					}
+
+					&:last-of-type {
 						border-bottom: 2px solid black;
 					}
 				}
-			
-				& > tr:first-of-type{
-					& > th{
-					
-						&:first-of-type{
+
+				& > tr:first-of-type {
+					& > th {
+						&:first-of-type {
 							position: sticky;
 							left: 0;
 							z-index: 2;
 							background-color: #fff;
-							
-							& + th{ 
+
+							& + th {
 								@include leftStickyColumn(0, black);
 								text-align: left;
 							}
 						}
-						
-						&:nth-last-child(-2n + 2){
+
+						&:nth-last-child(-2n + 2) {
 							@include rightStickyColumn(63px, black);
 						}
-						
-						&:nth-last-child(-2n + 1){
-							@include rightStickyColumn(0, transparent)				
+
+						&:nth-last-child(-2n + 1) {
+							@include rightStickyColumn(0, transparent);
 						}
 					}
 				}
 			}
-			
-			& tbody{
-				& tr{
-					
+
+			& tbody {
+				& tr {
 					border-top: 1px solid #ccc;
-					
-					& th{
+
+					& th {
 						text-align: left;
 						background-color: #fff;
 						white-space: nowrap;
-	
-						&:nth-child(2){
-							@media(max-width: 800px){
+
+						&:nth-child(2) {
+							@media (max-width: 800px) {
 								max-width: 40vw;
 								white-space: normal;
 							}
 						}
-						
-						&:nth-last-child(-2n + 1){
+
+						&:nth-last-child(-2n + 1) {
 							@include rightStickyColumn(0, #ccc);
 						}
-						
-						&:nth-last-child(-2n + 2){
+
+						&:nth-last-child(-2n + 2) {
 							@include rightStickyColumn(63px, black);
 						}
-						
-						&:first-of-type{
+
+						&:first-of-type {
 							position: sticky;
 							left: 0;
 							background-color: #fff;
 							z-index: 2;
-							
-							& + th{
+
+							& + th {
 								@include leftStickyColumn(0, black);
 							}
 						}
 					}
-					
-					& td{
+
+					& td {
 						white-space: nowrap;
 					}
 				}
-			
-				& td{
+
+				& td {
 					position: relative;
-					transition: background-color .2s;
-						
-					&:hover:before{
+					transition: background-color 0.2s;
+
+					&:hover:before {
 						opacity: 1;
 					}
-					
-					&.highlight{
-						background-color: rgba(black, .05);
+
+					&.highlight {
+						background-color: rgba(black, 0.05);
 					}
-					
-					&.extra-highlight{
-						background-color: rgba(black, .1);
+
+					&.extra-highlight {
+						background-color: rgba(black, 0.1);
 					}
 				}
 			}
-			
-			& tfoot{
-			
+
+			& tfoot {
 				position: relative;
 				z-index: 3;
 				background-color: #fff;
-				
-				& tr{
-					
+
+				& tr {
 					border-top: 2px solid black;
-					
-					& th{
-			
+
+					& th {
 						background-color: #fff;
-						
-						&:first-of-type{
-	
-							& + th{
+
+						&:first-of-type {
+							& + th {
 								@include leftStickyColumn(0, black);
 							}
 						}
-						
-						&:last-of-type{
+
+						&:last-of-type {
 							@include rightStickyColumn(0px, black);
 						}
 					}
-					& td{
+					& td {
 						text-align: center;
 						background-color: #fff;
 					}
@@ -276,5 +265,4 @@ body{
 			}
 		}
 	}
-
 }

@@ -1,59 +1,72 @@
 import { CloseRounded } from "@mui/icons-material";
-import { Button, Grid, IconButton, Select, TextField, MenuItem, FormControl, InputLabel } from "@mui/material";
+import {
+	Button,
+	Grid,
+	IconButton,
+	Select,
+	TextField,
+	MenuItem,
+	FormControl,
+	InputLabel,
+} from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 
-function DateModal(props){
-
-	const [ event, setEvent ] = useState({
+function DateModal(props) {
+	const [event, setEvent] = useState({
 		theme: "",
-		date: dayjs('1 dec 1980'),
-		pair: '1',
+		date: dayjs("1 dec 1980"),
+		pair: "1",
 		groupId: null,
-		dayId: null
-	})
+		dayId: null,
+	});
 
 	useEffect(() => {
-		if(props.event){
-			let newEvent = JSON.parse(JSON.stringify({
-				theme: props.event.theme,
-				date: null,
-				pair: props.event.pair,
-				dayId: props.event.dayId,
-				groupId: props.event.groupId
-			}));
+		if (props.event) {
+			let newEvent = JSON.parse(
+				JSON.stringify({
+					theme: props.event.theme,
+					date: null,
+					pair: props.event.pair,
+					dayId: props.event.dayId,
+					groupId: props.event.groupId,
+				})
+			);
 			newEvent.date = dayjs(new Date(props.event.date));
 			setEvent(newEvent);
 		}
-	}, [props.event])
+	}, [props.event]);
 
 	const closeModal = () => {
 		props.closeHandler();
-	}
+	};
 
 	const updatePair = (e, newVal) => {
-		setEvent(prevEvent => ({ ...prevEvent, pair: newVal.props.value }));
-	}
+		setEvent((prevEvent) => ({ ...prevEvent, pair: newVal.props.value }));
+	};
 
 	const updateTheme = (e) => {
-		setEvent(prevEvent => ({ ...prevEvent, theme: e.target.value }));
-	}
+		setEvent((prevEvent) => ({ ...prevEvent, theme: e.target.value }));
+	};
 
 	const updateDate = (e) => {
-		let newEvent = {...event};
+		let newEvent = { ...event };
 		newEvent.date = e;
 		setEvent(newEvent);
-	}
+	};
 
 	const save = () => {
 		props.saveHandler(event);
-	}
+	};
 
-	return(		
-		<div className={props.open ? "modal-wrapper open" : "modal-wrapper"} id="event">
+	return (
+		<div
+			className={props.open ? "modal-wrapper open" : "modal-wrapper"}
+			id="event"
+		>
 			<div className="modal">
 				<div className="modal-content">
 					<div className="modal-header">
@@ -64,29 +77,44 @@ function DateModal(props){
 					</div>
 					<Grid container columnSpacing={2} rowSpacing={3}>
 						<Grid item md={12}>
-							<TextField onChange={updateTheme} value={event.theme} sx={{width:"100%"}} variant="standard" label="Тема занятия" />
+							<TextField
+								onChange={updateTheme}
+								value={event.theme}
+								sx={{ width: "100%" }}
+								variant="standard"
+								label="Тема занятия"
+							/>
 						</Grid>
 						<Grid item md={8}>
-							<LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
+							<LocalizationProvider
+								dateAdapter={AdapterDayjs}
+								adapterLocale="ru"
+							>
 								<DatePicker
 									value={event.date}
 									format="D MMMM YYYY г."
 									variant="standard"
 									label="Дата занятия"
-									sx={{width: '100%'}}
+									sx={{ width: "100%" }}
 									onChange={updateDate}
 									slotProps={{
 										textField: {
-											variant: "standard"
-										}
+											variant: "standard",
+										},
 									}}
 								/>
 							</LocalizationProvider>
 						</Grid>
 						<Grid item md={4}>
-							<FormControl variant="standard" sx={{width: '100%'}}>
+							<FormControl
+								variant="standard"
+								sx={{ width: "100%" }}
+							>
 								<InputLabel>Пара</InputLabel>
-								<Select value={event.pair} onChange={updatePair}>
+								<Select
+									value={event.pair}
+									onChange={updatePair}
+								>
 									<MenuItem value="1">1 пара</MenuItem>
 									<MenuItem value="2">2 пара</MenuItem>
 									<MenuItem value="3">3 пара</MenuItem>
@@ -100,11 +128,13 @@ function DateModal(props){
 				</div>
 				<div className="modal-footer">
 					<span />
-					<Button variant="text" onClick={save}>Сохранить</Button>
+					<Button variant="text" onClick={save}>
+						Сохранить
+					</Button>
 				</div>
 			</div>
 		</div>
-	)
+	);
 }
 
 export default DateModal;

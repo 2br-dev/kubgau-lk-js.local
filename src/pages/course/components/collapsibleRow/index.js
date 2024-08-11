@@ -1,19 +1,19 @@
-import { useState } from "react"
+import { useState } from "react";
 import {
 	TableRow,
 	TableCell,
 	Menu,
 	MenuItem,
 	IconButton,
-	Collapse
-} from "@mui/material"
-import { EView } from "../detailsBlock/interfaces"
-import { ExpandMore, MoreVertRounded } from "@mui/icons-material"
-import progressControl from "../../../../components/progressControl"
-import DetailsBlock from "../detailsBlock"
-import React from "react"
-import { Grid } from "@mui/material"
-import "./styles.scss"
+	Collapse,
+} from "@mui/material";
+import { EView } from "../detailsBlock/interfaces";
+import { ExpandMore, MoreVertRounded } from "@mui/icons-material";
+import progressControl from "../../../../components/progressControl";
+import DetailsBlock from "../detailsBlock";
+import React from "react";
+import { Grid } from "@mui/material";
+import "./styles.scss";
 import { Link } from "react-router-dom";
 
 /**
@@ -24,79 +24,93 @@ import { Link } from "react-router-dom";
  * @returns React.Node
  */
 function CollapsibleRow(props) {
-	
-	const { row } = props
-	const [anchorEl, setAnchorEl] = useState(null)
-	const menuOpen = Boolean(anchorEl)
+	const { row } = props;
+	const [anchorEl, setAnchorEl] = useState(null);
+	const menuOpen = Boolean(anchorEl);
 
 	// Отображение меню курса
-	const handleMenuOpen = e => {
-		setAnchorEl(e.currentTarget)
-	}
+	const handleMenuOpen = (e) => {
+		setAnchorEl(e.currentTarget);
+	};
 
 	// Скрытие меню курса
 	const handleMenuClose = () => {
-		setAnchorEl(null)
-	}
+		setAnchorEl(null);
+	};
 
 	// Переключение видимости строки
-	const toggleRow = e => {
-		let path = Array.from(e.nativeEvent.composedPath())
-		let links = path.filter(el => {
-			let element = el
+	const toggleRow = (e) => {
+		let path = Array.from(e.nativeEvent.composedPath());
+		let links = path.filter((el) => {
+			let element = el;
 			return (
 				element.tagName === "A" ||
 				element.tagName === "BUTTON" ||
 				element.id === "more-menu"
-			)
-		})
+			);
+		});
 		if (links.length === 0) {
 			// Callback
-			props.toggler(!props.isOpen, row.id)
+			props.toggler(!props.isOpen, row.id);
 		}
-	}
+	};
 
 	let lectionControl = progressControl(
 		row.lections?.current,
 		row.lections?.total
-	) // Лекции в дочерней таблице
+	); // Лекции в дочерней таблице
 	let seminarControl = progressControl(
 		row.seminars?.current,
 		row.seminars?.total
-	) // Семинары в дочерней таблице
-	let labControl = progressControl(row.labs?.current, row.labs?.total) //  Лабораторные работы в дочерней таблице
+	); // Семинары в дочерней таблице
+	let labControl = progressControl(row.labs?.current, row.labs?.total); //  Лабораторные работы в дочерней таблице
 
 	// Положение стрелочки
-	let transform = props.isOpen ? "rotate(180deg)" : "rotate(0deg)"
+	let transform = props.isOpen ? "rotate(180deg)" : "rotate(0deg)";
 
 	return (
 		<>
 			<TableRow hover onClick={toggleRow} sx={{ cursor: "pointer" }}>
-				<TableCell sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}>
+				<TableCell
+					sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}
+				>
 					<ExpandMore
-						sx={{ transition: "transform .4s", transform: transform }}
+						sx={{
+							transition: "transform .4s",
+							transform: transform,
+						}}
 					/>
 				</TableCell>
-				<TableCell sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}>
+				<TableCell
+					sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}
+				>
 					{row.name}
 				</TableCell>
-				<TableCell sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}>
+				<TableCell
+					sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}
+				>
 					{row.course}
 				</TableCell>
-				<TableCell sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}>
+				<TableCell
+					sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}
+				>
 					{lectionControl}
 				</TableCell>
-				<TableCell sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}>
+				<TableCell
+					sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}
+				>
 					{seminarControl}
 				</TableCell>
-				<TableCell sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}>
+				<TableCell
+					sx={{ borderBottom: 0, fontSize: "clamp(16px, 3vw, 18px)" }}
+				>
 					{labControl}
 				</TableCell>
 				<TableCell
 					sx={{
 						borderBottom: 0,
 						fontSize: "clamp(16px, 3vw, 18px)",
-						textAlign: "right"
+						textAlign: "right",
 					}}
 				>
 					<IconButton
@@ -115,16 +129,20 @@ function CollapsibleRow(props) {
 						onClose={handleMenuClose}
 						anchorOrigin={{
 							vertical: "bottom",
-							horizontal: "right"
+							horizontal: "right",
 						}}
 						transformOrigin={{
 							horizontal: "right",
-							vertical: "top"
+							vertical: "top",
 						}}
 					>
 						<MenuItem>Список тем</MenuItem>
-						<MenuItem component={Link} to="/main/journal">Журнал</MenuItem>
-						<MenuItem component={Link} to='/main/subgroups'>Подгруппы</MenuItem>
+						<MenuItem component={Link} to="/main/journal">
+							Журнал
+						</MenuItem>
+						<MenuItem component={Link} to="/main/subgroups">
+							Подгруппы
+						</MenuItem>
 						<MenuItem>Пропуски студентов</MenuItem>
 					</Menu>
 				</TableCell>
@@ -155,7 +173,7 @@ function CollapsibleRow(props) {
 				</TableCell>
 			</TableRow>
 		</>
-	)
+	);
 }
 
-export default CollapsibleRow
+export default CollapsibleRow;

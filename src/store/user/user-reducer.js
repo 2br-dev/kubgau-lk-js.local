@@ -1,16 +1,16 @@
 const initialState = {
-	fullname: ""
-}
+	fullname: "",
+};
 
 const userReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case "LOGIN":
-			return { ...state, action }
-	 	case "LOGOUT":
-			return { ...state, action }
+			return { ...state, action };
+		case "LOGOUT":
+			return { ...state, action };
 		default:
-			return state
+			return state;
 	}
-}
+};
 
-export default userReducer
+export default userReducer;

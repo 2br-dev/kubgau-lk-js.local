@@ -1,7 +1,7 @@
-import { EView } from "./interfaces"
-import CardBlock from "../cardBlock"
-import TableBlock from "../tableBlock"
-import { Grid } from "@mui/material"
+import { EView } from "./interfaces";
+import CardBlock from "../cardBlock";
+import TableBlock from "../tableBlock";
+import { Grid } from "@mui/material";
 
 /**
  * Блок детализации
@@ -9,27 +9,30 @@ import { Grid } from "@mui/material"
  * @returns React.Node
  */
 function DetailsBlock(props) {
-  let component = null
+	let component = null;
 
-  if (props.data) {
-    switch (props.view) {
-      case EView.TABLE:
-        component = <TableBlock data={props.data} title={props.title} />
-        break
-      case EView.CARD:
-        component = <CardBlock data={props.data} title={props.title} />
-        break
-      default: component = <></>
-    }
-  } else {
-    return <></>
-  }
+	if (props.data) {
+		switch (props.view) {
+			case EView.TABLE:
+				component = (
+					<TableBlock data={props.data} title={props.title} />
+				);
+				break;
+			case EView.CARD:
+				component = <CardBlock data={props.data} title={props.title} />;
+				break;
+			default:
+				component = <></>;
+		}
+	} else {
+		return <></>;
+	}
 
-  return (
-    <Grid item xl={4} lg={4}>
-      {component}
-    </Grid>
-  )
+	return (
+		<Grid item xl={4} lg={4}>
+			{component}
+		</Grid>
+	);
 }
 
-export default DetailsBlock
+export default DetailsBlock;

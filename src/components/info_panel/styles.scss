@@ -1,83 +1,78 @@
-h1{
-
+h1 {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 
-	& .subtitle{
+	& .subtitle {
 		width: 100%;
 		display: block;
 		font-size: clamp(16px, 3vw, 18px);
 		line-height: 1.4em;
 	}
 
-	& svg{
+	& svg {
 		margin-right: 10px;
 		width: 36px !important;
 		height: 36px !important;
 		cursor: pointer;
 	}
 
-	&.info svg{
-		fill: #359DFD;
+	&.info svg {
+		fill: #359dfd;
 	}
-	&.warning svg{
+	&.warning svg {
 		fill: #ed6c02;
 	}
-	&.error{
+	&.error {
 		fill: #d32f2f;
 	}
 }
 
-.info-panel{
-
+.info-panel {
 	padding: 20px;
 	border-radius: 10px;
 
-	& p{
+	& p {
 		margin: 0;
 	}
 
-	& .panel-header, & .panel-head{
+	& .panel-header,
+	& .panel-head {
 		display: block;
 		margin-bottom: 10px;
 	}
-	
-	& .panel-head{
 
+	& .panel-head {
 		display: flex;
 		justify-content: space-between;
 
-		& svg{
+		& svg {
 			width: 36px;
 			height: 36px;
 			display: block;
 		}
 	}
 
-	&.info{
+	&.info {
+		background-color: #e6f3ff;
 
-		background-color: #E6F3FF;
-
-		& svg{
-			fill: #359DFD;
+		& svg {
+			fill: #359dfd;
 		}
 	}
 
-	&.warning{
-
+	&.warning {
 		background-color: #fffbd0;
 
-		& svg{
+		& svg {
 			fill: #ed6c02;
 		}
 	}
 
-	&.error{
-
+	&.error {
 		background-color: #ffd6df;
 
-		& svg{
+		& svg {
 			fill: #d32f2f;
 		}
 	}

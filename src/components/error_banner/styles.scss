@@ -1,5 +1,5 @@
-.banner{
-	border: 1px solid #FF1744;
+.banner {
+	border: 1px solid #ff1744;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -7,12 +7,12 @@
 	border-radius: 4px;
 	flex-wrap: wrap;
 
-	& p{
-		margin: 0
+	& p {
+		margin: 0;
 	}
 
-	&.error{
-		background-color: #FFCDD2;
-		color: #FF1744;
+	&.error {
+		background-color: #ffcdd2;
+		color: #ff1744;
 	}
 }

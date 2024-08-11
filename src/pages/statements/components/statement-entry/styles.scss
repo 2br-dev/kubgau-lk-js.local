@@ -1,14 +1,12 @@
-
-tr{
-	
-	& .actions-wrapper{
+tr {
+	& .actions-wrapper {
 		display: inline-flex;
-		opacity: .3;
-		transition: opacity .2s ease-in-out;
+		opacity: 0.3;
+		transition: opacity 0.2s ease-in-out;
 	}
 
-	&:hover{
-		.actions-wrapper{
+	&:hover {
+		.actions-wrapper {
 			opacity: 1;
 		}
 	}

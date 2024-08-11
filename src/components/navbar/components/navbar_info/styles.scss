@@ -1,19 +1,17 @@
-.navbar-info{
-
+.navbar-info {
 	padding: 10px 0;
 
-	&.info{
-		background-color: #359DFD;
+	&.info {
+		background-color: #359dfd;
 		color: #fff;
 	}
-	
-	&.warning{
-		background-color: #FFD54F;
+
+	&.warning {
+		background-color: #ffd54f;
 	}
-	
-	&.error{
+
+	&.error {
 		background-color: #e7002e;
 		color: #fff;
 	}
-
 }
