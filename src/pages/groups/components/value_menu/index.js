@@ -246,7 +246,7 @@ import {
 		  open={snackbarOpen}
 		  message={snackbarMessage}
 		  anchorOrigin={{
-			vertical: "bottom",
+			vertical: "top",
 			horizontal: "right"
 		  }}
 		/>

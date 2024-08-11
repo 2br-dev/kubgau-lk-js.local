@@ -16,6 +16,7 @@ import {
 	FormLabel,
 	ToggleButtonGroup,
 	ToggleButton,
+	Snackbar,
 	IconButton} from "@mui/material";
 import PageHeader from "../../components/pageHeader";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -38,6 +39,8 @@ function Subgroups(){
 	const [ haveUnattached, setHaveUnattached ] = useState(false);
 	const initialized = useRef(false);
 	const [ filterVal, setFilterVal ] = useState('all');
+	const [ snackbarOpen, setSnackbarOpen ] = useState(false);
+	const [ snackbarMessage, setSnackbarMessage ] = useState('');
 
 	// Стилизованный переключатель
 	const StyledSwitch = styled(Switch)(({ theme }) => ({
@@ -193,7 +196,7 @@ function Subgroups(){
 	// Контрол в банере с ошибкой
 	const filterControl = <FormControl className="non-attach-wrapper">
 		<FormLabel sx={{userSelect: 'none', color: '#333', "&.Mui-focused": {color: 'red'}}} htmlFor="non-attached">Нераспределённые</FormLabel>
-		<Checkbox sx={{"&.Mui-checked": {color: 'red'}}} onChange={toggleNonAttached} id="non-attached"/>
+		<Checkbox  inputProps={{ 'aria-label': 'controlled' }} value="unattached" sx={{"&.Mui-checked": {color: 'red'}}} checked={filterVal === 'unattached'} onChange={toggleNonAttached} id="non-attached"/>
 	</FormControl>
 
 	const warning = () => {
@@ -241,70 +244,78 @@ function Subgroups(){
 
 	// Сохранение
 	const save = () => {
+		setSnackbarMessage("Готово!");
+		setSnackbarOpen(true);
 
+		setTimeout(() => {
+			setSnackbarOpen(false);
+		}, 2000);
 	}
 
 	// DOM
 	return (
-		<main id="subgroups">
-			<section>
-				<div className="container">
-					<PageHeader header="Программирование" backLink={true} subheader="Управление подгруппами" suffix={ filtersControl } />
-					<Card>
-						<CardContent>
-							{ warning() }
-							<div className="subgroup-header">
-								<Tabs variant="scrollable" className="screen" value={groupId} onChange={switchGroup}>
+		<>
+			<main id="subgroups">
+				<section>
+					<div className="container">
+						<PageHeader header="Программирование" backLink={true} subheader="Управление подгруппами" suffix={ filtersControl } />
+						<Card>
+							<CardContent>
+								{ warning() }
+								<div className="subgroup-header">
+									<Tabs variant="scrollable" className="screen" value={groupId} onChange={switchGroup}>
 
-									{groups.map((g, index) => (
-										<Tab data-url={g.url} value={index} key={index} label={ g.name } />
-									))}
-								</Tabs>
-								{ printSubheader() }
-							</div>
-							<div className="subgroup-content">
-								<TableContainer>
-									<Table className="simple-table">
-										<TableHead>
-											<TableRow>
-												<TableCell>ФИО</TableCell>
-												<TableCell className="print">Распределён</TableCell>
-												<TableCell className="print">Преподаватель</TableCell>
-												<TableCell className="screen" sx={{textAlign: 'right'}}>Группа/Распределение</TableCell>
-											</TableRow>
-										</TableHead>
-										<TableBody>
-											{filteredGroup.map((student, index) => (
-												<TableRow sx={{userSelect: 'none'}} data-id={index} onClick={ toggleAttach } key={index} hover>
-													<TableCell>{student.name}</TableCell>
-													<TableCell className="print">{student.state ? "Да" : "Нет"}</TableCell>
-													<TableCell className="print">{student.teacher}</TableCell>
-													<TableCell className="screen" sx={{textAlign: 'right'}}>{ groupVal(student) }</TableCell>
+										{groups.map((g, index) => (
+											<Tab data-url={g.url} value={index} key={index} label={ g.name } />
+										))}
+									</Tabs>
+									{ printSubheader() }
+								</div>
+								<div className="subgroup-content">
+									<TableContainer>
+										<Table className="simple-table">
+											<TableHead>
+												<TableRow>
+													<TableCell>ФИО</TableCell>
+													<TableCell className="print">Распределён</TableCell>
+													<TableCell className="print">Преподаватель</TableCell>
+													<TableCell className="screen" sx={{textAlign: 'right'}}>Группа/Распределение</TableCell>
 												</TableRow>
-											))}
-										</TableBody>
-									</Table>
-								</TableContainer>
+											</TableHead>
+											<TableBody>
+												{filteredGroup.map((student, index) => (
+													<TableRow sx={{userSelect: 'none'}} data-id={index} onClick={ toggleAttach } key={index} hover>
+														<TableCell>{student.name}</TableCell>
+														<TableCell className="print">{student.state ? "Да" : "Нет"}</TableCell>
+														<TableCell className="print">{student.teacher}</TableCell>
+														<TableCell className="screen" sx={{textAlign: 'right'}}>{ groupVal(student) }</TableCell>
+													</TableRow>
+												))}
+											</TableBody>
+										</Table>
+									</TableContainer>
+								</div>
+							</CardContent>
+						</Card>
+						<div className="card-actions-wrapper screen desktop">
+							<div className="left-side">
+								<Button onClick={ printGroups } variant="outlined">Печать</Button>
 							</div>
-						</CardContent>
-					</Card>
-					<div className="card-actions-wrapper screen desktop">
-						<div className="left-side">
-							<Button onClick={ printGroups } variant="outlined">Печать</Button>
+							<div className="right-side">
+								<Button variant="outlined" onClick={ reset }>Сброс</Button>
+								<Button variant="contained" onClick={ save }>Сохранить</Button>
+							</div>
 						</div>
-						<div className="right-side">
-							<Button variant="outlined" onClick={ reset }>Сброс</Button>
-							<Button variant="contained" onClick={ toggleAttach }>Сохранить</Button>
+						<div className="card-actions-wrapper mobile">
+							<IconButton onClick={ printGroups }><PrintRounded /></IconButton>
+							<IconButton onClick={ reset }><ClearRounded /></IconButton>
+							<IconButton onClick={ save }><SaveRounded /></IconButton>
 						</div>
 					</div>
-					<div className="card-actions-wrapper mobile">
-						<IconButton onClick={ printGroups }><PrintRounded /></IconButton>
-						<IconButton onClick={ reset }><ClearRounded /></IconButton>
-						<IconButton onClick={ save }><SaveRounded /></IconButton>
-					</div>
-				</div>
-			</section>
-		</main>
+				</section>
+			</main>
+			<Snackbar anchorOrigin={{ vertical: "top", horizontal: "right" }} open={snackbarOpen} message={snackbarMessage} />
+		</>
 	)
 }
 

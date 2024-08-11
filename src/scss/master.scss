@@ -17,6 +17,10 @@ body{
 		@media(max-width: 600px){
 			width: calc(100% - 20px);
 		}
+
+		@media print{
+			width: 100%;
+		}
 	}
 
 	& .App{

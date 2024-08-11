@@ -70,6 +70,7 @@ function DateModal(props){
 							<LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
 								<DatePicker
 									value={event.date}
+									format="D MMMM YYYY г."
 									variant="standard"
 									label="Дата занятия"
 									sx={{width: '100%'}}

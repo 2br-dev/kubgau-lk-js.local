@@ -597,7 +597,7 @@ import {
 		</section>
 		<Snackbar
 			open={snackbarOpen}
-			anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+			anchorOrigin={{ vertical: "top", horizontal: "right" }}
 			message={snackbarMessage}
 			action={cancelAction}
 		/>

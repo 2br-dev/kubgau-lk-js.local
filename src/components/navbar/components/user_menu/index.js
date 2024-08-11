@@ -57,30 +57,14 @@ const UserMenu = () => {
 					open={open}
 					onClose={handleClose}
 				>
-					<MenuItem onClick={handleClose}>
-						<Link to={"/main/courses"}>Главная страница</Link>
-					</MenuItem>
-					<MenuItem onClick={handleClose}>
-						<Link to={"/main/admin"}>Админ-панель</Link>
-					</MenuItem>
-					<MenuItem onClick={handleClose} className="mobile-help">
-						<Link to={"/main/help"}>Помощь</Link>
-					</MenuItem>
+					<MenuItem onClick={handleClose} component={Link} to="/main/courses">Главная страница</MenuItem>
+					<MenuItem onClick={handleClose} component={Link} to="/main/admin">Админ-панель</MenuItem>
+					<MenuItem onClick={handleClose} component={Link} to="/main/help" className="mobile-help">Помощь</MenuItem>
 					<Divider />
-					<MenuItem onClick={handleClose}>
-						<Link to={"/main/statements"}>Мои ведомости</Link>
-					</MenuItem>
-					<MenuItem onClick={handleClose}>
-						<Link to={"/main/statements_practics"}>
-							Мои ведомости по практикам
-						</Link>
-					</MenuItem>
-					<MenuItem onClick={handleClose}>
-						<Link to={"/main/attestation_lists"}>Аттестационные листы</Link>
-					</MenuItem>
-					<MenuItem onClick={handleClose}>
-						<Link to={"/main/portfolio"}>Портфолио студента</Link>
-					</MenuItem>
+					<MenuItem onClick={handleClose} component={Link} to="/main/statements">Мои ведомости</MenuItem>
+					<MenuItem onClick={handleClose} component={Link} to="/main/statements_practics">Мои ведомости по практикам</MenuItem>
+					<MenuItem onClick={handleClose} component={Link} to="/main/attestation_lists">Аттестационные листы</MenuItem>
+					<MenuItem onClick={handleClose} component={Link} to="/main/portfolio">Портфолио студента</MenuItem>
 					<Divider />
 					<MenuItem>Сменить пользователя</MenuItem>
 					<MenuItem>Сменить пароль</MenuItem>

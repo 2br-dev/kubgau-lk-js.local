@@ -4,10 +4,12 @@ import { Switch, Select, Button, MenuItem, IconButton, ToggleButtonGroup, Toggle
 import { AttachmentRounded, CloseRounded, DeleteRounded } from "@mui/icons-material";
 import './index.scss';
 import toggleTheme from "../../../../components/toggleTheme";
+import dayjs from "dayjs";
+import 'dayjs/locale/ru';
 
 function ValueModal(props){
 
-
+	dayjs.locale('ru');
 	const [student, setStudent] = useState(null);
 	const originalStudent = {...props.student};
 
@@ -111,8 +113,10 @@ function ValueModal(props){
 
 			if(student.days && props.day !== null){
 
-				if(type === "date")
-					return student.days[props.day].date;
+				if(type === "date"){
+					let stringDate = dayjs(student.days[props.day].date);
+					return stringDate.format("D MMMM YYYY г.");
+				}
 
 				if(type === "class")
 					return student.days[props.day].class;
