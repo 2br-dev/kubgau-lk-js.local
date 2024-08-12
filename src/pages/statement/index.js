@@ -39,7 +39,7 @@ import toggleTheme from "../../components/toggleTheme/";
 import "./index.scss";
 
 /**
- * Ведомости
+ * Страница ведомости
  */
 function Statement() {
 	// Инициализация

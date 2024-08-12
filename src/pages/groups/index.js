@@ -62,6 +62,10 @@ const StyledSwitch = styled(Switch)(({ theme }) => ({
 	},
 }));
 
+/**
+ * Перекличка
+ * @returns
+ */
 export default function GroupsPage() {
 	const [panelOpen, setPanelOpen] = useState(true);
 	const [theme, setTheme] = useState("");
@@ -559,6 +563,7 @@ export default function GroupsPage() {
 																							.skipping
 																							.current
 																					}
+
 																					/
 																					{
 																						student
@@ -579,6 +584,7 @@ export default function GroupsPage() {
 																							.skipping
 																							.percentage
 																					}
+
 																					%
 																				</TableCell>
 																			);

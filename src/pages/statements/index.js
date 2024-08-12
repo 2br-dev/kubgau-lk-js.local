@@ -8,7 +8,7 @@ import StatementEntry from "./components/statement-entry";
 import React from "react";
 
 /**
- * Страница ведомостей
+ * Список ведомостей
  */
 function StatementsPage() {
 	const [panelOpened, setPanelOpened] = useState(false);

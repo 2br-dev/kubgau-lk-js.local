@@ -12,6 +12,10 @@ import ValueModal from "./components/value_modal";
 import DateModal from "./components/date_modal";
 import PageHeader from "../../components/pageHeader";
 
+/**
+ * Журнал посещаемости
+ * @returns
+ */
 function Journal() {
 	// Инициализация
 	let my_table = useRef(null);

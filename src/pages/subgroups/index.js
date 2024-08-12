@@ -29,7 +29,7 @@ import { PrintRounded, ClearRounded, SaveRounded } from "@mui/icons-material";
 import toggleTheme from "../../components/toggleTheme/index";
 
 /**
- * @returns Страница управления подгруппами
+ * Страница управления подгруппами
  */
 function Subgroups() {
 	const [groups, setGroups] = useState([]);
