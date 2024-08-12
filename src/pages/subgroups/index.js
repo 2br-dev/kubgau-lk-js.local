@@ -43,6 +43,8 @@ function Subgroups() {
 	const [snackbarOpen, setSnackbarOpen] = useState(false);
 	const [snackbarMessage, setSnackbarMessage] = useState("");
 
+	const [markAll, setMarkAll] = useState("Отметить всех");
+
 	// Стилизованный переключатель
 	const StyledSwitch = styled(Switch)(({ theme }) => ({
 		"& .MuiSwitch-switchBase": {
@@ -222,6 +224,7 @@ function Subgroups() {
 				sx={{
 					userSelect: "none",
 					color: "#333",
+					cursor: "pointer",
 					"&.Mui-focused": { color: "red" },
 				}}
 				htmlFor="non-attached"
@@ -344,6 +347,34 @@ function Subgroups() {
 		}, 2000);
 	};
 
+	// Простановка распределения у всех своих студентов
+	const mark = () => {
+		let newGroup = [...group];
+
+		newGroup.forEach((student) => {
+			if (student.teacher === currentTeacher.shortName) {
+				student.state = true;
+			}
+		});
+
+		setGroup(newGroup);
+		setHaveUnattached(false);
+	};
+
+	// Снятие распределения у всех своих студентов
+	const unmark = () => {
+		let newGroup = [...group];
+
+		newGroup.forEach((student) => {
+			if (student.teacher === currentTeacher.shortName) {
+				student.state = false;
+			}
+		});
+
+		setGroup(newGroup);
+		setHaveUnattached(true);
+	};
+
 	// DOM
 	return (
 		<>
@@ -376,6 +407,20 @@ function Subgroups() {
 										))}
 									</Tabs>
 									{printSubheader()}
+									<div className="screen controls">
+										<Button
+											onClick={unmark}
+											variant="outlined"
+										>
+											Снять отметку
+										</Button>
+										<Button
+											onClick={mark}
+											variant="outlined"
+										>
+											Отметить все
+										</Button>
+									</div>
 								</div>
 								<div className="subgroup-content">
 									<TableContainer>
@@ -465,7 +510,7 @@ function Subgroups() {
 								</Button>
 							</div>
 						</div>
-						<div className="card-actions-wrapper mobile">
+						<div className="card-actions-wrapper mobile desktop">
 							<IconButton onClick={printGroups}>
 								<PrintRounded />
 							</IconButton>

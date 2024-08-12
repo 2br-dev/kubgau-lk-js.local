@@ -6,81 +6,67 @@
 	"state": "Открыта",
 	"unit": 5,
 	"hours": 180,
-    "doc": "document.pdf",
+	"doc": "document.pdf",
 	"startDate": "4 апреля 2022 г.",
 	"closeDate": "12 апреля 2022 г.",
-    "deadline": "7 апреля 2022 г.",
-    "examDate": "4 апреля 2022 г.",
-	"students":[
+	"deadline": "7 апреля 2022 г.",
+	"examDate": "4 апреля 2022 г.",
+	"students": [
 		{
 			"name": "Алаева Эмилия Игоревна",
-			"value": "Зачёт",
-            "access": true
+			"value": "Зачёт"
 		},
 		{
 			"name": "Безуглый Илья Андреевич",
-			"value": "Незачёт",
-            "access": true
+			"value": "Незачёт"
 		},
 		{
 			"name": "Броваров Олег Евгеньевич",
-			"value": "Зачёт",
-            "access": true
+			"value": "Зачёт"
 		},
 		{
 			"name": "Волков Семён Романович",
-			"value": "Неявка",
-            "access": true
+			"value": "Неявка"
 		},
 		{
 			"name": "Ганжа Артём Александрович",
-			"value": "Зачёт",
-            "access": true
+			"value": "Зачёт"
 		},
 		{
 			"name": "Жданов Дмитрий Олегович",
-			"value": "Зачёт",
-            "access": false
+			"value": "Зачёт"
 		},
 		{
 			"name": "Клименко Татьяна Викторовна",
-			"value": "Незачёт",
-            "access": true
+			"value": "Незачёт"
 		},
 		{
 			"name": "Коринец Никита Валерьевич",
-			"value": "Зачёт",
-            "access": true
+			"value": "Зачёт"
 		},
 		{
 			"name": "Крисковец Мария Геннадьевна",
-			"value": "Незачёт",
-            "access": true
+			"value": "Незачёт"
 		},
 		{
 			"name": "Латрыгин Никита Евгеньевич",
-			"value": "Зачёт",
-            "access": true
+			"value": "Зачёт"
 		},
 		{
 			"name": "Меликов Ислам Аферович",
-			"value": "Неявка",
-            "access": true
+			"value": "Неявка"
 		},
 		{
 			"name": "Панеш Роман Оскарович",
-			"value": "Зачёт",
-            "access": false
+			"value": "Зачёт"
 		},
 		{
 			"name": "Поляруш Артём Павлович",
-			"value": "Зачёт",
-            "access": true
+			"value": "Зачёт"
 		},
 		{
 			"name": "Прокофьев Павел Михайлович",
-			"value": "Зачёт",
-            "access": true
+			"value": "Зачёт"
 		}
 	]
 }

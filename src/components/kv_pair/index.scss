@@ -12,6 +12,7 @@
 		font-size: 14px;
 		padding-right: 20px;
 		color: #939393;
+		min-width: 150px;
 	}
 
 	@media (max-width: 310px) {
@@ -22,6 +23,17 @@
 		& .value {
 			display: block;
 			padding-bottom: 0;
+		}
+	}
+
+	@media print {
+		& .key,
+		& .value {
+			font-size: 10pt;
+		}
+
+		& .key {
+			width: 20%;
 		}
 	}
 }

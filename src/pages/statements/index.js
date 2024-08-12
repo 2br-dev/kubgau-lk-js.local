@@ -116,7 +116,12 @@ function StatementsPage() {
 					/>
 					<Box sx={{ width: "100%", marginTop: "2vmax" }}>
 						<Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-							<Tabs value={tabValue} onChange={handleTabChange}>
+							<Tabs
+								value={tabValue}
+								onChange={handleTabChange}
+								variant="scrollable"
+								scrollButtons="auto"
+							>
 								<Tab label="Зачёты" value={0} />
 								<Tab label="Курсовые работы" value={1} />
 								<Tab label="Экзамены" value={2} />

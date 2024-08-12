@@ -5,6 +5,20 @@ main#subgroups {
 
 	& .subgroup-header {
 		margin-bottom: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		& .controls {
+			@media (max-width: 800px) {
+				margin-top: 20px;
+			}
+		}
+
+		& .controls button:not(:first-of-type) {
+			margin-left: 10px;
+		}
 	}
 
 	& .non-attach-wrapper {

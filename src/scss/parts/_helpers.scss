@@ -88,6 +88,21 @@ body {
 		}
 	}
 
+	& .context-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		& span {
+			display: block;
+
+			&.context-actions {
+				margin-left: 20px;
+			}
+		}
+	}
+
 	@media print {
 		.MuiCardContent-root {
 			padding: 0 !important;

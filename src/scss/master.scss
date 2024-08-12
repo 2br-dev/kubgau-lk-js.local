@@ -52,21 +52,23 @@ body {
 			& .simple-table {
 				width: 100%;
 
-				& thead {
-					& th {
-						border-bottom: 2px solid black;
-						padding-bottom: 0;
-						font-size: 14px;
+				@media screen {
+					& thead {
+						& th {
+							border-bottom: 2px solid black;
+							padding-bottom: 0;
+							font-size: 14px;
+						}
 					}
-				}
 
-				& tbody {
-					& td {
-						font-size: clamp(16px, 3vw, 18px);
+					& tbody {
+						& td {
+							font-size: clamp(16px, 3vw, 18px);
 
-						& .icon-button {
-							width: 40px;
-							height: 40px;
+							& .icon-button {
+								width: 40px;
+								height: 40px;
+							}
 						}
 					}
 				}

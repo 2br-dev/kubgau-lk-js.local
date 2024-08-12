@@ -1,5 +1,7 @@
 body {
 	& main {
-		background-color: #fafcff;
+		@media screen {
+			background-color: #fafcff;
+		}
 	}
 }

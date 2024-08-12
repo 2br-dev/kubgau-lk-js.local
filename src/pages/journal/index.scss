@@ -162,6 +162,9 @@ body {
 
 							& + th {
 								@include leftStickyColumn(0, black);
+							}
+
+							& + th {
 								text-align: left;
 							}
 						}
