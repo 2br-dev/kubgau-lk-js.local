@@ -170,7 +170,7 @@ body {
 						}
 
 						&:nth-last-child(-2n + 2) {
-							@include rightStickyColumn(63px, black);
+							@include rightStickyColumn(74px, black);
 						}
 
 						&:nth-last-child(-2n + 1) {
@@ -201,7 +201,7 @@ body {
 						}
 
 						&:nth-last-child(-2n + 2) {
-							@include rightStickyColumn(63px, black);
+							@include rightStickyColumn(74px, black);
 						}
 
 						&:first-of-type {

@@ -7,6 +7,13 @@ import {
 } from "@mui/material";
 import { QueryBuilderRounded } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import React from "react";
+import PropTypes from "prop-types";
+
+TableBlock.propTypes = {
+	title: PropTypes.string,
+	data: PropTypes.arrayOf(PropTypes.object),
+};
 
 /**
  * Табличный блок контента дочерней таблицы

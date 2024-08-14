@@ -11,6 +11,10 @@ import {
 import ValueModal from "./components/value_modal";
 import DateModal from "./components/date_modal";
 import PageHeader from "../../components/pageHeader";
+import React from "react";
+import studentAbsent from "./components/student_absent";
+
+Journal.propTypes = {};
 
 /**
  * Журнал посещаемости
@@ -19,22 +23,20 @@ import PageHeader from "../../components/pageHeader";
 function Journal() {
 	// Инициализация
 	let my_table = useRef(null);
-	const [headerData, setHeaderData] = useState([
-		{
-			group: [
-				{
-					title: "",
-					content: [],
-				},
-			],
-		},
-	]);
-	const [footerData, setFooterData] = useState([]);
 	const [students, setStudents] = useState([
 		{
 			id: null,
-			name: "",
-			days: [],
+			lastName: "",
+			firstName: "",
+			middleName: "",
+			certificatesOfSkipping: [],
+			lessons: [
+				{
+					lessonId: null,
+					lessonDate: null,
+					grades: [],
+				},
+			],
 		},
 	]);
 	const [tooltips, setTooltips] = useState(true);
@@ -52,11 +54,9 @@ function Journal() {
 
 	// Получение данных
 	useEffect(() => {
-		fetch("/data/student_values.json")
+		fetch("/data/getJournalData.json")
 			.then((res) => res.json())
 			.then((data) => {
-				setHeaderData(data.header);
-				setFooterData(data.footer);
 				setStudents(data.students);
 			});
 	}, []);
@@ -67,7 +67,7 @@ function Journal() {
 		setStudent(student);
 		let newStudents = [...students];
 		newStudents = newStudents.map((s) => {
-			if (s.id === student.id) return newStudent;
+			if (s.studentId === student.studentId) return newStudent;
 			else return s;
 		});
 		setStudents(newStudents);
@@ -79,7 +79,7 @@ function Journal() {
 		let dayId = parseInt(e.currentTarget.dataset["day"]);
 
 		let student = students.filter((s) => {
-			return s.id === studentId;
+			return s.studentId === studentId;
 		})[0];
 
 		setStudent(student);
@@ -95,44 +95,19 @@ function Journal() {
 		setStudent(defaultStudent);
 	};
 
-	// Получение оценок
-	const getValues = (day, index) => {
-		if (day.values.length === 0) {
-			return (
-				<span key={index} className="fogged">
-					–
-				</span>
-			);
-		} else {
-			return (
-				<span key={index}>
-					{day.values.map((value, index2) => {
-						return (
-							<Fragment key={index2}>
-								<Tooltip
-									title={tooltips ? value.type : ""}
-									placement="top"
-								>
-									<span>{value.value}</span>
-								</Tooltip>
-								{index2 < day.values.length - 1 ? " / " : ""}
-							</Fragment>
-						);
-					})}
-				</span>
-			);
-		}
-	};
-
 	// Открытие урока
 	const openEvent = (e) => {
 		let el = e.target;
 		let day = parseInt(el.dataset["day"]);
 		let month = parseInt(el.dataset["group"]);
-		let lessonData = headerData[month].group[0].content[day];
-		lessonData.dayId = day;
-		lessonData.groupId = month;
-		setEvent(lessonData);
+		let theme = el.dataset["theme"];
+		const pairNum = el.dataset["pair"];
+		setEvent({
+			date: day,
+			month: month,
+			theme: theme,
+			pairNum: pairNum,
+		});
 
 		setTimeout(() => {
 			setEventOpen(true);
@@ -146,32 +121,7 @@ function Journal() {
 	};
 
 	// Сохранение урока
-	const saveEvent = (event) => {
-		let day = event.date.$D;
-		let month = [
-			"jan",
-			"feb",
-			"mar",
-			"apr",
-			"may",
-			"jun",
-			"july",
-			"aug",
-			"sept",
-			"oct",
-			"nov",
-			"dec",
-		][event.date.$M];
-		let year = event.date.$y;
-
-		let newHeaderData = [...headerData];
-		let group = newHeaderData[event.groupId];
-		let dayEntry = group.group[0].content[event.dayId];
-		dayEntry.day = day;
-		dayEntry.date = day + ` ${month} ` + year;
-		dayEntry.pair = parseInt(event.pair);
-
-		setHeaderData(headerData);
+	const saveEvent = () => {
 		setEventOpen(false);
 	};
 
@@ -180,6 +130,9 @@ function Journal() {
 		e.target.classList.add("extra-highlight");
 		let row = e.target.parentElement;
 		let table = row.parentElement.parentElement;
+
+		if (!row || !table) return;
+
 		let rowIndex = e.target.cellIndex;
 
 		// Row
@@ -195,7 +148,7 @@ function Journal() {
 	};
 
 	// Сброс подсветки строки
-	const resetHighlight = (e) => {
+	const resetHighlight = () => {
 		my_table.current.querySelectorAll("td").forEach((cell) => {
 			cell.classList?.remove("highlight");
 			cell.classList?.remove("extra-highlight");
@@ -205,6 +158,186 @@ function Journal() {
 	// Отображение тултипов
 	const handleCheck = (e) => {
 		setTooltips(e.target.checked);
+	};
+
+	// Оценки
+	const grades = (grades) => {
+		const types = [
+			"Тестирование",
+			"Лабораторная работа",
+			"Контрольная работа",
+			"Расчётно-графическая работа",
+			"Доашняя работа",
+			"Другое",
+		];
+		if (grades.length > 0) {
+			return grades.map((g, index) => (
+				<Fragment key={index}>
+					<Tooltip
+						title={tooltips ? types[g.gradeType] : ""}
+						placement="top"
+					>
+						<span>{g.grade}</span>
+					</Tooltip>
+					{index < grades.length - 1 ? " / " : ""}
+				</Fragment>
+			));
+		} else {
+			return <>–</>;
+		}
+	};
+
+	// Заголовок
+	const header = () => {
+		const lessons = students[0].lessons;
+		const dates =
+			lessons.length > 0
+				? lessons.map((l) => new Date(l.lessonDate).getMonth())
+				: [];
+
+		let monthesNum = [...new Set(dates)];
+		let counts = monthesNum.map((m) => {
+			return dates.filter((d) => {
+				return d === m;
+			}).length;
+		});
+
+		const monthesVals = [
+			"Январь",
+			"Февраль",
+			"Март",
+			"Апрель",
+			"Май",
+			"Июнь",
+			"Июль",
+			"Август",
+			"Сентябрь",
+			"Октябрь",
+			"Ноябрь",
+			"Декабрь",
+		];
+		let monthes = monthesNum.map((m) => {
+			return monthesVals[m];
+		});
+
+		return (
+			<>
+				<colgroup>
+					<col className="num" />
+					<col className="num" />
+				</colgroup>
+				{counts.map((count, index) => (
+					<colgroup key={index}>
+						<col className="month" span={count} />
+					</colgroup>
+				))}
+				<colgroup>
+					<col className="num" />
+					<col className="num" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th rowSpan={2}>Номер</th>
+						<th rowSpan={2}>ФИО</th>
+						{monthes.map((m, index) => {
+							return (
+								<th key={index} colSpan={counts[index]}>
+									{m}
+								</th>
+							);
+						})}
+						<th rowSpan={2}>Ср. балл</th>
+						<th rowSpan={2}>Ср. общ. балл</th>
+					</tr>
+					<tr>
+						{lessons.map((lesson, index) => {
+							let day = new Date(lesson.lessonDate);
+
+							let lessonMonth = day.getMonth();
+							let lessonDay = day.getDate();
+							return (
+								<th
+									data-date={lesson.lessonDate}
+									data-month={lessonMonth}
+									key={index}
+									data-theme={lesson.theme}
+									onClick={openEvent}
+								>
+									{lessonDay}
+								</th>
+							);
+						})}
+					</tr>
+				</thead>
+			</>
+		);
+	};
+
+	// Подвал
+	const footer = () => (
+		<tfoot>
+			<tr>
+				<th></th>
+				<th>Посещаемость, %</th>
+				{students[0].lessons.map((student, index) => {
+					return (
+						<th key={index}>
+							<Tooltip
+								title="Нужны данные в JSON"
+								placement="top"
+							>
+								<span>96</span>
+							</Tooltip>
+						</th>
+					);
+				})}
+				<th colSpan={2}></th>
+			</tr>
+		</tfoot>
+	);
+
+	const dateCell = (lesson, index, student) => {
+		// Проверяем пропуск
+		let className = studentAbsent(student, index);
+
+		return (
+			<td
+				className={className}
+				onMouseOver={highlight}
+				onMouseLeave={resetHighlight}
+				key={index}
+				data-student={student.studentId}
+				data-day={index}
+				onClick={openStudent}
+			>
+				{grades(lesson.grades)}
+			</td>
+		);
+	};
+
+	// Таблица с оценками
+	const table = () => {
+		return students.map((student, index) => (
+			<tr key={index}>
+				<th>{index + 1}</th>
+				<th>
+					{student.lastName} {student.firstName} {student.middleName}
+				</th>
+				{student.lessons.map((lesson, lessonIndex) =>
+					dateCell(lesson, lessonIndex, student)
+				)}
+				<th style={{ minWidth: "45px" }}>
+					<Tooltip title="Нужны значения в JSON" placement="top">
+						<span>4</span>
+					</Tooltip>
+				</th>
+				<th style={{ minWidth: "50px" }}>
+					<Tooltip title="Нужны значения в JSON" placement="top">
+						<span>4</span>
+					</Tooltip>
+				</th>
+			</tr>
+		));
 	};
 
 	// DOM
@@ -237,172 +370,9 @@ function Journal() {
 							</div>
 							<div className="table-wrapper">
 								<table className="complex-table" ref={my_table}>
-									{headerData.map((col, index) => {
-										return (
-											<colgroup key={index}>
-												{col.group.map(
-													(item, index) => {
-														let className =
-															item.content ===
-															null
-																? "num"
-																: "month";
-														return (
-															<col
-																key={index}
-																className={
-																	className
-																}
-																span={
-																	item.content
-																		.length
-																}
-															/>
-														);
-													}
-												)}
-											</colgroup>
-										);
-									})}
-									<thead>
-										<tr>
-											{headerData.map((col, index) => {
-												return col.group.map(
-													(group, index2) => {
-														if (
-															group.content
-																.length === 0
-														) {
-															return (
-																<th
-																	key={index2}
-																	rowSpan={2}
-																>
-																	{
-																		group.title
-																	}
-																</th>
-															);
-														} else {
-															return (
-																<th
-																	key={index2}
-																	colSpan={
-																		group
-																			.content
-																			.length
-																	}
-																>
-																	{
-																		group.title
-																	}
-																</th>
-															);
-														}
-													}
-												);
-											})}
-										</tr>
-										<tr>
-											{headerData.map((col, index) => {
-												return col.group.map(
-													(group, index2) => {
-														return group.content.map(
-															(cell, index3) => {
-																return (
-																	<th
-																		onClick={
-																			openEvent
-																		}
-																		data-group={
-																			index
-																		}
-																		data-day={
-																			index3
-																		}
-																		key={
-																			index3
-																		}
-																	>
-																		{
-																			cell.day
-																		}
-																	</th>
-																);
-															}
-														);
-													}
-												);
-											})}
-										</tr>
-									</thead>
-									<tbody>
-										{students.map((student, index) => {
-											return (
-												<tr key={index}>
-													<th>{student.id}</th>
-													<th>{student.name}</th>
-													{student.days.map(
-														(day, index2) => {
-															return (
-																<td
-																	data-student={
-																		student.id
-																	}
-																	key={index2}
-																	data-day={
-																		index2
-																	}
-																	className={
-																		day.class
-																	}
-																	onMouseEnter={
-																		highlight
-																	}
-																	onMouseLeave={
-																		resetHighlight
-																	}
-																	onClick={
-																		openStudent
-																	}
-																>
-																	{getValues(
-																		day,
-																		index2
-																	)}
-																</td>
-															);
-														}
-													)}
-													<th className="summary">
-														{student.middle_value}
-													</th>
-													<th className="summary">
-														{
-															student.middle_common_value
-														}
-													</th>
-												</tr>
-											);
-										})}
-									</tbody>
-									<tfoot>
-										<tr>
-											{footerData.map((entry, index) => {
-												return (
-													<th
-														key={index}
-														colSpan={entry.span}
-													>
-														<span>
-															{entry.content}
-														</span>
-													</th>
-												);
-											})}
-											<th colSpan={2}></th>
-										</tr>
-									</tfoot>
+									{header()}
+									<tbody>{table()}</tbody>
+									{footer()}
 								</table>
 							</div>
 						</CardContent>

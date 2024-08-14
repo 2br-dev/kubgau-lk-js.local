@@ -1,13 +1,21 @@
-tr {
-	& .actions-wrapper {
-		display: inline-flex;
-		opacity: 0.3;
-		transition: opacity 0.2s ease-in-out;
+main#statements {
+	tr {
+		& .actions-wrapper {
+			display: inline-flex;
+			opacity: 0.3;
+			transition: opacity 0.2s ease-in-out;
+		}
+
+		&:hover {
+			.actions-wrapper {
+				opacity: 1;
+			}
+		}
 	}
 
-	&:hover {
-		.actions-wrapper {
-			opacity: 1;
+	.MuiPaper-root {
+		& h2 {
+			margin-top: 0;
 		}
 	}
 }

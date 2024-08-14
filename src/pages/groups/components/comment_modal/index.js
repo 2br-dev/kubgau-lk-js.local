@@ -1,5 +1,16 @@
 import { Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
+
+CommentModal.propTypes = {
+	closeSetter: PropTypes.func,
+	comment: PropTypes.string,
+	setter: PropTypes.func,
+	groupId: PropTypes.number,
+	studentId: PropTypes.number,
+	openClass: PropTypes.string,
+};
 
 export default function CommentModal(props) {
 	const [open, setOpen] = useState("");

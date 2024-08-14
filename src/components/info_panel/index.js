@@ -1,7 +1,19 @@
 import { Button } from "@mui/material";
 import { InfoClass } from "./interfaces";
 import { ErrorRounded, InfoRounded, WarningRounded } from "@mui/icons-material";
+import React from "react";
 import "./styles.scss";
+import PropTypes from "prop-types";
+
+InfoPanel.propTypes = {
+	title: PropTypes.string,
+	subtitle: PropTypes.string,
+	setter: PropTypes.func,
+	open: PropTypes.bool,
+	id: PropTypes.number,
+	type: InfoClass,
+	message: PropTypes.string,
+};
 
 /**
  * Информационная панель

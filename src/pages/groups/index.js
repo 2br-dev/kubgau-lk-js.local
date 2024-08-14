@@ -32,9 +32,10 @@ import ValueMenu from "./components/value_menu";
 import { EMenuType } from "./components/value_menu/interfaces";
 import "./styles.scss";
 import CommentModal from "./components/comment_modal";
+import React from "react";
 import styled from "@emotion/styled";
 
-const StyledSwitch = styled(Switch)(({ theme }) => ({
+const StyledSwitch = styled(Switch)(() => ({
 	"& .MuiSwitch-switchBase": {
 		"&.Mui-checked": {
 			color: "#fff",
@@ -394,7 +395,7 @@ export default function GroupsPage() {
 										ответ, защита доклада/реферата, работа
 										на занятии). Выставляется
 										непосредственно во время переклички в
-										период 7-ми дней. Исправление или
+										период 7-ми дней. Исправление или
 										удаление оценки осуществляется ТОЛЬКО
 										сотрудниками Центра ИТ через служебную
 										записку, подписанную начальником УМУ.
@@ -412,7 +413,7 @@ export default function GroupsPage() {
 										должна быть выставлена оценка. Оценка
 										может быть выставлена в период 14-ти
 										дней даже студентам, которые
-										отсутствовали на занятии. Исправление
+										отсутствовали на занятии. Исправление
 										или удаление оценки осуществляется
 										ТОЛЬКО сотрудниками Центра ИТ через
 										служебную записку, подписанную

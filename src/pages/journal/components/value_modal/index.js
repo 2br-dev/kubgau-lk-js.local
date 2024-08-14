@@ -21,6 +21,17 @@ import toggleTheme from "../../../../components/toggleTheme";
 import dayjs from "dayjs";
 import "dayjs/locale/ru";
 import KVPair from "../../../../components/kv_pair";
+import React from "react";
+import PropTypes from "prop-types";
+import studentAbsent from "../student_absent";
+
+ValueModal.propTypes = {
+	student: PropTypes.object,
+	day: PropTypes.number,
+	closeHandler: PropTypes.func,
+	saveHandler: PropTypes.func,
+	open: PropTypes.bool,
+};
 
 function ValueModal(props) {
 	dayjs.locale("ru");
@@ -63,7 +74,7 @@ function ValueModal(props) {
 
 	const addEmptyButton = () => {
 		if (student) {
-			let vals = student.days[props.day].values;
+			let vals = student.lessons[props.day].grades;
 			if (vals.length === 0) {
 				return <Button onClick={addValue}>Добавить оценку</Button>;
 			}
@@ -77,9 +88,9 @@ function ValueModal(props) {
 
 	const setPresenceState = (e) => {
 		let newStudent = { ...student };
-		let day = newStudent.days[props.day];
-		day.class = e.target.checked ? "" : studentAbsent(newStudent);
-		newStudent.days[props.day] = day;
+		let day = newStudent.lessons[props.day];
+		day.attended = !e.target.checked;
+		newStudent.lessons[props.day] = day;
 		setStudent(newStudent);
 	};
 
@@ -92,46 +103,46 @@ function ValueModal(props) {
 	const handleValue = (e, newVal) => {
 		if (newVal === null) return;
 		let newStudent = { ...student };
-		let newVals = newStudent.days[props.day].values;
+		let newVals = newStudent.lessons[props.day].grades;
 		let currentVal = parseInt(e.target.dataset["value"]);
 		let val = newVals[currentVal];
-		val.value = newVal;
-		newStudent.days[props.day].values = newVals;
+		val.grade = newVal;
+		newStudent.lessons[props.day].grades = newVals;
 		setStudent(newStudent);
 	};
 
 	const removeVal = (e) => {
 		let newStudent = { ...student };
-		let newVals = newStudent.days[props.day].values;
+		let newVals = newStudent.lessons[props.day].grades;
 		let index = parseInt(e.target.dataset["value"]);
 		newVals.splice(index, 1);
-		newStudent.days[props.day].values = newVals;
+		newStudent.lessons[props.day].grades = newVals;
 		setStudent(newStudent);
 	};
 
 	const addValue = () => {
 		let newStudent = { ...student };
 		let newVal = {
-			value: 5,
-			type: "Тестирование",
+			grade: 5,
+			gradeType: 0,
 		};
-		if (newStudent.days[props.day].values.length <= 3) {
-			newStudent.days[props.day].values.push(newVal);
+		if (newStudent.lessons[props.day].grades.length <= 3) {
+			newStudent.lessons[props.day].grades.push(newVal);
 			setStudent(newStudent);
 		}
 	};
 
 	const date = (type) => {
 		if (student) {
-			if (student.days && props.day !== null) {
+			if (student.lessons && props.day !== null) {
 				if (type === "date") {
-					let stringDate = dayjs(student.days[props.day].date);
+					let stringDate = dayjs(student.lessons[props.day].date);
 					return stringDate.format("D MMMM YYYY г.");
 				}
 
-				if (type === "class") return student.days[props.day].class;
+				if (type === "class") return studentAbsent(student, props.day);
 
-				if (type === "values") return student.days[props.day].values;
+				if (type === "values") return student.lessons[props.day].grades;
 			}
 		}
 
@@ -141,7 +152,8 @@ function ValueModal(props) {
 	const handleVlaueType = (newVal, event) => {
 		let newStudent = { ...student };
 		let valIndex = event.props["data-val"];
-		newStudent.days[props.day].values[valIndex].type = newVal.target.value;
+		newStudent.lessons[props.day].grades[valIndex].gradeType =
+			newVal.target.value;
 		setStudent(newStudent);
 	};
 
@@ -156,34 +168,25 @@ function ValueModal(props) {
 							onChange={handleVlaueType}
 							label="Тип оценки"
 							variant="standard"
-							value={value.type}
+							value={value.gradeType.toString()}
 							sx={{ width: "100%" }}
 						>
-							<MenuItem data-val={index} value="Тестирование">
+							<MenuItem data-val={index} value={0}>
 								Тестирование
 							</MenuItem>
-							<MenuItem
-								data-val={index}
-								value="Лабораторная работа"
-							>
+							<MenuItem data-val={index} value={1}>
 								Лабораторная работа
 							</MenuItem>
-							<MenuItem
-								data-val={index}
-								value="Контрольная работа"
-							>
+							<MenuItem data-val={index} value={2}>
 								Контрольная работа
 							</MenuItem>
-							<MenuItem
-								data-val={index}
-								value="Расчётно-графическая работа"
-							>
+							<MenuItem data-val={index} value={3}>
 								Расчётно-графическая работа
 							</MenuItem>
-							<MenuItem data-val={index} value="Домашняя работа">
+							<MenuItem data-val={index} value={4}>
 								Домашняя работа
 							</MenuItem>
-							<MenuItem data-val={index} value="Другое">
+							<MenuItem data-val={index} value={5}>
 								Другое
 							</MenuItem>
 						</Select>
@@ -193,7 +196,7 @@ function ValueModal(props) {
 							<ToggleButtonGroup
 								sx={{ width: "100%" }}
 								exclusive
-								value={value.value}
+								value={value.grade}
 								onChange={handleValue}
 							>
 								<ToggleButton
@@ -243,7 +246,7 @@ function ValueModal(props) {
 						<Button
 							variant="text"
 							disabled={
-								student.days[props.day].values.length >= 3
+								student.lessons[props.day].grades.length >= 3
 							}
 							onClick={addValue}
 						>
@@ -255,47 +258,30 @@ function ValueModal(props) {
 		}
 	};
 
-	const studentAbsent = (s) => {
-		let day = s.days[props.day];
-		let absent_reason = day.absent_reason;
-		let absent_doc = day.absent_doc;
-		let absent_link = day.absent_link;
-
-		if (
-			(absent_reason === "" || absent_reason === null) &&
-			(absent_doc === "" || absent_doc === null) &&
-			(absent_link === "" || absent_link === null)
-		) {
-			return "absent";
-		}
-
-		return "soft-absent";
-	};
-
-	const handleFile = (e, newVal) => {
+	const handleFile = (e) => {
 		const file = e.target.files[0];
 		let newStudent = { ...student };
-		let day = newStudent.days[props.day];
-		day.class = studentAbsent(newStudent);
+		let day = newStudent.lessons[props.day];
+		day.class = studentAbsent(newStudent, props.day);
 		day.absent_link = file ? file.name : "Выберите файл";
-		newStudent.days[props.day] = day;
+		newStudent.lessons[props.day] = day;
 		setStudent(newStudent);
 	};
 
 	const clearFile = () => {
 		let newStudent = { ...student };
-		let day = newStudent.days[props.day];
-		day.class = studentAbsent(newStudent);
+		let day = newStudent.lessons[props.day];
+		day.class = studentAbsent(newStudent, props.day);
 		day.absent_link = "";
-		newStudent.days[props.day] = day;
+		newStudent.lessons[props.day] = day;
 
 		setStudent(newStudent);
 	};
 
 	const inputLabel = () => {
 		let clearFileClass =
-			student.days[props.day].absent_link === null ||
-			student.days[props.day].absent_link === ""
+			student.lessons[props.day].absent_link === null ||
+			student.lessons[props.day].absent_link === ""
 				? "clear-file hide"
 				: "clear-file";
 		return (
@@ -303,7 +289,8 @@ function ValueModal(props) {
 				<div className="file-label">
 					<AttachmentRounded />
 					<span>
-						{student.days[props.day].absent_link || "Выберите файл"}
+						{student.lessons[props.day].absent_link ||
+							"Выберите файл"}
 					</span>
 				</div>
 				<div className="clear-wrapper">
@@ -317,25 +304,25 @@ function ValueModal(props) {
 
 	const commentChange = (e) => {
 		let newStudent = { ...student };
-		let day = newStudent.days[props.day];
+		let day = newStudent.lessons[props.day];
 		day.absent_reason = e.target.value;
-		day.class = studentAbsent(newStudent);
-		newStudent.days[props.day] = day;
+		day.class = studentAbsent(newStudent, props.day);
+		newStudent.lessons[props.day] = day;
 		setStudent(newStudent);
 	};
 
 	const docnameChange = (e) => {
 		let newStudent = { ...student };
-		let day = newStudent.days[props.day];
+		let day = newStudent.lessons[props.day];
 		day.absent_doc = e.target.value;
-		day.class = studentAbsent(newStudent);
-		newStudent.days[props.day] = day;
+		day.class = studentAbsent(newStudent, props.day);
+		newStudent.lessons[props.day] = day;
 		setStudent(newStudent);
 	};
 
 	const clearValues = () => {
 		let newStudent = { ...student };
-		newStudent.days[props.day].values = [];
+		newStudent.lessons[props.day].grades = [];
 		setStudent(newStudent);
 	};
 
@@ -350,7 +337,7 @@ function ValueModal(props) {
 							sx={{ width: "100%" }}
 							onChange={docnameChange}
 							variant="standard"
-							value={student.days[props.day].absent_doc}
+							value={student.lessons[props.day].absent_doc}
 							label="Название документа"
 						/>
 					</div>
@@ -369,7 +356,9 @@ function ValueModal(props) {
 							onChange={commentChange}
 							multiline={true}
 							variant="standard"
-							value={student.days[props.day].absent_reason || ""}
+							value={
+								student.lessons[props.day].absent_reason || ""
+							}
 							label="Комментарий"
 						/>
 					</div>
@@ -387,7 +376,10 @@ function ValueModal(props) {
 			<div className="modal">
 				<div className="modal-content">
 					<div className="modal-header">
-						<div className="name">{student?.name}</div>
+						<div className="name">
+							{student?.lastName} {student?.firstName}{" "}
+							{student?.middleName}
+						</div>
 						<IconButton onClick={closeModal}>
 							<CloseRounded />
 						</IconButton>

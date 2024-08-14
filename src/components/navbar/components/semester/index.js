@@ -4,6 +4,7 @@ import store from "../../../../store";
 import Autocomplete from "@mui/material/Autocomplete";
 import { TextField } from "@mui/material";
 import "./styles.scss";
+import React from "react";
 
 const Semester = () => {
 	let [semester, setSemester] = useState(

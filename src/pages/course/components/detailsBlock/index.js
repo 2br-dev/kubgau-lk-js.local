@@ -2,6 +2,14 @@ import { EView } from "./interfaces";
 import CardBlock from "../cardBlock";
 import TableBlock from "../tableBlock";
 import { Grid } from "@mui/material";
+import React from "react";
+import PropTypes from "prop-types";
+
+DetailsBlock.propTypes = {
+	data: PropTypes.any,
+	title: PropTypes.string,
+	view: EView,
+};
 
 /**
  * Блок детализации

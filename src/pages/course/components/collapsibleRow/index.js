@@ -15,12 +15,21 @@ import React from "react";
 import { Grid } from "@mui/material";
 import "./styles.scss";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+CollapsibleRow.propTypes = {
+	row: PropTypes.any,
+	index: PropTypes.number,
+	toggler: PropTypes.func,
+	isOpen: PropTypes.bool,
+};
 
 /**
  * Сворачиваемая строка таблицы
  * @param row Вхождение курса
  * @param index Индекс курса
  * @param toggler Функция, отрабатывающая переключение видимости строки
+ * @param isOpen Определяет раскрыта ли строка
  * @returns React.Node
  */
 function CollapsibleRow(props) {

@@ -1,6 +1,16 @@
 import { Autocomplete, Button, TextField } from "@mui/material";
 import { useState } from "react";
 import "./styles.scss";
+import React from "react";
+import PropTypes from "prop-types";
+
+FilterCourses.propTypes = {
+	disciplines: PropTypes.arrayOf(PropTypes.string),
+	courses: PropTypes.arrayOf(PropTypes.string),
+	handleApply: PropTypes.func,
+	globalCollapse: PropTypes.bool,
+	toggleCollapse: PropTypes.func,
+};
 
 /**
  * Форма фильтров страницы курсов

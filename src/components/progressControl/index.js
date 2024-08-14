@@ -2,8 +2,9 @@ import styled from "@emotion/styled";
 import { QueryBuilderRounded } from "@mui/icons-material";
 import { LinearProgress, linearProgressClasses } from "@mui/material";
 import "./styles.scss";
+import React from "react";
 
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+const BorderLinearProgress = styled(LinearProgress)(() => ({
 	height: 10,
 	borderRadius: 5,
 	[`&.${linearProgressClasses.colorPrimary}`]: {
@@ -15,7 +16,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 	},
 }));
 
-const FullBorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+const FullBorderLinearProgress = styled(LinearProgress)(() => ({
 	height: 10,
 	borderRadius: 5,
 	[`&.${linearProgressClasses.colorPrimary}`]: {

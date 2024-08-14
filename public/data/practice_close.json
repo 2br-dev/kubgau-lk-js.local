@@ -1,0 +1,98 @@
+[
+	{
+		"name": "Алгоритмическое и объектно-ориентированное программирование",
+		"code": "ПИз - 1Б (закрытые)",
+		"groups": [
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-177",
+				"statementUrl": "/main/statement/practice"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-460",
+				"statementUrl": "/main/statement/practice"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/practice"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-02-178",
+				"statementUrl": "/main/statement/practice"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-02-351",
+				"statementUrl": "/main/statement/practice"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-02-461",
+				"statementUrl": "/main/statement/practice"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/practice"
+			}
+		]
+	},
+	{
+		"name": "Алгоритмическое и объектно-ориентированное программирование",
+		"code": "ПИ - 1П (закрытые)",
+		"groups": [
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-177",
+				"statementUrl": "/main/statement/practice_value"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-460",
+				"statementUrl": "/main/statement/practice_value"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/practice_value"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-02-178",
+				"statementUrl": "/main/statement/practice_value"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-02-351",
+				"statementUrl": "/main/statement/practice_value"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-02-461",
+				"statementUrl": "/main/statement/practice_value"
+			},
+			{
+				"indicator": "close",
+				"type": "Основная",
+				"statementNum": "Л-18-01-460/1",
+				"statementUrl": "/main/statement/practice_value"
+			}
+		]
+	}
+]

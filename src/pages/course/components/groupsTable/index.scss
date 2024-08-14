@@ -1,0 +1,12 @@
+main#courses {
+	& .assemble-table-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	& .edit-wrapper {
+		display: inline-flex;
+		align-items: baseline;
+	}
+}

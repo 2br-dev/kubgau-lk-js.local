@@ -15,40 +15,77 @@ function LoginScreen() {
 	const [snackOpen, setSnackOpen] = useState(false);
 	const [messageType, setMessageType] = useState("success");
 
+	const Do_login_enter = (e) => {
+		if (e.key === "Enter") {
+			Do_login();
+		}
+	};
+
 	/** Процедура входа */
 	const Do_login = () => {
-		if (login !== "admin") {
-			// Заглушка для ошибки входа
-			setMessage("Неверная пара логин/пароль!");
-			setMessageType("error");
-			setSnackOpen(true);
-		} else {
-			// Заглушка для успешного входа
-			setMessage("Добро пожаловать, Татьяна Анатольевна!");
-			setMessageType("success");
-			setSnackOpen(true);
+		let user = {};
 
-			// Нужно заменить на актуальные данные
-			let user = {
-				login: login,
-				fullname: "Татьяна Анатольевна",
-				shortName: "Крамаренко А.В",
-				role: "admin",
-			};
+		switch (login) {
+			case "cathedra":
+				// Заглушка для успешного входа
+				setMessage("Добро пожаловать, Татьяна Анатольевна!");
+				setMessageType("success");
+				setSnackOpen(true);
 
-			// Сохранение пользователя в localStorage
-			localStorage.setItem("loggedUser", JSON.stringify(user));
+				// Нужно заменить на актуальные данные
+				user = {
+					login: login,
+					fullname: "Татьяна Анатольевна",
+					shortName: "Крамаренко А.В",
+					role: "cathedra",
+				};
 
-			// Сохранение пользователя в store
-			store.dispatch({
-				type: "SET_USER",
-				payload: user,
-			});
+				localStorage.setItem("loggedUser", JSON.stringify(user));
 
-			// Переходим на главную страницу после отображения приветствия
-			setTimeout(() => {
-				navigate("/main/courses");
-			}, 800);
+				store.dispatch({
+					type: "SET_USER",
+					payload: user,
+				});
+
+				setTimeout(() => {
+					navigate("/main/courses");
+				}, 800);
+
+				break;
+			case "teacher":
+				// Заглушка для успешного входа
+				setMessage("Добро пожаловать, Татьяна Анатольевна!");
+				setMessageType("success");
+				setSnackOpen(true);
+
+				// Нужно заменить на актуальные данные
+				user = {
+					login: login,
+					fullname: "Татьяна Анатольевна",
+					shortName: "Крамаренко А.В",
+					role: "teacher",
+				};
+
+				// Сохранение пользователя в localStorage
+				localStorage.setItem("loggedUser", JSON.stringify(user));
+
+				// Сохранение пользователя в store
+				store.dispatch({
+					type: "SET_USER",
+					payload: user,
+				});
+
+				// Переходим на главную страницу после отображения приветствия
+				setTimeout(() => {
+					navigate("/main/courses");
+				}, 800);
+				break;
+
+			default:
+				// Заглушка для ошибки входа
+				setMessage("Неверная пара логин/пароль!");
+				setMessageType("error");
+				setSnackOpen(true);
 		}
 	};
 
@@ -58,12 +95,25 @@ function LoginScreen() {
 			<Card className="login-card">
 				<CardContent sx={{ padding: "30px" }}>
 					<h1>Вход</h1>
+					<div
+						style={{
+							marginBottom: "20px",
+							border: "1px solid #ccc",
+							padding: "6px",
+							boxSizing: "border-box",
+						}}
+					>
+						<div>• teacher – права преподавателя</div>
+						<div>• cathedra – права кафедры</div>
+						<p>Пароль – любой</p>
+					</div>
 					<div className="field">
 						<TextField
 							value={login}
 							sx={{ width: 280 }}
 							name="login"
 							label="Логин"
+							onKeyDown={Do_login_enter}
 							onChange={(e) => setLogin(e.target.value)}
 						/>
 					</div>
@@ -74,6 +124,7 @@ function LoginScreen() {
 							name="password"
 							label="Пароль"
 							type="password"
+							onKeyDown={Do_login_enter}
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</div>

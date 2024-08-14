@@ -1,0 +1,2113 @@
+{
+	"students": [
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 0,
+			"lastName": "Афанасенко",
+			"firstName": "Снежана",
+			"middleName": "Владимировна"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 1,
+			"lastName": "Борисенко",
+			"firstName": "Виктор",
+			"middleName": "Михайлович"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [
+						{
+							"grade": 3,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [
+						{
+							"grade": 3,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [
+						{
+							"grade": 3,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": true,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [
+				{
+					"certificateOfSkippingId": 0,
+					"fromDate": "2024-08-16T00:00:00",
+					"toDate": "2024-12-23T00:00:00",
+					"fromPair": 0,
+					"toPair": 0,
+					"comment": null,
+					"documentType": 0
+				}
+			],
+			"studentId": 2,
+			"lastName": "Демкова",
+			"firstName": "Виктория",
+			"middleName": "Андреевна"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 3,
+			"lastName": "Демченко",
+			"firstName": "Даниил",
+			"middleName": "Петрович"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 3,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 3,
+							"gradeId": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 3,
+							"gradeType": 0
+						},
+						{
+							"grade": 2,
+							"gradeType": 1
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 4,
+			"lastName": "Денисов",
+			"firstName": "Артём",
+			"middleName": "Андреевич"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						},
+						{
+							"grade": 5,
+							"gradeType": 1
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 5,
+			"lastName": "Королёв",
+			"firstName": "Илья",
+			"middleName": "Юрьевич"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeId": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeId": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 6,
+			"lastName": "Кротенко",
+			"firstName": "Дарья",
+			"middleName": "Олеговна"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 4,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 7,
+			"lastName": "Кушнаренко",
+			"firstName": "Матвей",
+			"middleName": "Сергеевич"
+		},
+		{
+			"lessons": [
+				{
+					"lessonId": 1,
+					"lessonDate": "2024-09-16T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 2,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 3,
+					"lessonDate": "2024-09-24T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 4,
+					"lessonDate": "2024-09-30T00:00:00",
+					"theme": "Администрирование баз данных на платформе MS SQL Server",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [
+						{
+							"grade": 5,
+							"gradeType": 0
+						}
+					],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 5,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 6,
+					"lessonDate": "2024-10-08T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 7,
+					"lessonDate": "2024-10-14T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 8,
+					"lessonDate": "2024-10-22T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 9,
+					"lessonDate": "2024-10-28T00:00:00",
+					"theme": "Язык программирования C# в движке Unity",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 10,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 11,
+					"lessonDate": "2024-11-05T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 12,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 13,
+					"lessonDate": "2024-11-11T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 14,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 15,
+					"lessonDate": "2024-11-19T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 16,
+					"lessonDate": "2024-11-25T00:00:00",
+					"theme": "Объектно-ориентированное программирование",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 17,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 18,
+					"lessonDate": "2024-12-03T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 19,
+					"lessonDate": "2024-12-09T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 20,
+					"lessonDate": "2024-12-17T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 21,
+					"lessonDate": "2024-12-23T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 22,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				},
+				{
+					"lessonId": 23,
+					"lessonDate": "2024-12-29T00:00:00",
+					"theme": "Программирование микропроцессоров",
+					"pairNumber": 1,
+					"attended": false,
+					"grades": [],
+					"lessonStudentDetailsId": 1
+				}
+			],
+			"certificatesOfSkipping": [],
+			"studentId": 8,
+			"lastName": "Лазько",
+			"firstName": "Владислав",
+			"middleName": "Викторович"
+		}
+	],
+	"errors": ["some string data"],
+	"success": true
+}

@@ -8,7 +8,9 @@
 	"hours": 180,
 	"startDate": "4 апреля 2022 г.",
 	"closeDate": "12 апреля 2022 г.",
-	"students":[
+	"eventDate": "4 апреля 2022 г.",
+	"eventTime": "10:00",
+	"students": [
 		{
 			"name": "Алаева Эмилия Игоревна",
 			"value": "Зачёт"

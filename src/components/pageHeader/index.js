@@ -1,6 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { ChevronLeftRounded } from "@mui/icons-material";
 import "./index.scss";
+import React from "react";
+import PropTypes from "prop-types";
+
+PageHeader.propTypes = {
+	header: PropTypes.string,
+	backLink: PropTypes.bool,
+	subheader: PropTypes.string,
+	suffix: PropTypes.any,
+};
 
 /**
  * @param {string} header - Заголовок страницы

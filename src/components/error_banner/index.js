@@ -1,4 +1,11 @@
 import "./styles.scss";
+import React from "react";
+import PropTypes from "prop-types";
+
+ErrorBanner.propTypes = {
+	message: PropTypes.string,
+	control: PropTypes.object,
+};
 
 function ErrorBanner(props) {
 	return (

@@ -29,7 +29,7 @@ function App() {
 						<Route path="/main" element={<MainPage />}>
 							<Route path="courses" element={<CoursePage />} />
 							<Route
-								path="statements"
+								path="statements/:type"
 								element={<StatementsPage />}
 							/>
 							<Route path="groups" element={<GroupsPage />} />

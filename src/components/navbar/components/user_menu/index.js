@@ -1,14 +1,14 @@
-import store from "../../../../store";
 import { MenuRounded } from "@mui/icons-material";
-import { Menu, MenuItem, Divider, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import "./styles.scss";
+import TeacherMenu from "../teacher_menu";
+import CathedraMenu from "../cathedra_menu";
+import React from "react";
 
 const UserMenu = () => {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
-	const navigate = useNavigate();
 	const handleClick = (e) => {
 		setAnchorEl(e.currentTarget);
 	};
@@ -19,6 +19,7 @@ const UserMenu = () => {
 	let user = {
 		fullname: "Anonymus",
 		login: "",
+		role: "stranger",
 		logged: false,
 	};
 
@@ -29,10 +30,27 @@ const UserMenu = () => {
 		</Button>
 	);
 
-	const handleLogout = () => {
-		localStorage.removeItem("loggedUser");
-		store.dispatch({ type: "LOGOUT" });
-		navigate("/");
+	const userMenu = () => {
+		switch (user.role) {
+			case "teacher":
+				return (
+					<TeacherMenu
+						open={open}
+						anchorEl={anchorEl}
+						handleClose={handleClose}
+					/>
+				);
+			case "cathedra":
+				return (
+					<CathedraMenu
+						open={open}
+						anchorEl={anchorEl}
+						handleClose={handleClose}
+					/>
+				);
+			default:
+				return <></>;
+		}
 	};
 
 	if (loggedUser) {
@@ -53,69 +71,7 @@ const UserMenu = () => {
 					</span>
 					<MenuRounded sx={{ marginLeft: "10px" }} />
 				</Button>
-				<Menu
-					id="user-menu"
-					anchorEl={anchorEl}
-					open={open}
-					onClose={handleClose}
-				>
-					<MenuItem
-						onClick={handleClose}
-						component={Link}
-						to="/main/courses"
-					>
-						Главная страница
-					</MenuItem>
-					<MenuItem
-						onClick={handleClose}
-						component={Link}
-						to="/main/admin"
-					>
-						Админ-панель
-					</MenuItem>
-					<MenuItem
-						onClick={handleClose}
-						component={Link}
-						to="/main/help"
-						className="mobile-help"
-					>
-						Помощь
-					</MenuItem>
-					<Divider />
-					<MenuItem
-						onClick={handleClose}
-						component={Link}
-						to="/main/statements"
-					>
-						Мои ведомости
-					</MenuItem>
-					<MenuItem
-						onClick={handleClose}
-						component={Link}
-						to="/main/statement/practice"
-					>
-						Мои ведомости по практикам
-					</MenuItem>
-					<MenuItem
-						onClick={handleClose}
-						component={Link}
-						to="/main/attestation_lists"
-					>
-						Аттестационные листы
-					</MenuItem>
-					<MenuItem
-						onClick={handleClose}
-						component={Link}
-						to="/main/portfolio"
-					>
-						Портфолио студента
-					</MenuItem>
-					<Divider />
-					<MenuItem>Сменить пользователя</MenuItem>
-					<MenuItem>Сменить пароль</MenuItem>
-					<Divider />
-					<MenuItem onClick={handleLogout}>Выход</MenuItem>
-				</Menu>
+				{userMenu()}
 			</>
 		);
 	}

@@ -1,11 +1,12 @@
 import { ChevronLeftRounded } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import InfoPanel from "../../components/info_panel";
 import { InfoClass } from "../../components/info_panel/interfaces";
 import { useState, useEffect } from "react";
 import { Box, Tabs, Tab } from "@mui/material";
 import StatementEntry from "./components/statement-entry";
 import React from "react";
+import { useParams } from "react-router-dom";
 
 /**
  * Список ведомостей
@@ -15,6 +16,11 @@ function StatementsPage() {
 	const [tabValue, setTabValue] = useState(0);
 	const [data, setData] = useState(null);
 	const navigate = useNavigate();
+
+	// Тип ведомости, указанный в URL, сюда же по хорошему нужно передать ID ведомости
+	const { type } = useParams();
+
+	const location = useLocation();
 
 	// Отработка кнопки "Назад"
 	const back = () => {
@@ -38,10 +44,15 @@ function StatementsPage() {
 	};
 
 	// Заглушка – перечень локальных JSON
-	const sources = [
+	const main_sources = [
 		"/data/statements_tests.json",
 		"/data/statements_courses.json",
 		"/data/statements_exams.json",
+	];
+
+	const practice_sources = [
+		"/data/practice_open.json",
+		"/data/practice_close.json",
 	];
 
 	/**
@@ -50,12 +61,18 @@ function StatementsPage() {
 	 */
 	const dataFetch = (tabIndex) => {
 		let sourceIndex = tabIndex === undefined ? tabValue : tabIndex;
+		let source;
 
-		let source = sources[sourceIndex];
+		if (type === "common") {
+			source = main_sources[sourceIndex];
+		} else {
+			source = practice_sources[sourceIndex];
+		}
 
 		fetch(source)
 			.then((res) => res.json())
-			.then((data) => setData(data));
+			.then((data) => setData(data))
+			.catch((err) => console.error(err));
 	};
 
 	/**
@@ -66,7 +83,10 @@ function StatementsPage() {
 		 * Получение данных при загрузке компонента
 		 */
 		const dataFetch = () => {
-			let source = "/data/statements_tests.json";
+			let source =
+				type === "common"
+					? "/data/statements_tests.json"
+					: "/data/practice_open.json";
 
 			fetch(source)
 				.then((res) => res.json())
@@ -86,7 +106,7 @@ function StatementsPage() {
 
 		// Вызов функции получения данных
 		dataFetch();
-	}, []);
+	}, [location, type]);
 
 	/**
 	 * Обработчик переключения вкладок
@@ -98,14 +118,36 @@ function StatementsPage() {
 		dataFetch(newValue);
 	};
 
+	const tabs = () => {
+		switch (type) {
+			case "common":
+				return [
+					<Tab key={1} label="Зачёты" value={0} />,
+					<Tab key={2} label="Курсовые работы" value={1} />,
+					<Tab key={3} label="Экзамены" value={2} />,
+				];
+			case "practice":
+				return [
+					<Tab key={1} label="Открытые" value={0} />,
+					<Tab key={2} label="Закрытые" value={1} />,
+				];
+			default:
+				return <></>;
+		}
+	};
+
 	// Рендер компонента
 	return (
-		<main>
+		<main id="statements">
 			<section>
 				<div className="container">
-					<a href="#!" onClick={back} className="icon-block">
-						<ChevronLeftRounded /> Назад
-					</a>
+					<div className="back-link screen">
+						<a href="#!" onClick={back} className="icon-block">
+							<ChevronLeftRounded />
+							Назад
+						</a>
+						<span>Мои ведомости</span>
+					</div>
 					<InfoPanel
 						id="statements-page-info"
 						title="Внимание! (Из кодекса корпоративной этики Кубанского ГАУ)"
@@ -122,13 +164,11 @@ function StatementsPage() {
 								variant="scrollable"
 								scrollButtons="auto"
 							>
-								<Tab label="Зачёты" value={0} />
-								<Tab label="Курсовые работы" value={1} />
-								<Tab label="Экзамены" value={2} />
+								{tabs()}
 							</Tabs>
 						</Box>
 						<Box sx={{ marginTop: "1vmax" }}>
-							<StatementEntry data={data} />
+							<StatementEntry data={data} type={type} />
 						</Box>
 					</Box>
 				</div>

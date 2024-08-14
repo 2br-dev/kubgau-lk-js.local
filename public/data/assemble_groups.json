@@ -1,0 +1,37 @@
+[
+	{
+		"name": "ЮФ1",
+		"hours": {
+			"current": 36,
+			"total": 38
+		}
+	},
+	{
+		"name": "ЮФ2",
+		"hours": {
+			"current": 36,
+			"total": 36
+		}
+	},
+	{
+		"name": "ЮФ3",
+		"hours": {
+			"current": 36,
+			"total": 36
+		}
+	},
+	{
+		"name": "ИМ/ПМ1",
+		"hours": {
+			"current": 36,
+			"total": 36
+		}
+	},
+	{
+		"name": "ЭО/ЭБ1",
+		"hours": {
+			"current": 36,
+			"total": 36
+		}
+	}
+]

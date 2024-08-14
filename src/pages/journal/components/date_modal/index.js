@@ -14,6 +14,15 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
+
+DateModal.propTypes = {
+	event: PropTypes.object,
+	closeHandler: PropTypes.func,
+	saveHandler: PropTypes.func,
+	open: PropTypes.bool,
+};
 
 function DateModal(props) {
 	const [event, setEvent] = useState({
@@ -25,6 +34,7 @@ function DateModal(props) {
 	});
 
 	useEffect(() => {
+		debugger;
 		if (props.event) {
 			let newEvent = JSON.parse(
 				JSON.stringify({

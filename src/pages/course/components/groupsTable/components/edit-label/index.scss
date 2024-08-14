@@ -1,0 +1,6 @@
+.edit-label {
+	& input {
+		width: 40px;
+		font-size: clamp(16px, 3vw, 18px);
+	}
+}

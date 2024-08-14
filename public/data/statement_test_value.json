@@ -6,10 +6,12 @@
 	"state": "Открыта",
 	"unit": 5,
 	"hours": 180,
-    "doc": "document.pdf",
+	"doc": "document.pdf",
 	"startDate": "4 апреля 2022 г.",
 	"closeDate": "12 апреля 2022 г.",
-	"students":[
+	"eventDate": "4 апреля 2022 г.",
+	"eventTime": "10:00",
+	"students": [
 		{
 			"name": "Алаева Эмилия Игоревна",
 			"value": 5

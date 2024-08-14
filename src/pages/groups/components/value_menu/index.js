@@ -16,6 +16,20 @@ import toggleTheme from "../../../../components/toggleTheme";
 import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 import { CheckRounded } from "@mui/icons-material";
 import { IconButton, Snackbar } from "@mui/material";
+import PropTypes from "prop-types";
+import React from "react";
+
+ValueMenu.propTypes = {
+	name: PropTypes.string,
+	value: PropTypes.number,
+	changeHandler: PropTypes.func,
+	sectionId: PropTypes.number,
+	studentId: PropTypes.number,
+	valueId: PropTypes.number,
+	type: EMenuType,
+	removeHandler: PropTypes.func,
+	content: PropTypes.string,
+};
 
 export default function ValueMenu(props) {
 	const [anchorEl, setAnchorEl] = useState(null);
@@ -87,7 +101,7 @@ export default function ValueMenu(props) {
 		setOpen(false);
 	};
 
-	const handleClickAway = (e) => {
+	const handleClickAway = () => {
 		setOpen(false);
 	};
 

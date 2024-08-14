@@ -1,5 +1,12 @@
 import { ErrorRounded, InfoRounded, WarningRounded } from "@mui/icons-material";
 import "./styles.scss";
+import React from "react";
+import PropTypes from "prop-types";
+
+NavbarInfo.propTypes = {
+	type: PropTypes.string,
+	message: PropTypes.string,
+};
 
 export let EType;
 (function (EType) {

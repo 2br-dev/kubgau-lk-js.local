@@ -6,80 +6,82 @@
 	"state": "Открыта",
 	"unit": 5,
 	"hours": 180,
-    "doc": "document.pdf",
+	"doc": "document.pdf",
 	"startDate": "4 апреля 2022 г.",
 	"closeDate": "12 апреля 2022 г.",
-    "deadline": "7 апреля 2022 г.",
-	"students":[
+	"deadline": "7 апреля 2022 г.",
+	"eventDate": "4 апреля 2022 г.",
+	"eventTime": "10:00",
+	"students": [
 		{
 			"name": "Алаева Эмилия Игоревна",
 			"value": "Зачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Безуглый Илья Андреевич",
 			"value": "Незачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Броваров Олег Евгеньевич",
 			"value": "Зачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Волков Семён Романович",
 			"value": "Неявка",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Ганжа Артём Александрович",
 			"value": "Зачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Жданов Дмитрий Олегович",
 			"value": "Зачёт",
-            "access": false
+			"access": false
 		},
 		{
 			"name": "Клименко Татьяна Викторовна",
 			"value": "Незачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Коринец Никита Валерьевич",
 			"value": "Зачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Крисковец Мария Геннадьевна",
 			"value": "Незачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Латрыгин Никита Евгеньевич",
 			"value": "Зачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Меликов Ислам Аферович",
 			"value": "Неявка",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Панеш Роман Оскарович",
 			"value": "Зачёт",
-            "access": false
+			"access": false
 		},
 		{
 			"name": "Поляруш Артём Павлович",
 			"value": "Зачёт",
-            "access": true
+			"access": true
 		},
 		{
 			"name": "Прокофьев Павел Михайлович",
 			"value": "Зачёт",
-            "access": true
+			"access": true
 		}
 	]
 }

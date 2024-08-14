@@ -1,4 +1,12 @@
 import "./index.scss";
+import React from "react";
+import PropTypes from "prop-types";
+
+KVPair.propTypes = {
+	_className: PropTypes.string,
+	_value: PropTypes.any,
+	_key: PropTypes.string,
+};
 
 /**
  * Вывод пары ключ-значение

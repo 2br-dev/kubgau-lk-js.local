@@ -3,6 +3,12 @@ import { QueryBuilderRounded } from "@mui/icons-material";
 import React from "react";
 import "./styles.scss";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+
+CardBlock.propTypes = {
+	title: PropTypes.string,
+	data: PropTypes.any,
+};
 
 function CardBlock(props) {
 	const navigate = useNavigate();
