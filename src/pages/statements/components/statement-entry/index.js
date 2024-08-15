@@ -27,7 +27,6 @@ function StatementEntry(props) {
 	};
 
 	// DOM
-
 	if (props) {
 		if (props.data !== null) {
 			control = (
@@ -54,6 +53,14 @@ function StatementEntry(props) {
 					})}
 				</>
 			);
+			const show = Math.max(props.data.map((e) => e.details.length));
+			if (show === 0) {
+				control = (
+					<Card>
+						<CardContent>Нет данных</CardContent>
+					</Card>
+				);
+			}
 		}
 	}
 

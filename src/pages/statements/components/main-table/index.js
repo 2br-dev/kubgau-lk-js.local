@@ -182,10 +182,12 @@ function MainTable(props) {
 		}
 	};
 
+	// Перевод даты в строку
 	const dateString = (date) => {
 		return new Date(date).toLocaleDateString("ru-RU");
 	};
 
+	// DOM
 	return (
 		<TableContainer>
 			<Table className="simple-table">
