@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 
 TableBlock.propTypes = {
 	title: PropTypes.string,
-	data: PropTypes.arrayOf(PropTypes.object),
+	data: PropTypes.any,
 };
 
 /**

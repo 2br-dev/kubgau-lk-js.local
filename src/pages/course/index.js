@@ -3,12 +3,11 @@ import { Menu, MenuItem } from "@mui/material";
 import { useEffect, useState } from "react";
 import React from "react";
 import ErrorBanner from "../../components/error_banner";
-import { useNavigate } from "react-router-dom";
-import store from "../../store";
 import "./styles.scss";
 import PageHeader from "../../components/pageHeader";
 import CoursesTable from "./components/coursesTable";
 import GroupsTable from "./components/groupsTable";
+import { Link } from "react-router-dom";
 
 /** Страница курсов  */
 function CoursePage() {
@@ -16,20 +15,11 @@ function CoursePage() {
 	const open = Boolean(anchorEl);
 	const [selectedTab, setSelectedTab] = useState("Список курсов");
 
-	const navigate = useNavigate();
-
 	useEffect(() => {
 		/**
 		 * Функция получения данных
 		 */
 	}, []);
-
-	// Переход на семестр, содержащий ошибки
-	const handleMenuClick = (e) => {
-		let semester = e.currentTarget.textContent;
-		store.dispatch({ type: "write", payload: semester });
-		navigate("/main/statements");
-	};
 
 	// Заглушка - рыбные ошибки
 	let message = "У вас есть незакрытые ведомости, пожалуйста, закройте их!";
@@ -86,7 +76,11 @@ function CoursePage() {
 			>
 				{errors.map((value, index) => {
 					return (
-						<MenuItem key={index} onClick={handleMenuClick}>
+						<MenuItem
+							key={index}
+							component={Link}
+							to="/main/statements/common"
+						>
 							{value}
 						</MenuItem>
 					);

@@ -1,0 +1,158 @@
+{
+	"disciplines": [
+		{
+			"sessionDisciplineId": 31169,
+			"disciplineName": "Информатика",
+			"chairName": "Компьютерных технологий и систем",
+			"controlTypeId": 1,
+			"details": [
+				{
+					"sessionDisciplineDetailId": 103280,
+					"statementId": 82647,
+					"statementName": "Л-24-01-77",
+					"numberInOrder": 0,
+					"closingDate": null,
+					"groupName": "ЗМЗ2301",
+					"canClose": false,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 8,
+						"total": 20
+					}
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 31170,
+			"disciplineName": "Информатика",
+			"chairName": "Компьютерных технологий и систем",
+			"controlTypeId": 0,
+			"details": [
+				{
+					"sessionDisciplineDetailId": 107626,
+					"statementId": 88219,
+					"statementName": "382",
+					"numberInOrder": 0,
+					"closingDate": "2024-06-14T17:13:35.59",
+					"groupName": "ПТ2303",
+					"canClose": true,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 20,
+						"total": 20
+					}
+				},
+				{
+					"sessionDisciplineDetailId": 107627,
+					"statementId": 86217,
+					"statementName": "379",
+					"numberInOrder": 0,
+					"closingDate": "2024-06-10T14:40:23.2366667",
+					"groupName": "ПТ2304",
+					"canClose": false,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 20,
+						"total": 20
+					}
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 15097,
+			"disciplineName": "Информационные технологии",
+			"chairName": "Компьютерных технологий и систем",
+			"controlTypeId": 1,
+			"details": [
+				{
+					"sessionDisciplineDetailId": 107776,
+					"statementId": 92429,
+					"statementName": "8",
+					"numberInOrder": 0,
+					"closingDate": null,
+					"groupName": "АИ2301",
+					"canClose": false,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 20,
+						"total": 20
+					}
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 8952,
+			"disciplineName": "Основы математической логики и теории алгоритмов",
+			"chairName": "Компьютерных технологий и систем",
+			"controlTypeId": 2,
+			"details": [
+				{
+					"sessionDisciplineDetailId": 110440,
+					"statementId": null,
+					"statementName": null,
+					"numberInOrder": 0,
+					"closingDate": null,
+					"groupName": "ИТ2301",
+					"canClose": null,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 8,
+						"total": 20
+					}
+				},
+				{
+					"sessionDisciplineDetailId": 110441,
+					"statementId": 88090,
+					"statementName": "1318",
+					"numberInOrder": 0,
+					"closingDate": "2024-06-13T13:16:26.2033333",
+					"groupName": "ИТ2302",
+					"canClose": false,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 20,
+						"total": 20
+					}
+				},
+				{
+					"sessionDisciplineDetailId": 110442,
+					"statementId": null,
+					"statementName": null,
+					"numberInOrder": 0,
+					"closingDate": null,
+					"groupName": "ИТ2303",
+					"canClose": null,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 18,
+						"total": 20
+					}
+				},
+				{
+					"sessionDisciplineDetailId": 110443,
+					"statementId": 88097,
+					"statementName": "1319",
+					"numberInOrder": 0,
+					"closingDate": "2024-06-13T15:46:06.9433333",
+					"groupName": "ИТ2304",
+					"canClose": false,
+					"eventPlace": "Локация",
+					"eventDate": "2024-09-16T00:00:00",
+					"grades": {
+						"current": 20,
+						"total": 20
+					}
+				}
+			]
+		}
+	],
+	"errors": null,
+	"success": true
+}

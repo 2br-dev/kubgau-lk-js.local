@@ -28,7 +28,7 @@ function DateModal(props) {
 	const [event, setEvent] = useState({
 		theme: "",
 		date: dayjs("1 dec 1980"),
-		pairNum: 1,
+		pairNumber: 1,
 		month: null,
 		day: 0,
 		id: null,
@@ -40,7 +40,7 @@ function DateModal(props) {
 				let newEvent = {
 					theme: props.event.theme,
 					date: props.event.date,
-					pairNum: props.event.pairNum,
+					pairNumber: props.event.pairNumber,
 					month: props.event.month,
 					day: props.event.day,
 					id: props.event.id,
@@ -57,7 +57,7 @@ function DateModal(props) {
 	const updatePair = (e, newVal) => {
 		setEvent((prevEvent) => ({
 			...prevEvent,
-			pairNum: parseInt(newVal.props.value),
+			pairNumber: parseInt(newVal.props.value),
 		}));
 	};
 
@@ -125,7 +125,7 @@ function DateModal(props) {
 							>
 								<InputLabel>Пара</InputLabel>
 								<Select
-									value={event.pairNum}
+									value={event.pairNumber}
 									onChange={updatePair}
 								>
 									<MenuItem value="1">1 пара</MenuItem>

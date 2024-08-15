@@ -108,14 +108,14 @@ function Journal() {
 		const day = date.toDate().getDate();
 		const month = date.toDate().getMonth();
 		const theme = event2edit.theme;
-		const pairNum = event2edit.pairNumber;
+		const pairNumber = event2edit.pairNumber;
 
 		setEvent({
 			date: date,
 			day: day,
 			month: month,
 			theme: theme,
-			pairNum: pairNum,
+			pairNumber: pairNumber,
 			id: id,
 		});
 

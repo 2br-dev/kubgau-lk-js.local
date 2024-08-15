@@ -10,6 +10,7 @@ import GroupsPage from "./pages/groups";
 import Journal from "./pages/journal";
 import Subgroups from "./pages/subgroups";
 import Statement from "./pages/statement";
+import React from "react";
 
 function App() {
 	// Установка шрифта для приложения

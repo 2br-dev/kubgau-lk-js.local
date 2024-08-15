@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 DetailsBlock.propTypes = {
 	data: PropTypes.any,
 	title: PropTypes.string,
-	view: EView,
+	view: PropTypes.number,
 };
 
 /**

@@ -6,7 +6,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 EditLabel.propTypes = {
-	val: PropTypes.string,
+	val: PropTypes.number,
 	onSave: PropTypes.func,
 	groupId: PropTypes.number,
 };

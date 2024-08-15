@@ -14,7 +14,8 @@ import { useParams } from "react-router-dom";
 function StatementsPage() {
 	const [panelOpened, setPanelOpened] = useState(false);
 	const [tabValue, setTabValue] = useState(0);
-	const [data, setData] = useState(null);
+	const [data, setData] = useState([]);
+	const [filteredData, setFilteredData] = useState([]);
 	const navigate = useNavigate();
 
 	// Тип ведомости, указанный в URL, сюда же по хорошему нужно передать ID ведомости
@@ -43,54 +44,81 @@ function StatementsPage() {
 		setPanelOpened(value);
 	};
 
-	// Заглушка – перечень локальных JSON
-	const main_sources = [
-		"/data/statements_tests.json",
-		"/data/statements_courses.json",
-		"/data/statements_exams.json",
-	];
+	const filterMainData = (data, typeId) => {
+		return data.filter((el) => {
+			return el.controlTypeId === typeId;
+		});
+	};
 
-	const practice_sources = [
-		"/data/practice_open.json",
-		"/data/practice_close.json",
-	];
-
-	/**
-	 * Получение данных
-	 * @param {number} tabIndex Индекс выбранной вкладки
-	 */
-	const dataFetch = (tabIndex) => {
-		let sourceIndex = tabIndex === undefined ? tabValue : tabIndex;
-		let source;
-
-		if (type === "common") {
-			source = main_sources[sourceIndex];
-		} else {
-			source = practice_sources[sourceIndex];
+	const filterPracticeData = (data, typeId) => {
+		let newData;
+		switch (typeId) {
+			case 0:
+				newData = data.map((discipline) => {
+					return {
+						sessionDisciplineId: discipline.sessionDisciplineId,
+						disciplineName: discipline.disciplineName,
+						chairName: discipline.chairName,
+						controlTypeId: discipline.controlTypeId,
+						details: discipline.details.filter((d) => {
+							return d.closingDate === null;
+						}),
+					};
+				});
+				break;
+			case 1:
+				newData = data.map((discipline) => {
+					return {
+						sessionDisciplineId: discipline.sessionDisciplineId,
+						disciplineName: discipline.disciplineName,
+						chairName: discipline.chairName,
+						controlTypeId: discipline.controlTypeId,
+						details: discipline.details.filter((d) => {
+							return d.closingDate !== null;
+						}),
+					};
+				});
+				break;
+			default:
+				newData = [];
+				break;
 		}
 
-		fetch(source)
-			.then((res) => res.json())
-			.then((data) => setData(data))
-			.catch((err) => console.error(err));
+		return newData;
 	};
 
 	/**
 	 * Монтирование компонента
 	 */
 	useEffect(() => {
+		setTabValue(0);
 		/**
 		 * Получение данных при загрузке компонента
 		 */
 		const dataFetch = () => {
-			let source =
+			const url =
 				type === "common"
-					? "/data/statements_tests.json"
-					: "/data/practice_open.json";
+					? "/data/employeeStatements.json"
+					: "/data/employeePracticeStatements.json";
 
-			fetch(source)
+			fetch(url)
 				.then((res) => res.json())
-				.then((data) => setData(data));
+				.then((responseData) => {
+					setData(responseData.disciplines);
+					switch (type) {
+						case "common":
+							setFilteredData(
+								filterMainData(responseData.disciplines, 0)
+							);
+							break;
+						case "practice":
+							setFilteredData(
+								filterPracticeData(responseData.disciplines, 0)
+							);
+							break;
+					}
+				})
+				.catch((err) => console.error(err));
 		};
 
 		// Состояние информационной панели
@@ -115,7 +143,13 @@ function StatementsPage() {
 	 */
 	const handleTabChange = (event, newValue) => {
 		setTabValue(newValue);
-		dataFetch(newValue);
+		switch (type) {
+			case "common":
+				setFilteredData(filterMainData(data, newValue));
+				break;
+			case "practice":
+				setFilteredData(filterPracticeData(data, newValue));
+		}
 	};
 
 	const tabs = () => {
@@ -168,7 +202,7 @@ function StatementsPage() {
 							</Tabs>
 						</Box>
 						<Box sx={{ marginTop: "1vmax" }}>
-							<StatementEntry data={data} type={type} />
+							<StatementEntry data={filteredData} type={type} />
 						</Box>
 					</Box>
 				</div>

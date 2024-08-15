@@ -20,7 +20,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 StatementTable.propTypes = {
-	data: PropTypes.arrayOf(PropTypes.object),
+	data: PropTypes.any,
 	setValue: PropTypes.func,
 	open: PropTypes.bool,
 	handleContext: PropTypes.func,

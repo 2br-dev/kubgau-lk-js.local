@@ -15,20 +15,38 @@ import {
 	TableContainer,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import React from "react";
+import PropTypes from "prop-types";
+
+PracticeTable.propTypes = {
+	groups: PropTypes.arrayOf(PropTypes.object),
+};
 
 function PracticeTable(props) {
 	const navigate = useNavigate();
 
-	const indicator = (val) => {
-		return val === "open" ? <LockOpenRounded /> : <LockRounded />;
+	const indicator = (row) => {
+		return row.closingDate === null ? <LockOpenRounded /> : <LockRounded />;
+	};
+
+	// Тип сдачи
+	const type = (typeNum) => {
+		const types = [
+			"Основная",
+			"Дополнительная",
+			"Комиссионная",
+			"Внеплановая",
+		];
+		if (!typeNum) typeNum = 0;
+		return types[typeNum];
 	};
 
 	const openStatement = (e) => {
-		const el = e.currentTarget;
 		const path = Array.from(e.nativeEvent.composedPath()).filter(
 			(item) => item.tagName === "BUTTON"
 		);
-		const url = el.dataset["url"];
+
+		const url = "/main/statement/4";
 
 		if (!path.length) {
 			navigate(url);
@@ -58,6 +76,8 @@ function PracticeTable(props) {
 		);
 	};
 
+	const groups = props.groups ? props.groups : [];
+
 	return (
 		<TableContainer>
 			<Table className="simple-table">
@@ -71,7 +91,7 @@ function PracticeTable(props) {
 					</TableRow>
 				</TableHead>
 				<TableBody>
-					{props.groups.map((group, index) => (
+					{groups.map((group, index) => (
 						<TableRow
 							key={index}
 							sx={{ cursor: "pointer" }}
@@ -80,12 +100,14 @@ function PracticeTable(props) {
 							data-url={group.statementUrl}
 						>
 							<TableCell sx={{ width: "50px" }}>
-								{indicator(group.indicator)}
+								{indicator(group)}
 							</TableCell>
-							<TableCell sx={{ whiteSpace: "nowrap" }}>
-								{group.statementNum}
+							<TableCell
+								sx={{ whiteSpace: "nowrap", width: "30%" }}
+							>
+								{group.statementName || "Не указано"}
 							</TableCell>
-							<TableCell>{group.type}</TableCell>
+							<TableCell>{type(group.controlTypeId)}</TableCell>
 							<TableCell
 								sx={{
 									textAlign: "right",

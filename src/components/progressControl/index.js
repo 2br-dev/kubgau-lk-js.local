@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { QueryBuilderRounded } from "@mui/icons-material";
+import { QueryBuilderRounded, GradeOutlined } from "@mui/icons-material";
 import { LinearProgress, linearProgressClasses } from "@mui/material";
 import "./styles.scss";
 import React from "react";
@@ -28,9 +28,16 @@ const FullBorderLinearProgress = styled(LinearProgress)(() => ({
 	},
 }));
 
-const progressControl = (current, total) => {
+const progressControl = (current, total, iconType = "clock") => {
 	let percent = null;
 	let control = null;
+	let icon = null;
+
+	if (iconType === null) {
+		icon = <QueryBuilderRounded className="screen" />;
+	} else {
+		icon = <GradeOutlined className="screen" />;
+	}
 
 	if (!current || !total) {
 		return <>—</>;
@@ -58,7 +65,7 @@ const progressControl = (current, total) => {
 			<div className="progress-wrapper">
 				<div className="progressbar-wrapper">{control}</div>
 				<div className="icon-block">
-					<QueryBuilderRounded className="screen" />
+					{icon}
 					<div>
 						{Math.round(current)}/{Math.round(total)}
 					</div>

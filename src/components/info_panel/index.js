@@ -10,8 +10,8 @@ InfoPanel.propTypes = {
 	subtitle: PropTypes.string,
 	setter: PropTypes.func,
 	open: PropTypes.bool,
-	id: PropTypes.number,
-	type: InfoClass,
+	id: PropTypes.string,
+	type: PropTypes.string,
 	message: PropTypes.string,
 };
 

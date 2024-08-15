@@ -18,14 +18,21 @@ import {
 } from "@mui/icons-material";
 import progressControl from "../../../../components/progressControl";
 import { useNavigate } from "react-router-dom";
+import React from "react";
+import PropTypes from "prop-types";
+
+MainTable.propTypes = {
+	groups: PropTypes.arrayOf(PropTypes.object),
+	statementId: PropTypes.number,
+};
 
 function MainTable(props) {
 	const navigate = useNavigate();
 
 	// Действия
 	const actions = (row) => {
-		switch (row.indicator) {
-			case "opened":
+		switch (true) {
+			case row.closingDate === null:
 				return (
 					<span className="actions-wrapper">
 						<Tooltip
@@ -46,7 +53,7 @@ function MainTable(props) {
 						</Tooltip>
 					</span>
 				);
-			case "closed":
+			case row.closingDate !== null:
 				return (
 					<span className="actions-wrapper">
 						<Tooltip
@@ -64,7 +71,8 @@ function MainTable(props) {
 						</Tooltip>
 					</span>
 				);
-			case "outdated":
+			case row.closingDate === null &&
+				row.grades.current === row.grades.total:
 				return (
 					<span className="actions-wrapper">
 						<Tooltip
@@ -97,15 +105,16 @@ function MainTable(props) {
 			return el.tagName === "BUTTON";
 		});
 		if (!buttons.length) {
-			let url = e.currentTarget.dataset["url"];
+			let url = "/main/statement/" + e.currentTarget.dataset["id"];
 			navigate(url);
 		}
 	};
 
 	// Индикатор
 	const indicator = (row) => {
-		switch (row.indicator) {
-			case "opened":
+		switch (true) {
+			case row.closingDate === null &&
+				row.grades.current !== row.grades.total:
 				return (
 					<CircleRounded
 						sx={{
@@ -113,7 +122,7 @@ function MainTable(props) {
 						}}
 					/>
 				);
-			case "closed":
+			case row.closingDate !== null:
 				return (
 					<LockRounded
 						sx={{
@@ -121,7 +130,8 @@ function MainTable(props) {
 						}}
 					/>
 				);
-			case "outdated":
+			case row.closingDate === null &&
+				row.grades.current === row.grades.total:
 				return (
 					<CircleRounded
 						sx={{
@@ -134,14 +144,25 @@ function MainTable(props) {
 		}
 	};
 
+	// Тип сдачи
+	const type = (typeNum) => {
+		const types = [
+			"Основная",
+			"Дополнительная",
+			"Комиссионная",
+			"Внеплановая",
+		];
+		if (!typeNum) typeNum = 0;
+		return types[typeNum];
+	};
+
 	// Статус ведомости
 	const statusControl = (row) => {
-		switch (row.indicator) {
-			case "opened":
-				return progressControl(row.status.current, row.status.total);
-			case "closed":
-				return <>Закрыта {row.status.closeDate}</>;
-			case "outdated":
+		switch (true) {
+			case row.closingDate !== null:
+				return <>Закрыта {dateString(row.closingDate)}</>;
+			case row.grades.current === row.grades.total &&
+				row.closingDate === null:
 				return (
 					<Button
 						variant="contained"
@@ -153,15 +174,23 @@ function MainTable(props) {
 					</Button>
 				);
 			default:
-				return <></>;
+				return progressControl(
+					row.grades.current,
+					row.grades.total,
+					"grade"
+				);
 		}
+	};
+
+	const dateString = (date) => {
+		return new Date(date).toLocaleDateString("ru-RU");
 	};
 
 	return (
 		<TableContainer>
 			<Table className="simple-table">
 				<TableHead>
-					<TableRow>
+					<TableRow onClick={openStatement}>
 						<TableCell sx={{ width: "26%" }} colSpan={2}>
 							Группа/студент
 						</TableCell>
@@ -190,17 +219,19 @@ function MainTable(props) {
 								sx={{
 									cursor: "pointer",
 								}}
-								data-url={row.statementUrl}
+								data-type={props.statementId}
 								onClick={openStatement}
 								key={index}
 								hover
 							>
 								<TableCell>{indicator(row)}</TableCell>
-								<TableCell>{row.group}</TableCell>
-								<TableCell>{row.date}</TableCell>
+								<TableCell>{row.groupName}</TableCell>
+								<TableCell>
+									{dateString(row.eventDate)}
+								</TableCell>
 								<TableCell>{statusControl(row)}</TableCell>
-								<TableCell>{row.type}</TableCell>
-								<TableCell>{row.statementNum}</TableCell>
+								<TableCell>{type(row.numberInOrder)}</TableCell>
+								<TableCell>{row.statementName}</TableCell>
 								<TableCell> {actions(row)} </TableCell>
 							</TableRow>
 						);
