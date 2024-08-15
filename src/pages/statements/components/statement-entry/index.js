@@ -32,24 +32,19 @@ function StatementEntry(props) {
 			control = (
 				<>
 					{props.data.map((el, index) => {
-						if (el.details.length) {
-							return (
-								<Card key={index}>
-									<CardContent>
-										<h2>
-											<span className="code">
-												{el.disciplineName}
-											</span>
-										</h2>
-										<p>{el.chairName}</p>
-										{outputTable(
-											el.details,
-											el.controlTypeId
-										)}
-									</CardContent>
-								</Card>
-							);
-						}
+						return (
+							<Card key={index}>
+								<CardContent>
+									<h2>
+										<span className="code">
+											{el.disciplineName}
+										</span>
+									</h2>
+									<p>{el.chairName}</p>
+									{outputTable(el.details, el.controlTypeId)}
+								</CardContent>
+							</Card>
+						);
 					})}
 				</>
 			);
