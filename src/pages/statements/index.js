@@ -220,6 +220,7 @@ function StatementsPage() {
 		if (type === "common") {
 			return (
 				<FormControlLabel
+					className="open-only"
 					control={<Checkbox />}
 					label="Только открытые"
 					checked={openOnly}

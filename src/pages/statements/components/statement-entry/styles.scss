@@ -2,6 +2,13 @@ main#statements {
 	.tabs-wrapper {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	& .open-only {
+		@media (max-width: 600px) {
+			margin: 20px 0;
+		}
 	}
 
 	tr {
