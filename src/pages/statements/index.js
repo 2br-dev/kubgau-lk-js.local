@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import InfoPanel from "../../components/info_panel";
 import { InfoClass } from "../../components/info_panel/interfaces";
 import { useState, useEffect } from "react";
-import { Box, Tabs, Tab } from "@mui/material";
+import { Box, Tabs, Tab, Checkbox, FormControlLabel } from "@mui/material";
 import StatementEntry from "./components/statement-entry";
 import React from "react";
 import { useParams } from "react-router-dom";
@@ -16,11 +16,11 @@ function StatementsPage() {
 	const [tabValue, setTabValue] = useState(0);
 	const [data, setData] = useState([]);
 	const [filteredData, setFilteredData] = useState([]);
+	const [openOnly, setOpenOnly] = useState(false);
 	const navigate = useNavigate();
 
 	// Тип ведомости, указанный в URL, сюда же по хорошему нужно передать ID ведомости
 	const { type } = useParams();
-
 	const location = useLocation();
 
 	// Отработка кнопки "Назад"
@@ -44,12 +44,40 @@ function StatementsPage() {
 		setPanelOpened(value);
 	};
 
-	const filterMainData = (data, typeId) => {
-		return data.filter((el) => {
-			return el.controlTypeId === typeId;
-		});
+	/**
+	 * Фильтрация основных данных
+	 * @param {*} data Данные для фильтрации
+	 * @param {*} typeId Выбранная вкладка
+	 * @returns
+	 */
+	const filterMainData = (data, tabValue, openFilter) => {
+		let output = data.filter(
+			(discipline) => discipline.controlTypeId === tabValue
+		);
+
+		if (openFilter) {
+			output = output.map((discipline) => {
+				return {
+					sessionDisciplineId: discipline.sessionDisciplineId,
+					disciplineName: discipline.disciplineName,
+					chairName: discipline.chairName,
+					controlTypeId: discipline.controlTypeId,
+					details: discipline.details.filter((d) => {
+						return d.closingDate === null;
+					}),
+				};
+			});
+		}
+
+		return output;
 	};
 
+	/**
+	 * Фильтрация данных по практике
+	 * @param {*} data Данные для фильтрации
+	 * @param {*} typeId Выбранная вкладка
+	 * @returns
+	 */
 	const filterPracticeData = (data, typeId) => {
 		let newData;
 		switch (typeId) {
@@ -108,12 +136,20 @@ function StatementsPage() {
 					switch (type) {
 						case "common":
 							setFilteredData(
-								filterMainData(responseData.disciplines, 0)
+								filterMainData(
+									responseData.disciplines,
+									0,
+									tabValue
+								)
 							);
 							break;
 						case "practice":
 							setFilteredData(
-								filterPracticeData(responseData.disciplines, 0)
+								filterPracticeData(
+									responseData.disciplines,
+									0,
+									tabValue
+								)
 							);
 							break;
 					}
@@ -136,6 +172,16 @@ function StatementsPage() {
 		dataFetch();
 	}, [location, type]);
 
+	useEffect(() => {
+		switch (type) {
+			case "common":
+				setFilteredData(filterMainData(data, tabValue, openOnly));
+				break;
+			case "practice":
+				setFilteredData(filterPracticeData(data, tabValue, openOnly));
+		}
+	}, [tabValue, openOnly]);
+
 	/**
 	 * Обработчик переключения вкладок
 	 * @param event Событие
@@ -143,15 +189,9 @@ function StatementsPage() {
 	 */
 	const handleTabChange = (event, newValue) => {
 		setTabValue(newValue);
-		switch (type) {
-			case "common":
-				setFilteredData(filterMainData(data, newValue));
-				break;
-			case "practice":
-				setFilteredData(filterPracticeData(data, newValue));
-		}
 	};
 
+	// Отображаемые вкладки
 	const tabs = () => {
 		switch (type) {
 			case "common":
@@ -168,6 +208,26 @@ function StatementsPage() {
 			default:
 				return <></>;
 		}
+	};
+
+	const handleChangeOpen = (e) => {
+		setOpenOnly(e.target.checked);
+		setFilteredData(filterMainData(data, tabValue, e.target.checked));
+	};
+
+	// Фильтр на открытые ведомости
+	const openFilters = () => {
+		if (type === "common") {
+			return (
+				<FormControlLabel
+					control={<Checkbox />}
+					label="Только открытые"
+					checked={openOnly}
+					onChange={handleChangeOpen}
+				/>
+			);
+		}
+		return <></>;
 	};
 
 	// Рендер компонента
@@ -191,7 +251,10 @@ function StatementsPage() {
 						setter={setter}
 					/>
 					<Box sx={{ width: "100%", marginTop: "2vmax" }}>
-						<Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+						<Box
+							sx={{ borderBottom: 1, borderColor: "divider" }}
+							className="tabs-wrapper"
+						>
 							<Tabs
 								value={tabValue}
 								onChange={handleTabChange}
@@ -200,6 +263,7 @@ function StatementsPage() {
 							>
 								{tabs()}
 							</Tabs>
+							{openFilters()}
 						</Box>
 						<Box sx={{ marginTop: "1vmax" }}>
 							<StatementEntry data={filteredData} type={type} />

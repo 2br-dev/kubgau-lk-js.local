@@ -1,4 +1,9 @@
 main#statements {
+	.tabs-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
 	tr {
 		& .actions-wrapper {
 			display: inline-flex;
