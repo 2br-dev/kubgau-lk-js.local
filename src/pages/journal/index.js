@@ -13,7 +13,7 @@ import DateModal from "./components/date_modal";
 import PageHeader from "../../components/pageHeader";
 import React from "react";
 import studentAbsent from "./components/student_absent";
-
+import dayjs from "dayjs";
 Journal.propTypes = {};
 
 /**
@@ -43,6 +43,7 @@ function Journal() {
 	const [isStudentOpen, setIsStudentOpen] = useState(false);
 	const [day, setDay] = useState(null);
 	const [student, setStudent] = useState(null);
+	const [headerData, setHeaderData] = useState([]);
 	const [event, setEvent] = useState({
 		pair: 1,
 		groupId: null,
@@ -58,6 +59,7 @@ function Journal() {
 			.then((res) => res.json())
 			.then((data) => {
 				setStudents(data.students);
+				setHeaderData([...data.students[0].lessons]);
 			});
 	}, []);
 
@@ -97,16 +99,24 @@ function Journal() {
 
 	// Открытие урока
 	const openEvent = (e) => {
-		let el = e.target;
-		let day = parseInt(el.dataset["day"]);
-		let month = parseInt(el.dataset["group"]);
-		let theme = el.dataset["theme"];
-		const pairNum = el.dataset["pair"];
+		const el = e.target;
+		const id = parseInt(el.dataset["id"]);
+
+		let event2edit = headerData[id];
+		const strDay = event2edit.lessonDate;
+		const date = dayjs(strDay);
+		const day = date.toDate().getDate();
+		const month = date.toDate().getMonth();
+		const theme = event2edit.theme;
+		const pairNum = event2edit.pairNumber;
+
 		setEvent({
-			date: day,
+			date: date,
+			day: day,
 			month: month,
 			theme: theme,
 			pairNum: pairNum,
+			id: id,
 		});
 
 		setTimeout(() => {
@@ -121,7 +131,13 @@ function Journal() {
 	};
 
 	// Сохранение урока
-	const saveEvent = () => {
+	const saveEvent = (event) => {
+		let newHeaderData = [...headerData];
+		let lesson = newHeaderData[event.id];
+		lesson.lessonDate = event.date.toDate();
+		lesson.theme = event.theme;
+		lesson.pairNumber = event.pairNum;
+		setHeaderData(newHeaderData);
 		setEventOpen(false);
 	};
 
@@ -189,10 +205,9 @@ function Journal() {
 
 	// Заголовок
 	const header = () => {
-		const lessons = students[0].lessons;
 		const dates =
-			lessons.length > 0
-				? lessons.map((l) => new Date(l.lessonDate).getMonth())
+			headerData.length > 0
+				? headerData.map((l) => new Date(l.lessonDate).getMonth())
 				: [];
 
 		let monthesNum = [...new Set(dates)];
@@ -250,17 +265,14 @@ function Journal() {
 						<th rowSpan={2}>Ср. общ. балл</th>
 					</tr>
 					<tr>
-						{lessons.map((lesson, index) => {
+						{headerData.map((lesson, index) => {
 							let day = new Date(lesson.lessonDate);
-
-							let lessonMonth = day.getMonth();
 							let lessonDay = day.getDate();
+
 							return (
 								<th
-									data-date={lesson.lessonDate}
-									data-month={lessonMonth}
+									data-id={index}
 									key={index}
-									data-theme={lesson.theme}
 									onClick={openEvent}
 								>
 									{lessonDay}

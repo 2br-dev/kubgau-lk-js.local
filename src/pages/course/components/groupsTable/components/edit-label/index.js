@@ -17,7 +17,7 @@ function EditLabel(props) {
 
 	useEffect(() => {
 		setLabel(props.val);
-	}, []);
+	}, [props.val]);
 
 	const handleChange = (e) => {
 		setLabel(e.target.value);

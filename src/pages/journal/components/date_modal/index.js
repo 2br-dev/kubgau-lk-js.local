@@ -28,25 +28,25 @@ function DateModal(props) {
 	const [event, setEvent] = useState({
 		theme: "",
 		date: dayjs("1 dec 1980"),
-		pair: "1",
-		groupId: null,
-		dayId: null,
+		pairNum: 1,
+		month: null,
+		day: 0,
+		id: null,
 	});
 
 	useEffect(() => {
-		debugger;
 		if (props.event) {
-			let newEvent = JSON.parse(
-				JSON.stringify({
+			if (props.event.date !== null) {
+				let newEvent = {
 					theme: props.event.theme,
-					date: null,
-					pair: props.event.pair,
-					dayId: props.event.dayId,
-					groupId: props.event.groupId,
-				})
-			);
-			newEvent.date = dayjs(new Date(props.event.date));
-			setEvent(newEvent);
+					date: props.event.date,
+					pairNum: props.event.pairNum,
+					month: props.event.month,
+					day: props.event.day,
+					id: props.event.id,
+				};
+				setEvent(newEvent);
+			}
 		}
 	}, [props.event]);
 
@@ -55,7 +55,10 @@ function DateModal(props) {
 	};
 
 	const updatePair = (e, newVal) => {
-		setEvent((prevEvent) => ({ ...prevEvent, pair: newVal.props.value }));
+		setEvent((prevEvent) => ({
+			...prevEvent,
+			pairNum: parseInt(newVal.props.value),
+		}));
 	};
 
 	const updateTheme = (e) => {
@@ -122,7 +125,7 @@ function DateModal(props) {
 							>
 								<InputLabel>Пара</InputLabel>
 								<Select
-									value={event.pair}
+									value={event.pairNum}
 									onChange={updatePair}
 								>
 									<MenuItem value="1">1 пара</MenuItem>
