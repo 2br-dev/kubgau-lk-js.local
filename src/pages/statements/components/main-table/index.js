@@ -24,6 +24,7 @@ import PropTypes from "prop-types";
 MainTable.propTypes = {
 	groups: PropTypes.arrayOf(PropTypes.object),
 	statementId: PropTypes.number,
+	statementType: PropTypes.number,
 };
 
 function MainTable(props) {
@@ -105,7 +106,7 @@ function MainTable(props) {
 			return el.tagName === "BUTTON";
 		});
 		if (!buttons.length) {
-			let url = "/main/statement/" + e.currentTarget.dataset["id"];
+			let url = `/main/statement/${props.statementType}`;
 			navigate(url);
 		}
 	};

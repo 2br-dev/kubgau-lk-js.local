@@ -267,7 +267,11 @@ function StatementsPage() {
 							{openFilters()}
 						</Box>
 						<Box sx={{ marginTop: "1vmax" }}>
-							<StatementEntry data={filteredData} type={type} />
+							<StatementEntry
+								data={filteredData}
+								type={type}
+								statementType={tabValue}
+							/>
 						</Box>
 					</Box>
 				</div>

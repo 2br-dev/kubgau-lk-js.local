@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 StatementEntry.propTypes = {
 	type: PropTypes.string,
 	data: PropTypes.array,
+	statementType: PropTypes.number,
 };
 
 function StatementEntry(props) {
@@ -20,7 +21,11 @@ function StatementEntry(props) {
 
 	const outputTable = (data, statementId) => {
 		return props.type === "common" ? (
-			<MainTable groups={data} statementId={statementId} />
+			<MainTable
+				groups={data}
+				statementId={statementId}
+				statementType={props.statementType}
+			/>
 		) : (
 			<PracticeTable groups={data} />
 		);
