@@ -33,7 +33,7 @@ const progressControl = (current, total, iconType = "clock") => {
 	let control = null;
 	let icon = null;
 
-	if (iconType === null) {
+	if (iconType === "clock") {
 		icon = <QueryBuilderRounded className="screen" />;
 	} else {
 		icon = <GradeOutlined className="screen" />;

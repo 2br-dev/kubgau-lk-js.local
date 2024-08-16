@@ -52,7 +52,7 @@ function StatementsPage() {
 	 */
 	const filterMainData = (data, tabValue, openFilter) => {
 		let output = data.filter(
-			(discipline) => discipline.controlTypeId === tabValue
+			(discipline) => discipline.controlTypeId === tabValue,
 		);
 
 		if (openFilter) {
@@ -139,8 +139,8 @@ function StatementsPage() {
 								filterMainData(
 									responseData.disciplines,
 									0,
-									tabValue
-								)
+									tabValue,
+								),
 							);
 							break;
 						case "practice":
@@ -148,9 +148,12 @@ function StatementsPage() {
 								filterPracticeData(
 									responseData.disciplines,
 									0,
-									tabValue
-								)
+									tabValue,
+								),
 							);
+							break;
+						default:
+							setFilteredData(responseData.disciplines);
 							break;
 					}
 				})
@@ -170,6 +173,7 @@ function StatementsPage() {
 
 		// Вызов функции получения данных
 		dataFetch();
+		// eslint-disable-next-line
 	}, [location, type]);
 
 	useEffect(() => {
@@ -179,7 +183,11 @@ function StatementsPage() {
 				break;
 			case "practice":
 				setFilteredData(filterPracticeData(data, tabValue, openOnly));
+				break;
+			default:
+				setFilteredData(data);
 		}
+		// eslint-disable-next-line
 	}, [tabValue, openOnly]);
 
 	/**

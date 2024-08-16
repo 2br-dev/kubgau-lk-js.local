@@ -1,0 +1,126 @@
+{
+	"data": [
+		{
+			"disciplineName": "Алгоритмизация и программирование",
+			"virtualGroups": [
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ1",
+					"employeeFullName": "Иванов Иван Иванович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ2",
+					"employeeFullName": "Иванов Иван Иванович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ3",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ИМ/ПМ1",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЭО/ЭБ1",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				}
+			]
+		},
+		{
+			"disciplineName": "Алгоритмы и структуры данных",
+			"virtualGroups": [
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ1",
+					"employeeFullName": "Иванов Иван Иванович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ2",
+					"employeeFullName": "Иванов Иван Иванович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ3",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ИМ/ПМ1",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЭО/ЭБ1",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				}
+			]
+		},
+		{
+			"disciplineName": "Информационные системы в управлении и финансовой деятельности",
+			"virtualGroups": [
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ1",
+					"employeeFullName": "Иванов Иван Иванович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ2",
+					"employeeFullName": "Иванов Иван Иванович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЮФ3",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ИМ/ПМ1",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				},
+				{
+					"virtualGroupId": 1,
+					"virtualGroupName": "ЭО/ЭБ1",
+					"employeeFullName": "Петров Пётр Петрович",
+					"filledHours": 10,
+					"totalHours": 20
+				}
+			]
+		}
+	],
+	"errors": [""],
+	"success": true
+}

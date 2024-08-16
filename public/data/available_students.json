@@ -1,0 +1,60 @@
+{
+	"data": [
+		{
+			"studentId": 1,
+			"fullName": "Афанасенко Снежана Владимировна",
+			"attachedToSubGroup": "ЮФ3",
+			"attachedToEmployee": "Татьяна Анатольевна Шевцова"
+		},
+		{
+			"studentId": 2,
+			"fullName": "Борисенко Виктор Михайлович",
+			"attachedToSubGroup": null,
+			"attachedToEmployee": null
+		},
+		{
+			"studentId": 3,
+			"fullName": "Демкова Виктория Андреевна",
+			"attachedToSubGroup": null,
+			"attachedToEmployee": null
+		},
+		{
+			"studentId": 4,
+			"fullName": "Демченко Даниил Петрович",
+			"attachedToSubGroup": "ЮФ3",
+			"attachedToEmployee": "Татьяна Анатольевна Шевцова"
+		},
+		{
+			"studentId": 5,
+			"fullName": "Денисов Артём Андреевич",
+			"attachedToSubGroup": "АХ-21",
+			"attachedToEmployee": "Королёв Дмитрий Афанасьевич"
+		},
+		{
+			"studentId": 6,
+			"fullName": "Королёв Илья Юрьевич",
+			"attachedToSubGroup": null,
+			"attachedToEmployee": null
+		},
+		{
+			"studentId": 7,
+			"fullName": "Кротенко Дарья Олеговна",
+			"attachedToSubGroup": "КС-43",
+			"attachedToEmployee": "Владимирская Светлана Олеговна"
+		},
+		{
+			"studentId": 8,
+			"fullName": "Кушнаренко Матвей Сергеевич",
+			"attachedToSubGroup": null,
+			"attachedToEmployee": null
+		},
+		{
+			"studentId": 9,
+			"fullName": "Лазько Владислав Викторович",
+			"attachedToSubGroup": null,
+			"attachedToEmployee": null
+		}
+	],
+	"errors": [""],
+	"success": true
+}

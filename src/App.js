@@ -11,6 +11,7 @@ import Journal from "./pages/journal";
 import Subgroups from "./pages/subgroups";
 import Statement from "./pages/statement";
 import React from "react";
+import { DialogsProvider } from "@toolpad/core";
 
 function App() {
 	// Установка шрифта для приложения
@@ -22,28 +23,36 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<div className="App">
-				{/* Роутер */}
-				<Router>
-					<Routes>
-						<Route path="/" element={<LoginScreen />} />
-						<Route path="/main" element={<MainPage />}>
-							<Route path="courses" element={<CoursePage />} />
-							<Route
-								path="statements/:type"
-								element={<StatementsPage />}
-							/>
-							<Route path="groups" element={<GroupsPage />} />
-							<Route path="journal" element={<Journal />} />
-							<Route path="subgroups" element={<Subgroups />} />
-							<Route
-								path="statement/:type"
-								element={<Statement />}
-							/>
-						</Route>
-					</Routes>
-				</Router>
-			</div>
+			<DialogsProvider>
+				<div className="App">
+					{/* Роутер */}
+					<Router>
+						<Routes>
+							<Route path="/" element={<LoginScreen />} />
+							<Route path="/main" element={<MainPage />}>
+								<Route
+									path="courses"
+									element={<CoursePage />}
+								/>
+								<Route
+									path="statements/:type"
+									element={<StatementsPage />}
+								/>
+								<Route path="groups" element={<GroupsPage />} />
+								<Route path="journal" element={<Journal />} />
+								<Route
+									path="subgroups"
+									element={<Subgroups />}
+								/>
+								<Route
+									path="statement/:type"
+									element={<Statement />}
+								/>
+							</Route>
+						</Routes>
+					</Router>
+				</div>
+			</DialogsProvider>
 		</ThemeProvider>
 	);
 }
