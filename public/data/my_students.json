@@ -1,0 +1,24 @@
+{
+	"data": [
+		{
+			"studentId": 1,
+			"fullName": "Афанасенко Снежана Владимировна",
+			"attachedToSubGroup": "ЮФ3",
+			"attachedToEmployee": "Татьяна Анатольевна Шевцова"
+		},
+		{
+			"studentId": 2,
+			"fullName": "Борисенко Виктор Михайлович",
+			"attachedToSubGroup": "ЮФ3",
+			"attachedToEmployee": "Татьяна Анатольевна Шевцова"
+		},
+		{
+			"studentId": 3,
+			"fullName": "Демкова Виктория Андреевна",
+			"attachedToSubGroup": "ЮФ3",
+			"attachedToEmployee": "Татьяна Анатольевна Шевцова"
+		}
+	],
+	"errors": [],
+	"success": true
+}

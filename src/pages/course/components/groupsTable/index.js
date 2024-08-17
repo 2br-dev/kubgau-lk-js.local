@@ -88,7 +88,11 @@ function GroupsTable() {
 		setEditOpen(false);
 		setEditGroup(null);
 		setModalMode("edit");
-		console.log(group);
+
+		const studentIds = group.students.map((s) => s.studentId);
+		group.students = studentIds;
+
+		console.table(group);
 	};
 
 	const handleModalClose = () => {

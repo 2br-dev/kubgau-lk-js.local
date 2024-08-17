@@ -116,6 +116,7 @@ function CoursePage() {
 							<Tabs
 								value={selectedTab}
 								onChange={switchTab}
+								variant="scrollable"
 								sx={{ marginBottom: "20px" }}
 							>
 								<Tab
