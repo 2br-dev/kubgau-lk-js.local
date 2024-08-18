@@ -1,56 +1,127 @@
 import KVPair from "../../../../components/kv_pair";
 import { Grid, Link } from "@mui/material";
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-StatementData.propTypes = {
-	startDate: PropTypes.string,
-	closeDate: PropTypes.string,
-	eventDate: PropTypes.string,
-	deadline: PropTypes.string,
-	eventTime: PropTypes.string,
-	group: PropTypes.string,
-	number: PropTypes.number,
-	type: PropTypes.string,
-	subtype: PropTypes.string,
-	state: PropTypes.string,
-	unit: PropTypes.string,
-	hours: PropTypes.string,
-	doc: PropTypes.string,
-	examDate: PropTypes.string,
-};
+function StatementData() {
+	const { type } = useParams();
 
-function StatementData(props) {
+	const [statement, setStatement] = useState({
+		statementId: null,
+		controlType: 0,
+		creationDate: null,
+		deadline: null,
+		closingDate: null,
+		eventDate: null,
+		groupName: "",
+		discipline: "",
+		eventPlace: "",
+		scanGUID: null,
+		statementNumber: "0",
+	});
+
+	const statementType = (typeId) => {
+		const types = [
+			"Экзаменационная",
+			"Зачётная",
+			"Зачётная",
+			"Курсовая работа",
+			"Курсовой проект",
+		];
+		return types[typeId];
+	};
+
+	useEffect(() => {
+		/**
+		 * Экзаменационная ведомость - 0
+		 * Зачётная ведомость - 1
+		 * Зачётная ведомость с оценкой - 2
+		 * Курсовая работа - 3
+		 * Курсовой проект - 4
+		 */
+		const url = `/data/statementData${type}.json`;
+		fetch(url)
+			.then((res) => res.json())
+			.then((response) => {
+				setStatement(response.statement);
+			});
+	}, []);
+
+	const formatDate = (date) => {
+		return new Date(date).toLocaleString("ru-RU", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+		});
+	};
+
+	const formatTime = (date) => {
+		return new Date(date).toLocaleString("ru-RU", {
+			hour: "2-digit",
+			minute: "2-digit",
+		});
+	};
+
+	const status = (closingDate) => {
+		return closingDate === "" || closingDate === null
+			? "Открыта"
+			: "Закрыта";
+	};
+
 	return (
 		<>
-			<Grid container className="screen">
+			<Grid container className="screen" sx={{ marginBottom: "40px" }}>
 				<Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
-					<KVPair _key="дата выдачи" _value={props.startDate} />
-					<KVPair _key="дата закрытия" _value={props.closeDate} />
-					<KVPair _key="дедлайн закрытия" _value={props.deadline} />
-					<KVPair _key="дата проведения" _value={props.eventDate} />
-					<KVPair _key="время проведения" _value={props.eventTime} />
+					<KVPair
+						_key="дата выдачи"
+						_value={formatDate(statement.creationDate)}
+					/>
+					<KVPair
+						_key="дата закрытия"
+						_value={formatDate(statement.closingDate)}
+					/>
+					<KVPair
+						_key="дедлайн закрытия"
+						_value={formatDate(statement.deadline)}
+					/>
+					<KVPair
+						_key="дата проведения"
+						_value={formatDate(statement.eventDate)}
+					/>
+					<KVPair
+						_key="время проведения"
+						_value={formatTime(statement.eventDate)}
+					/>
 				</Grid>
 				<Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
 					<KVPair
 						_key="группа"
-						_value={<Link href="/main/group">{props.group}</Link>}
+						_value={
+							<Link href="/main/group">
+								{statement.groupName}
+							</Link>
+						}
 					/>
-					<KVPair _key="номер ведомости" _value={props.number} />
-					<KVPair _key="тип ведомости" _value={props.type} />
-					<KVPair _key="вид ведомости" _value={props.subtype} />
+					<KVPair
+						_key="номер ведомости"
+						_value={statement.statementNumber}
+					/>
+					<KVPair
+						_key="тип ведомости"
+						_value={statementType(statement.controlType)}
+					/>
 				</Grid>
 				<Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
-					<KVPair _key="статус" _value={props.state} />
-					<KVPair _key="зачётная единица" _value={props.unit} />
-					<KVPair _key="кол-во часов" _value={props.hours} />
+					<KVPair
+						_key="статус"
+						_value={status(statement.closingDate) || "Неизвестно"}
+					/>
 					<KVPair
 						_className="screen"
 						_key="скан документа"
 						_value={
 							<>
-								<Link href={"/" + props.doc}>Посмотреть</Link> |{" "}
-								<Link>Удалить</Link>
+								<Link>Посмотреть</Link> | <Link>Удалить</Link>
 							</>
 						}
 					/>
@@ -59,18 +130,34 @@ function StatementData(props) {
 			<div className="statement-data print">
 				<KVPair
 					_key="группа"
-					_value={<Link href="/main/group">{props.group}</Link>}
+					_value={
+						<Link href="/main/group">{statement.groupName}</Link>
+					}
 				/>
-				<KVPair _key="номер ведомости" _value={props.number} />
-				<KVPair _key="тип ведомости" _value={props.type} />
-				<KVPair _key="вид ведомости" _value={props.subtype} />
-				<KVPair _key="статус" _value={props.state} />
-				<KVPair _key="зачётная единица" _value={props.unit} />
-				<KVPair _key="кол-во часов" _value={props.hours} />
-				<KVPair _key="дата выдачи" _value={props.startDate} />
-				<KVPair _key="дата закрытия" _value={props.closeDate} />
-				<KVPair _key="дедлайн закрытия" _value={props.deadline} />
-				<KVPair _key="дата экзамена" _value={props.examDate} />
+				<KVPair
+					_key="номер ведомости"
+					_value={statement.statementNumber}
+				/>
+				<KVPair
+					_key="тип ведомости"
+					_value={statementType(statement.controlType)}
+				/>
+				<KVPair
+					_key="дата выдачи"
+					_value={formatDate(statement.creationDate)}
+				/>
+				<KVPair
+					_key="дата закрытия"
+					_value={formatDate(statement.closingDate)}
+				/>
+				<KVPair
+					_key="дедлайн закрытия"
+					_value={formatDate(statement.deadline)}
+				/>
+				<KVPair
+					_key="дата экзамена"
+					_value={formatDate(statement.eventDate)}
+				/>
 			</div>
 		</>
 	);

@@ -9,32 +9,99 @@ import {
 	ToggleButtonGroup,
 	ThemeProvider,
 	IconButton,
+	Card,
+	CardContent,
+	Button,
+	MenuItem,
+	Tooltip,
+	Menu,
+	Snackbar,
 } from "@mui/material";
 import {
 	MoreVertRounded,
 	CheckRounded,
 	CancelRounded,
+	PrintRounded,
+	ClearRounded,
+	SaveRounded,
+	CloudUploadOutlined,
+	DeleteOutlined,
+	DownloadOutlined,
+	EditOutlined,
 } from "@mui/icons-material";
 import toggleTheme from "../../../../components/toggleTheme";
 import React from "react";
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-StatementTable.propTypes = {
-	data: PropTypes.any,
-	setValue: PropTypes.func,
-	open: PropTypes.bool,
-	handleContext: PropTypes.func,
-};
+function StatementTable() {
+	const [snackbarOpen, setSnackbarOpen] = useState(false);
+	const [snackbarMessage, setSnackbarMessage] = useState("");
+	const [anchorEl, setAnchorEl] = useState(null);
+	const open = Boolean(anchorEl);
+	const [data, setData] = useState([]);
+	const { type } = useParams(); // Тип ведомости, указанный в URL, сюда же по хорошему нужно передать ID ведомости
 
-function StatementTable(props) {
-	const data = props.data;
+	const statementType = parseInt(type);
+
+	const getJsonData = () => {
+		fetch(`/data/statementGrades${type}.json`)
+			.then((res) => res.json())
+			.then((data) => setData(data.students));
+	};
+
+	useEffect(() => {
+		getJsonData();
+	}, []);
+
+	// Установка оценки
+	const setValue = (e, newVal) => {
+		if (!newVal) return;
+		let newData = [...data];
+		let studentId = parseInt(e.target.dataset["student"]);
+		let student = newData[studentId];
+		if (student) {
+			student.gradeId = newVal;
+		}
+		setData(newData);
+	};
+
+	// Сохранение
+	const save = () => {
+		setSnackbarOpen(true);
+		setSnackbarMessage("Данные успешно сохранены!");
+
+		setTimeout(() => {
+			setSnackbarOpen(false);
+		}, 2000);
+	};
+
+	// Вызов контекстного меню
+	const handleContext = (e) => {
+		setAnchorEl(e.currentTarget);
+	};
+
+	// Закрытие контекстного меню
+	const handleCloseContext = () => {
+		setAnchorEl(null);
+	};
+
+	// Печать
+	const print = () => {
+		window.print();
+	};
+
+	// Сброс
+	const reset = () => {
+		let suffix = type;
+		let url = `/data/statement_${suffix}.json`;
+		getJsonData(url);
+	};
 
 	// Заголовок колонки таблицы с допуском
 	const accessHeader = () => {
-		if (data.students.length) {
-			if (data.students[0].access !== undefined) {
-				return <TableCell sx={{ width: "100%" }}>Допуск</TableCell>;
-			}
+		if (statementType === 0) {
+			return <TableCell sx={{ width: "100%" }}>Допуск</TableCell>;
 		}
 		return <></>;
 	};
@@ -45,10 +112,10 @@ function StatementTable(props) {
 	 * @returns контрол со значением допуска
 	 */
 	const accessVal = (student) => {
-		if (student.access !== undefined) {
+		if (statementType === 0) {
 			let control = <></>;
 
-			if (student.access) {
+			if (student.gradeId !== 6) {
 				control = (
 					<>
 						<CheckRounded
@@ -84,6 +151,29 @@ function StatementTable(props) {
 		return <></>;
 	};
 
+	const getPrintValue = (value) => {
+		switch (true) {
+			case value === 1:
+				return "–";
+			case statementType !== 0 &&
+				statementType !== 2 &&
+				statementType !== 3 &&
+				value === 2:
+				return "Незачёт";
+			case value === 6:
+				return "–";
+			case value === 7:
+				return "Неявка";
+			case statementType !== 0 &&
+				statementType !== 2 &&
+				statementType !== 3 &&
+				value === 5:
+				return "Зачёт";
+			default:
+				return value;
+		}
+	};
+
 	/**
 	 * Контрол оценки
 	 * @param {*} value - оценка
@@ -91,14 +181,17 @@ function StatementTable(props) {
 	 * @returns Контрол с оценкой
 	 */
 	const getValue = (value, index) => {
-		if (typeof value === "number") {
+		const disabledStyle =
+			value === 6 ? { pointerEvents: "none", opacity: "0.3" } : {};
+		if (statementType === 0 || statementType === 2 || statementType === 3) {
 			return (
 				<ThemeProvider theme={toggleTheme}>
 					<ToggleButtonGroup
+						sx={disabledStyle}
 						className="screen"
 						exclusive
 						value={value}
-						onChange={props.setValue}
+						onChange={setValue}
 					>
 						<ToggleButton
 							data-student={index}
@@ -137,7 +230,7 @@ function StatementTable(props) {
 						</ToggleButton>
 					</ToggleButtonGroup>
 					<span className="print">
-						{value < 0 ? "Неявка" : value}
+						<span className="print">{getPrintValue(value)}</span>
 					</span>
 				</ThemeProvider>
 			);
@@ -146,13 +239,14 @@ function StatementTable(props) {
 			<ThemeProvider theme={toggleTheme}>
 				<ToggleButtonGroup
 					exclusive
-					onChange={props.setValue}
+					onChange={setValue}
 					className="screen"
+					sx={disabledStyle}
 				>
 					<ToggleButton
 						size="small"
 						data-student={index}
-						selected={value === "Зачёт"}
+						selected={value === 5}
 						value="Зачёт"
 					>
 						Зачёт
@@ -160,7 +254,7 @@ function StatementTable(props) {
 					<ToggleButton
 						size="small"
 						data-student={index}
-						selected={value === "Незачёт"}
+						selected={value === 2}
 						value="Незачёт"
 					>
 						Незачёт
@@ -168,67 +262,231 @@ function StatementTable(props) {
 					<ToggleButton
 						size="small"
 						data-student={index}
-						selected={value === "Неявка"}
+						selected={value === 7}
 						value="Неявка"
 					>
 						Неявка
 					</ToggleButton>
 				</ToggleButtonGroup>
-				<span className="print">{value}</span>
+				<span className="print">{getPrintValue(value)}</span>
 			</ThemeProvider>
 		);
 	};
 
-	return (
-		<TableContainer>
-			<Table className="simple-table">
-				<TableHead>
-					<TableRow>
-						<TableCell>№</TableCell>
-						<TableCell sx={{ width: "70%" }}>ФИО</TableCell>
-						{accessHeader()}
-						<TableCell sx={{ width: "220px" }}>Оценка</TableCell>
-						<TableCell
-							className="screen"
-							sx={{ textAlign: "right" }}
-						>
-							Действия
-						</TableCell>
-					</TableRow>
-				</TableHead>
-				<TableBody>
-					{data.students.map((student, index) => (
-						<TableRow key={index}>
-							<TableCell>{index + 1}</TableCell>
-							<TableCell>{student.name}</TableCell>
-							{accessVal(student)}
-							<TableCell>
-								{getValue(student.value, index)}
-							</TableCell>
-							<TableCell
-								className="screen"
-								sx={{
-									textAlign: "right",
-								}}
-							>
-								<IconButton
-									aria-controls={
-										props.open ? "student-menu" : undefined
-									}
-									aria-haspopup={true}
-									aria-expanded={
-										props.open ? "true" : undefined
-									}
-									onClick={props.handleContext}
-								>
-									<MoreVertRounded />
+	const menuItems = () => {
+		if (statementType === 3 || statementType === 4) {
+			return [
+				<MenuItem disableRipple key={0}>
+					<span className="context-item">
+						<span className="context-title">Рецензия</span>
+						<span className="context-actions">
+							<Tooltip title="Загрузить" placement="top">
+								<IconButton>
+									<CloudUploadOutlined />
 								</IconButton>
-							</TableCell>
-						</TableRow>
-					))}
-				</TableBody>
-			</Table>
-		</TableContainer>
+							</Tooltip>
+							{/* Показываем кнопку удалить, когда есть что удалять */}
+							{/* <Tooltip title="Удалить" placement="top">
+								<IconButton>
+									<DeleteOutlined />
+								</IconButton>
+							</Tooltip> */}
+						</span>
+					</span>
+				</MenuItem>,
+				<MenuItem disableRipple key={1}>
+					<span className="context-item">
+						<span className="context-title">Работа</span>
+						<span className="context-actions">
+							<Tooltip title="Загрузить" placement="top">
+								<IconButton>
+									<CloudUploadOutlined />
+								</IconButton>
+							</Tooltip>
+							<Tooltip title="Удалить" placement="top">
+								<IconButton>
+									<DeleteOutlined />
+								</IconButton>
+							</Tooltip>
+						</span>
+					</span>
+				</MenuItem>,
+			];
+		} else {
+			return [
+				<MenuItem disableRipple key={1}>
+					<span className="context-item">
+						<span className="context-title">
+							Аттестационный лист
+						</span>
+						{/* Если уже загружен, кнопки как у остальных */}
+						<span className="context-actions">
+							<Tooltip title="Загрузить" placement="top">
+								<IconButton>
+									<CloudUploadOutlined />
+								</IconButton>
+							</Tooltip>
+						</span>
+					</span>
+				</MenuItem>,
+				<MenuItem disableRipple key={2}>
+					<span className="context-item">
+						<span className="context-title">Отчёт</span>
+						<span className="context-actions">
+							<Tooltip title="Редактировать" placement="top">
+								<IconButton>
+									<EditOutlined />
+								</IconButton>
+							</Tooltip>
+							<Tooltip title="Скачать" placement="top">
+								<IconButton>
+									<DownloadOutlined />
+								</IconButton>
+							</Tooltip>
+							<Tooltip title="Удалить" placement="top">
+								<IconButton>
+									<DeleteOutlined />
+								</IconButton>
+							</Tooltip>
+						</span>
+					</span>
+				</MenuItem>,
+				<MenuItem key={3} disableRipple>
+					<span className="context-item">
+						<span className="context-title">Документы</span>
+						<span className="context-actions">
+							<Tooltip title="Редактировать" placement="top">
+								<IconButton>
+									<EditOutlined />
+								</IconButton>
+							</Tooltip>
+							<Tooltip title="Скачать" placement="top">
+								<IconButton>
+									<DownloadOutlined />
+								</IconButton>
+							</Tooltip>
+							<Tooltip title="Удалить" placement="top">
+								<IconButton>
+									<DeleteOutlined />
+								</IconButton>
+							</Tooltip>
+						</span>
+					</span>
+				</MenuItem>,
+			];
+		}
+	};
+
+	return (
+		<>
+			<Card>
+				<CardContent>
+					<TableContainer>
+						<Table className="simple-table">
+							<TableHead>
+								<TableRow>
+									<TableCell>№</TableCell>
+									<TableCell sx={{ width: "70%" }}>
+										ФИО
+									</TableCell>
+									{accessHeader()}
+									<TableCell sx={{ width: "220px" }}>
+										Оценка
+									</TableCell>
+									<TableCell
+										className="screen"
+										sx={{ textAlign: "right" }}
+									>
+										Действия
+									</TableCell>
+								</TableRow>
+							</TableHead>
+							<TableBody>
+								{data.map((student, index) => (
+									<TableRow key={index}>
+										<TableCell>{index + 1}</TableCell>
+										<TableCell>
+											{student.lastName}{" "}
+											{student.firstName}{" "}
+											{student.middleName}
+										</TableCell>
+										{accessVal(student)}
+										<TableCell>
+											{getValue(student.gradeId, index)}
+										</TableCell>
+										<TableCell
+											className="screen"
+											sx={{
+												textAlign: "right",
+											}}
+										>
+											<IconButton
+												aria-controls={
+													open
+														? "student-menu"
+														: undefined
+												}
+												aria-haspopup={true}
+												aria-expanded={
+													open ? "true" : undefined
+												}
+												onClick={handleContext}
+											>
+												<MoreVertRounded />
+											</IconButton>
+										</TableCell>
+									</TableRow>
+								))}
+							</TableBody>
+						</Table>
+					</TableContainer>
+				</CardContent>
+			</Card>
+			<div className="card-actions-wrapper screen desktop">
+				<div className="left-side">
+					<Button onClick={print} variant="outlined">
+						Печать
+					</Button>
+				</div>
+				<div className="right-side">
+					<Button variant="outlined" onClick={reset}>
+						Сброс
+					</Button>
+					<Button variant="contained" onClick={save}>
+						Сохранить
+					</Button>
+				</div>
+			</div>
+			<div className="card-actions-wrapper mobile">
+				<IconButton onClick={print}>
+					<PrintRounded />
+				</IconButton>
+				<IconButton onClick={reset}>
+					<ClearRounded />
+				</IconButton>
+				<IconButton onClick={save}>
+					<SaveRounded />
+				</IconButton>
+			</div>
+			<Menu
+				id="student-menu"
+				anchorEl={anchorEl}
+				open={open}
+				onClose={handleCloseContext}
+				anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+				transformOrigin={{ horizontal: "right", vertical: "top" }}
+			>
+				{menuItems()}
+			</Menu>
+			<Snackbar
+				anchorOrigin={{
+					vertical: "top",
+					horizontal: "right",
+				}}
+				open={snackbarOpen}
+				message={snackbarMessage}
+			/>
+		</>
 	);
 }
 

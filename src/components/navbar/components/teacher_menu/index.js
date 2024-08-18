@@ -9,7 +9,7 @@ import React from "react";
 TeacherMenu.propTypes = {
 	open: PropTypes.bool,
 	handleClose: PropTypes.func,
-	anchorEl: PropTypes.node,
+	anchorEl: PropTypes.any,
 };
 
 function TeacherMenu(props) {

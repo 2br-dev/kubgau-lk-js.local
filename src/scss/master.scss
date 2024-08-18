@@ -32,7 +32,9 @@ body {
 			flex-grow: 1;
 
 			& section {
-				padding: 2vmax 0;
+				@media screen {
+					padding: 2vmax 0;
+				}
 			}
 
 			& .MuiPaper-root {

@@ -1,0 +1,24 @@
+{
+	"statement": {
+		"sessionDisciplineDetailId": 108165,
+		"statementId": 87247,
+		"statementNumber": "1302",
+		"controlType": 2,
+		"employees": [
+			"Креймер Алексей Семёнович",
+			"Лукьяненко Татьяна Викторовна"
+		],
+		"extraEmployees": [],
+		"creationDate": "2024-06-11T08:18:54.3566667",
+		"deadline": "2024-06-12T00:00:00",
+		"closingDate": "2024-06-13T10:11:36.4",
+		"groupName": "БИ2101",
+		"disciplineName": "WEB-программирование",
+		"sessionId": 3738,
+		"eventDate": "2024-06-11T09:45:00",
+		"eventPlace": null,
+		"scanGuid": null
+	},
+	"errors": null,
+	"success": true
+}
