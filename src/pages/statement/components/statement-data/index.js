@@ -45,7 +45,7 @@ function StatementData() {
 			.then((response) => {
 				setStatement(response.statement);
 			});
-	}, []);
+	}, [type]);
 
 	const formatDate = (date) => {
 		return new Date(date).toLocaleString("ru-RU", {

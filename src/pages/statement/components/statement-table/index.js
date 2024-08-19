@@ -51,8 +51,10 @@ function StatementTable() {
 	};
 
 	useEffect(() => {
-		getJsonData();
-	}, []);
+		fetch(`/data/statementGrades${type}.json`)
+			.then((res) => res.json())
+			.then((data) => setData(data.students));
+	}, [type]);
 
 	// Установка оценки
 	const setValue = (e, newVal) => {
@@ -153,11 +155,14 @@ function StatementTable() {
 
 	const getPrintValue = (value) => {
 		switch (true) {
+			// Неявка
 			case value === 1:
 				return "–";
+			// Незачёт
 			case statementType !== 0 &&
 				statementType !== 2 &&
 				statementType !== 3 &&
+				statementType !== 4 &&
 				value === 2:
 				return "Незачёт";
 			case value === 6:
@@ -167,6 +172,7 @@ function StatementTable() {
 			case statementType !== 0 &&
 				statementType !== 2 &&
 				statementType !== 3 &&
+				statementType !== 4 &&
 				value === 5:
 				return "Зачёт";
 			default:
@@ -183,7 +189,12 @@ function StatementTable() {
 	const getValue = (value, index) => {
 		const disabledStyle =
 			value === 6 ? { pointerEvents: "none", opacity: "0.3" } : {};
-		if (statementType === 0 || statementType === 2 || statementType === 3) {
+		if (
+			statementType === 0 ||
+			statementType === 2 ||
+			statementType === 3 ||
+			statementType === 4
+		) {
 			return (
 				<ThemeProvider theme={toggleTheme}>
 					<ToggleButtonGroup
@@ -223,7 +234,7 @@ function StatementTable() {
 						</ToggleButton>
 						<ToggleButton
 							data-student={index}
-							selected={value === -1}
+							selected={value === 7}
 							value={-1}
 						>
 							Неявка

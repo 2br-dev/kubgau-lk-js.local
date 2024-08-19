@@ -55,6 +55,7 @@ function StatementEntry(props) {
 								</Card>
 							);
 						}
+						return <></>;
 					})}
 				</>
 			);
