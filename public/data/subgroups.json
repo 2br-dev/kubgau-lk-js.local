@@ -1,12 +1,1414 @@
 {
-	"subgroups": [
+	"subGroups": [
 		{
-			"name": "БИ2001 - подгруппа1",
-			"url": "subgroup1.json"
+			"groupFlowTeamId": 21609,
+			"groupFlowTeamName": "ПИ2001 - Подгр. 2",
+			"attachedStudents": [],
+			"freeStudents": [
+				{
+					"studentId": 5355,
+					"lastName": "Васильев",
+					"firstName": "Данил",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 2590,
+					"lastName": "Муравьев",
+					"firstName": "Эдуард",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 2473,
+					"lastName": "Щербина",
+					"firstName": "Юлия",
+					"middleName": "Николаевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 7994,
+					"lastName": "Котов",
+					"firstName": "Николай",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 384,
+					"lastName": "Яворская",
+					"firstName": "Виктория",
+					"middleName": "Юрьевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3782,
+					"lastName": "Дерябкина",
+					"firstName": "Елизавета",
+					"middleName": "Александровна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 2748,
+					"lastName": "Глушаков",
+					"firstName": "Владислав",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 17952,
+					"lastName": "Косников",
+					"firstName": "Игорь",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1753,
+					"lastName": "Фоменко",
+					"firstName": "Иван",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2777,
+					"lastName": "Ивлев",
+					"firstName": "Евгений",
+					"middleName": "Владимирович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1737,
+					"lastName": "Чайников",
+					"firstName": "Вадим",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 169,
+					"lastName": "Галась",
+					"firstName": "Андрей",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1214,
+					"lastName": "Пруцаков",
+					"firstName": "Виктор",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 3404,
+					"lastName": "Шипулин",
+					"firstName": "Николай",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 88,
+					"lastName": "Гайфуллин",
+					"firstName": "Артем",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2592,
+					"lastName": "Долотов",
+					"firstName": "Семен",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2672,
+					"lastName": "Стасенко",
+					"firstName": "Полина",
+					"middleName": "Игоревна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2570,
+					"lastName": "Чернобровкина",
+					"firstName": "Ангелина",
+					"middleName": "Сергеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 288,
+					"lastName": "Кириллов",
+					"firstName": "Владимир",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1860,
+					"lastName": "Клеменко",
+					"firstName": "Феликс",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1594,
+					"lastName": "Егоров",
+					"firstName": "Илья",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 15490,
+					"lastName": "Корепанов",
+					"firstName": "Даниил",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4578,
+					"lastName": "Степанов",
+					"firstName": "Антон",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				}
+			],
+			"students": [
+				{
+					"studentId": 5355,
+					"lastName": "Васильев",
+					"firstName": "Данил",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 88,
+					"lastName": "Гайфуллин",
+					"firstName": "Артем",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": "Сергеев А.С.",
+					"accepted": false
+				},
+				{
+					"studentId": 169,
+					"lastName": "Галась",
+					"firstName": "Андрей",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2748,
+					"lastName": "Глушаков",
+					"firstName": "Владислав",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3782,
+					"lastName": "Дерябкина",
+					"firstName": "Елизавета",
+					"middleName": "Александровна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 2592,
+					"lastName": "Долотов",
+					"firstName": "Семен",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1594,
+					"lastName": "Егоров",
+					"firstName": "Илья",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 2777,
+					"lastName": "Ивлев",
+					"firstName": "Евгений",
+					"middleName": "Владимирович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 288,
+					"lastName": "Кириллов",
+					"firstName": "Владимир",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1860,
+					"lastName": "Клеменко",
+					"firstName": "Феликс",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15490,
+					"lastName": "Корепанов",
+					"firstName": "Даниил",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 17952,
+					"lastName": "Косников",
+					"firstName": "Игорь",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 7994,
+					"lastName": "Котов",
+					"firstName": "Николай",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2590,
+					"lastName": "Муравьев",
+					"firstName": "Эдуард",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1214,
+					"lastName": "Пруцаков",
+					"firstName": "Виктор",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2672,
+					"lastName": "Стасенко",
+					"firstName": "Полина",
+					"middleName": "Игоревна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4578,
+					"lastName": "Степанов",
+					"firstName": "Антон",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1753,
+					"lastName": "Фоменко",
+					"firstName": "Иван",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1737,
+					"lastName": "Чайников",
+					"firstName": "Вадим",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2570,
+					"lastName": "Чернобровкина",
+					"firstName": "Ангелина",
+					"middleName": "Сергеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3404,
+					"lastName": "Шипулин",
+					"firstName": "Николай",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2473,
+					"lastName": "Щербина",
+					"firstName": "Юлия",
+					"middleName": "Николаевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 384,
+					"lastName": "Яворская",
+					"firstName": "Виктория",
+					"middleName": "Юрьевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Сергеев А.С",
+					"isCurrentEmployee": false,
+					"accepted": false
+				}
+			]
 		},
-		{	
-			"name": "БИ2001 - подгруппа2",
-			"url": "subgroup2.json"
+		{
+			"groupFlowTeamId": 22226,
+			"groupFlowTeamName": "ПИ2002 - Подгр. 2",
+			"attachedStudents": [],
+			"freeStudents": [
+				{
+					"studentId": 2656,
+					"lastName": "Болотов",
+					"firstName": "Егор",
+					"middleName": "Юрьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 2513,
+					"lastName": "Газизов",
+					"firstName": "Родион",
+					"middleName": "Рамизович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2559,
+					"lastName": "Панина",
+					"firstName": "Ульяна",
+					"middleName": "Евгеньевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 17951,
+					"lastName": "Криворучко",
+					"firstName": "Алексей",
+					"middleName": "Максимович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 4129,
+					"lastName": "Зароченцев",
+					"firstName": "Евгений",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3063,
+					"lastName": "Овсепьян",
+					"firstName": "Сурен",
+					"middleName": "Самвелович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 3590,
+					"lastName": "Довгаль",
+					"firstName": "Никита",
+					"middleName": "Анатольевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3127,
+					"lastName": "Лысенко",
+					"firstName": "Яна",
+					"middleName": "Витальевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4485,
+					"lastName": "Жадан",
+					"firstName": "Светлана",
+					"middleName": "Викторовна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 79,
+					"lastName": "Харитонов",
+					"firstName": "Никита",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 4943,
+					"lastName": "Петрина",
+					"firstName": "Елена",
+					"middleName": "Дмитриевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 17912,
+					"lastName": "Денисов",
+					"firstName": "Александр",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 285,
+					"lastName": "Медведев",
+					"firstName": "Константин",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 4629,
+					"lastName": "Ткаченко",
+					"firstName": "Александр",
+					"middleName": "Владимирович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2935,
+					"lastName": "Данилов",
+					"firstName": "Кирилл",
+					"middleName": "Игоревич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3093,
+					"lastName": "Григорьев",
+					"firstName": "Григорий",
+					"middleName": "Максимович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2160,
+					"lastName": "Волков",
+					"firstName": "Денис",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3080,
+					"lastName": "Тищенко",
+					"firstName": "Александра",
+					"middleName": "Павловна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2516,
+					"lastName": "Попов",
+					"firstName": "Владислав",
+					"middleName": "Витальевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3619,
+					"lastName": "Черногаев",
+					"firstName": "Матвей",
+					"middleName": "Дмитриевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15518,
+					"lastName": "Винниченко",
+					"firstName": "Илья",
+					"middleName": "Николаевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15547,
+					"lastName": "Кост",
+					"firstName": "Александр",
+					"middleName": "Евгеньевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2984,
+					"lastName": "Глушков",
+					"firstName": "Дмитрий",
+					"middleName": "Иванович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 39069,
+					"lastName": "Гусейнов",
+					"firstName": "Алим",
+					"middleName": "Артурович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4458,
+					"lastName": "Самойлик",
+					"firstName": "Мария",
+					"middleName": "Михайловна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				}
+			],
+			"students": [
+				{
+					"studentId": 2656,
+					"lastName": "Болотов",
+					"firstName": "Егор",
+					"middleName": "Юрьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15518,
+					"lastName": "Винниченко",
+					"firstName": "Илья",
+					"middleName": "Николаевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2160,
+					"lastName": "Волков",
+					"firstName": "Денис",
+					"middleName": "Олегович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2513,
+					"lastName": "Газизов",
+					"firstName": "Родион",
+					"middleName": "Рамизович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2984,
+					"lastName": "Глушков",
+					"firstName": "Дмитрий",
+					"middleName": "Иванович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3093,
+					"lastName": "Григорьев",
+					"firstName": "Григорий",
+					"middleName": "Максимович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 39069,
+					"lastName": "Гусейнов",
+					"firstName": "Алим",
+					"middleName": "Артурович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2935,
+					"lastName": "Данилов",
+					"firstName": "Кирилл",
+					"middleName": "Игоревич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 17912,
+					"lastName": "Денисов",
+					"firstName": "Александр",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3590,
+					"lastName": "Довгаль",
+					"firstName": "Никита",
+					"middleName": "Анатольевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4485,
+					"lastName": "Жадан",
+					"firstName": "Светлана",
+					"middleName": "Викторовна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4129,
+					"lastName": "Зароченцев",
+					"firstName": "Евгений",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15547,
+					"lastName": "Кост",
+					"firstName": "Александр",
+					"middleName": "Евгеньевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 17951,
+					"lastName": "Криворучко",
+					"firstName": "Алексей",
+					"middleName": "Максимович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3127,
+					"lastName": "Лысенко",
+					"firstName": "Яна",
+					"middleName": "Витальевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 285,
+					"lastName": "Медведев",
+					"firstName": "Константин",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3063,
+					"lastName": "Овсепьян",
+					"firstName": "Сурен",
+					"middleName": "Самвелович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2559,
+					"lastName": "Панина",
+					"firstName": "Ульяна",
+					"middleName": "Евгеньевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4943,
+					"lastName": "Петрина",
+					"firstName": "Елена",
+					"middleName": "Дмитриевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2516,
+					"lastName": "Попов",
+					"firstName": "Владислав",
+					"middleName": "Витальевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4458,
+					"lastName": "Самойлик",
+					"firstName": "Мария",
+					"middleName": "Михайловна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3080,
+					"lastName": "Тищенко",
+					"firstName": "Александра",
+					"middleName": "Павловна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4629,
+					"lastName": "Ткаченко",
+					"firstName": "Александр",
+					"middleName": "Владимирович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 79,
+					"lastName": "Харитонов",
+					"firstName": "Никита",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3619,
+					"lastName": "Черногаев",
+					"firstName": "Матвей",
+					"middleName": "Дмитриевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Симонян М.Г.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				}
+			]
+		},
+		{
+			"groupFlowTeamId": 23155,
+			"groupFlowTeamName": "ПИ2003 - Подгр. 2",
+			"attachedStudents": [],
+			"freeStudents": [
+				{
+					"studentId": 15559,
+					"lastName": "Ханцев",
+					"firstName": "Даниил",
+					"middleName": "Алексеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 302,
+					"lastName": "Куприянова",
+					"firstName": "Влада",
+					"middleName": "Михайловна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2572,
+					"lastName": "Кравченко",
+					"firstName": "Егор",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 1587,
+					"lastName": "Давоян",
+					"firstName": "Данил",
+					"middleName": "Эдуардович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3930,
+					"lastName": "Ольховский",
+					"firstName": "Максим",
+					"middleName": "Александрович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 25811,
+					"lastName": "Буренко",
+					"firstName": "Анна",
+					"middleName": "Сергеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 1580,
+					"lastName": "Переверзев",
+					"firstName": "Данила",
+					"middleName": "Дмитриевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 1652,
+					"lastName": "Коротаева",
+					"firstName": "Анастасия",
+					"middleName": "Алексеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1255,
+					"lastName": "Евсиков",
+					"firstName": "Иван",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 1838,
+					"lastName": "Букач",
+					"firstName": "Константин",
+					"middleName": "Юрьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3780,
+					"lastName": "Пивнев",
+					"firstName": "Олег",
+					"middleName": "Юрьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 24,
+					"lastName": "Ямчицкая",
+					"firstName": "Мария",
+					"middleName": "Сергеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 4480,
+					"lastName": "Мирошников",
+					"firstName": "Артем",
+					"middleName": "Валерьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 2391,
+					"lastName": "Гусарь",
+					"firstName": "Илья",
+					"middleName": "Дмитриевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 5035,
+					"lastName": "Гертер",
+					"firstName": "Евгений",
+					"middleName": "Алексеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3425,
+					"lastName": "Куприянов",
+					"firstName": "Виктор",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 15474,
+					"lastName": "Давоян",
+					"firstName": "Александра",
+					"middleName": "Ивановна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 177,
+					"lastName": "Розентул",
+					"firstName": "Илья",
+					"middleName": "Васильевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 272,
+					"lastName": "Шепилов",
+					"firstName": "Алексей",
+					"middleName": "Александрович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 1771,
+					"lastName": "Шелехов",
+					"firstName": "Денис",
+					"middleName": "Вадимович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15530,
+					"lastName": "Каунов",
+					"firstName": "Кирилл",
+					"middleName": "Павлович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": null,
+					"isCurrentEmployee": false,
+					"accepted": false
+				}
+			],
+			"students": [
+				{
+					"studentId": 1838,
+					"lastName": "Букач",
+					"firstName": "Константин",
+					"middleName": "Юрьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 25811,
+					"lastName": "Буренко",
+					"firstName": "Анна",
+					"middleName": "Сергеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": true,
+					"accepted": false
+				},
+				{
+					"studentId": 5035,
+					"lastName": "Гертер",
+					"firstName": "Евгений",
+					"middleName": "Алексеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2391,
+					"lastName": "Гусарь",
+					"firstName": "Илья",
+					"middleName": "Дмитриевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15474,
+					"lastName": "Давоян",
+					"firstName": "Александра",
+					"middleName": "Ивановна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1587,
+					"lastName": "Давоян",
+					"firstName": "Данил",
+					"middleName": "Эдуардович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1255,
+					"lastName": "Евсиков",
+					"firstName": "Иван",
+					"middleName": "Сергеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15530,
+					"lastName": "Каунов",
+					"firstName": "Кирилл",
+					"middleName": "Павлович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1652,
+					"lastName": "Коротаева",
+					"firstName": "Анастасия",
+					"middleName": "Алексеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 2572,
+					"lastName": "Кравченко",
+					"firstName": "Егор",
+					"middleName": "Андреевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3425,
+					"lastName": "Куприянов",
+					"firstName": "Виктор",
+					"middleName": "Викторович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 302,
+					"lastName": "Куприянова",
+					"firstName": "Влада",
+					"middleName": "Михайловна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 4480,
+					"lastName": "Мирошников",
+					"firstName": "Артем",
+					"middleName": "Валерьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3930,
+					"lastName": "Ольховский",
+					"firstName": "Максим",
+					"middleName": "Александрович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1580,
+					"lastName": "Переверзев",
+					"firstName": "Данила",
+					"middleName": "Дмитриевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 3780,
+					"lastName": "Пивнев",
+					"firstName": "Олег",
+					"middleName": "Юрьевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 177,
+					"lastName": "Розентул",
+					"firstName": "Илья",
+					"middleName": "Васильевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 15559,
+					"lastName": "Ханцев",
+					"firstName": "Даниил",
+					"middleName": "Алексеевич",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 1771,
+					"lastName": "Шелехов",
+					"firstName": "Денис",
+					"middleName": "Вадимович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 272,
+					"lastName": "Шепилов",
+					"firstName": "Алексей",
+					"middleName": "Александрович",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				},
+				{
+					"studentId": 24,
+					"lastName": "Ямчицкая",
+					"firstName": "Мария",
+					"middleName": "Сергеевна",
+					"groupFlowTeamId": null,
+					"attachedEmployee": "Семихатов А.М.",
+					"isCurrentEmployee": false,
+					"accepted": false
+				}
+			]
 		}
-	]
+	],
+	"disciplineName": "Интеллектуальные информационные системы",
+	"errors": null,
+	"success": true
 }

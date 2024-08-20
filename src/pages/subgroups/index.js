@@ -21,7 +21,7 @@ import {
 	ThemeProvider,
 } from "@mui/material";
 import PageHeader from "../../components/pageHeader";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styled from "@emotion/styled";
 import ErrorBanner from "../../components/error_banner";
 import "./index.scss";
@@ -39,7 +39,6 @@ function Subgroups() {
 	const [filteredGroup, setFilteredGroup] = useState([]);
 	const currentTeacher = JSON.parse(localStorage.getItem("loggedUser"));
 	const [haveUnattached, setHaveUnattached] = useState(false);
-	const initialized = useRef(false);
 	const [filterVal, setFilterVal] = useState("all");
 	const [snackbarOpen, setSnackbarOpen] = useState(false);
 	const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -75,34 +74,31 @@ function Subgroups() {
 
 	// Получение начальных данных
 	useEffect(() => {
-		if (!initialized.current) {
-			initialized.current = true;
-			// Загрузка списка групп
-			fetch("/data/subgroups.json")
-				.then((response) => response.json())
-				.then((groups) => {
-					setGroups(groups.subgroups);
-				});
-
-			// Загрузка студентов первой группы
-			fetch("/data/subgroup1.json")
-				.then((res) => res.json())
-				.then((students) => {
-					setGroup(students);
-					setFilteredGroup(students, "all");
-
-					// Проверяем нераспределённые
-					let unAttached = students.filter((s) => {
-						return (
-							s.teacher === currentTeacher.shortName &&
-							s.state === false
-						);
-					});
-
-					setHaveUnattached(unAttached.length > 0);
-				});
-		}
+		loadJson();
 	}, [currentTeacher.shortName]);
+
+	const loadJson = () => {
+		// Загрузка списка групп
+		fetch("/data/subgroups.json")
+			.then((response) => response.json())
+			.then((response) => {
+				setGroups(response.subGroups);
+
+				response.subGroups[groupId].freeStudents.forEach((s) => {
+					s.isFree = true;
+				});
+
+				response.subGroups[groupId].students.forEach((s) => {
+					s.isFree = false;
+				});
+
+				const g = response.subGroups[groupId];
+				const joinedGroup = [...g.freeStudents, ...g.students];
+
+				setGroup(joinedGroup);
+				setFilteredGroup(joinedGroup);
+			});
+	};
 
 	// Фильтр групп
 	const filter = useCallback(
@@ -111,18 +107,15 @@ function Subgroups() {
 				case "unattached":
 					return students.filter(
 						(s) =>
-							s.teacher === currentTeacher.shortName &&
-							s.state === false
+							s.isFree === true && s.isCurrentEmployee === false,
 					);
 				case "own":
-					return students.filter(
-						(s) => s.teacher === currentTeacher.shortName
-					);
+					return students.filter((s) => s.isFree === true);
 				default:
 					return students;
 			}
 		},
-		[filterVal, currentTeacher.shortName]
+		[filterVal, currentTeacher.shortName],
 	);
 
 	// Callback для простановки фильтров
@@ -138,54 +131,31 @@ function Subgroups() {
 	// Переключение вкладки
 	const switchGroup = (e, newVal) => {
 		setGroupId(newVal);
-		let url = e.target.dataset["url"];
+		let groupName = e.target.textContent;
+		let newGroup = groups.filter((g) => {
+			return g.groupFlowTeamName === groupName;
+		})[0];
 
-		// Подгрузка студентов выбранной группы
-		fetch(`/data/${url}`)
-			.then((res) => res.json())
-			.then((students) => {
-				setGroup(students);
-				setFilteredGroup(filter(students));
+		newGroup.freeStudents.forEach((s) => (s.isFree = true));
+		newGroup.students.forEach((s) => (s.isFree = false));
 
-				let unAttached = students.filter((s) => {
-					return (
-						s.teacher === currentTeacher.shortName &&
-						s.state === false
-					);
-				});
-				setHaveUnattached(unAttached.length > 0);
-			});
+		let outputGroup = [...newGroup.freeStudents, ...newGroup.students];
+		setGroup(outputGroup);
+		setFilteredGroup(outputGroup);
 	};
 
 	// Сброс
 	const reset = () => {
-		let url = groups[groupId].url;
-		fetch(`/data/${url}`)
-			.then((res) => res.json())
-			.then((students) => {
-				setGroup(students);
-				setFilteredGroup(filter(students));
-
-				// Проверяем нераспределённые
-				let unAttached = students.filter((s) => {
-					return (
-						s.teacher === currentTeacher.shortName &&
-						s.state === false
-					);
-				});
-
-				setHaveUnattached(unAttached.length > 0);
-			});
+		loadJson();
 	};
 
 	// Колонка с распределением/преподавателем
 	const groupVal = (student) => {
-		let teacher = student.teacher;
-		if (teacher === currentTeacher.shortName) {
-			let checked = student.state === true;
-			return <StyledSwitch checked={checked}></StyledSwitch>;
+		if (!student.isFree) {
+			return student.attachedEmployee;
 		} else {
-			return teacher;
+			let checked = student.isCurrentEmployee === true;
+			return <StyledSwitch checked={checked}></StyledSwitch>;
 		}
 	};
 
@@ -194,14 +164,15 @@ function Subgroups() {
 		let newGroup = [...filteredGroup];
 		let studentId = parseInt(e.currentTarget.dataset["id"]);
 		let student = newGroup[studentId];
-		if (student.teacher === currentTeacher.shortName) {
-			student.state = !student.state;
+
+		if (student.isFree) {
+			student.isCurrentEmployee = !student.isCurrentEmployee;
 		}
 		setFilteredGroup(filter(newGroup));
 
 		// Проверяем нераспределённые
 		let unAttached = group.filter((s) => {
-			return s.teacher === currentTeacher.shortName && s.state === false;
+			return s.isFree === true && s.isCurrentEmployee === false;
 		});
 
 		setHaveUnattached(unAttached.length > 0);
@@ -242,6 +213,9 @@ function Subgroups() {
 	);
 
 	const warning = () => {
+		const haveUnattached =
+			group.filter((s) => s.isFree && s.isCurrentEmployee === false)
+				.length > 0;
 		if (haveUnattached) {
 			return (
 				<ErrorBanner
@@ -351,8 +325,8 @@ function Subgroups() {
 		let newGroup = [...group];
 
 		newGroup.forEach((student) => {
-			if (student.teacher === currentTeacher.shortName) {
-				student.state = true;
+			if (student.isFree) {
+				student.isCurrentEmployee = true;
 			}
 		});
 
@@ -365,13 +339,71 @@ function Subgroups() {
 		let newGroup = [...group];
 
 		newGroup.forEach((student) => {
-			if (student.teacher === currentTeacher.shortName) {
-				student.state = false;
+			if (student.isFree) {
+				student.isCurrentEmployee = false;
 			}
 		});
 
 		setGroup(newGroup);
 		setHaveUnattached(true);
+	};
+
+	const tableContent = () => {
+		return (
+			<TableContainer>
+				<Table className="simple-table">
+					<TableHead>
+						<TableRow>
+							<TableCell>ФИО</TableCell>
+							<TableCell className="print">Распределён</TableCell>
+							<TableCell className="print">
+								Преподаватель
+							</TableCell>
+							<TableCell
+								className="screen"
+								sx={{
+									textAlign: "right",
+								}}
+							>
+								Группа/Распределение
+							</TableCell>
+						</TableRow>
+					</TableHead>
+					<TableBody>
+						{filteredGroup.map((student, index) => (
+							<TableRow
+								sx={{
+									userSelect: "none",
+								}}
+								data-id={index}
+								onClick={toggleAttach}
+								key={index}
+								hover
+							>
+								<TableCell>
+									{student.lastName} {student.firstName}{" "}
+									{student.middleName}
+								</TableCell>
+								<TableCell className="print">
+									{student.state ? "Да" : "Нет"}
+								</TableCell>
+								<TableCell className="print">
+									{student.teacher}
+								</TableCell>
+								<TableCell
+									className="screen"
+									sx={{
+										textAlign: "right",
+									}}
+								>
+									{groupVal(student)}
+								</TableCell>
+							</TableRow>
+						))}
+					</TableBody>
+				</Table>
+			</TableContainer>
+		);
 	};
 
 	// DOM
@@ -398,10 +430,10 @@ function Subgroups() {
 									>
 										{groups.map((g, index) => (
 											<Tab
-												data-url={g.url}
+												data-group={g.groupFlowTeamName}
 												value={index}
 												key={index}
-												label={g.name}
+												label={g.groupFlowTeamName}
 											/>
 										))}
 									</Tabs>
@@ -422,72 +454,7 @@ function Subgroups() {
 									</div>
 								</div>
 								<div className="subgroup-content">
-									<TableContainer>
-										<Table className="simple-table">
-											<TableHead>
-												<TableRow>
-													<TableCell>ФИО</TableCell>
-													<TableCell className="print">
-														Распределён
-													</TableCell>
-													<TableCell className="print">
-														Преподаватель
-													</TableCell>
-													<TableCell
-														className="screen"
-														sx={{
-															textAlign: "right",
-														}}
-													>
-														Группа/Распределение
-													</TableCell>
-												</TableRow>
-											</TableHead>
-											<TableBody>
-												{filteredGroup.map(
-													(student, index) => (
-														<TableRow
-															sx={{
-																userSelect:
-																	"none",
-															}}
-															data-id={index}
-															onClick={
-																toggleAttach
-															}
-															key={index}
-															hover
-														>
-															<TableCell>
-																{student.name}
-															</TableCell>
-															<TableCell className="print">
-																{student.state
-																	? "Да"
-																	: "Нет"}
-															</TableCell>
-															<TableCell className="print">
-																{
-																	student.teacher
-																}
-															</TableCell>
-															<TableCell
-																className="screen"
-																sx={{
-																	textAlign:
-																		"right",
-																}}
-															>
-																{groupVal(
-																	student
-																)}
-															</TableCell>
-														</TableRow>
-													)
-												)}
-											</TableBody>
-										</Table>
-									</TableContainer>
+									{tableContent()}
 								</div>
 							</CardContent>
 						</Card>
