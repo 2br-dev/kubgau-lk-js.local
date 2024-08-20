@@ -173,8 +173,7 @@ function StatementsPage() {
 
 		// Вызов функции получения данных
 		dataFetch();
-		// eslint-disable-next-line
-	}, [location, type]);
+	}, [location, type, tabValue]);
 
 	useEffect(() => {
 		switch (type) {

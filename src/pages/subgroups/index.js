@@ -37,8 +37,6 @@ function Subgroups() {
 	const [group, setGroup] = useState([]);
 	const [groupId, setGroupId] = useState(0);
 	const [filteredGroup, setFilteredGroup] = useState([]);
-	const currentTeacher = JSON.parse(localStorage.getItem("loggedUser"));
-	const [haveUnattached, setHaveUnattached] = useState(false);
 	const [filterVal, setFilterVal] = useState("all");
 	const [snackbarOpen, setSnackbarOpen] = useState(false);
 	const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -73,11 +71,7 @@ function Subgroups() {
 	}));
 
 	// Получение начальных данных
-	useEffect(() => {
-		loadJson();
-	}, [currentTeacher.shortName]);
-
-	const loadJson = () => {
+	const loadJson = useCallback(() => {
 		// Загрузка списка групп
 		fetch("/data/subgroups.json")
 			.then((response) => response.json())
@@ -98,7 +92,11 @@ function Subgroups() {
 				setGroup(joinedGroup);
 				setFilteredGroup(joinedGroup);
 			});
-	};
+	}, [groupId]);
+
+	useEffect(() => {
+		loadJson();
+	}, [loadJson]);
 
 	// Фильтр групп
 	const filter = useCallback(
@@ -115,7 +113,7 @@ function Subgroups() {
 					return students;
 			}
 		},
-		[filterVal, currentTeacher.shortName],
+		[filterVal],
 	);
 
 	// Callback для простановки фильтров
@@ -174,8 +172,6 @@ function Subgroups() {
 		let unAttached = group.filter((s) => {
 			return s.isFree === true && s.isCurrentEmployee === false;
 		});
-
-		setHaveUnattached(unAttached.length > 0);
 
 		if (unAttached.length === 0) {
 			setFilterVal("all");
@@ -331,7 +327,6 @@ function Subgroups() {
 		});
 
 		setGroup(newGroup);
-		setHaveUnattached(false);
 	};
 
 	// Снятие распределения у всех своих студентов
@@ -345,7 +340,6 @@ function Subgroups() {
 		});
 
 		setGroup(newGroup);
-		setHaveUnattached(true);
 	};
 
 	const tableContent = () => {
@@ -388,7 +382,7 @@ function Subgroups() {
 									{student.state ? "Да" : "Нет"}
 								</TableCell>
 								<TableCell className="print">
-									{student.teacher}
+									{student.attachedEmployee}
 								</TableCell>
 								<TableCell
 									className="screen"
