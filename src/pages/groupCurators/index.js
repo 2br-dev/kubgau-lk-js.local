@@ -23,7 +23,6 @@ function GroupCurators() {
 	const [filteredData, setFilteredData] = useState([]);
 	const [availableEmployees, setAvailableEmployees] = useState([]);
 	const [ownOnly, setOwnOnly] = useState(false);
-	const [chairs, setChairs] = useState([]);
 	const [snackBarOpen, setSnackbarOpen] = useState(false);
 	const [message, setMessage] = useState("");
 
@@ -36,12 +35,6 @@ function GroupCurators() {
 				setData(response.data);
 				setAvailableEmployees(response.availableEmployees);
 				setFilteredData(response.data);
-			});
-
-		fetch("/data/chairs.json")
-			.then((res) => res.json())
-			.then((response) => {
-				setChairs(response.chairs);
 			});
 	}, []);
 
@@ -130,51 +123,13 @@ function GroupCurators() {
 		}
 	};
 
-	const handleChairChange = (e) => {
-		const index = e.target.name;
-		const value = e.target.value;
-
-		let _filteredData = [...filteredData];
-		let item = _filteredData[index];
-		item.chairName = value;
-		setFilteredData(_filteredData);
-	};
-
-	const cathedraControl = (item, index) => {
-		if (item.mode === "view") {
-			return <>{item.chairName}</>;
-		} else {
-			return (
-				<Select
-					value={item.chairName}
-					name={index}
-					size="small"
-					variant="standard"
-					fullWidth
-					onChange={handleChairChange}
-					MenuProps={{
-						style: {
-							maxHeight: 400,
-						},
-					}}
-				>
-					{chairs.map((c, i) => (
-						<MenuItem key={i} value={c.value}>
-							{c.value}
-						</MenuItem>
-					))}
-				</Select>
-			);
-		}
-	};
-
 	const tableBody = () => {
 		return filteredData.map((item, index) => (
 			<TableRow key={index} hover>
 				<TableCell>{index + 1}</TableCell>
 				<TableCell>{item.groupName}</TableCell>
 				<TableCell>{curatorControl(item, index)}</TableCell>
-				<TableCell>{cathedraControl(item, index)}</TableCell>
+				<TableCell>{item.chairName}</TableCell>
 				<TableCell className="screen" sx={{ textAlign: "right" }}>
 					{curatorActionControl(item, index)}
 				</TableCell>
