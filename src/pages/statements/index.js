@@ -1,12 +1,11 @@
 import { ChevronLeftRounded } from "@mui/icons-material";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import InfoPanel from "../../components/info_panel";
 import { InfoClass } from "../../components/info_panel/interfaces";
 import { useState, useEffect } from "react";
 import { Box, Tabs, Tab, Checkbox, FormControlLabel } from "@mui/material";
 import StatementEntry from "./components/statement-entry";
 import React from "react";
-import { useParams } from "react-router-dom";
 
 /**
  * Список ведомостей
@@ -20,8 +19,6 @@ function StatementsPage() {
 	const navigate = useNavigate();
 
 	// Тип ведомости, указанный в URL, сюда же по хорошему нужно передать ID ведомости
-	const { type } = useParams();
-	const location = useLocation();
 
 	// Отработка кнопки "Назад"
 	const back = () => {
@@ -50,10 +47,11 @@ function StatementsPage() {
 	 * @param {*} typeId Выбранная вкладка
 	 * @returns
 	 */
-	const filterMainData = (data, tabValue, openFilter) => {
-		let output = data.filter(
-			(discipline) => discipline.controlTypeId === tabValue,
-		);
+	const filterMainData = (data, tab_value, openFilter) => {
+		if (!tab_value) tab_value = tabValue;
+		let output = data.filter((discipline) => {
+			return discipline.controlTypeId === tab_value;
+		});
 
 		if (openFilter) {
 			output = output.map((discipline) => {
@@ -73,92 +71,15 @@ function StatementsPage() {
 	};
 
 	/**
-	 * Фильтрация данных по практике
-	 * @param {*} data Данные для фильтрации
-	 * @param {*} typeId Выбранная вкладка
-	 * @returns
-	 */
-	const filterPracticeData = (data, typeId) => {
-		let newData;
-		switch (typeId) {
-			case 0:
-				newData = data.map((discipline) => {
-					return {
-						sessionDisciplineId: discipline.sessionDisciplineId,
-						disciplineName: discipline.disciplineName,
-						chairName: discipline.chairName,
-						controlTypeId: discipline.controlTypeId,
-						details: discipline.details.filter((d) => {
-							return d.closingDate === null;
-						}),
-					};
-				});
-				break;
-			case 1:
-				newData = data.map((discipline) => {
-					return {
-						sessionDisciplineId: discipline.sessionDisciplineId,
-						disciplineName: discipline.disciplineName,
-						chairName: discipline.chairName,
-						controlTypeId: discipline.controlTypeId,
-						details: discipline.details.filter((d) => {
-							return d.closingDate !== null;
-						}),
-					};
-				});
-				break;
-			default:
-				newData = [];
-				break;
-		}
-
-		return newData;
-	};
-
-	/**
 	 * Монтирование компонента
 	 */
 	useEffect(() => {
-		setTabValue(0);
-		/**
-		 * Получение данных при загрузке компонента
-		 */
-		const dataFetch = () => {
-			const url =
-				type === "common"
-					? "/data/employeeStatements.json"
-					: "/data/employeePracticeStatements.json";
-
-			fetch(url)
-				.then((res) => res.json())
-				.then((responseData) => {
-					setData(responseData.disciplines);
-					switch (type) {
-						case "common":
-							setFilteredData(
-								filterMainData(
-									responseData.disciplines,
-									0,
-									tabValue,
-								),
-							);
-							break;
-						case "practice":
-							setFilteredData(
-								filterPracticeData(
-									responseData.disciplines,
-									0,
-									tabValue,
-								),
-							);
-							break;
-						default:
-							setFilteredData(responseData.disciplines);
-							break;
-					}
-				})
-				.catch((err) => console.error(err));
-		};
+		fetch("/data/employeeStatements.json")
+			.then((res) => res.json())
+			.then((response) => {
+				setData(response.disciplines);
+				setFilteredData(filterMainData(response.disciplines));
+			});
 
 		// Состояние информационной панели
 		let stateString = localStorage.getItem("panelState");
@@ -170,23 +91,10 @@ function StatementsPage() {
 		} else {
 			setter(true, "statement-page-info");
 		}
-
-		// Вызов функции получения данных
-		dataFetch();
-	}, [location, type, tabValue]);
+	}, []);
 
 	useEffect(() => {
-		switch (type) {
-			case "common":
-				setFilteredData(filterMainData(data, tabValue, openOnly));
-				break;
-			case "practice":
-				setFilteredData(filterPracticeData(data, tabValue, openOnly));
-				break;
-			default:
-				setFilteredData(data);
-		}
-		// eslint-disable-next-line
+		setFilteredData(filterMainData(data, tabValue, openOnly));
 	}, [tabValue, openOnly]);
 
 	/**
@@ -198,44 +106,9 @@ function StatementsPage() {
 		setTabValue(newValue);
 	};
 
-	// Отображаемые вкладки
-	const tabs = () => {
-		switch (type) {
-			case "common":
-				return [
-					<Tab key={1} label="Зачёты" value={0} />,
-					<Tab key={2} label="Курсовые работы" value={1} />,
-					<Tab key={3} label="Экзамены" value={2} />,
-				];
-			case "practice":
-				return [
-					<Tab key={1} label="Открытые" value={0} />,
-					<Tab key={2} label="Закрытые" value={1} />,
-				];
-			default:
-				return <></>;
-		}
-	};
-
 	const handleChangeOpen = (e) => {
 		setOpenOnly(e.target.checked);
 		setFilteredData(filterMainData(data, tabValue, e.target.checked));
-	};
-
-	// Фильтр на открытые ведомости
-	const openFilters = () => {
-		if (type === "common") {
-			return (
-				<FormControlLabel
-					className="open-only"
-					control={<Checkbox />}
-					label="Только открытые"
-					checked={openOnly}
-					onChange={handleChangeOpen}
-				/>
-			);
-		}
-		return <></>;
 	};
 
 	// Рендер компонента
@@ -269,14 +142,21 @@ function StatementsPage() {
 								variant="scrollable"
 								scrollButtons="auto"
 							>
-								{tabs()}
+								<Tab label="Зачёты" value={0} />
+								<Tab label="Курсовые работы" value={1} />
+								<Tab label="Экзамены" value={2} />
 							</Tabs>
-							{openFilters()}
+							<FormControlLabel
+								className="open-only"
+								control={<Checkbox />}
+								label="Только открытые"
+								checked={openOnly}
+								onChange={handleChangeOpen}
+							/>
 						</Box>
 						<Box sx={{ marginTop: "1vmax" }}>
 							<StatementEntry
 								data={filteredData}
-								type={type}
 								statementType={tabValue}
 							/>
 						</Box>

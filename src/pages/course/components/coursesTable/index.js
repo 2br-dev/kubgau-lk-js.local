@@ -10,6 +10,7 @@ import {
 import CollapsibleRow from "../collapsibleRow";
 import FilterCourses from "../filter_courses";
 import React from "react";
+import EditModal from "../editModal";
 
 import { useState, useEffect } from "react";
 
@@ -19,6 +20,8 @@ function CoursesTable() {
 	const [disciplines, setDisciplines] = useState([]);
 	const [coursesList, setCoursesList] = useState([]);
 	const [globalCollapse, setGlobalCollapse] = useState(true);
+	const [editOpen, setEditOpen] = useState(false);
+	const [course2edit, setCourse2edit] = useState(null);
 
 	/**
 	 * Переключение открытости всех строк
@@ -92,6 +95,20 @@ function CoursesTable() {
 		console.table(value);
 	};
 
+	const editHandler = (index) => {
+		setCourse2edit(courses[index]);
+		setEditOpen(true);
+	};
+
+	const handleCourseSave = (course) => {
+		console.info(course);
+		setEditOpen(false);
+	};
+
+	const handleCourseClose = () => {
+		setEditOpen(false);
+	};
+
 	return (
 		<>
 			<div className="courses-filters">
@@ -163,6 +180,7 @@ function CoursesTable() {
 									isOpen={rowStates[index].is_open}
 									toggler={toggler}
 									index={index}
+									editHandler={editHandler}
 								/>
 							);
 						})}
@@ -199,6 +217,12 @@ function CoursesTable() {
 					))}
 				</TableBody>
 			</Table>
+			<EditModal
+				open={editOpen}
+				course={course2edit}
+				handleClose={handleCourseClose}
+				handleSave={handleCourseSave}
+			/>
 		</>
 	);
 }

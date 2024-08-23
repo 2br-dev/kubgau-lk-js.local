@@ -37,7 +37,7 @@ function CathedraMenu(props) {
 			<MenuItem component={Link} to="/main/users/">
 				Управление пользователями
 			</MenuItem>
-			<MenuItem component={Link} to="/main/group-chieves/">
+			<MenuItem component={Link} to="/main/group-curators/">
 				Кураторы групп
 			</MenuItem>
 			<Divider />

@@ -25,7 +25,27 @@ function LoginScreen() {
 	const Do_login = () => {
 		let user = {};
 
-		switch (login) {
+		switch (login.trim()) {
+			case "dekan":
+				// Заглушка для успешного входа
+				user = {
+					login: login,
+					fullname: "Татьяна Анатольевна",
+					role: "dekan",
+				};
+
+				localStorage.setItem("loggedUser", JSON.stringify(user));
+
+				store.dispatch({
+					type: "SET_USER",
+					payback: user,
+				});
+
+				setTimeout(() => {
+					navigate("/main/courses");
+				}, 800);
+
+				break;
 			case "cathedra":
 				// Заглушка для успешного входа
 				setMessage("Добро пожаловать, Татьяна Анатольевна!");
@@ -105,6 +125,7 @@ function LoginScreen() {
 					>
 						<div>• teacher – права преподавателя</div>
 						<div>• cathedra – права кафедры</div>
+						<div>• dekan – права деканата</div>
 						<p>Пароль – любой</p>
 					</div>
 					<div className="field">

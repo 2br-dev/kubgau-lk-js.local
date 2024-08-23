@@ -1,0 +1,134 @@
+{
+	"errors": ["string"],
+	"success": true,
+	"data": [
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "БИ1501",
+			"curatorFullName": "Параскевов Александр Владимирович",
+			"chairName": "Компьютерных технологий и систем",
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "БИ1601",
+			"curatorFullName": "Осенний Виталий Витальевич",
+			"chairName": "Экономической кибернетики",
+			"fromDifferentChair": true
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "БИ1602",
+			"curatorFullName": "Франциско Ольга Юрьевна",
+			"chairName": "Экономической кибернетики",
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "БИ1701",
+			"curatorFullName": "Яхонтова Ирина Михайловна",
+			"chairName": "Системного анализа и обработки информации",
+			"fromDifferentChair": true
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "БИ1801",
+			"curatorFullName": "Сайкинов Виктор Евгеньевич",
+			"chairName": "Информационных систем",
+			"fromDifferentChair": true
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1501",
+			"curatorFullName": "Печурина Елена Каримовна ",
+			"chairName": "Компьютерных технологий и систем",
+			"fromDifferentChair": true
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1601",
+			"curatorFullName": "Косников Сергей Николаевич",
+			"chairName": "Экономической кибернетики",
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1621",
+			"curatorFullName": "Косникова Оксана Владимировна",
+			"chairName": "Экономической кибернетики",
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1622",
+			"curatorFullName": "Турлий Светлана Ивановна",
+			"chairName": "Экономической кибернетики",
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1721",
+			"curatorFullName": "Грубич Татьяна Юрьевна",
+			"chairName": "Системного анализа и обработки информации",
+			"fromDifferentChair": true
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1722",
+			"curatorFullName": "Павлов Дмитрий Алексеевич",
+			"chairName": "Системного анализа и обработки информации",
+			"fromDifferentChair": true
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1723",
+			"curatorFullName": "Орлянская Наталья Петровна",
+			"chairName": "Системного анализа и обработки информации",
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1741",
+			"curatorFullName": null,
+			"chairName": null,
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1821",
+			"curatorFullName": "Кондратьев Валерий Юрьевич",
+			"chairName": "Информационных систем",
+			"fromDifferentChair": true
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1822",
+			"curatorFullName": "Тюнин Евгений Борисович",
+			"chairName": "Информационных систем",
+			"fromDifferentChair": false
+		},
+		{
+			"jobId": 0,
+			"groupId": 0,
+			"groupName": "ИТ1823",
+			"curatorFullName": "Грушко Вера Алексеевна",
+			"chairName": "Информационных систем",
+			"fromDifferentChair": true
+		}
+	]
+}

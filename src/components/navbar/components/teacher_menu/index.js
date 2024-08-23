@@ -56,7 +56,7 @@ function TeacherMenu(props) {
 			<MenuItem
 				onClick={handleClose}
 				component={Link}
-				to="/main/statements/practice"
+				to="/main/practice-statements"
 			>
 				Мои ведомости по практикам
 			</MenuItem>

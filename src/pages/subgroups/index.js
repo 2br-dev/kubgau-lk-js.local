@@ -40,6 +40,7 @@ function Subgroups() {
 	const [filterVal, setFilterVal] = useState("all");
 	const [snackbarOpen, setSnackbarOpen] = useState(false);
 	const [snackbarMessage, setSnackbarMessage] = useState("");
+	const [discipline, setDiscipline] = useState("");
 
 	// Стилизованный переключатель
 	const StyledSwitch = styled(Switch)(() => ({
@@ -76,6 +77,7 @@ function Subgroups() {
 		fetch("/data/subgroups.json")
 			.then((response) => response.json())
 			.then((response) => {
+				setDiscipline(response.disciplineName);
 				setGroups(response.subGroups);
 
 				response.subGroups[groupId].freeStudents.forEach((s) => {
@@ -407,7 +409,7 @@ function Subgroups() {
 				<section>
 					<div className="container">
 						<PageHeader
-							header="Программирование"
+							header={discipline}
 							backLink={true}
 							subheader="Управление подгруппами"
 							suffix={filtersControl}

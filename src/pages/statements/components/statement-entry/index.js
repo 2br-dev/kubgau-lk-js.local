@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@mui/material";
 import "./styles.scss";
 import MainTable from "../main-table";
-import PracticeTable from "../practice-table";
 import React from "react";
 import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
 
 StatementEntry.propTypes = {
 	type: PropTypes.string,
@@ -12,65 +12,53 @@ StatementEntry.propTypes = {
 };
 
 function StatementEntry(props) {
-	// Контрол по умолчанию
-	let control = (
-		<Card>
-			<CardContent>Нет данных</CardContent>
-		</Card>
-	);
+	const { type } = useParams();
 
-	const outputTable = (data, statementId) => {
-		return props.type === "common" ? (
-			<MainTable
-				groups={data}
-				statementId={statementId}
-				statementType={props.statementType}
-			/>
-		) : (
-			<PracticeTable groups={data} />
+	const cardContent = (el, index) => {
+		const header = type !== "practice" ? el.disciplineName : el.courseName;
+		const subHeader = type !== "practice" ? el.chairName : el.practiceType;
+
+		return (
+			<Card key={index}>
+				<CardContent>
+					<h2>
+						<span className="code">{header}</span>
+					</h2>
+					<p>{subHeader}</p>
+					<MainTable
+						groups={el.details}
+						statementId={el.controlTypeId}
+						statementType={props.statementType}
+					/>
+				</CardContent>
+			</Card>
 		);
 	};
 
 	// DOM
-	if (props) {
-		if (props.data !== null) {
-			control = (
-				<>
-					{props.data.map((el, index) => {
-						if (el.details.length) {
-							return (
-								<Card key={index}>
-									<CardContent>
-										<h2>
-											<span className="code">
-												{el.disciplineName}
-											</span>
-										</h2>
-										<p>{el.chairName}</p>
-										{outputTable(
-											el.details,
-											el.controlTypeId,
-										)}
-									</CardContent>
-								</Card>
-							);
-						}
-						return <></>;
-					})}
-				</>
-			);
-			const show = Math.max(props.data.map((e) => e.details.length));
-			if (show === 0) {
-				control = (
-					<Card>
-						<CardContent>Нет данных</CardContent>
-					</Card>
-				);
-			}
-		}
+	if (props.data.length) {
+		return (
+			<>
+				{props.data.map((el, index) => {
+					if (el.details.length) {
+						return cardContent(el, index);
+					}
+
+					return (
+						<Card key={index}>
+							<CardContent>Нет данных</CardContent>
+						</Card>
+					);
+				})}
+			</>
+		);
 	}
 
-	return control;
+	return (
+		<Card>
+			<CardContent>Нет данных</CardContent>
+		</Card>
+	);
 }
 
 export default StatementEntry;

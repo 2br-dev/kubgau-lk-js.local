@@ -52,6 +52,7 @@ function Journal() {
 		theme: "",
 	});
 	const [eventOpen, setEventOpen] = useState(false);
+	const currentUser = JSON.parse(localStorage.getItem("loggedUser"));
 
 	// Получение данных
 	useEffect(() => {
@@ -77,6 +78,7 @@ function Journal() {
 
 	// Открытие студента
 	const openStudent = (e) => {
+		if (currentUser.role === "cathedra") return;
 		let studentId = parseInt(e.currentTarget.dataset["student"]);
 		let dayId = parseInt(e.currentTarget.dataset["day"]);
 
@@ -312,12 +314,15 @@ function Journal() {
 		// Проверяем пропуск
 		let className = studentAbsent(student, index);
 
+		const cursor = currentUser.role === "teacher" ? "pointer" : "default";
+
 		return (
 			<td
 				className={className}
 				onMouseOver={highlight}
 				onMouseLeave={resetHighlight}
 				key={index}
+				style={{ cursor: cursor }}
 				data-student={student.studentId}
 				data-day={index}
 				onClick={openStudent}
@@ -336,7 +341,7 @@ function Journal() {
 					{student.lastName} {student.firstName} {student.middleName}
 				</th>
 				{student.lessons.map((lesson, lessonIndex) =>
-					dateCell(lesson, lessonIndex, student)
+					dateCell(lesson, lessonIndex, student),
 				)}
 				<th style={{ minWidth: "45px" }}>
 					<Tooltip title="Нужны значения в JSON" placement="top">

@@ -117,4 +117,38 @@ body {
 			padding-bottom: 6px !important;
 		}
 	}
+
+	& .card-actions-wrapper {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		position: sticky;
+		bottom: 0;
+		z-index: 2;
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 46px -16px rgba(12, 21, 97, 0.051);
+		box-sizing: border-box;
+
+		& .right-side {
+			& button:last-of-type {
+				margin-left: 10px;
+			}
+		}
+
+		&.mobile {
+			justify-content: center;
+
+			@media (min-width: 400px) {
+				display: none;
+			}
+		}
+
+		&.desktop {
+			@media (max-width: 399px) {
+				display: none;
+			}
+		}
+	}
 }

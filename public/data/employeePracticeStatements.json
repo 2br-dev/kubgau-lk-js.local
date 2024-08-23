@@ -1,154 +1,128 @@
 {
-	"disciplines": [
+	"practices": [
 		{
-			"sessionDisciplineId": 31169,
-			"disciplineName": "Информатика",
-			"chairName": "Компьютерных технологий и систем",
-			"controlTypeId": 3,
-			"details": [
+			"practiceId": 5120,
+			"practiceType": "Преддипломная практика",
+			"practiceKind": 2,
+			"groupName": "ВС2241",
+			"groupId": 1199,
+			"courseName": "2 курс, 20.04.02 Природообустройство и водопользование, \"Мелиорация, рекультивация и охрана земель\"  - Очная ф.о.",
+			"statements": [
 				{
-					"sessionDisciplineDetailId": 103280,
-					"statementId": 82647,
-					"statementName": "Л-24-01-77",
-					"numberInOrder": 0,
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "278/03.02",
+					"creationDate": "2024-05-20T15:47:05.34",
 					"closingDate": null,
-					"groupName": "ЗМЗ2301",
-					"canClose": false,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 8,
-						"total": 20
-					}
+					"canClose": false
+				},
+				{
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "278/03.03",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": "2024-05-20T15:47:05.34",
+					"canClose": true
+				},
+				{
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "278/03.04",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": null,
+					"canClose": false
+				},
+				{
+					"statementId": 1016,
+					"statementType": 3,
+					"statementNumber": "278/03.05",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": null,
+					"canClose": false
 				}
 			]
 		},
 		{
-			"sessionDisciplineId": 31170,
-			"disciplineName": "Информатика",
-			"chairName": "Компьютерных технологий и систем",
-			"controlTypeId": 3,
-			"details": [
+			"practiceId": 5120,
+			"practiceType": "Преддипломная практика",
+			"practiceKind": 2,
+			"groupName": "ВС2241",
+			"groupId": 1199,
+			"courseName": "2 курс, 20.04.02 Природообустройство и водопользование, \"Мелиорация, рекультивация и охрана земель\"  - Очная ф.о.",
+			"statements": [
 				{
-					"sessionDisciplineDetailId": 107626,
-					"statementId": 88219,
-					"statementName": "382",
-					"numberInOrder": 0,
-					"closingDate": "2024-06-14T17:13:35.59",
-					"groupName": "ПТ2303",
-					"canClose": true,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 20,
-						"total": 20
-					}
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "322/03.02",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": null,
+					"canClose": false
 				},
 				{
-					"sessionDisciplineDetailId": 107627,
-					"statementId": 86217,
-					"statementName": "379",
-					"numberInOrder": 0,
-					"closingDate": "2024-06-10T14:40:23.2366667",
-					"groupName": "ПТ2304",
-					"canClose": false,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 20,
-						"total": 20
-					}
+					"statementId": 1016,
+					"statementType": 1,
+					"statementNumber": "322/03.03",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": "2024-05-20T15:47:05.34",
+					"canClose": true
+				},
+				{
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "322/03.04",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": "2024-05-20T15:47:05.34",
+					"canClose": false
+				},
+				{
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "322/03.05",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": null,
+					"canClose": false
 				}
 			]
 		},
 		{
-			"sessionDisciplineId": 15097,
-			"disciplineName": "Информационные технологии",
-			"chairName": "Компьютерных технологий и систем",
-			"controlTypeId": 3,
-			"details": [
+			"practiceId": 5120,
+			"practiceType": "Преддипломная практика",
+			"practiceKind": 2,
+			"groupName": "ВС2241",
+			"groupId": 1199,
+			"courseName": "2 курс, 20.04.02 Природообустройство и водопользование, \"Мелиорация, рекультивация и охрана земель\"  - Очная ф.о.",
+			"statements": [
 				{
-					"sessionDisciplineDetailId": 107776,
-					"statementId": 92429,
-					"statementName": "8",
-					"numberInOrder": 0,
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "755/03.02",
+					"creationDate": "2024-05-20T15:47:05.34",
 					"closingDate": null,
-					"groupName": "АИ2301",
-					"canClose": false,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 20,
-						"total": 20
-					}
-				}
-			]
-		},
-		{
-			"sessionDisciplineId": 8952,
-			"disciplineName": "Основы математической логики и теории алгоритмов",
-			"chairName": "Компьютерных технологий и систем",
-			"controlTypeId": 3,
-			"details": [
-				{
-					"sessionDisciplineDetailId": 110440,
-					"statementId": null,
-					"statementName": null,
-					"numberInOrder": 0,
-					"closingDate": null,
-					"groupName": "ИТ2301",
-					"canClose": null,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 8,
-						"total": 20
-					}
+					"canClose": true
 				},
 				{
-					"sessionDisciplineDetailId": 110441,
-					"statementId": 88090,
-					"statementName": "1318",
-					"numberInOrder": 0,
-					"closingDate": "2024-06-13T13:16:26.2033333",
-					"groupName": "ИТ2302",
-					"canClose": false,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 20,
-						"total": 20
-					}
-				},
-				{
-					"sessionDisciplineDetailId": 110442,
-					"statementId": null,
-					"statementName": null,
-					"numberInOrder": 0,
+					"statementId": 1016,
+					"statementType": 1,
+					"statementNumber": "755/03.03",
+					"creationDate": "2024-05-20T15:47:05.34",
 					"closingDate": null,
-					"groupName": "ИТ2303",
-					"canClose": null,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 18,
-						"total": 20
-					}
+					"canClose": false
 				},
 				{
-					"sessionDisciplineDetailId": 110443,
-					"statementId": 88097,
-					"statementName": "1319",
-					"numberInOrder": 0,
-					"closingDate": "2024-06-13T15:46:06.9433333",
-					"groupName": "ИТ2304",
-					"canClose": false,
-					"eventPlace": "Локация",
-					"eventDate": "2024-09-16T00:00:00",
-					"grades": {
-						"current": 20,
-						"total": 20
-					}
+					"statementId": 1016,
+					"statementType": 0,
+					"statementNumber": "755/03.04",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": null,
+					"canClose": false
+				},
+				{
+					"statementId": 1016,
+					"statementType": 2,
+					"statementNumber": "755/03.05",
+					"creationDate": "2024-05-20T15:47:05.34",
+					"closingDate": "2024-05-20T15:47:05.34",
+					"canClose": true
 				}
 			]
 		}

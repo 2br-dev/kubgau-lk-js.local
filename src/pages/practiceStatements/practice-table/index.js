@@ -19,7 +19,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 PracticeTable.propTypes = {
-	groups: PropTypes.arrayOf(PropTypes.object),
+	data: PropTypes.arrayOf(PropTypes.object),
 };
 
 function PracticeTable(props) {
@@ -43,10 +43,10 @@ function PracticeTable(props) {
 
 	const openStatement = (e) => {
 		const path = Array.from(e.nativeEvent.composedPath()).filter(
-			(item) => item.tagName === "BUTTON"
+			(item) => item.tagName === "BUTTON",
 		);
 
-		const url = "/main/statement/4";
+		const url = "/main/practice-statement";
 
 		if (!path.length) {
 			navigate(url);
@@ -76,7 +76,7 @@ function PracticeTable(props) {
 		);
 	};
 
-	const groups = props.groups ? props.groups : [];
+	const groups = props.data ? props.data : [];
 
 	return (
 		<TableContainer>
@@ -97,7 +97,6 @@ function PracticeTable(props) {
 							sx={{ cursor: "pointer" }}
 							hover
 							onClick={openStatement}
-							data-url={group.statementUrl}
 						>
 							<TableCell sx={{ width: "50px" }}>
 								{indicator(group)}
@@ -105,9 +104,9 @@ function PracticeTable(props) {
 							<TableCell
 								sx={{ whiteSpace: "nowrap", width: "30%" }}
 							>
-								{group.statementName || "Не указано"}
+								{group.statementNumber || "Не указано"}
 							</TableCell>
-							<TableCell>{type(group.controlTypeId)}</TableCell>
+							<TableCell>{type(group.statementType)}</TableCell>
 							<TableCell
 								sx={{
 									textAlign: "right",

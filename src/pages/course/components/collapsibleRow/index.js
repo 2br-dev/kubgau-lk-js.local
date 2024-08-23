@@ -22,6 +22,7 @@ CollapsibleRow.propTypes = {
 	index: PropTypes.number,
 	toggler: PropTypes.func,
 	isOpen: PropTypes.bool,
+	editHandler: PropTypes.func,
 };
 
 /**
@@ -36,6 +37,7 @@ function CollapsibleRow(props) {
 	const { row } = props;
 	const [anchorEl, setAnchorEl] = useState(null);
 	const menuOpen = Boolean(anchorEl);
+	const currentUser = JSON.parse(localStorage.getItem("loggedUser"));
 
 	// Отображение меню курса
 	const handleMenuOpen = (e) => {
@@ -66,16 +68,31 @@ function CollapsibleRow(props) {
 
 	let lectionControl = progressControl(
 		row.lections?.current,
-		row.lections?.total
+		row.lections?.total,
 	); // Лекции в дочерней таблице
 	let seminarControl = progressControl(
 		row.seminars?.current,
-		row.seminars?.total
+		row.seminars?.total,
 	); // Семинары в дочерней таблице
 	let labControl = progressControl(row.labs?.current, row.labs?.total); //  Лабораторные работы в дочерней таблице
 
 	// Положение стрелочки
 	let transform = props.isOpen ? "rotate(180deg)" : "rotate(0deg)";
+
+	const editItem = () => {
+		if (currentUser.role === "cathedra") {
+			return (
+				<MenuItem
+					onClick={() => {
+						setAnchorEl(null);
+						props.editHandler?.(props.index);
+					}}
+				>
+					Редактировать
+				</MenuItem>
+			);
+		}
+	};
 
 	return (
 		<>
@@ -152,7 +169,10 @@ function CollapsibleRow(props) {
 						<MenuItem component={Link} to="/main/subgroups">
 							Подгруппы
 						</MenuItem>
-						<MenuItem>Пропуски студентов</MenuItem>
+						<MenuItem component={Link} to="main/skips">
+							Пропуски студентов
+						</MenuItem>
+						{editItem()}
 					</Menu>
 				</TableCell>
 			</TableRow>

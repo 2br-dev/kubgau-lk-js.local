@@ -1,0 +1,18 @@
+.edit {
+	position: relative;
+	z-index: 1;
+	background-color: #fffbf3;
+
+	& td {
+		border-top: 1px solid #ffc850;
+		border-bottom: 1px solid #ffc850;
+	}
+}
+
+.modal-footer.disabled {
+	& button {
+		filter: grayScale(1);
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}

@@ -5,6 +5,7 @@ import "./styles.scss";
 import TeacherMenu from "../teacher_menu";
 import CathedraMenu from "../cathedra_menu";
 import React from "react";
+import DekanMenu from "../dekan_menu";
 
 const UserMenu = () => {
 	const [anchorEl, setAnchorEl] = useState(null);
@@ -32,6 +33,14 @@ const UserMenu = () => {
 
 	const userMenu = () => {
 		switch (user.role) {
+			case "dekan":
+				return (
+					<DekanMenu
+						open={open}
+						anchorEl={anchorEl}
+						handleClose={handleClose}
+					/>
+				);
 			case "teacher":
 				return (
 					<TeacherMenu
