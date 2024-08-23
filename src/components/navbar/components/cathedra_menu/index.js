@@ -34,23 +34,39 @@ function CathedraMenu(props) {
 				Главная страница
 			</MenuItem>
 			<Divider />
-			<MenuItem component={Link} to="/main/users/">
+			<MenuItem onClick={handleClose} component={Link} to="/main/users/">
 				Управление пользователями
 			</MenuItem>
-			<MenuItem component={Link} to="/main/group-curators/">
+			<MenuItem
+				onClick={handleClose}
+				component={Link}
+				to="/main/group-curators/"
+			>
 				Кураторы групп
 			</MenuItem>
 			<Divider />
-			<MenuItem component={Link} to="/main/orphans/">
+			<MenuItem
+				onClick={handleClose}
+				component={Link}
+				to="/main/orphans/"
+			>
 				Студенты без сводной группы
 			</MenuItem>
-			<MenuItem component={Link} to="/main/subgroup-search/">
+			<MenuItem
+				onClick={handleClose}
+				component={Link}
+				to="/main/subgroup-search/"
+			>
 				Найти подгруппу студента
 			</MenuItem>
-			<MenuItem component={Link} to="/main/comission-access/">
+			<MenuItem
+				onClick={handleClose}
+				component={Link}
+				to="/main/comission-access/"
+			>
 				Допуски по медкомиссии
 			</MenuItem>
-			<MenuItem component={Link} to="/main/tools/">
+			<MenuItem onClick={handleClose} component={Link} to="/main/tools/">
 				Дополнительные инструменты
 			</MenuItem>
 			<Divider />
