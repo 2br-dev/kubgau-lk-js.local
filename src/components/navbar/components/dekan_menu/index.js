@@ -1,4 +1,5 @@
 import { Menu, MenuItem, Divider } from "@mui/material";
+import { Link } from "react-router-dom";
 import React from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
@@ -29,23 +30,57 @@ function DekanMenu(props) {
 			open={open}
 			onClose={handleClose}
 		>
-			<MenuItem>Главная страница</MenuItem>
-			<MenuItem>Админ-панель</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/main/courses">
+				Главная страница
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/main/admin">
+				Админ-панель
+			</MenuItem>
 			<Divider />
-			<MenuItem>Карточка студента</MenuItem>
-			<MenuItem>Карточка группа</MenuItem>
-			<MenuItem>Реестр документов</MenuItem>
-			<MenuItem>Управление пропусками</MenuItem>
-			<MenuItem>Управление аттестациями</MenuItem>
-			<MenuItem>Управление сессиями</MenuItem>
-			<MenuItem>Управление практиками</MenuItem>
-			<MenuItem>Управление пользователями</MenuItem>
-			<MenuItem>Кураторы групп</MenuItem>
-			<MenuItem>Отчёты</MenuItem>
-			<MenuItem>Логины студентов</MenuItem>
-			<MenuItem>Логины студентов (все факультеты)</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Карточка студента
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Карточка группа
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Реестр документов
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Управление пропусками
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Управление аттестациями
+			</MenuItem>
+			<MenuItem
+				onClick={handleClose}
+				onClose={handleClose}
+				component={Link}
+				to="/main/sessions"
+			>
+				{" "}
+				Управление сессиями
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Управление практиками
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Управление пользователями
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Кураторы групп
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Отчёты
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Логины студентов
+			</MenuItem>
+			<MenuItem onClick={handleClose} component={Link} to="/">
+				Логины студентов (все факультеты)
+			</MenuItem>
 			<Divider />
-			<MenuItem>Сменить пароль</MenuItem>
+			<MenuItem onClick={handleClose}>Сменить пароль</MenuItem>
 			<MenuItem onClick={handleLogout}>Выйти</MenuItem>
 		</Menu>
 	);

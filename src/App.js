@@ -14,6 +14,7 @@ import { DialogsProvider } from "@toolpad/core";
 import PracticeStatements from "./pages/practiceStatements";
 import PracticeDetails from "./pages/practiceDetails";
 import GroupCurators from "./pages/groupCurators";
+import SessionManager from "./pages/sessions";
 
 function App() {
 	// Установка шрифта для приложения
@@ -61,6 +62,10 @@ function App() {
 								<Route
 									path="group-curators"
 									element={<GroupCurators />}
+								/>
+								<Route
+									path="sessions"
+									element={<SessionManager />}
 								/>
 							</Route>
 						</Routes>
