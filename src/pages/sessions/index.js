@@ -17,7 +17,6 @@ import {
 	Tooltip,
 } from "@mui/material";
 import {
-	AddRounded,
 	CachedRounded,
 	CheckRounded,
 	CircleRounded,
@@ -29,6 +28,12 @@ function SessionManager() {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const [item, setItem] = useState(null);
 	const open = Boolean(anchorEl);
+
+	useEffect(() => {
+		fetch("/data/sessions.json")
+			.then((res) => res.json())
+			.then((response) => setData(groupData(response.data)));
+	}, []);
 
 	const handleClose = () => {
 		setAnchorEl(null);
@@ -47,12 +52,6 @@ function SessionManager() {
 			Студенты-задолжники
 		</Button>
 	);
-
-	useEffect(() => {
-		fetch("/data/sessions.json")
-			.then((res) => res.json())
-			.then((response) => setData(groupData(response.data)));
-	}, []);
 
 	const toDate = (dateStr) => {
 		if (dateStr !== null) {
@@ -83,12 +82,6 @@ function SessionManager() {
 
 	const indicator = (item) => {
 		switch (true) {
-			case item.approveStatus === null:
-				return (
-					<Tooltip placement="top-start" title="Нет доступных сессий">
-						<CircleRounded sx={{ color: "#E2E2E2" }} />
-					</Tooltip>
-				);
 			case item.approveStatus === 60:
 				return (
 					<Tooltip placement="top-start" title={warningMessage()}>
@@ -99,6 +92,12 @@ function SessionManager() {
 				return (
 					<Tooltip placement="top-start" title="Сессия утверждена">
 						<CircleRounded sx={{ color: "#00BFA5" }} />
+					</Tooltip>
+				);
+			default:
+				return (
+					<Tooltip placement="top-start" title="Нет доступных сессий">
+						<CircleRounded sx={{ color: "#E2E2E2" }} />
 					</Tooltip>
 				);
 		}
@@ -243,13 +242,7 @@ function SessionManager() {
 				</>
 			);
 		}
-		return (
-			<>
-				<IconButton>
-					<AddRounded />
-				</IconButton>
-			</>
-		);
+		return <Button variant="text">Создать сессию</Button>;
 	};
 
 	const tableContent = () => {
