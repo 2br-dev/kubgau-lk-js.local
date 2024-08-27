@@ -16,6 +16,7 @@ import PracticeDetails from "./pages/practiceDetails";
 import GroupCurators from "./pages/groupCurators";
 import SessionManager from "./pages/sessions";
 import SessionEditor from "./pages/createSession";
+import SessionTiming from "./pages/sessionTiming";
 
 function App() {
 	// Установка шрифта для приложения
@@ -71,6 +72,10 @@ function App() {
 								<Route
 									path="create-session/:course"
 									element={<SessionEditor />}
+								/>
+								<Route
+									path="session-timing"
+									element={<SessionTiming />}
 								/>
 							</Route>
 						</Routes>

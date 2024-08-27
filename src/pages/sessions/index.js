@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import PageHeader from "../../components/pageHeader";
 import formatRange from "../../components/formatDate";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
 	Button,
 	Card,
@@ -127,10 +127,19 @@ function SessionManager() {
 							<MenuItem onClick={handleClose}>
 								Отправить на утверждение
 							</MenuItem>
-							<MenuItem onClick={handleClose}>
+							{/* Заглушка */}
+							<MenuItem
+								onClick={handleClose}
+								component={Link}
+								to="/main/create-session/3"
+							>
 								Редактировать сессию
 							</MenuItem>
-							<MenuItem onClick={handleClose}>
+							<MenuItem
+								onClick={handleClose}
+								component={Link}
+								to="/main/session-timing"
+							>
 								Редактировать расписание
 							</MenuItem>
 						</Menu>

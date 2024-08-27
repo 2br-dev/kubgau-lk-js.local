@@ -87,6 +87,14 @@ function SessionEditor() {
 	};
 
 	const controlEditor = (item, controlTypes, type) => {
+		const cTypes = [
+			"Экзамен",
+			"Зачёт",
+			"Дифф. зачёт",
+			"Курсовая работа",
+			"Курсовой проект",
+		];
+
 		if (item.mode === "view") {
 			return (
 				<span
@@ -96,7 +104,7 @@ function SessionEditor() {
 					}}
 				>
 					{
-						controlTypes[
+						cTypes[
 							type === "main"
 								? item.extraControlType
 								: item.controlType
@@ -118,7 +126,7 @@ function SessionEditor() {
 							: item.controlType
 					}
 				>
-					{controlTypes.map((t, i) => {
+					{cTypes.map((t, i) => {
 						return (
 							<MenuItem
 								key={i}
