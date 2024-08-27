@@ -16,17 +16,10 @@ import {
 	TableContainer,
 	TableHead,
 	TableRow,
-	FormControl,
-	InputLabel,
 } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@emotion/react";
-import {
-	SaveRounded,
-	PrintRounded,
-	ClearRounded,
-	CloseRounded,
-} from "@mui/icons-material";
+import { SaveRounded, PrintRounded, ClearRounded } from "@mui/icons-material";
 import TimingModal from "./components/timing_modal";
 
 function SessionEditor() {
@@ -64,7 +57,7 @@ function SessionEditor() {
 				response.data.disciplines.forEach((d) => (d.mode = "view"));
 				setCourseData(response.data);
 			});
-	}, []);
+	}, [course]);
 
 	const openModal = () => {
 		setOpen(true);
