@@ -15,6 +15,7 @@ import PracticeStatements from "./pages/practiceStatements";
 import PracticeDetails from "./pages/practiceDetails";
 import GroupCurators from "./pages/groupCurators";
 import SessionManager from "./pages/sessions";
+import SessionEditor from "./pages/createSession";
 
 function App() {
 	// Установка шрифта для приложения
@@ -66,6 +67,10 @@ function App() {
 								<Route
 									path="sessions"
 									element={<SessionManager />}
+								/>
+								<Route
+									path="create-session/:course"
+									element={<SessionEditor />}
 								/>
 							</Route>
 						</Routes>

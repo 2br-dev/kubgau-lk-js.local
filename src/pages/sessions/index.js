@@ -1,5 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import PageHeader from "../../components/pageHeader";
+import formatRange from "../../components/formatDate";
+import { useNavigate } from "react-router-dom";
 import {
 	Button,
 	Card,
@@ -28,6 +30,12 @@ function SessionManager() {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const [item, setItem] = useState(null);
 	const open = Boolean(anchorEl);
+	const navigate = useNavigate();
+
+	const handleCreate = (e) => {
+		let courseId = parseInt(e.target.dataset.course);
+		navigate(`/main/create-session/${courseId}`);
+	};
 
 	useEffect(() => {
 		fetch("/data/sessions.json")
@@ -52,14 +60,6 @@ function SessionManager() {
 			Студенты-задолжники
 		</Button>
 	);
-
-	const toDate = (dateStr) => {
-		if (dateStr !== null) {
-			const dateArr = dateStr.split(".");
-			return new Date(dateArr[1] + "/" + dateArr[0] + "/" + dateArr[2]);
-		}
-		return null;
-	};
 
 	const warningMessage = () => {
 		return (
@@ -101,55 +101,6 @@ function SessionManager() {
 					</Tooltip>
 				);
 		}
-	};
-
-	const formatRange = (from, to) => {
-		const monthes = [
-			"янв",
-			"фев",
-			"мар",
-			"апр",
-			"мая",
-			"июн",
-			"июл",
-			"авг",
-			"сен",
-			"окт",
-			"ноя",
-			"дек",
-		];
-
-		const start = toDate(from);
-		const end = toDate(to);
-
-		const startIsCorrect = from !== null;
-		const endIsCorrect = to !== null;
-		let output = "";
-
-		if (startIsCorrect && endIsCorrect) {
-			const ds = start.getDate();
-			const de = end.getDate();
-
-			const ms = start.getMonth();
-			const me = end.getMonth();
-
-			const ys = start.getFullYear();
-			const ye = end.getFullYear();
-
-			output += ds.toString();
-
-			if (ms !== me) {
-				output += " " + monthes[ms];
-			}
-
-			if (ys !== ye) {
-				output += " " + ye.toString() + " г.";
-			}
-
-			output += ` – ${de} ${monthes[me]} ${ye} г.`;
-		}
-
-		return output;
 	};
 
 	const itemMenu = () => {
@@ -242,7 +193,15 @@ function SessionManager() {
 				</>
 			);
 		}
-		return <Button variant="text">Создать сессию</Button>;
+		return (
+			<Button
+				variant="text"
+				onClick={handleCreate}
+				data-course={item.courseNumber}
+			>
+				Создать сессию
+			</Button>
+		);
 	};
 
 	const tableContent = () => {

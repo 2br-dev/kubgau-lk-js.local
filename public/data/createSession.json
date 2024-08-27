@@ -1,0 +1,77 @@
+{
+	"data": {
+		"courseName": "1 курс, 09.03.03 Прикладная информатика",
+		"courseId": 913,
+		"sessionId": 4428,
+		"checksStartDate": "2024-04-08T00:00:00",
+		"checksEndDate": "2024-04-24T00:00:00",
+		"examsStartDate": "2024-04-20T00:00:00",
+		"examsEndDate": "2024-04-24T00:00:00",
+		"holidaysStartDate": "2024-06-24T00:00:00",
+		"holidaysEndDate": "2024-08-31T00:00:00",
+		"disciplines": [
+			{
+				"disciplineName": "Алгоритмизация и программирование",
+				"disciplineId": 1603,
+				"controlType": 0,
+				"extraControlType": 3
+			},
+			{
+				"disciplineName": "Вычислительные системы, сети и телекоммуникации",
+				"disciplineId": 171,
+				"controlType": 0,
+				"extraControlType": 3
+			},
+			{
+				"disciplineName": "Информационные системы и технологии",
+				"disciplineId": 42,
+				"controlType": 1,
+				"extraControlType": 0
+			},
+			{
+				"disciplineName": "Информационные технологии в деловой коммуникации",
+				"disciplineId": 951,
+				"controlType": 1,
+				"extraControlType": 0
+			},
+			{
+				"disciplineName": "Безопасность жизнедеятельности",
+				"disciplineId": 20,
+				"controlType": 1,
+				"extraControlType": 0
+			},
+			{
+				"disciplineName": "Социология и культурология",
+				"disciplineId": 310,
+				"controlType": 1,
+				"extraControlType": 0
+			},
+			{
+				"disciplineName": "Математический анализ и дополнительные разделы математики",
+				"disciplineId": 963,
+				"controlType": 0,
+				"extraControlType": 0
+			},
+			{
+				"disciplineName": "Экономика",
+				"disciplineId": 851,
+				"controlType": 1,
+				"extraControlType": 0
+			},
+			{
+				"disciplineName": "История России",
+				"disciplineId": 573,
+				"controlType": 0,
+				"extraControlType": 0
+			},
+			{
+				"disciplineName": "Иностранный язык",
+				"disciplineId": 2,
+				"controlType": 1,
+				"extraControlType": 0
+			}
+		]
+	},
+	"errors": null,
+	"success": true
+}
