@@ -1,0 +1,10 @@
+{
+	"data": {
+		"numberOfRequestsForSessionApproval": 2,
+		"numberOfRequestsForPracticeApproval": 1,
+		"numberOfRequestsForOutsidePlanSessionApproval": 2,
+		"numberOfRequestsForSessionSuspending": 6
+	},
+	"errors": null,
+	"success": true
+}

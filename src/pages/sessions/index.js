@@ -17,6 +17,13 @@ import {
 	MenuItem,
 	Divider,
 	Tooltip,
+	Tabs,
+	Tab,
+	Checkbox,
+	FormControl,
+	FormControlLabel,
+	Select,
+	InputLabel,
 } from "@mui/material";
 import {
 	CachedRounded,
@@ -28,19 +35,50 @@ import {
 function SessionManager() {
 	const [data, setData] = useState([]);
 	const [anchorEl, setAnchorEl] = useState(null);
+	const [umuTab, setUmuTab] = useState(0);
 	const [item, setItem] = useState(null);
 	const open = Boolean(anchorEl);
 	const navigate = useNavigate();
+	const [faculty, setFaculty] = useState("0");
+	const [faculties, setFaculties] = useState([
+		{
+			key: "0",
+			value: "Все факультеты",
+		},
+	]);
+	const loggedUserData = localStorage.getItem("loggedUser");
+	const loggedUser = JSON.parse(loggedUserData);
 
 	const handleCreate = (e) => {
 		let courseId = parseInt(e.target.dataset.course);
 		navigate(`/main/create-session/${courseId}`);
 	};
 
+	const handleTabChange = (e, newVal) => {
+		setUmuTab(newVal);
+	};
+
 	useEffect(() => {
-		fetch("/data/sessions.json")
-			.then((res) => res.json())
-			.then((response) => setData(groupData(response.data)));
+		switch (loggedUser.role) {
+			case "umu":
+				fetch("/data/faculties.json")
+					.then((res) => res.json())
+					.then((response) => {
+						setFaculties([...faculties, ...response.data]);
+					});
+				fetch("/data/umu_sessions.json")
+					.then((res) => res.json())
+					.then((response) => {
+						setData(groupUMUData(response.data));
+					});
+				break;
+			default:
+				fetch("/data/sessions.json")
+					.then((res) => res.json())
+					.then((response) => setData(groupData(response.data)));
+				break;
+		}
+		// eslint-disable-next-line
 	}, []);
 
 	const handleClose = () => {
@@ -55,11 +93,14 @@ function SessionManager() {
 		setAnchorEl(e.currentTarget);
 	};
 
-	const suffix = (
-		<Button variant="contained" color="primary">
-			Студенты-задолжники
-		</Button>
-	);
+	const suffix =
+		loggedUser.role === "dekan" ? (
+			<Button variant="contained" color="primary">
+				Студенты-задолжники
+			</Button>
+		) : (
+			<></>
+		);
 
 	const warningMessage = () => {
 		return (
@@ -104,83 +145,118 @@ function SessionManager() {
 	};
 
 	const itemMenu = () => {
-		if (item !== null) {
-			switch (item.approveStatus) {
-				case 60:
+		switch (loggedUser.role) {
+			case "dekan":
+				if (item !== null) {
+					switch (item.approveStatus) {
+						case 60:
+							return (
+								<Menu
+									onClose={handleClose}
+									open={open}
+									anchorEl={anchorEl}
+									transformOrigin={{
+										horizontal: "right",
+										vertical: "top",
+									}}
+									anchorOrigin={{
+										horizontal: "right",
+										vertical: "bottom",
+									}}
+								>
+									<MenuItem onClick={handleClose}>
+										Управление внеплановыми пересдачами
+									</MenuItem>
+									<MenuItem onClick={handleClose}>
+										Отправить на утверждение
+									</MenuItem>
+									{/* Заглушка */}
+									<MenuItem
+										onClick={handleClose}
+										component={Link}
+										to="/main/create-session/3"
+									>
+										Редактировать сессию
+									</MenuItem>
+									<MenuItem
+										onClick={handleClose}
+										component={Link}
+										to="/main/session-timing"
+									>
+										Редактировать расписание
+									</MenuItem>
+								</Menu>
+							);
+						default:
+							return (
+								<Menu
+									onClose={handleClose}
+									open={open}
+									anchorEl={anchorEl}
+									transformOrigin={{
+										horizontal: "right",
+										vertical: "top",
+									}}
+									anchorOrigin={{
+										horizontal: "right",
+										vertical: "bottom",
+									}}
+								>
+									<MenuItem onClick={handleClose}>
+										Управление внеплановыми пересдачами
+									</MenuItem>
+									<MenuItem onClick={handleClose}>
+										Управление ведомостями
+									</MenuItem>
+									<MenuItem onClick={handleClose}>
+										Редактировать расписание задач
+									</MenuItem>
+									<MenuItem onClick={handleClose}>
+										Приостановить сессию
+									</MenuItem>
+									<Divider />
+									<MenuItem onClick={handleClose}>
+										Печать расписание зачётов/экзаменов
+									</MenuItem>
+									<MenuItem onClick={handleClose}>
+										Печать расписания задач
+									</MenuItem>
+								</Menu>
+							);
+					}
+				}
+				break;
+			case "umu":
+				if (item !== null) {
 					return (
 						<Menu
 							onClose={handleClose}
 							open={open}
 							anchorEl={anchorEl}
 							transformOrigin={{
-								horizontal: "right",
 								vertical: "top",
+								horizontal: "right",
 							}}
 							anchorOrigin={{
-								horizontal: "right",
 								vertical: "bottom",
+								horizontal: "right",
 							}}
 						>
-							<MenuItem onClick={handleClose}>
-								Управление внеплановыми пересдачами
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								Отправить на утверждение
-							</MenuItem>
-							{/* Заглушка */}
 							<MenuItem
 								onClick={handleClose}
 								component={Link}
-								to="/main/create-session/3"
+								to="/main/session-details"
 							>
-								Редактировать сессию
+								Подробные сведения
 							</MenuItem>
-							<MenuItem
-								onClick={handleClose}
-								component={Link}
-								to="/main/session-timing"
-							>
-								Редактировать расписание
-							</MenuItem>
+							<MenuItem>Печать расписания</MenuItem>
+							<MenuItem>Печать расписания пересдач</MenuItem>
 						</Menu>
 					);
-				default:
-					return (
-						<Menu
-							onClose={handleClose}
-							open={open}
-							anchorEl={anchorEl}
-							transformOrigin={{
-								horizontal: "right",
-								vertical: "top",
-							}}
-							anchorOrigin={{
-								horizontal: "right",
-								vertical: "bottom",
-							}}
-						>
-							<MenuItem onClick={handleClose}>
-								Управление внеплановыми пересдачами
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								Управление ведомостями
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								Редактировать расписание задач
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								Приостановить сессию
-							</MenuItem>
-							<Divider />
-							<MenuItem onClick={handleClose}>
-								Печать расписание зачётов/экзаменов
-							</MenuItem>
-							<MenuItem onClick={handleClose}>
-								Печать расписания задач
-							</MenuItem>
-						</Menu>
-					);
-			}
+				}
+				break;
+			default:
+				return <></>;
 		}
 	};
 
@@ -213,7 +289,7 @@ function SessionManager() {
 		);
 	};
 
-	const tableContent = () => {
+	const dekanTable = () => {
 		return data.map((item, groupIndex) => (
 			<Fragment key={groupIndex}>
 				<TableRow>
@@ -226,7 +302,7 @@ function SessionManager() {
 						<TableRow key={itemIndex} hover>
 							<TableCell>{indicator(group)}</TableCell>
 							<TableCell>{group.courseNumber}</TableCell>
-							<TableCell>{group.groups.join(", ")}</TableCell>
+							<TableCell>{group.groups?.join(", ")}</TableCell>
 							<TableCell sx={{ whiteSpace: "nowrap" }}>
 								{formatRange(
 									group.checksStartDate,
@@ -255,9 +331,93 @@ function SessionManager() {
 		));
 	};
 
+	const umuTable = () => {
+		return data.map((f, index) => (
+			<Fragment key={index}>
+				<TableRow>
+					<TableCell colSpan={7}>{f.name}</TableCell>
+				</TableRow>
+				{f.disciplines.map((d, dindex) => {
+					return (
+						<Fragment key={dindex}>
+							<TableRow>
+								<TableCell colSpan={7}>
+									{d.discipline}
+								</TableCell>
+							</TableRow>
+							{d.sessions.map((s, sindex) => (
+								<TableRow key={sindex}>
+									<TableCell>{indicator(s)}</TableCell>
+									<TableCell>{s.courseNumber}</TableCell>
+									<TableCell>{s.groups.join(", ")}</TableCell>
+									<TableCell>
+										{formatRange(
+											s.checksStartDate,
+											s.checksEndDate,
+										)}
+									</TableCell>
+									<TableCell>
+										{formatRange(
+											s.examsStartDate,
+											s.examsEndDate,
+										)}
+									</TableCell>
+									<TableCell>
+										{formatRange(
+											s.holidayStartDate,
+											s.holidayEndDate,
+										)}
+									</TableCell>
+									<TableCell sx={{ textAlign: "right" }}>
+										{actionControl(s, dindex, sindex)}
+									</TableCell>
+								</TableRow>
+							))}
+						</Fragment>
+					);
+				})}
+			</Fragment>
+		));
+	};
+
+	const tableContent = () => {
+		if (loggedUser.role === "dekan") {
+			return dekanTable();
+		} else {
+			return umuTable();
+		}
+	};
+
+	const groupUMUData = (data) => {
+		const faculties = data.map((f) => {
+			let groups = f.sessions.map((s) => {
+				return s.programOfEducationName;
+			});
+
+			const groupsUnique = [...new Set(groups)];
+			const disciplines = [];
+
+			groupsUnique.forEach((group) => {
+				disciplines.push({
+					discipline: group,
+					sessions: f.sessions.filter(
+						(s) => s.programOfEducationName === group,
+					),
+				});
+			});
+
+			return {
+				name: f.facultyName,
+				id: f.facultyId,
+				disciplines: disciplines,
+			};
+		});
+		return faculties;
+	};
+
 	const groupData = (data) => {
-		const disciplines = data.map((d) => d.programOfEducationName);
-		const groups = [...new Set(disciplines)];
+		const groupsContent = data.map((d) => d.programOfEducationName);
+		const groups = [...new Set(groupsContent)];
 
 		const groupedData = groups.map((g) => {
 			return {
@@ -268,6 +428,107 @@ function SessionManager() {
 			};
 		});
 		return groupedData;
+	};
+
+	const handleFacultyChange = (e) => {
+		setFaculty(e.target.value);
+	};
+
+	const filterControls = () => {
+		if (umuTab === 0) {
+			return (
+				<div
+					className="filters"
+					style={{
+						display: "flex",
+						alignItems: "center",
+						flexWrap: "wrap",
+						marginBottom: "20px",
+						maxWidth: "100%",
+					}}
+				>
+					<FormControlLabel
+						sx={{
+							userSelect: "none",
+							maxWidth: "100%",
+							"& .MuiTypography-root": {
+								maxWidth: "calc(100%)",
+								overflow: "hidden",
+								textOverflow: "ellipsis",
+								whiteSpace: "nowrap",
+							},
+						}}
+						control={<Checkbox />}
+						label="Только заявки на утверждение"
+					/>
+					<FormControl
+						variant="standard"
+						sx={{
+							minWidth: "200px",
+							transform: "translateY(-8px)",
+						}}
+					>
+						<InputLabel>Выберите факультет</InputLabel>
+						<Select
+							value={faculty}
+							onChange={handleFacultyChange}
+							MenuProps={{
+								style: {
+									maxHeight: 400,
+								},
+								transformOrigin: {
+									horizontal: "right",
+									vertical: "top",
+								},
+								anchorOrigin: {
+									horizontal: "right",
+									vertical: "bottom",
+								},
+							}}
+						>
+							{faculties.map((f, index) => (
+								<MenuItem key={index} value={f.key}>
+									{f.value}
+								</MenuItem>
+							))}
+						</Select>
+					</FormControl>
+				</div>
+			);
+		}
+
+		return <></>;
+	};
+
+	const umuFilters = () => {
+		if (loggedUser.role === "umu") {
+			return (
+				<div
+					style={{
+						display: "flex",
+						flexWrap: "wrap",
+						alignItems: "flex-start",
+						justifyContent: "space-between",
+					}}
+				>
+					<div className="tabs">
+						<Tabs
+							value={umuTab}
+							onChange={handleTabChange}
+							variant="scrollable"
+							sx={{ marginBottom: "20px" }}
+						>
+							<Tab value={0} label="Секции факультетов" />
+							<Tab
+								value={1}
+								label="Заявки на внеплановые сессии"
+							/>
+						</Tabs>
+					</div>
+					{filterControls()}
+				</div>
+			);
+		}
 	};
 
 	return (
@@ -281,6 +542,7 @@ function SessionManager() {
 					/>
 					<Card>
 						<CardContent>
+							{umuFilters()}
 							<TableContainer>
 								<Table className="simple-table">
 									<TableHead>

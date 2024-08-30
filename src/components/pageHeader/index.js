@@ -28,7 +28,11 @@ function PageHeader(props) {
 
 	const headerControl = () => {
 		if (typeof props.header === "string") {
-			return <h1>{props.header}</h1>;
+			return (
+				<h1 style={{ marginRight: "40px", flexShrink: 0 }}>
+					{props.header}
+				</h1>
+			);
 		} else {
 			return props.header;
 		}

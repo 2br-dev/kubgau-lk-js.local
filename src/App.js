@@ -17,6 +17,7 @@ import GroupCurators from "./pages/groupCurators";
 import SessionManager from "./pages/sessions";
 import SessionEditor from "./pages/createSession";
 import SessionTiming from "./pages/sessionTiming";
+import UMUDashboard from "./pages/umu_dashboard";
 
 function App() {
 	// Установка шрифта для приложения
@@ -76,6 +77,10 @@ function App() {
 								<Route
 									path="session-timing"
 									element={<SessionTiming />}
+								/>
+								<Route
+									path="umu-dashboard"
+									element={<UMUDashboard />}
 								/>
 							</Route>
 						</Routes>

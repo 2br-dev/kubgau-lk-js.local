@@ -6,6 +6,7 @@ import TeacherMenu from "../teacher_menu";
 import CathedraMenu from "../cathedra_menu";
 import React from "react";
 import DekanMenu from "../dekan_menu";
+import UMUMenu from "../umu_menu";
 
 const UserMenu = () => {
 	const [anchorEl, setAnchorEl] = useState(null);
@@ -33,6 +34,14 @@ const UserMenu = () => {
 
 	const userMenu = () => {
 		switch (user.role) {
+			case "umu":
+				return (
+					<UMUMenu
+						open={open}
+						anchorEl={anchorEl}
+						handleClose={handleClose}
+					/>
+				);
 			case "dekan":
 				return (
 					<DekanMenu

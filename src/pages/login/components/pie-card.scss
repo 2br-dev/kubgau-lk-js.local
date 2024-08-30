@@ -1,0 +1,57 @@
+.pie-content {
+	display: flex;
+	align-items: center;
+
+	& .MuiChartsLegend-root {
+		display: none;
+	}
+
+	@media (max-width: 900px) and (min-width: 600px) {
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@media (max-width: 320px) {
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	& .chart-wrapper {
+		position: relative;
+		margin-right: 20px;
+		box-shadow: 0 2px 8px rgba(black, 0.4) inset;
+		border-radius: 50%;
+
+		@media (max-width: 900px) and (min-width: 600px) {
+			margin: auto;
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: 320px) {
+			margin: auto;
+			margin-bottom: 20px;
+		}
+
+		& .chart-label {
+			position: absolute;
+			width: 70px;
+			aspect-ratio: 1 / 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background-color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 2;
+			font-weight: bold;
+			font-size: 21px;
+			box-shadow: 0 2px 8px rgba(black, 0.4);
+		}
+	}
+}

@@ -26,6 +26,24 @@ function LoginScreen() {
 		let user = {};
 
 		switch (login.trim()) {
+			case "umu":
+				user = {
+					login: login,
+					fullname: "Татьяна Анатольевна",
+					role: "umu",
+				};
+
+				localStorage.setItem("loggedUser", JSON.stringify(user));
+
+				store.dispatch({
+					type: "SET_USER",
+					payload: user,
+				});
+
+				setTimeout(() => {
+					navigate("/main/umu-dashboard");
+				}, 800);
+				break;
 			case "dekan":
 				// Заглушка для успешного входа
 				user = {
@@ -126,6 +144,7 @@ function LoginScreen() {
 						<div>• teacher – права преподавателя</div>
 						<div>• cathedra – права кафедры</div>
 						<div>• dekan – права деканата</div>
+						<div>• umu – права УМУ</div>
 						<p>Пароль – любой</p>
 					</div>
 					<div className="field">
