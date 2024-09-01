@@ -1,22 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 import PageHeader from "../../components/pageHeader";
-import formatRange from "../../components/formatDate";
-import { Link, useNavigate } from "react-router-dom";
 import {
 	Button,
 	Card,
 	CardContent,
-	IconButton,
-	Table,
-	TableBody,
-	TableCell,
-	TableContainer,
-	TableHead,
-	TableRow,
-	Menu,
 	MenuItem,
-	Divider,
-	Tooltip,
 	Tabs,
 	Tab,
 	Checkbox,
@@ -25,72 +13,82 @@ import {
 	Select,
 	InputLabel,
 } from "@mui/material";
-import {
-	CachedRounded,
-	CheckRounded,
-	CircleRounded,
-	MoreVertRounded,
-} from "@mui/icons-material";
+import DekanTable from "./components/dekanTable";
+import UMUTable from "./components/umuTable";
+
+// TODO
+// В режиме всех факультетов выводить только заголовки с возможностью раскрытия секции
 
 function SessionManager() {
 	const [data, setData] = useState([]);
-	const [anchorEl, setAnchorEl] = useState(null);
+	const [filteredData, setFilteredData] = useState([]);
 	const [umuTab, setUmuTab] = useState(0);
-	const [item, setItem] = useState(null);
-	const open = Boolean(anchorEl);
-	const navigate = useNavigate();
 	const [faculty, setFaculty] = useState("0");
-	const [faculties, setFaculties] = useState([
-		{
-			key: "0",
-			value: "Все факультеты",
-		},
-	]);
+	const [faculties, setFaculties] = useState([]);
 	const loggedUserData = localStorage.getItem("loggedUser");
 	const loggedUser = JSON.parse(loggedUserData);
-
-	const handleCreate = (e) => {
-		let courseId = parseInt(e.target.dataset.course);
-		navigate(`/main/create-session/${courseId}`);
-	};
-
-	const handleTabChange = (e, newVal) => {
-		setUmuTab(newVal);
-	};
+	const [requestsOnly, setRequestsOnly] = useState(false);
 
 	useEffect(() => {
 		switch (loggedUser.role) {
 			case "umu":
-				fetch("/data/faculties.json")
-					.then((res) => res.json())
-					.then((response) => {
-						setFaculties([...faculties, ...response.data]);
-					});
 				fetch("/data/umu_sessions.json")
 					.then((res) => res.json())
 					.then((response) => {
 						setData(groupUMUData(response.data));
+						const filteredData = filterUMUData(
+							null,
+							null,
+							groupUMUData(response.data),
+						);
+						setFilteredData(filteredData);
+						let sessions = response.data;
+
+						fetch("/data/faculties.json")
+							.then((res) => res.json())
+							.then((fresponse) => {
+								const defaultFaculties = [
+									{
+										key: "0",
+										value: "Все факультеты",
+									},
+								];
+								const actual = getActual(
+									sessions,
+									fresponse.data,
+								);
+								setFaculties([...defaultFaculties, ...actual]);
+							});
 					});
 				break;
 			default:
 				fetch("/data/sessions.json")
 					.then((res) => res.json())
-					.then((response) => setData(groupData(response.data)));
+					.then((response) => {
+						setData(groupData(response.data));
+					});
 				break;
 		}
 		// eslint-disable-next-line
 	}, []);
 
-	const handleClose = () => {
-		setAnchorEl(null);
-		setItem(null);
+	const setRequestsFilter = (e) => {
+		setRequestsOnly(e.target.checked);
+		filterUMUData(null, e.target.checked);
 	};
 
-	const handleClick = (e) => {
-		const groupId = parseInt(e.currentTarget.dataset.group);
-		const itemId = parseInt(e.currentTarget.dataset.item);
-		setItem(data[groupId].data[itemId]);
-		setAnchorEl(e.currentTarget);
+	const getActual = (disciplines, faculties) => {
+		let outputFaculties = [];
+		for (let i = 0; i < disciplines.length; i++) {
+			if (disciplines[i].sessions.length) {
+				outputFaculties.push(faculties[i]);
+			}
+		}
+		return outputFaculties;
+	};
+
+	const handleTabChange = (e, newVal) => {
+		setUmuTab(newVal);
 	};
 
 	const suffix =
@@ -102,289 +100,13 @@ function SessionManager() {
 			<></>
 		);
 
-	const warningMessage = () => {
-		return (
-			<ul style={{ paddingLeft: "0", margin: 0, listStyle: "none" }}>
-				<li>
-					<CheckRounded sx={{ height: ".5em" }} />
-					Основная информация заполнена
-				</li>
-				<li>
-					<CheckRounded sx={{ height: ".5em" }} />
-					Расписание заполнено
-				</li>
-				<li>
-					<CachedRounded sx={{ height: ".5em" }} />
-					Ожидает утверждения
-				</li>
-			</ul>
-		);
-	};
-
-	const indicator = (item) => {
-		switch (true) {
-			case item.approveStatus === 60:
-				return (
-					<Tooltip placement="top-start" title={warningMessage()}>
-						<CircleRounded sx={{ color: "#FDD835" }} />
-					</Tooltip>
-				);
-			case item.approveStatus === 100:
-				return (
-					<Tooltip placement="top-start" title="Сессия утверждена">
-						<CircleRounded sx={{ color: "#00BFA5" }} />
-					</Tooltip>
-				);
-			default:
-				return (
-					<Tooltip placement="top-start" title="Нет доступных сессий">
-						<CircleRounded sx={{ color: "#E2E2E2" }} />
-					</Tooltip>
-				);
-		}
-	};
-
-	const itemMenu = () => {
-		switch (loggedUser.role) {
-			case "dekan":
-				if (item !== null) {
-					switch (item.approveStatus) {
-						case 60:
-							return (
-								<Menu
-									onClose={handleClose}
-									open={open}
-									anchorEl={anchorEl}
-									transformOrigin={{
-										horizontal: "right",
-										vertical: "top",
-									}}
-									anchorOrigin={{
-										horizontal: "right",
-										vertical: "bottom",
-									}}
-								>
-									<MenuItem onClick={handleClose}>
-										Управление внеплановыми пересдачами
-									</MenuItem>
-									<MenuItem onClick={handleClose}>
-										Отправить на утверждение
-									</MenuItem>
-									{/* Заглушка */}
-									<MenuItem
-										onClick={handleClose}
-										component={Link}
-										to="/main/create-session/3"
-									>
-										Редактировать сессию
-									</MenuItem>
-									<MenuItem
-										onClick={handleClose}
-										component={Link}
-										to="/main/session-timing"
-									>
-										Редактировать расписание
-									</MenuItem>
-								</Menu>
-							);
-						default:
-							return (
-								<Menu
-									onClose={handleClose}
-									open={open}
-									anchorEl={anchorEl}
-									transformOrigin={{
-										horizontal: "right",
-										vertical: "top",
-									}}
-									anchorOrigin={{
-										horizontal: "right",
-										vertical: "bottom",
-									}}
-								>
-									<MenuItem onClick={handleClose}>
-										Управление внеплановыми пересдачами
-									</MenuItem>
-									<MenuItem onClick={handleClose}>
-										Управление ведомостями
-									</MenuItem>
-									<MenuItem onClick={handleClose}>
-										Редактировать расписание задач
-									</MenuItem>
-									<MenuItem onClick={handleClose}>
-										Приостановить сессию
-									</MenuItem>
-									<Divider />
-									<MenuItem onClick={handleClose}>
-										Печать расписание зачётов/экзаменов
-									</MenuItem>
-									<MenuItem onClick={handleClose}>
-										Печать расписания задач
-									</MenuItem>
-								</Menu>
-							);
-					}
-				}
-				break;
-			case "umu":
-				if (item !== null) {
-					return (
-						<Menu
-							onClose={handleClose}
-							open={open}
-							anchorEl={anchorEl}
-							transformOrigin={{
-								vertical: "top",
-								horizontal: "right",
-							}}
-							anchorOrigin={{
-								vertical: "bottom",
-								horizontal: "right",
-							}}
-						>
-							<MenuItem
-								onClick={handleClose}
-								component={Link}
-								to="/main/session-details"
-							>
-								Подробные сведения
-							</MenuItem>
-							<MenuItem>Печать расписания</MenuItem>
-							<MenuItem>Печать расписания пересдач</MenuItem>
-						</Menu>
-					);
-				}
-				break;
-			default:
-				return <></>;
-		}
-	};
-
-	const actionControl = (item, groupIndex, itemIndex) => {
-		if (
-			item.checksStartDate !== null &&
-			item.examsStartDate !== null &&
-			item.holidayStartDate !== null
-		) {
-			return (
-				<>
-					<IconButton
-						onClick={handleClick}
-						data-item={itemIndex}
-						data-group={groupIndex}
-					>
-						<MoreVertRounded />
-					</IconButton>
-				</>
-			);
-		}
-		return (
-			<Button
-				variant="text"
-				onClick={handleCreate}
-				data-course={item.courseNumber}
-			>
-				Создать сессию
-			</Button>
-		);
-	};
-
-	const dekanTable = () => {
-		return data.map((item, groupIndex) => (
-			<Fragment key={groupIndex}>
-				<TableRow>
-					<TableCell colSpan={7} sx={{ fontWeight: "bold" }}>
-						{item.name}
-					</TableCell>
-				</TableRow>
-				{item.data.map((group, itemIndex) => {
-					return (
-						<TableRow key={itemIndex} hover>
-							<TableCell>{indicator(group)}</TableCell>
-							<TableCell>{group.courseNumber}</TableCell>
-							<TableCell>{group.groups?.join(", ")}</TableCell>
-							<TableCell sx={{ whiteSpace: "nowrap" }}>
-								{formatRange(
-									group.checksStartDate,
-									group.checksEndDate,
-								)}
-							</TableCell>
-							<TableCell sx={{ whiteSpace: "nowrap" }}>
-								{formatRange(
-									group.examsStartDate,
-									group.examsEndDate,
-								)}
-							</TableCell>
-							<TableCell sx={{ whiteSpace: "nowrap" }}>
-								{formatRange(
-									group.holidayStartDate,
-									group.holidayEndDate,
-								)}
-							</TableCell>
-							<TableCell sx={{ textAlign: "right" }}>
-								{actionControl(group, groupIndex, itemIndex)}
-							</TableCell>
-						</TableRow>
-					);
-				})}
-			</Fragment>
-		));
-	};
-
-	const umuTable = () => {
-		return data.map((f, index) => (
-			<Fragment key={index}>
-				<TableRow>
-					<TableCell colSpan={7}>{f.name}</TableCell>
-				</TableRow>
-				{f.disciplines.map((d, dindex) => {
-					return (
-						<Fragment key={dindex}>
-							<TableRow>
-								<TableCell colSpan={7}>
-									{d.discipline}
-								</TableCell>
-							</TableRow>
-							{d.sessions.map((s, sindex) => (
-								<TableRow key={sindex}>
-									<TableCell>{indicator(s)}</TableCell>
-									<TableCell>{s.courseNumber}</TableCell>
-									<TableCell>{s.groups.join(", ")}</TableCell>
-									<TableCell>
-										{formatRange(
-											s.checksStartDate,
-											s.checksEndDate,
-										)}
-									</TableCell>
-									<TableCell>
-										{formatRange(
-											s.examsStartDate,
-											s.examsEndDate,
-										)}
-									</TableCell>
-									<TableCell>
-										{formatRange(
-											s.holidayStartDate,
-											s.holidayEndDate,
-										)}
-									</TableCell>
-									<TableCell sx={{ textAlign: "right" }}>
-										{actionControl(s, dindex, sindex)}
-									</TableCell>
-								</TableRow>
-							))}
-						</Fragment>
-					);
-				})}
-			</Fragment>
-		));
-	};
-
 	const tableContent = () => {
 		if (loggedUser.role === "dekan") {
-			return dekanTable();
+			return <DekanTable data={data} />;
 		} else {
-			return umuTable();
+			if (umuTab === 0) {
+				return <UMUTable data={filteredData} />;
+			}
 		}
 	};
 
@@ -430,8 +152,36 @@ function SessionManager() {
 		return groupedData;
 	};
 
+	const filterUMUData = (
+		facultyId = null,
+		requests = null,
+		inputData = null,
+	) => {
+		const umuData = inputData !== null ? inputData : data;
+		let _data = JSON.parse(JSON.stringify(umuData));
+		facultyId = facultyId ?? faculty;
+		requests = requests ?? requestsOnly;
+		let filtered = _data.filter((item) => {
+			if (requests === true) {
+				item.disciplines.forEach((d) => {
+					d.sessions = d.sessions.filter(
+						(s) => s.approveStatus === 1,
+					);
+				});
+			}
+			if (parseInt(facultyId) !== 0) {
+				return item.id === parseInt(facultyId);
+			} else {
+				return true;
+			}
+		});
+		setFilteredData(filtered);
+		return filtered;
+	};
+
 	const handleFacultyChange = (e) => {
 		setFaculty(e.target.value);
+		filterUMUData(e.target.value, null);
 	};
 
 	const filterControls = () => {
@@ -458,7 +208,12 @@ function SessionManager() {
 								whiteSpace: "nowrap",
 							},
 						}}
-						control={<Checkbox />}
+						control={
+							<Checkbox
+								checked={requestsOnly}
+								onChange={setRequestsFilter}
+							/>
+						}
 						label="Только заявки на утверждение"
 					/>
 					<FormControl
@@ -541,35 +296,13 @@ function SessionManager() {
 						suffix={suffix}
 					/>
 					<Card>
-						<CardContent>
+						<CardContent sx={{ minHeight: 450 }}>
 							{umuFilters()}
-							<TableContainer>
-								<Table className="simple-table">
-									<TableHead>
-										<TableRow>
-											<TableCell></TableCell>
-											<TableCell>Курс</TableCell>
-											<TableCell>Группа</TableCell>
-											<TableCell>
-												Зачётная неделя
-											</TableCell>
-											<TableCell>Экзамены</TableCell>
-											<TableCell>Каникулы</TableCell>
-											<TableCell
-												sx={{ textAlign: "right" }}
-											>
-												Действия
-											</TableCell>
-										</TableRow>
-									</TableHead>
-									<TableBody>{tableContent()}</TableBody>
-								</Table>
-							</TableContainer>
+							{tableContent()}
 						</CardContent>
 					</Card>
 				</div>
 			</section>
-			{itemMenu()}
 		</main>
 	);
 }
