@@ -2,7 +2,7 @@ import { ChevronLeftRounded } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import InfoPanel from "../../components/info_panel";
 import { InfoClass } from "../../components/info_panel/interfaces";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Box, Tabs, Tab, Checkbox, FormControlLabel } from "@mui/material";
 import StatementEntry from "./components/statement-entry";
 import React from "react";
@@ -47,28 +47,31 @@ function StatementsPage() {
 	 * @param {*} typeId Выбранная вкладка
 	 * @returns
 	 */
-	const filterMainData = (data, tab_value, openFilter) => {
-		if (!tab_value) tab_value = tabValue;
-		let output = data.filter((discipline) => {
-			return discipline.controlTypeId === tab_value;
-		});
-
-		if (openFilter) {
-			output = output.map((discipline) => {
-				return {
-					sessionDisciplineId: discipline.sessionDisciplineId,
-					disciplineName: discipline.disciplineName,
-					chairName: discipline.chairName,
-					controlTypeId: discipline.controlTypeId,
-					details: discipline.details.filter((d) => {
-						return d.closingDate === null;
-					}),
-				};
+	const filterMainData = useCallback(
+		(data, tab_value, openFilter) => {
+			if (!tab_value) tab_value = tabValue;
+			let output = data.filter((discipline) => {
+				return discipline.controlTypeId === tab_value;
 			});
-		}
 
-		return output;
-	};
+			if (openFilter) {
+				output = output.map((discipline) => {
+					return {
+						sessionDisciplineId: discipline.sessionDisciplineId,
+						disciplineName: discipline.disciplineName,
+						chairName: discipline.chairName,
+						controlTypeId: discipline.controlTypeId,
+						details: discipline.details.filter((d) => {
+							return d.closingDate === null;
+						}),
+					};
+				});
+			}
+
+			return output;
+		},
+		[tabValue],
+	);
 
 	/**
 	 * Монтирование компонента
@@ -91,11 +94,11 @@ function StatementsPage() {
 		} else {
 			setter(true, "statement-page-info");
 		}
-	}, []);
+	}, [filterMainData]);
 
 	useEffect(() => {
 		setFilteredData(filterMainData(data, tabValue, openOnly));
-	}, [tabValue, openOnly]);
+	}, [tabValue, openOnly, filterMainData, data]);
 
 	/**
 	 * Обработчик переключения вкладок

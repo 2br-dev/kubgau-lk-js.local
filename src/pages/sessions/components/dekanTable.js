@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
 import {
 	TableContainer,
 	Table,
@@ -17,15 +16,35 @@ import formatRange from "../../../components/formatDate";
 import ActionControl from "./actionControl";
 import { useNavigate, Link } from "react-router-dom";
 
-DekanTable.propTypes = {
-	data: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
-
-function DekanTable(props) {
+function DekanTable() {
 	const navigate = useNavigate();
 	const [item, setItem] = useState(null);
 	const [anchorEl, setAnchorEl] = useState(null);
+	const [data, setData] = useState([]);
 	const open = Boolean(anchorEl);
+
+	useEffect(() => {
+		fetch("/data/sessions.json")
+			.then((res) => res.json())
+			.then((response) => {
+				setData(groupData(response.data));
+			});
+	});
+
+	const groupData = (data) => {
+		const groupsContent = data.map((d) => d.programOfEducationName);
+		const groups = [...new Set(groupsContent)];
+
+		const groupedData = groups.map((g) => {
+			return {
+				name: g,
+				data: data.filter((i) => {
+					return i.programOfEducationName === g;
+				}),
+			};
+		});
+		return groupedData;
+	};
 
 	const handleClose = () => {
 		setAnchorEl(null);
@@ -34,7 +53,7 @@ function DekanTable(props) {
 	const handleClick = (e) => {
 		const groupId = parseInt(e.currentTarget.dataset.group);
 		const itemId = parseInt(e.currentTarget.dataset.item);
-		setItem(props.data[groupId].data[itemId]);
+		setItem(data[groupId].data[itemId]);
 		setAnchorEl(e.currentTarget);
 	};
 
@@ -44,6 +63,9 @@ function DekanTable(props) {
 	};
 
 	const itemMenu = () => {
+		if (!item) {
+			return <></>;
+		}
 		switch (item.approveStatus) {
 			case 60:
 				return (
@@ -123,7 +145,7 @@ function DekanTable(props) {
 	};
 
 	const tableBody = () => {
-		return props.data.map((item, groupIndex) => (
+		return data.map((item, groupIndex) => (
 			<Fragment key={groupIndex}>
 				<TableRow>
 					<TableCell colSpan={7} sx={{ fontWeight: "bold" }}>

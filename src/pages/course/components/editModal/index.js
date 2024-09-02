@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import {
 	IconButton,
@@ -45,6 +45,15 @@ function EditModal(props) {
 	const [filteredBindings, setFilteredBindings] = useState([]);
 	const [teachers, setTeachers] = useState([]);
 
+	const filterBindings = useCallback(
+		(vals, tab = tabVal) => {
+			return vals.filter(
+				(item) => (item.lessonType === 4 ? 3 : item.lessonType) === tab,
+			);
+		},
+		[tabVal],
+	);
+
 	useEffect(() => {
 		if (props.open) {
 			fetch("/data/editCourse.json")
@@ -67,7 +76,7 @@ function EditModal(props) {
 					setTeachers([...new Set(response.availableEmployees)]);
 				});
 		}
-	}, [props.open]);
+	}, [props.open, filterBindings]);
 
 	const handleClose = () => {
 		props.handleClose();
@@ -81,12 +90,6 @@ function EditModal(props) {
 
 	const handleAllHoursChange = (e) => {
 		setHours4all(e.target.value);
-	};
-
-	const filterBindings = (vals, tab = tabVal) => {
-		return vals.filter(
-			(item) => (item.lessonType === 4 ? 3 : item.lessonType) === tab,
-		);
 	};
 
 	const saveRow = (e) => {

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useCallback } from "react";
 import PageHeader from "../../components/pageHeader";
 import { useState, useEffect } from "react";
 import {
@@ -39,6 +39,16 @@ function SessionTiming() {
 	});
 	const [availableTeachers, setAvailableTeachers] = useState([]);
 
+	const filterDisciplines = useCallback(
+		(d = null, tab = null) => {
+			if (d === null) d = disciplines;
+			if (tab === null) tab = tabValue;
+
+			return d.filter((d) => d.controlType === tab);
+		},
+		[tabValue, disciplines],
+	);
+
 	useEffect(() => {
 		fetch("/data/sessionTiming.json")
 			.then((res) => res.json())
@@ -50,14 +60,7 @@ function SessionTiming() {
 				setHeader(response.schedule.courseName);
 				setAvailableTeachers(response.chairEmployees);
 			});
-	}, []);
-
-	const filterDisciplines = (d = null, tab = null) => {
-		if (d === null) d = disciplines;
-		if (tab === null) tab = tabValue;
-
-		return d.filter((d) => d.controlType === tab);
-	};
+	}, [filterDisciplines]);
 
 	const handleTabChange = (e, newVal) => {
 		setTabValue(newVal);
