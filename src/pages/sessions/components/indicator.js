@@ -27,7 +27,7 @@ const warningMessage = () => {
 
 function indicator(item) {
 	switch (true) {
-		case item.approveStatus === 60:
+		case item.approveStatus === 1:
 			return (
 				<Tooltip placement="top-start" title={warningMessage()}>
 					<CircleRounded sx={{ color: "#FDD835" }} />

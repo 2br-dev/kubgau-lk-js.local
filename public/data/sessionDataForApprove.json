@@ -1,0 +1,576 @@
+{
+	"courseName": "1 курс, 09.03.02 Информационные системы и технологии, \"Создание, модификация и сопровождение информационных систем, администрирование баз данных\"  - Очная ф.о.",
+	"checksStartDate": "10.06.2024",
+	"checksEndDate": "12.06.2024",
+	"examsStartDate": "13.06.2024",
+	"examsEndDate": "29.06.2024",
+	"holidaysStartDate": "15.07.2024",
+	"holidaysEndDate": "31.08.2024",
+	"disciplines": [
+		{
+			"controlType": 1,
+			"disciplineName": "Безопасность жизнедеятельности",
+			"employees": [
+				"Туманова Марина Ивановна",
+				"Фролов Владимир Юрьевич"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "10.06.2024 08:00",
+					"eventPlace": "113мх",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "15.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "10.06.2024 09:45",
+					"eventPlace": "104мх",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "15.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "10.06.2024 11:30",
+					"eventPlace": "104мх",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "15.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "10.06.2024 13:50",
+					"eventPlace": "104мх",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "15.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Деловые коммуникации",
+			"employees": [
+				"Павловская Ольга Евгеньевна",
+				"Рыбальченко Ольга Владимировна"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "11.06.2024 09:45",
+					"eventPlace": "522гд",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "16.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "11.06.2024 11:30",
+					"eventPlace": "522гд",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "16.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "11.06.2024 09:45",
+					"eventPlace": "522гд",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "16.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "11.06.2024 08:00",
+					"eventPlace": "522гд",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "16.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Иностранный язык",
+			"employees": [
+				"Алещанова Ирина Владимировна",
+				"Гузиекова Саида Мусовна",
+				"Непшекуева Тамара Сагидовна",
+				"Селейдарян Элина Михайловна",
+				"Степанова Анастасия Павловна"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "13.06.2024 09:45",
+					"eventPlace": "302зоо, 304зоо",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "17.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "17.06.2024 09:45",
+					"eventPlace": "302зоо, 021зоо",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "17.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "13.06.2024 09:45",
+					"eventPlace": "431зоо, 303зоо",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "17.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "17.06.2024 09:45",
+					"eventPlace": "304зоо, 303зоо",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "17.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "История России",
+			"employees": [
+				"Малиш Марьяна Адамовна",
+				"Салчинкина Ангелина Ростиславовна"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "21.06.2024 08:00",
+					"eventPlace": "713гл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "18.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "21.06.2024 11:30",
+					"eventPlace": "713гл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "18.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "25.06.2024 08:00",
+					"eventPlace": "714гл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "18.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "25.06.2024 11:30",
+					"eventPlace": "714гл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "18.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Основы математической логики и теории алгоритмов",
+			"employees": [
+				"Аршинов Георгий Александрович",
+				"Лукьяненко Татьяна Викторовна"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "17.06.2024 09:45",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "19.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "13.06.2024 09:45",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "19.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "17.06.2024 13:50",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "19.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "13.06.2024 13:50",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "19.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Теория вероятностей",
+			"employees": ["Кацко Игорь Александрович"],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "25.06.2024 09:45",
+					"eventPlace": "403нот",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "22.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "25.06.2024 13:50",
+					"eventPlace": "403нот",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "22.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "29.06.2024 09:45",
+					"eventPlace": "403нот",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "22.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "29.06.2024 13:15",
+					"eventPlace": "403нот",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "22.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Технологии программирования",
+			"employees": [
+				"Барановская Татьяна Петровна",
+				"Салий Виктория Владимировна"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "29.06.2024 09:45",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "23.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "29.06.2024 13:15",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "23.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "21.06.2024 08:00",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "23.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "21.06.2024 11:30",
+					"eventPlace": "111эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "23.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 4,
+			"disciplineName": "Технологии программирования",
+			"employees": [
+				"Барановская Татьяна Петровна",
+				"Салий Виктория Владимировна"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "",
+					"eventPlace": null,
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "",
+					"eventPlace": null,
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "",
+					"eventPlace": null,
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "",
+					"eventPlace": null,
+					"passingType": 0
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Физика",
+			"employees": [
+				"Колесникова Татьяна Петровна",
+				"Курченко Николай Юрьевич"
+			],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "11.06.2024 11:30",
+					"eventPlace": "002эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "24.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "11.06.2024 13:50",
+					"eventPlace": "002эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "24.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "10.06.2024 09:45",
+					"eventPlace": "002эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "24.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "10.06.2024 11:30",
+					"eventPlace": "002эл",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "24.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Экономика",
+			"employees": ["Артемова Елена Игоревна", "Мамий Сима Асламбечевна"],
+			"extraEmployees": [],
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "10.06.2024 09:45",
+					"eventPlace": "223зр",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2301",
+					"eventDate": "25.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "10.06.2024 11:30",
+					"eventPlace": "223зр",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2302",
+					"eventDate": "25.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "11.06.2024 11:30",
+					"eventPlace": "110мх",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2303",
+					"eventDate": "25.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "11.06.2024 09:45",
+					"eventPlace": "110мх",
+					"passingType": 0
+				},
+				{
+					"groupName": "ИТ2304",
+					"eventDate": "25.07.2024 09:45",
+					"eventPlace": "кафедра",
+					"passingType": 1
+				}
+			]
+		}
+	],
+	"errors": null,
+	"success": true
+}

@@ -1,0 +1,2820 @@
+{
+	"schedule": {
+		"courseName": "2 курс, 09.03.02 Информационные системы и технологии",
+		"sessionId": 4493,
+		"approveStatus": 100,
+		"disciplines": [
+			{
+				"disciplineId": 20,
+				"disciplineName": "Безопасность жизнедеятельности",
+				"chairName": "Механизации животноводства и БЖД",
+				"chairId": 31,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "08:00",
+						"eventPlace": "113мх",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 928,
+								"lastName": "Фролов",
+								"firstName": "Владимир",
+								"middleName": "Юрьевич"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6070,
+								"lastName": "Туманова",
+								"firstName": "Марина",
+								"middleName": "Ивановна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "104мх",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 928,
+								"lastName": "Фролов",
+								"firstName": "Владимир",
+								"middleName": "Юрьевич"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6070,
+								"lastName": "Туманова",
+								"firstName": "Марина",
+								"middleName": "Ивановна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "104мх",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 928,
+								"lastName": "Фролов",
+								"firstName": "Владимир",
+								"middleName": "Юрьевич"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6070,
+								"lastName": "Туманова",
+								"firstName": "Марина",
+								"middleName": "Ивановна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "13:50",
+						"eventPlace": "104мх",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 928,
+								"lastName": "Фролов",
+								"firstName": "Владимир",
+								"middleName": "Юрьевич"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6070,
+								"lastName": "Туманова",
+								"firstName": "Марина",
+								"middleName": "Ивановна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 1
+			},
+			{
+				"disciplineId": 1219,
+				"disciplineName": "Деловые коммуникации",
+				"chairName": "Русского языка и речевой коммуникации",
+				"chairId": 68,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "522гд",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 103,
+								"lastName": "Павловская",
+								"firstName": "Ольга",
+								"middleName": "Евгеньевна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6221,
+								"lastName": "Рыбальченко",
+								"firstName": "Ольга",
+								"middleName": "Владимировна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "522гд",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 103,
+								"lastName": "Павловская",
+								"firstName": "Ольга",
+								"middleName": "Евгеньевна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6221,
+								"lastName": "Рыбальченко",
+								"firstName": "Ольга",
+								"middleName": "Владимировна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "522гд",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 103,
+								"lastName": "Павловская",
+								"firstName": "Ольга",
+								"middleName": "Евгеньевна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6221,
+								"lastName": "Рыбальченко",
+								"firstName": "Ольга",
+								"middleName": "Владимировна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "08:00",
+						"eventPlace": "522гд",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 103,
+								"lastName": "Павловская",
+								"firstName": "Ольга",
+								"middleName": "Евгеньевна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6221,
+								"lastName": "Рыбальченко",
+								"firstName": "Ольга",
+								"middleName": "Владимировна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 1
+			},
+			{
+				"disciplineId": 2,
+				"disciplineName": "Иностранный язык",
+				"chairName": "Иностранных языков",
+				"chairId": 14,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-13T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "302зоо, 304зоо",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 2611,
+								"lastName": "Гузиекова",
+								"firstName": "Саида",
+								"middleName": "Мусовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 4665,
+								"lastName": "Непшекуева",
+								"firstName": "Тамара",
+								"middleName": "Сагидовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5390,
+								"lastName": "Степанова",
+								"firstName": "Анастасия",
+								"middleName": "Павловна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-17T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "302зоо, 021зоо",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 4665,
+								"lastName": "Непшекуева",
+								"firstName": "Тамара",
+								"middleName": "Сагидовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5390,
+								"lastName": "Степанова",
+								"firstName": "Анастасия",
+								"middleName": "Павловна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5509,
+								"lastName": "Алещанова",
+								"firstName": "Ирина",
+								"middleName": "Владимировна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-13T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "431зоо, 303зоо",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 4665,
+								"lastName": "Непшекуева",
+								"firstName": "Тамара",
+								"middleName": "Сагидовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5509,
+								"lastName": "Алещанова",
+								"firstName": "Ирина",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7656,
+								"lastName": "Селейдарян",
+								"firstName": "Элина",
+								"middleName": "Михайловна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-17T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "304зоо, 303зоо",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 2611,
+								"lastName": "Гузиекова",
+								"firstName": "Саида",
+								"middleName": "Мусовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 4665,
+								"lastName": "Непшекуева",
+								"firstName": "Тамара",
+								"middleName": "Сагидовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7656,
+								"lastName": "Селейдарян",
+								"firstName": "Элина",
+								"middleName": "Михайловна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 0
+			},
+			{
+				"disciplineId": 573,
+				"disciplineName": "История России",
+				"chairName": "Истории и политологии",
+				"chairId": 40,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-21T00:00:00",
+						"eventTime": "08:00",
+						"eventPlace": "713гл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 4822,
+								"lastName": "Салчинкина",
+								"firstName": "Ангелина",
+								"middleName": "Ростиславовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7413,
+								"lastName": "Малиш",
+								"firstName": "Марьяна",
+								"middleName": "Адамовна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-21T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "713гл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 4822,
+								"lastName": "Салчинкина",
+								"firstName": "Ангелина",
+								"middleName": "Ростиславовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7413,
+								"lastName": "Малиш",
+								"firstName": "Марьяна",
+								"middleName": "Адамовна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-25T00:00:00",
+						"eventTime": "08:00",
+						"eventPlace": "714гл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 4822,
+								"lastName": "Салчинкина",
+								"firstName": "Ангелина",
+								"middleName": "Ростиславовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7413,
+								"lastName": "Малиш",
+								"firstName": "Марьяна",
+								"middleName": "Адамовна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-25T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "714гл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 4822,
+								"lastName": "Салчинкина",
+								"firstName": "Ангелина",
+								"middleName": "Ростиславовна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7413,
+								"lastName": "Малиш",
+								"firstName": "Марьяна",
+								"middleName": "Адамовна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 0
+			},
+			{
+				"disciplineId": 1591,
+				"disciplineName": "Основы математической логики и теории алгоритмов",
+				"chairName": "Компьютерных технологий и систем",
+				"chairId": 28,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-17T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 3486,
+								"lastName": "Аршинов",
+								"firstName": "Георгий",
+								"middleName": "Александрович"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7590,
+								"lastName": "Лукьяненко",
+								"firstName": "Татьяна",
+								"middleName": "Викторовна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-13T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 3486,
+								"lastName": "Аршинов",
+								"firstName": "Георгий",
+								"middleName": "Александрович"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7590,
+								"lastName": "Лукьяненко",
+								"firstName": "Татьяна",
+								"middleName": "Викторовна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-17T00:00:00",
+						"eventTime": "13:50",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 3486,
+								"lastName": "Аршинов",
+								"firstName": "Георгий",
+								"middleName": "Александрович"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7590,
+								"lastName": "Лукьяненко",
+								"firstName": "Татьяна",
+								"middleName": "Викторовна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-13T00:00:00",
+						"eventTime": "13:50",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 3486,
+								"lastName": "Аршинов",
+								"firstName": "Георгий",
+								"middleName": "Александрович"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7590,
+								"lastName": "Лукьяненко",
+								"firstName": "Татьяна",
+								"middleName": "Викторовна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 0
+			},
+			{
+				"disciplineId": 1189,
+				"disciplineName": "Теория вероятностей",
+				"chairName": "Статистики и прикладной математики",
+				"chairId": 17,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-25T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "403нот",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 6722,
+								"lastName": "Кацко",
+								"firstName": "Игорь",
+								"middleName": "Александрович"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-25T00:00:00",
+						"eventTime": "13:50",
+						"eventPlace": "403нот",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 6722,
+								"lastName": "Кацко",
+								"firstName": "Игорь",
+								"middleName": "Александрович"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-29T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "403нот",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 6722,
+								"lastName": "Кацко",
+								"firstName": "Игорь",
+								"middleName": "Александрович"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-29T00:00:00",
+						"eventTime": "13:15",
+						"eventPlace": "403нот",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 6722,
+								"lastName": "Кацко",
+								"firstName": "Игорь",
+								"middleName": "Александрович"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 0
+			},
+			{
+				"disciplineId": 1776,
+				"disciplineName": "Технологии программирования",
+				"chairName": "Системного анализа и обработки информации",
+				"chairId": 37,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-29T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-29T00:00:00",
+						"eventTime": "13:15",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-21T00:00:00",
+						"eventTime": "08:00",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-21T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "111эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 0
+			},
+			{
+				"disciplineId": 1776,
+				"disciplineName": "Технологии программирования",
+				"chairName": "Системного анализа и обработки информации",
+				"chairId": 37,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": null,
+						"eventTime": null,
+						"eventPlace": null,
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": null,
+						"eventTime": null,
+						"eventPlace": null,
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": null,
+						"eventTime": null,
+						"eventPlace": null,
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": null,
+						"eventTime": null,
+						"eventPlace": null,
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 1167,
+								"lastName": "Салий",
+								"firstName": "Виктория",
+								"middleName": "Владимировна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 5794,
+								"lastName": "Барановская",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 4
+			},
+			{
+				"disciplineId": 1727,
+				"disciplineName": "Физика",
+				"chairName": "Физики",
+				"chairId": 58,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "002эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 348,
+								"lastName": "Колесникова",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6566,
+								"lastName": "Курченко",
+								"firstName": "Николай",
+								"middleName": "Юрьевич"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "13:50",
+						"eventPlace": "002эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 348,
+								"lastName": "Колесникова",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6566,
+								"lastName": "Курченко",
+								"firstName": "Николай",
+								"middleName": "Юрьевич"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "002эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 348,
+								"lastName": "Колесникова",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6566,
+								"lastName": "Курченко",
+								"firstName": "Николай",
+								"middleName": "Юрьевич"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "002эл",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 348,
+								"lastName": "Колесникова",
+								"firstName": "Татьяна",
+								"middleName": "Петровна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 6566,
+								"lastName": "Курченко",
+								"firstName": "Николай",
+								"middleName": "Юрьевич"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 1
+			},
+			{
+				"disciplineId": 1005,
+				"disciplineName": "Экономика",
+				"chairName": "Экономической теории",
+				"chairId": 35,
+				"groups": [
+					{
+						"groupId": 589,
+						"groupName": "ИТ2301",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "223зр",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 95,
+								"lastName": "Артемова",
+								"firstName": "Елена",
+								"middleName": "Игоревна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7216,
+								"lastName": "Мамий",
+								"firstName": "Сима",
+								"middleName": "Асламбечевна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 391,
+						"groupName": "ИТ2302",
+						"eventDate": "2024-06-10T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "223зр",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 95,
+								"lastName": "Артемова",
+								"firstName": "Елена",
+								"middleName": "Игоревна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7216,
+								"lastName": "Мамий",
+								"firstName": "Сима",
+								"middleName": "Асламбечевна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 889,
+						"groupName": "ИТ2303",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "11:30",
+						"eventPlace": "110мх",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 95,
+								"lastName": "Артемова",
+								"firstName": "Елена",
+								"middleName": "Игоревна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7216,
+								"lastName": "Мамий",
+								"firstName": "Сима",
+								"middleName": "Асламбечевна"
+							}
+						],
+						"extraEmployees": []
+					},
+					{
+						"groupId": 1109,
+						"groupName": "ИТ2304",
+						"eventDate": "2024-06-11T00:00:00",
+						"eventTime": "09:45",
+						"eventPlace": "110мх",
+						"employees": [
+							{
+								"chairId": 0,
+								"employeeId": 95,
+								"lastName": "Артемова",
+								"firstName": "Елена",
+								"middleName": "Игоревна"
+							},
+							{
+								"chairId": 0,
+								"employeeId": 7216,
+								"lastName": "Мамий",
+								"firstName": "Сима",
+								"middleName": "Асламбечевна"
+							}
+						],
+						"extraEmployees": []
+					}
+				],
+				"controlType": 1
+			}
+		]
+	},
+	"chairEmployees": [
+		{
+			"chairId": 68,
+			"employeeId": 9,
+			"lastName": "Федотова",
+			"firstName": "Татьяна",
+			"middleName": "Васильевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 13,
+			"lastName": "Васильева",
+			"firstName": "Алеся",
+			"middleName": "Дмитриевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 14,
+			"lastName": "Васильева",
+			"firstName": "Алеся",
+			"middleName": "Дмитриевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 53,
+			"lastName": "Бакланова",
+			"firstName": "Полина",
+			"middleName": "Васильевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 95,
+			"lastName": "Артемова",
+			"firstName": "Елена",
+			"middleName": "Игоревна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 96,
+			"lastName": "Артемова",
+			"firstName": "Елена",
+			"middleName": "Игоревна"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 103,
+			"lastName": "Павловская",
+			"firstName": "Ольга",
+			"middleName": "Евгеньевна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 235,
+			"lastName": "Бебко",
+			"firstName": "Дмитрий",
+			"middleName": "Анатольевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 310,
+			"lastName": "Яшина",
+			"firstName": "Людмила",
+			"middleName": "Борисовна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 343,
+			"lastName": "Кузьмина",
+			"firstName": "Эвелина",
+			"middleName": "Вячеславовна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 344,
+			"lastName": "Кузьмина",
+			"firstName": "Эвелина",
+			"middleName": "Вячеславовна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 348,
+			"lastName": "Колесникова",
+			"firstName": "Татьяна",
+			"middleName": "Петровна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 375,
+			"lastName": "Кошокова",
+			"firstName": "Саньят",
+			"middleName": "Январбиевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 376,
+			"lastName": "Кошокова",
+			"firstName": "Саньят",
+			"middleName": "Январбиевна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 401,
+			"lastName": "Сторожук",
+			"firstName": "Татьяна",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 428,
+			"lastName": "Кутьков",
+			"firstName": "Александр",
+			"middleName": "Юрьевич"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 523,
+			"lastName": "Котелевская",
+			"firstName": "Елена",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 609,
+			"lastName": "Александров",
+			"firstName": "Денис",
+			"middleName": "Сергеевич"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 614,
+			"lastName": "Жигайлов",
+			"firstName": "Федор",
+			"middleName": "Юрьевич"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 844,
+			"lastName": "Даус",
+			"firstName": "Юлия",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 852,
+			"lastName": "Нечаев",
+			"firstName": "Владимир",
+			"middleName": "Генадьевич"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 928,
+			"lastName": "Фролов",
+			"firstName": "Владимир",
+			"middleName": "Юрьевич"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 931,
+			"lastName": "Сидоренко",
+			"firstName": "Александр",
+			"middleName": "Дмитриевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 939,
+			"lastName": "Галкин",
+			"firstName": "Александр",
+			"middleName": "Георгиевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 954,
+			"lastName": "Битков",
+			"firstName": "Иван",
+			"middleName": "Сергеевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 956,
+			"lastName": "Лытнев",
+			"firstName": "Николай",
+			"middleName": "Николаевич"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 1026,
+			"lastName": "Кузнецов",
+			"firstName": "Владимир",
+			"middleName": "Иванович"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 1035,
+			"lastName": "Линник",
+			"firstName": "Анастасия",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1047,
+			"lastName": "Лаптев",
+			"firstName": "Сергей",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 1074,
+			"lastName": "Ткаченко",
+			"firstName": "Василий",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 1075,
+			"lastName": "Ткаченко",
+			"firstName": "Василий",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 1081,
+			"lastName": "Мищенко",
+			"firstName": "Елена",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 1084,
+			"lastName": "Мищенко",
+			"firstName": "Елена",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 1090,
+			"lastName": "Погребняк",
+			"firstName": "Наталья",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 1094,
+			"lastName": "Погребняк",
+			"firstName": "Наталья",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 1109,
+			"lastName": "Болотнова",
+			"firstName": "Евгения",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 1113,
+			"lastName": "Цуприков",
+			"firstName": "Леонид",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1167,
+			"lastName": "Салий",
+			"firstName": "Виктория",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1168,
+			"lastName": "Салий",
+			"firstName": "Виктория",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1306,
+			"lastName": "Павлов",
+			"firstName": "Дмитрий",
+			"middleName": "Алексеевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1312,
+			"lastName": "Павлов",
+			"firstName": "Дмитрий",
+			"middleName": "Алексеевич"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 1445,
+			"lastName": "Шушанян",
+			"firstName": "Наринэ",
+			"middleName": "Суреновна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 1496,
+			"lastName": "Шадрина",
+			"firstName": "Жанна",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 1560,
+			"lastName": "Русак",
+			"firstName": "Светлана",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 1561,
+			"lastName": "Русак",
+			"firstName": "Светлана",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1563,
+			"lastName": "Завгородняя",
+			"firstName": "Наталья",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1646,
+			"lastName": "Минина",
+			"firstName": "Евгения",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1647,
+			"lastName": "Минина",
+			"firstName": "Евгения",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 1803,
+			"lastName": "Проскурина",
+			"firstName": "Светлана",
+			"middleName": "Ивановна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 2022,
+			"lastName": "Лытнев",
+			"firstName": "Николай",
+			"middleName": "Николаевич"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 2143,
+			"lastName": "Ляховецкий",
+			"firstName": "Алексей",
+			"middleName": "Михайлович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 2208,
+			"lastName": "Харитонов",
+			"firstName": "Евгений",
+			"middleName": "Михайлович"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 2235,
+			"lastName": "Кирий",
+			"firstName": "Владимир",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 2263,
+			"lastName": "Овсянникова",
+			"firstName": "Ольга",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 2363,
+			"lastName": "Ушакова",
+			"firstName": "Дарья",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 2415,
+			"lastName": "Шичиях",
+			"firstName": "Фарида",
+			"middleName": "Зауровна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 2504,
+			"lastName": "Емелин",
+			"firstName": "Антон",
+			"middleName": "Валерьевич"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 2525,
+			"lastName": "Печурина",
+			"firstName": "Елена",
+			"middleName": "Каримовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 2578,
+			"lastName": "Мосесова",
+			"firstName": "Милана",
+			"middleName": "Эдуардовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 2580,
+			"lastName": "Мосесова",
+			"firstName": "Милана",
+			"middleName": "Эдуардовна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 2587,
+			"lastName": "Яхонтова",
+			"firstName": "Ирина",
+			"middleName": "Михайловна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 2594,
+			"lastName": "Яхонтова",
+			"firstName": "Ирина",
+			"middleName": "Михайловна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 2611,
+			"lastName": "Гузиекова",
+			"firstName": "Саида",
+			"middleName": "Мусовна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 2646,
+			"lastName": "Авакимян",
+			"firstName": "Наталья",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 2653,
+			"lastName": "Савенко",
+			"firstName": "Алексей",
+			"middleName": "Валентинович"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 2700,
+			"lastName": "Харченко",
+			"firstName": "Сергей",
+			"middleName": "Николаевич"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 2731,
+			"lastName": "Рожков",
+			"firstName": "Евгений",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 2738,
+			"lastName": "Инюкина",
+			"firstName": "Татьяна",
+			"middleName": "Андреевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 2768,
+			"lastName": "Хускич",
+			"firstName": "Харис",
+			"middleName": "Хайрудинович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 2814,
+			"lastName": "Курносов",
+			"firstName": "Сергей",
+			"middleName": "Андреевич"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 2838,
+			"lastName": "Попова",
+			"firstName": "Маргарита",
+			"middleName": "Игоревна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 2947,
+			"lastName": "Евсеев",
+			"firstName": "Никита",
+			"middleName": "Сергеевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 2956,
+			"lastName": "Тахумова",
+			"firstName": "Оксана",
+			"middleName": "Викторовна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 2983,
+			"lastName": "Креймер",
+			"firstName": "Алексей",
+			"middleName": "Семёнович"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 3016,
+			"lastName": "Чунтыз",
+			"firstName": "Алий",
+			"middleName": "Асланович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3024,
+			"lastName": "Василенко",
+			"firstName": "Игорь",
+			"middleName": "Иванович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 3061,
+			"lastName": "Жабчик",
+			"firstName": "Светлана",
+			"middleName": "Викторовна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 3062,
+			"lastName": "Жабчик",
+			"firstName": "Светлана",
+			"middleName": "Викторовна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3099,
+			"lastName": "Яковлев",
+			"firstName": "Руслан",
+			"middleName": "Евгеньевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 3117,
+			"lastName": "Самойленкова",
+			"firstName": "Виктория",
+			"middleName": "Аркадьевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 3118,
+			"lastName": "Самойленкова",
+			"firstName": "Виктория",
+			"middleName": "Аркадьевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3146,
+			"lastName": "Хитарова",
+			"firstName": "Татьяна",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3173,
+			"lastName": "Хроль",
+			"firstName": "Екатерина",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3174,
+			"lastName": "Хроль",
+			"firstName": "Екатерина",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 3228,
+			"lastName": "Даутова",
+			"firstName": "Ирина",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 3231,
+			"lastName": "Пересыпкина",
+			"firstName": "Наталья",
+			"middleName": "Георгиевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3244,
+			"lastName": "Гришин",
+			"firstName": "Евгений",
+			"middleName": "Викторович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3267,
+			"lastName": "Бурсов",
+			"firstName": "Даниил",
+			"middleName": "Геннадьевич"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 3268,
+			"lastName": "Кремянский",
+			"firstName": "Владислав",
+			"middleName": "Франтишекович"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 3283,
+			"lastName": "Грушевская",
+			"firstName": "Ирина",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 3284,
+			"lastName": "Грушевская",
+			"firstName": "Ирина",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3292,
+			"lastName": "Аванесян",
+			"firstName": "Даниэла",
+			"middleName": "Нельсоновна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 3300,
+			"lastName": "Ефанова",
+			"firstName": "Наталья",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 3306,
+			"lastName": "Ефанова",
+			"firstName": "Наталья",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3329,
+			"lastName": "Бурса",
+			"firstName": "Игорь",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 3335,
+			"lastName": "Крикун",
+			"firstName": "Карина",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 3402,
+			"lastName": "Хоружая",
+			"firstName": "Светлана",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 3404,
+			"lastName": "Класнер",
+			"firstName": "Георгий",
+			"middleName": "Георгиевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 3408,
+			"lastName": "Иванова",
+			"firstName": "Елена",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 3410,
+			"lastName": "Иванова",
+			"firstName": "Елена",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3428,
+			"lastName": "Здановская",
+			"firstName": "Лидия",
+			"middleName": "Борисовна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3486,
+			"lastName": "Аршинов",
+			"firstName": "Георгий",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3491,
+			"lastName": "Аршинов",
+			"firstName": "Георгий",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 3580,
+			"lastName": "Крепышев",
+			"firstName": "Дмитрий",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 3586,
+			"lastName": "Гоник",
+			"firstName": "Галина",
+			"middleName": "Георгиевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 3587,
+			"lastName": "Гоник",
+			"firstName": "Галина",
+			"middleName": "Георгиевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3613,
+			"lastName": "Бурковский",
+			"firstName": "Петр",
+			"middleName": "Васильевич"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3618,
+			"lastName": "Бурковский",
+			"firstName": "Петр",
+			"middleName": "Васильевич"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3647,
+			"lastName": "Тапехина",
+			"firstName": "Татьяна",
+			"middleName": "Евгеньевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3650,
+			"lastName": "Тапехина",
+			"firstName": "Татьяна",
+			"middleName": "Евгеньевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3651,
+			"lastName": "Тапехина",
+			"firstName": "Татьяна",
+			"middleName": "Евгеньевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3692,
+			"lastName": "Айвазян",
+			"firstName": "Надежда",
+			"middleName": "Борисовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3694,
+			"lastName": "Айвазян",
+			"firstName": "Надежда",
+			"middleName": "Борисовна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 3785,
+			"lastName": "Стригунова",
+			"firstName": "Надежда",
+			"middleName": "Юрьевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3799,
+			"lastName": "Климова",
+			"firstName": "Наталья",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3800,
+			"lastName": "Климова",
+			"firstName": "Наталья",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 3973,
+			"lastName": "Жилинская",
+			"firstName": "Кристина",
+			"middleName": "Васильевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 3998,
+			"lastName": "Батурьян",
+			"firstName": "Маргарита",
+			"middleName": "Аветисовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 4000,
+			"lastName": "Батурьян",
+			"firstName": "Маргарита",
+			"middleName": "Аветисовна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 4041,
+			"lastName": "Удодова",
+			"firstName": "Надежда",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 4086,
+			"lastName": "Сенникова",
+			"firstName": "Алина",
+			"middleName": "Евгеньевна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 4117,
+			"lastName": "Майборода",
+			"firstName": "Алексей",
+			"middleName": "Сергеевич"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 4120,
+			"lastName": "Жминько",
+			"firstName": "Альбина",
+			"middleName": "Евгеньевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 4168,
+			"lastName": "Капуста",
+			"firstName": "Адриана",
+			"middleName": "Андреевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 4221,
+			"lastName": "Ворокова",
+			"firstName": "Нодира",
+			"middleName": "Хасановна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 4223,
+			"lastName": "Кравцова",
+			"firstName": "Юлия",
+			"middleName": "Константиновна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 4224,
+			"lastName": "Кравцова",
+			"firstName": "Юлия",
+			"middleName": "Константиновна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 4289,
+			"lastName": "Потебня",
+			"firstName": "Андрей",
+			"middleName": "Николаевич"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 4320,
+			"lastName": "Авлияев",
+			"firstName": "Александр",
+			"middleName": "Шухратович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 4436,
+			"lastName": "Сущенко",
+			"firstName": "Максим",
+			"middleName": "Алексеевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 4437,
+			"lastName": "Хетагурова",
+			"firstName": "Заира",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 4499,
+			"lastName": "Гончарова",
+			"firstName": "Наталия",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 4523,
+			"lastName": "Егорчев",
+			"firstName": "Филипп",
+			"middleName": "Андреевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 4627,
+			"lastName": "Исакова",
+			"firstName": "Наталья",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 4650,
+			"lastName": "Климовских",
+			"firstName": "Надежда",
+			"middleName": "Валерьевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 4652,
+			"lastName": "Климовских",
+			"firstName": "Надежда",
+			"middleName": "Валерьевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 4660,
+			"lastName": "Голуб",
+			"firstName": "Анна",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 4665,
+			"lastName": "Непшекуева",
+			"firstName": "Тамара",
+			"middleName": "Сагидовна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 4670,
+			"lastName": "Абдразаков",
+			"firstName": "Владислав",
+			"middleName": "Андреевич"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 4729,
+			"lastName": "Шевченко",
+			"firstName": "Ольга",
+			"middleName": "Павловна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 4746,
+			"lastName": "Слепченко",
+			"firstName": "Александр",
+			"middleName": "Юрьевич"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 4759,
+			"lastName": "Козловская",
+			"firstName": "Светлана",
+			"middleName": "Алексеевна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 4808,
+			"lastName": "Параскевов",
+			"firstName": "Александр",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 4822,
+			"lastName": "Салчинкина",
+			"firstName": "Ангелина",
+			"middleName": "Ростиславовна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 4860,
+			"lastName": "Васильев",
+			"firstName": "Вячеслав",
+			"middleName": "Павлович"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 4986,
+			"lastName": "Бычков",
+			"firstName": "Александр",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5006,
+			"lastName": "Терещенко",
+			"firstName": "Олеся",
+			"middleName": "Валерьевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5008,
+			"lastName": "Терещенко",
+			"firstName": "Олеся",
+			"middleName": "Валерьевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5024,
+			"lastName": "Сизион",
+			"firstName": "Денис",
+			"middleName": "Сергеевич"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 5054,
+			"lastName": "Киселева",
+			"firstName": "Ангелина",
+			"middleName": "Игоревна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 5249,
+			"lastName": "Зайцева",
+			"firstName": "Анна",
+			"middleName": "Эдуардовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 5251,
+			"lastName": "Зайцева",
+			"firstName": "Анна",
+			"middleName": "Эдуардовна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5307,
+			"lastName": "Хронова",
+			"firstName": "Ирина",
+			"middleName": "Алексеевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5308,
+			"lastName": "Хронова",
+			"firstName": "Ирина",
+			"middleName": "Алексеевна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5339,
+			"lastName": "Лаптев",
+			"firstName": "Сергей",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5342,
+			"lastName": "Лаптев",
+			"firstName": "Сергей",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 5390,
+			"lastName": "Степанова",
+			"firstName": "Анастасия",
+			"middleName": "Павловна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 5457,
+			"lastName": "Казакова",
+			"firstName": "Екатерина",
+			"middleName": "Эдуардовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 5509,
+			"lastName": "Алещанова",
+			"firstName": "Ирина",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5529,
+			"lastName": "Рябченко",
+			"firstName": "Александр",
+			"middleName": "Григорьевич"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5596,
+			"lastName": "Алашеев",
+			"firstName": "Вадим",
+			"middleName": "Викторович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5597,
+			"lastName": "Алашеев",
+			"firstName": "Вадим",
+			"middleName": "Викторович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5625,
+			"lastName": "Дашин",
+			"firstName": "Алексей",
+			"middleName": "Викторович"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 5638,
+			"lastName": "Скударнова",
+			"firstName": "Анастасия",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5644,
+			"lastName": "Сергеев",
+			"firstName": "Александр",
+			"middleName": "Эдуардович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5647,
+			"lastName": "Сергеев",
+			"firstName": "Александр",
+			"middleName": "Эдуардович"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5695,
+			"lastName": "Темляков",
+			"firstName": "Владимир",
+			"middleName": "Евгеньевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5696,
+			"lastName": "Темляков",
+			"firstName": "Владимир",
+			"middleName": "Евгеньевич"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 5704,
+			"lastName": "Приходько",
+			"firstName": "Карина",
+			"middleName": "Согомоновна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 5730,
+			"lastName": "Вострокнутов",
+			"firstName": "Александр",
+			"middleName": "Евгеньевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 5739,
+			"lastName": "Вострокнутов",
+			"firstName": "Александр",
+			"middleName": "Евгеньевич"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5745,
+			"lastName": "Малюков",
+			"firstName": "Денис",
+			"middleName": "Алексеевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 5792,
+			"lastName": "Барановская",
+			"firstName": "Татьяна",
+			"middleName": "Петровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 5794,
+			"lastName": "Барановская",
+			"firstName": "Татьяна",
+			"middleName": "Петровна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 5797,
+			"lastName": "Барановская",
+			"firstName": "Татьяна",
+			"middleName": "Петровна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 5806,
+			"lastName": "Ивлев",
+			"firstName": "Евгений",
+			"middleName": "Владимирович"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 5815,
+			"lastName": "Федоренко",
+			"firstName": "Евгений",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 5822,
+			"lastName": "Сахно",
+			"firstName": "Ольга",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 5905,
+			"lastName": "Нилова",
+			"firstName": "Надежда",
+			"middleName": "Михайловна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 5907,
+			"lastName": "Нилова",
+			"firstName": "Надежда",
+			"middleName": "Михайловна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 5924,
+			"lastName": "Бочкова",
+			"firstName": "Татьяна",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 5927,
+			"lastName": "Вершиловская",
+			"firstName": "Наталья",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5946,
+			"lastName": "Салфетников",
+			"firstName": "Дмитрий",
+			"middleName": "Анатольевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 5947,
+			"lastName": "Салфетников",
+			"firstName": "Дмитрий",
+			"middleName": "Анатольевич"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6017,
+			"lastName": "Аракелян",
+			"firstName": "Нина",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6019,
+			"lastName": "Аракелян",
+			"firstName": "Нина",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 6070,
+			"lastName": "Туманова",
+			"firstName": "Марина",
+			"middleName": "Ивановна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 6074,
+			"lastName": "Крамаренко",
+			"firstName": "Татьяна",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 6076,
+			"lastName": "Крамаренко",
+			"firstName": "Татьяна",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 6108,
+			"lastName": "Кремянская",
+			"firstName": "Елена",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 6109,
+			"lastName": "Кремянская",
+			"firstName": "Елена",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 6140,
+			"lastName": "Самойлюков",
+			"firstName": "Юрий",
+			"middleName": "Николаевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 6141,
+			"lastName": "Самойлюков",
+			"firstName": "Юрий",
+			"middleName": "Николаевич"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6184,
+			"lastName": "Криворучко",
+			"firstName": "Ирина",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6188,
+			"lastName": "Криворучко",
+			"firstName": "Ирина",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6191,
+			"lastName": "Строганова",
+			"firstName": "Марина",
+			"middleName": "Дмитриевна"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 6194,
+			"lastName": "Клименко",
+			"firstName": "Ирина",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 6208,
+			"lastName": "Горпинченко",
+			"firstName": "Ксения",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 6209,
+			"lastName": "Горпинченко",
+			"firstName": "Ксения",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 68,
+			"employeeId": 6221,
+			"lastName": "Рыбальченко",
+			"firstName": "Ольга",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 6226,
+			"lastName": "Лаптев",
+			"firstName": "Владимир",
+			"middleName": "Николаевич"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6254,
+			"lastName": "Анисимова",
+			"firstName": "Анна",
+			"middleName": "Тихоновна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6255,
+			"lastName": "Анисимова",
+			"firstName": "Анна",
+			"middleName": "Тихоновна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6310,
+			"lastName": "Яткин",
+			"firstName": "Виктор",
+			"middleName": "Игоревич"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6311,
+			"lastName": "Яткин",
+			"firstName": "Виктор",
+			"middleName": "Игоревич"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 6340,
+			"lastName": "Свярчков",
+			"firstName": "Виктор",
+			"middleName": "Викторович"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 6392,
+			"lastName": "Мурлин",
+			"firstName": "Алексей",
+			"middleName": "Георгиевич"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 6402,
+			"lastName": "Турк",
+			"firstName": "Светлана",
+			"middleName": "Нальбиевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 6403,
+			"lastName": "Турк",
+			"firstName": "Светлана",
+			"middleName": "Нальбиевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 6455,
+			"lastName": "Чикаева",
+			"firstName": "Карина",
+			"middleName": "Суреновна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6467,
+			"lastName": "Донскова",
+			"firstName": "Людмила",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 6468,
+			"lastName": "Донскова",
+			"firstName": "Людмила",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6476,
+			"lastName": "Максимов",
+			"firstName": "Сергей",
+			"middleName": "Григорьевич"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 6566,
+			"lastName": "Курченко",
+			"firstName": "Николай",
+			"middleName": "Юрьевич"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 6680,
+			"lastName": "Карачанская",
+			"firstName": "Татьяна",
+			"middleName": "Алексеевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 6711,
+			"lastName": "Терещенко",
+			"firstName": "Жанна",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 6722,
+			"lastName": "Кацко",
+			"firstName": "Игорь",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6756,
+			"lastName": "Шулимова",
+			"firstName": "Анна",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6758,
+			"lastName": "Шулимова",
+			"firstName": "Анна",
+			"middleName": "Анатольевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6760,
+			"lastName": "Алексеенко",
+			"firstName": "Анастасия",
+			"middleName": "Германовна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6761,
+			"lastName": "Алексеенко",
+			"firstName": "Анастасия",
+			"middleName": "Германовна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6796,
+			"lastName": "Шейко",
+			"firstName": "Екатерина",
+			"middleName": "Валерьевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 6896,
+			"lastName": "Лазько",
+			"firstName": "Людмила",
+			"middleName": "Владимировна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 6914,
+			"lastName": "Рыбянцева",
+			"firstName": "Мария",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 6915,
+			"lastName": "Рыбянцева",
+			"firstName": "Мария",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 7035,
+			"lastName": "Кощаева",
+			"firstName": "Ольга",
+			"middleName": "Викторовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 7047,
+			"lastName": "Карамышева",
+			"firstName": "Светлана",
+			"middleName": "Геннадьевна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7126,
+			"lastName": "Луценко",
+			"firstName": "Евгений",
+			"middleName": "Вениаминович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7128,
+			"lastName": "Луценко",
+			"firstName": "Евгений",
+			"middleName": "Вениаминович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7129,
+			"lastName": "Луценко",
+			"firstName": "Евгений",
+			"middleName": "Вениаминович"
+		},
+		{
+			"chairId": 58,
+			"employeeId": 7149,
+			"lastName": "Лебедев",
+			"firstName": "Дмитрий",
+			"middleName": "Васильевич"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7166,
+			"lastName": "Ткаченко",
+			"firstName": "Наталья",
+			"middleName": "Андреевна"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 7216,
+			"lastName": "Мамий",
+			"firstName": "Сима",
+			"middleName": "Асламбечевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 7217,
+			"lastName": "Карипиди",
+			"firstName": "Алла",
+			"middleName": "Геннадиевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 7219,
+			"lastName": "Карипиди",
+			"firstName": "Алла",
+			"middleName": "Геннадиевна"
+		},
+		{
+			"chairId": 37,
+			"employeeId": 7259,
+			"lastName": "Птух",
+			"firstName": "Дмитрий",
+			"middleName": "Александрович"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7295,
+			"lastName": "Фешина",
+			"firstName": "Елена",
+			"middleName": "Васильевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 7312,
+			"lastName": "Жминько",
+			"firstName": "Надежда",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 7317,
+			"lastName": "Жминько",
+			"firstName": "Надежда",
+			"middleName": "Сергеевна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7352,
+			"lastName": "Чемарина",
+			"firstName": "Анна",
+			"middleName": "Валерьевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 7413,
+			"lastName": "Малиш",
+			"firstName": "Марьяна",
+			"middleName": "Адамовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 7456,
+			"lastName": "Басте",
+			"firstName": "Зара",
+			"middleName": "Юсуфовна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 7458,
+			"lastName": "Басте",
+			"firstName": "Зара",
+			"middleName": "Юсуфовна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7472,
+			"lastName": "Зосимова",
+			"firstName": "Екатерина",
+			"middleName": "Андреевна"
+		},
+		{
+			"chairId": 31,
+			"employeeId": 7473,
+			"lastName": "Ефремова",
+			"firstName": "Виолетта",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 40,
+			"employeeId": 7507,
+			"lastName": "Тамбиянц",
+			"firstName": "Юлиан",
+			"middleName": "Григорьевич"
+		},
+		{
+			"chairId": 35,
+			"employeeId": 7558,
+			"lastName": "Скоморощенко",
+			"firstName": "Анна",
+			"middleName": "Александровна"
+		},
+		{
+			"chairId": 28,
+			"employeeId": 7590,
+			"lastName": "Лукьяненко",
+			"firstName": "Татьяна",
+			"middleName": "Викторовна"
+		},
+		{
+			"chairId": 17,
+			"employeeId": 7631,
+			"lastName": "Яроменко",
+			"firstName": "Наталья",
+			"middleName": "Николаевна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 7655,
+			"lastName": "Селейдарян",
+			"firstName": "Элина",
+			"middleName": "Михайловна"
+		},
+		{
+			"chairId": 14,
+			"employeeId": 7656,
+			"lastName": "Селейдарян",
+			"firstName": "Элина",
+			"middleName": "Михайловна"
+		}
+	],
+	"errors": null,
+	"success": true
+}

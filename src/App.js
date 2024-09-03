@@ -18,6 +18,8 @@ import SessionManager from "./pages/sessions";
 import SessionEditor from "./pages/createSession";
 import SessionTiming from "./pages/sessionTiming";
 import UMUDashboard from "./pages/umu_dashboard";
+import SessionSchedule from "./pages/outplan_requests";
+import SessionApprove from "./pages/sessionApprove";
 
 function App() {
 	// Установка шрифта для приложения
@@ -81,6 +83,14 @@ function App() {
 								<Route
 									path="umu-dashboard"
 									element={<UMUDashboard />}
+								/>
+								<Route
+									path="session-schedule"
+									element={<SessionSchedule />}
+								/>
+								<Route
+									path="session-approve/:sessionId"
+									element={<SessionApprove />}
 								/>
 							</Route>
 						</Routes>

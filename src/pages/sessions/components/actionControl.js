@@ -1,6 +1,6 @@
 import React from "react";
-import { IconButton, Button } from "@mui/material";
-import { MoreVertRounded } from "@mui/icons-material";
+import { IconButton, Button, Tooltip } from "@mui/material";
+import { MoreVertRounded, RuleRounded } from "@mui/icons-material";
 import PropTypes from "prop-types";
 
 ActionControl.propTypes = {
@@ -13,33 +13,47 @@ ActionControl.propTypes = {
 };
 
 function ActionControl(props) {
-	if (
-		props.item.checksStartDate !== null &&
-		props.item.examsStartDate !== null &&
-		props.item.holidayStartDate !== null
-	) {
-		return (
-			<>
-				<IconButton
-					onClick={props.handleClick}
-					data-item={props.itemIndex}
-					data-group={props.groupIndex}
-					data-faculty={props.facultyIndex}
+	const handleClick = (e) => {
+		props.handleClick(e, props.item);
+	};
+	switch (props.item.approveStatus) {
+		case 1:
+			return (
+				<Tooltip placement="top" title="Принять решение">
+					<IconButton onClick={handleClick}>
+						<RuleRounded />
+					</IconButton>
+				</Tooltip>
+			);
+		default:
+			if (
+				props.item.checksStartDate !== null &&
+				props.item.examsStartDate !== null &&
+				props.item.holidayStartDate !== null
+			) {
+				return (
+					<>
+						<IconButton
+							onClick={handleClick}
+							data-item={props.itemIndex}
+							data-group={props.groupIndex}
+							data-faculty={props.facultyIndex}
+						>
+							<MoreVertRounded />
+						</IconButton>
+					</>
+				);
+			}
+			return (
+				<Button
+					variant="text"
+					onClick={props.handleCreate}
+					data-course={props.item.courseNumber}
 				>
-					<MoreVertRounded />
-				</IconButton>
-			</>
-		);
+					Создать сессию
+				</Button>
+			);
 	}
-	return (
-		<Button
-			variant="text"
-			onClick={props.handleCreate}
-			data-course={props.item.courseNumber}
-		>
-			Создать сессию
-		</Button>
-	);
 }
 
 export default ActionControl;

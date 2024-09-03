@@ -40,7 +40,8 @@ function UMUTable(props) {
 				setFilteredData(filteredData);
 				props.onLoad([...groupedData]);
 			});
-	}, [props.faculty, props.requestsOnly]);
+		// eslint-disable-next-line
+	}, [props.faculty]);
 
 	const groupUMUData = (data) => {
 		const faculties = data.map((f) => {
@@ -71,8 +72,13 @@ function UMUTable(props) {
 		return faculties.filter((f) => !f.isEmpty);
 	};
 
-	const handleClick = (e) => {
-		setAnchorEl(e.currentTarget);
+	const handleClick = (e, item) => {
+		if (item.approveStatus === 100) {
+			setAnchorEl(e.currentTarget);
+		} else {
+			// TODO: Переслать ID сессии
+			navigate("/main/session-approve/12");
+		}
 	};
 
 	const handleCreate = (e) => {
@@ -178,31 +184,33 @@ function UMUTable(props) {
 		setAnchorEl(null);
 	};
 
-	const itemMenu = () => (
-		<Menu
-			onClose={handleClose}
-			open={open}
-			anchorEl={anchorEl}
-			transformOrigin={{
-				vertical: "top",
-				horizontal: "right",
-			}}
-			anchorOrigin={{
-				vertical: "bottom",
-				horizontal: "right",
-			}}
-		>
-			<MenuItem
-				onClick={handleClose}
-				component={Link}
-				to="/main/session-details"
+	const itemMenu = () => {
+		return (
+			<Menu
+				onClose={handleClose}
+				open={open}
+				anchorEl={anchorEl}
+				transformOrigin={{
+					vertical: "top",
+					horizontal: "right",
+				}}
+				anchorOrigin={{
+					vertical: "bottom",
+					horizontal: "right",
+				}}
 			>
-				Подробные сведения
-			</MenuItem>
-			<MenuItem>Печать расписания</MenuItem>
-			<MenuItem>Печать расписания пересдач</MenuItem>
-		</Menu>
-	);
+				<MenuItem
+					onClick={handleClose}
+					component={Link}
+					to="/main/session-details"
+				>
+					Подробные сведения
+				</MenuItem>
+				<MenuItem>Печать расписания</MenuItem>
+				<MenuItem>Печать расписания пересдач</MenuItem>
+			</Menu>
+		);
+	};
 
 	const UMURows = (sessions, disciplineIndex, facultyIndex) => {
 		return sessions.map((s, index) => {
@@ -289,6 +297,8 @@ function UMUTable(props) {
 								{UMURows(d.sessions, dindex, index)}
 							</Fragment>
 						);
+					} else {
+						return <Fragment key={dindex} />;
 					}
 				} else {
 					return <Fragment key={index} />;

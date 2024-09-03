@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 UMUFilters.propTypes = {
 	onFacultyChange: PropTypes.func.isRequired,
 	onRequestsChange: PropTypes.func.isRequired,
-	faculty: PropTypes.string.isRequired,
+	faculty: PropTypes.number,
 	requestsOnly: PropTypes.bool,
 	umuTab: PropTypes.number,
 	onTabChange: PropTypes.func,
@@ -92,7 +92,7 @@ function UMUFilters(props) {
 					>
 						<InputLabel>Выберите факультет</InputLabel>
 						<Select
-							value={props.faculty}
+							value={props.faculty || ""}
 							onChange={handleFacultyChange}
 							MenuProps={{
 								style: {
