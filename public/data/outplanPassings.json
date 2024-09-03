@@ -1,0 +1,321 @@
+{
+	"data": {
+		"courseName": "1 курс, 09.03.03 Прикладная информатика, \"Менеджмент проектов в области информационных технологий, создание и поддержка информационных систем\"  - Очная ф.о.",
+		"outsidePlanPassings": [
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": true,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": false,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": false,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": false,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": true,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": false,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": true,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": false,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": true,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": true,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": false,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			},
+			{
+				"groupName": "БИ2301",
+				"students": [
+					{
+						"key": "0",
+						"value": "Афанасенко Снежана Владимировна"
+					},
+					{
+						"key": "0",
+						"value": "Борисенко Виктор Михайлович"
+					},
+					{
+						"key": "0",
+						"value": "Демкова Виктория Андреевна"
+					},
+					{
+						"key": "0",
+						"value": "Демченко Даниил Павлович"
+					}
+				],
+				"orderNumber": "25444356-34545363-3453",
+				"individualSchedule": true,
+				"badGradesRetake": true,
+				"approveStatus": 100,
+				"outsidePlanPassingId": 0
+			}
+		]
+	},
+	"errors": null,
+	"success": true
+}

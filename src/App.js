@@ -18,8 +18,9 @@ import SessionManager from "./pages/sessions";
 import SessionEditor from "./pages/createSession";
 import SessionTiming from "./pages/sessionTiming";
 import UMUDashboard from "./pages/umu_dashboard";
-import SessionSchedule from "./pages/outplan_requests";
 import SessionApprove from "./pages/sessionApprove";
+import OutplanRepasses from "./pages/outplan_requests";
+import DekanStatements from "./pages/dekan_statements";
 
 function App() {
 	// Установка шрифта для приложения
@@ -85,12 +86,16 @@ function App() {
 									element={<UMUDashboard />}
 								/>
 								<Route
-									path="session-schedule"
-									element={<SessionSchedule />}
+									path="outplan-repasses"
+									element={<OutplanRepasses />}
 								/>
 								<Route
 									path="session-approve/:sessionId"
 									element={<SessionApprove />}
+								/>
+								<Route
+									path="dekan-statements/"
+									element={<DekanStatements />}
 								/>
 							</Route>
 						</Routes>

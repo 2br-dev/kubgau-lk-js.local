@@ -120,10 +120,18 @@ function DekanTable() {
 							vertical: "bottom",
 						}}
 					>
-						<MenuItem onClick={handleClose}>
+						<MenuItem
+							onClick={handleClose}
+							component={Link}
+							to="/main/outplan-repasses"
+						>
 							Управление внеплановыми пересдачами
 						</MenuItem>
-						<MenuItem onClick={handleClose}>
+						<MenuItem
+							onClick={handleClose}
+							component={Link}
+							to={"/main/dekan-statements"}
+						>
 							Управление ведомостями
 						</MenuItem>
 						<MenuItem onClick={handleClose}>
