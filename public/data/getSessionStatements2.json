@@ -1,0 +1,984 @@
+{
+	"courseName": "1 курс, 09.03.02 Информационные системы и технологии, \"Создание, модификация и сопровождение информационных систем, администрирование баз данных\"  - Очная ф.о.",
+	"disciplines": [
+		{
+			"controlType": 1,
+			"disciplineName": "Безопасность жизнедеятельности",
+			"chairName": "Механизации животноводства и БЖД",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116285,
+					"statementId": 88973,
+					"statementNumber": "1268",
+					"dateOfClose": "2024-06-11T10:15:48.21",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116309,
+					"statementId": 101197,
+					"statementNumber": "1462",
+					"dateOfClose": "2024-07-16T11:36:15.8066667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116286,
+					"statementId": 89027,
+					"statementNumber": "1269",
+					"dateOfClose": "2024-06-11T10:29:09.5433333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116310,
+					"statementId": 101306,
+					"statementNumber": "1463",
+					"dateOfClose": "2024-07-16T10:44:59.48",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116287,
+					"statementId": 89094,
+					"statementNumber": "1270",
+					"dateOfClose": "2024-06-11T10:35:47.63",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116311,
+					"statementId": 101184,
+					"statementNumber": "1464",
+					"dateOfClose": "2024-07-16T10:46:32.61",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116288,
+					"statementId": 89060,
+					"statementNumber": "1271",
+					"dateOfClose": "2024-06-11T10:50:16.9666667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116312,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Деловые коммуникации",
+			"chairName": "Русского языка и речевой коммуникации",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116289,
+					"statementId": 90609,
+					"statementNumber": "1303",
+					"dateOfClose": "2024-06-23T07:24:54.35",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116313,
+					"statementId": 101246,
+					"statementNumber": "1467",
+					"dateOfClose": "2024-07-31T11:40:58.3666667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116290,
+					"statementId": 90569,
+					"statementNumber": "1304",
+					"dateOfClose": "2024-06-23T07:26:13.3833333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116314,
+					"statementId": 101261,
+					"statementNumber": "1468",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116291,
+					"statementId": 90610,
+					"statementNumber": "1305",
+					"dateOfClose": "2024-06-23T07:27:46.82",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116315,
+					"statementId": 101284,
+					"statementNumber": "1469",
+					"dateOfClose": "2024-08-02T11:51:53.53",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116292,
+					"statementId": 90577,
+					"statementNumber": "1306",
+					"dateOfClose": "2024-06-23T07:28:58.41",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116316,
+					"statementId": 101285,
+					"statementNumber": "1470",
+					"dateOfClose": "2024-08-08T09:20:14.43",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Иностранный язык",
+			"chairName": "Иностранных языков",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116265,
+					"statementId": 91298,
+					"statementNumber": "1316",
+					"dateOfClose": "2024-06-14T23:45:21.6833333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 117173,
+					"statementId": 101940,
+					"statementNumber": "1492",
+					"dateOfClose": "2024-07-26T17:10:56.6766667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116266,
+					"statementId": 93571,
+					"statementNumber": "1349",
+					"dateOfClose": "2024-06-18T17:41:43.5533333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 117174,
+					"statementId": 101924,
+					"statementNumber": "1493",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116267,
+					"statementId": 91263,
+					"statementNumber": "1317",
+					"dateOfClose": "2024-06-17T11:12:20.4333333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 117175,
+					"statementId": 101945,
+					"statementNumber": "1494",
+					"dateOfClose": "2024-08-12T13:19:13.74",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116268,
+					"statementId": 93516,
+					"statementNumber": "1350",
+					"dateOfClose": "2024-06-17T11:27:59.6533333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 117176,
+					"statementId": 101946,
+					"statementNumber": "1495",
+					"dateOfClose": "2024-07-30T14:54:48.9833333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "История России",
+			"chairName": "Истории и политологии",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116269,
+					"statementId": 95270,
+					"statementNumber": "1381",
+					"dateOfClose": "2024-06-21T13:32:11.4366667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116317,
+					"statementId": 100709,
+					"statementNumber": "1446",
+					"dateOfClose": "2024-07-15T14:17:46.5966667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116270,
+					"statementId": 95291,
+					"statementNumber": "1382",
+					"dateOfClose": "2024-06-21T13:34:09.7533333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116318,
+					"statementId": 100680,
+					"statementNumber": "1447",
+					"dateOfClose": "2024-08-08T08:49:54.1033333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116271,
+					"statementId": 96263,
+					"statementNumber": "1411",
+					"dateOfClose": "2024-06-25T10:38:50.04",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116319,
+					"statementId": 100663,
+					"statementNumber": "1448",
+					"dateOfClose": "2024-08-12T14:41:31.96",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116272,
+					"statementId": 96192,
+					"statementNumber": "1412",
+					"dateOfClose": "2024-06-25T13:37:21.5966667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116320,
+					"statementId": 100689,
+					"statementNumber": "1449",
+					"dateOfClose": "2024-07-15T14:22:48.8533333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Основы математической логики и теории алгоритмов",
+			"chairName": "Компьютерных технологий и систем",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116273,
+					"statementId": 93559,
+					"statementNumber": "1351",
+					"dateOfClose": "2024-06-18T09:54:19.1666667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116321,
+					"statementId": 100666,
+					"statementNumber": "1450",
+					"dateOfClose": "2024-07-16T11:03:19.94",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116274,
+					"statementId": 91315,
+					"statementNumber": "1318",
+					"dateOfClose": "2024-06-13T13:16:26.2033333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116322,
+					"statementId": 100656,
+					"statementNumber": "1451",
+					"dateOfClose": "2024-07-19T14:54:35.6266667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116275,
+					"statementId": 93580,
+					"statementNumber": "1352",
+					"dateOfClose": "2024-06-18T09:54:51.0733333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116323,
+					"statementId": 100648,
+					"statementNumber": "1452",
+					"dateOfClose": "2024-07-19T14:51:44.9033333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116276,
+					"statementId": 91259,
+					"statementNumber": "1319",
+					"dateOfClose": "2024-06-13T15:46:06.9433333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116324,
+					"statementId": 100782,
+					"statementNumber": "1453",
+					"dateOfClose": "2024-07-16T11:05:11.5766667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Теория вероятностей",
+			"chairName": "Статистики и прикладной математики",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116277,
+					"statementId": 96196,
+					"statementNumber": "1413",
+					"dateOfClose": "2024-06-25T14:03:01.8933333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116325,
+					"statementId": 102569,
+					"statementNumber": "1697",
+					"dateOfClose": "2024-07-29T12:33:47.1166667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116278,
+					"statementId": 96294,
+					"statementNumber": "1414",
+					"dateOfClose": "2024-06-25T16:57:44.8066667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116326,
+					"statementId": 100737,
+					"statementNumber": "1461",
+					"dateOfClose": "2024-08-09T11:13:27.84",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 117450,
+					"statementId": 90018,
+					"statementNumber": "1461/К",
+					"dateOfClose": "2024-08-13T12:14:14.6766667",
+					"dateOfSign": null,
+					"passingType": 2,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116279,
+					"statementId": 97401,
+					"statementNumber": "1421",
+					"dateOfClose": "2024-06-29T13:08:42.9833333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116327,
+					"statementId": 102590,
+					"statementNumber": "1698",
+					"dateOfClose": "2024-08-09T11:12:28.9833333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 117451,
+					"statementId": 89993,
+					"statementNumber": "1698/К",
+					"dateOfClose": "2024-08-13T12:13:29.3033333",
+					"dateOfSign": null,
+					"passingType": 2,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116280,
+					"statementId": 97410,
+					"statementNumber": "1422",
+					"dateOfClose": "2024-07-01T10:51:04.76",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116328,
+					"statementId": 86058,
+					"statementNumber": "1699",
+					"dateOfClose": "2024-07-29T12:32:27.4666667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Технологии программирования",
+			"chairName": "Системного анализа и обработки информации",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116281,
+					"statementId": 97406,
+					"statementNumber": "1423",
+					"dateOfClose": "2024-06-29T15:35:17.1466667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116329,
+					"statementId": 102022,
+					"statementNumber": "1496",
+					"dateOfClose": "2024-08-01T10:53:46.6766667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116282,
+					"statementId": 97412,
+					"statementNumber": "1424",
+					"dateOfClose": "2024-06-29T15:35:53.0066667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116330,
+					"statementId": 102029,
+					"statementNumber": "1497",
+					"dateOfClose": "2024-08-01T13:09:58.23",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116283,
+					"statementId": 95280,
+					"statementNumber": "1383",
+					"dateOfClose": "2024-06-21T14:01:28.11",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116331,
+					"statementId": 102097,
+					"statementNumber": "1498",
+					"dateOfClose": "2024-08-01T10:55:25.4333333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116284,
+					"statementId": 95287,
+					"statementNumber": "1384",
+					"dateOfClose": "2024-06-21T14:01:54.3966667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116332,
+					"statementId": 102031,
+					"statementNumber": "1499",
+					"dateOfClose": "2024-08-01T13:10:53.6066667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				}
+			]
+		},
+		{
+			"controlType": 4,
+			"disciplineName": "Технологии программирования",
+			"chairName": "Системного анализа и обработки информации",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116305,
+					"statementId": 89262,
+					"statementNumber": "1289",
+					"dateOfClose": "2024-06-28T12:33:59.7866667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 117180,
+					"statementId": 100583,
+					"statementNumber": "1434",
+					"dateOfClose": "2024-08-01T10:47:25.9766667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116306,
+					"statementId": 89201,
+					"statementNumber": "1290",
+					"dateOfClose": "2024-06-28T12:34:10.49",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 117181,
+					"statementId": 100700,
+					"statementNumber": "1435",
+					"dateOfClose": "2024-08-01T12:28:07.2333333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116307,
+					"statementId": 89214,
+					"statementNumber": "1291",
+					"dateOfClose": "2024-06-20T23:09:46.85",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 117182,
+					"statementId": 100612,
+					"statementNumber": "1436",
+					"dateOfClose": "2024-08-01T10:49:45.06",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116308,
+					"statementId": 89211,
+					"statementNumber": "1292",
+					"dateOfClose": "2024-06-20T23:10:10.0833333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 117183,
+					"statementId": 100636,
+					"statementNumber": "1437",
+					"dateOfClose": "2024-08-01T12:50:14.4533333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Физика",
+			"chairName": "Физики",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116293,
+					"statementId": 90595,
+					"statementNumber": "1307",
+					"dateOfClose": "2024-06-26T14:51:55.4633333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116333,
+					"statementId": 100643,
+					"statementNumber": "1438",
+					"dateOfClose": "2024-07-29T11:23:47.8433333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116294,
+					"statementId": 90631,
+					"statementNumber": "1308",
+					"dateOfClose": "2024-06-26T14:53:41.9666667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116334,
+					"statementId": 100614,
+					"statementNumber": "1439",
+					"dateOfClose": "2024-07-29T11:25:57.6866667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116295,
+					"statementId": 89101,
+					"statementNumber": "1272",
+					"dateOfClose": "2024-06-26T14:55:16.95",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116335,
+					"statementId": 100661,
+					"statementNumber": "1440",
+					"dateOfClose": "2024-07-25T12:13:04.0333333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116296,
+					"statementId": 89034,
+					"statementNumber": "1273",
+					"dateOfClose": "2024-06-26T14:56:24.6566667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116336,
+					"statementId": 100624,
+					"statementNumber": "1441",
+					"dateOfClose": "2024-07-29T11:45:13.66",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Экономика",
+			"chairName": "Экономической теории",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116297,
+					"statementId": 89045,
+					"statementNumber": "1274",
+					"dateOfClose": "2024-06-15T11:45:18.01",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116337,
+					"statementId": 100665,
+					"statementNumber": "1442",
+					"dateOfClose": "2024-07-15T10:42:17.1833333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116298,
+					"statementId": 89052,
+					"statementNumber": "1275",
+					"dateOfClose": "2024-06-15T11:46:36.4166667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116338,
+					"statementId": 100628,
+					"statementNumber": "1443",
+					"dateOfClose": "2024-07-15T11:20:30.9033333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116299,
+					"statementId": 90657,
+					"statementNumber": "1309",
+					"dateOfClose": "2024-06-15T11:47:56.8566667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116339,
+					"statementId": 100621,
+					"statementNumber": "1444",
+					"dateOfClose": "2024-07-15T12:36:16.1333333",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116300,
+					"statementId": 90659,
+					"statementNumber": "1310",
+					"dateOfClose": "2024-06-15T11:48:41.9966667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116340,
+					"statementId": 100651,
+					"statementNumber": "1445",
+					"dateOfClose": "2024-07-15T12:04:22.9066667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Элективные курсы по физической культуре и спорту",
+			"chairName": "Физвоспитания",
+			"groups": [
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 116301,
+					"statementId": 89145,
+					"statementNumber": "1276",
+					"dateOfClose": "2024-07-04T16:04:40.2533333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2301",
+					"sessionDisciplineDetailId": 117304,
+					"statementId": 102449,
+					"statementNumber": "1682",
+					"dateOfClose": "2024-07-29T12:52:21.4466667",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 116302,
+					"statementId": 89122,
+					"statementNumber": "1277",
+					"dateOfClose": "2024-07-04T16:05:27.44",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2302",
+					"sessionDisciplineDetailId": 117305,
+					"statementId": 102529,
+					"statementNumber": "1683",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 116303,
+					"statementId": 89066,
+					"statementNumber": "1278",
+					"dateOfClose": "2024-07-04T16:05:58.4566667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2303",
+					"sessionDisciplineDetailId": 117306,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 116304,
+					"statementId": 89126,
+					"statementNumber": "1279",
+					"dateOfClose": "2024-07-04T16:06:28.24",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "ИТ2304",
+					"sessionDisciplineDetailId": 117307,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				}
+			]
+		}
+	],
+	"errors": null,
+	"success": true
+}

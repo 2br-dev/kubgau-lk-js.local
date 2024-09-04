@@ -1,0 +1,203 @@
+{
+	"courseName": "4 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+	"disciplines": [
+		{
+			"controlType": 1,
+			"disciplineName": "Обследование зданий и сооружений",
+			"chairName": "Архитектуры",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108148,
+					"statementId": 83611,
+					"statementNumber": "36",
+					"dateOfClose": "2024-06-04T14:33:07.2366667",
+					"dateOfSign": "2024-07-09T16:07:19.2366667",
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108153,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Основы организации строительного  производства",
+			"chairName": "Строительного производства",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108145,
+					"statementId": 89143,
+					"statementNumber": "33",
+					"dateOfClose": "2024-04-22T16:05:06.5566667",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108154,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 4,
+			"disciplineName": "Основы организации строительного  производства",
+			"chairName": "Строительного производства",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108151,
+					"statementId": 83605,
+					"statementNumber": "39",
+					"dateOfClose": "2024-04-15T11:19:40.86",
+					"dateOfSign": "2024-06-10T14:37:24.59",
+					"passingType": 0,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Основы технической эксплуатации объектов строительства",
+			"chairName": "Оснований и фундаментов",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108149,
+					"statementId": 83616,
+					"statementNumber": "37",
+					"dateOfClose": "2024-04-12T13:18:11.0733333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108155,
+					"statementId": 92555,
+					"statementNumber": "37П",
+					"dateOfClose": "2024-06-14T13:35:50.5",
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": true
+				}
+			]
+		},
+		{
+			"controlType": 1,
+			"disciplineName": "Планировка сельских населенных мест",
+			"chairName": "Архитектуры",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108150,
+					"statementId": 83599,
+					"statementNumber": "38",
+					"dateOfClose": "2024-05-02T14:45:38.2433333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108156,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Типология и архитектурно-конструктивное проектирование",
+			"chairName": "Архитектуры",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108146,
+					"statementId": 88349,
+					"statementNumber": "34",
+					"dateOfClose": "2024-04-19T17:55:19.6233333",
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108157,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				}
+			]
+		},
+		{
+			"controlType": 0,
+			"disciplineName": "Экономика отрасли",
+			"chairName": "Строительного производства",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108147,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 0,
+					"canCreate": true
+				},
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108158,
+					"statementId": 0,
+					"statementNumber": "",
+					"dateOfClose": null,
+					"dateOfSign": null,
+					"passingType": 1,
+					"canCreate": false
+				}
+			]
+		},
+		{
+			"controlType": 4,
+			"disciplineName": "Экономика отрасли",
+			"chairName": "Строительного производства",
+			"groups": [
+				{
+					"groupName": "АИ2001",
+					"sessionDisciplineDetailId": 108152,
+					"statementId": 83594,
+					"statementNumber": "40",
+					"dateOfClose": "2024-04-25T10:25:36.58",
+					"dateOfSign": "2024-06-10T14:37:45.0733333",
+					"passingType": 0,
+					"canCreate": true
+				}
+			]
+		}
+	],
+	"errors": null,
+	"success": true
+}
