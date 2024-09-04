@@ -1,0 +1,427 @@
+{
+	"data": [
+		{
+			"sessionDisciplineId": 3471,
+			"chairId": 14,
+			"noStatements": false,
+			"disciplineName": "Иностранный язык",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 85432,
+					"statementNumber": "3",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Отлично",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 39043,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кушхов Салим Адамович"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Хорошо",
+							"gradeId": 4,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Отлично",
+							"gradeId": 5,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 10036,
+			"chairId": 3,
+			"noStatements": false,
+			"disciplineName": "Инженерная геодезия",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 91238,
+					"statementNumber": "2",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Отлично",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Хорошо",
+							"gradeId": 4,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				},
+				{
+					"statementId": 102512,
+					"statementNumber": "2П",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 39043,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кушхов Салим Адамович"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 10157,
+			"chairId": 42,
+			"noStatements": false,
+			"disciplineName": "Высшая математика",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 83100,
+					"statementNumber": "1",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Хорошо",
+							"gradeId": 4,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 39043,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кушхов Салим Адамович"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Хорошо",
+							"gradeId": 4,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Хорошо",
+							"gradeId": 4,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 15021,
+			"chairId": 92,
+			"noStatements": false,
+			"disciplineName": "Теоретическая механика",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99758,
+					"statementNumber": "9",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				},
+				{
+					"statementId": 102435,
+					"statementNumber": "9П",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 39043,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кушхов Салим Адамович"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 15099,
+			"chairId": 28,
+			"noStatements": false,
+			"disciplineName": "Информационные технологии",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99556,
+					"statementNumber": "8",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 39043,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кушхов Салим Адамович"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 22642,
+			"chairId": 21,
+			"noStatements": false,
+			"disciplineName": "Инженерная геология и экология",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99551,
+					"statementNumber": "6",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 39043,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кушхов Салим Адамович"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 24740,
+			"chairId": 46,
+			"noStatements": false,
+			"disciplineName": "Элективные курсы по физической культуре и спорту",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99608,
+					"statementNumber": "10",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 39043,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кушхов Салим Адамович"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 25873,
+			"chairId": 61,
+			"noStatements": false,
+			"disciplineName": "Инженерная графика",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99555,
+					"statementNumber": "7",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				},
+				{
+					"statementId": 102367,
+					"statementNumber": "7П",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 39043,
+							"gradeName": "Зачтено",
+							"gradeId": 5,
+							"fullName": "Кушхов Салим Адамович"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 32650,
+			"chairId": 40,
+			"noStatements": false,
+			"disciplineName": "История России",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 88138,
+					"statementNumber": "4",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Отлично",
+							"gradeId": 5,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 39043,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кушхов Салим Адамович"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Хорошо",
+							"gradeId": 4,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sessionDisciplineId": 32717,
+			"chairId": 58,
+			"noStatements": false,
+			"disciplineName": "Физика",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 93864,
+					"statementNumber": "5",
+					"isClosed": true,
+					"students": [
+						{
+							"studentId": 33771,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Момотов Андрей Валерьевич"
+						},
+						{
+							"studentId": 39043,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кушхов Салим Адамович"
+						},
+						{
+							"studentId": 46356,
+							"gradeName": "Удовлетворительно",
+							"gradeId": 3,
+							"fullName": "Кесян Норак Иосифович"
+						},
+						{
+							"studentId": 56132,
+							"gradeName": "Хорошо",
+							"gradeId": 4,
+							"fullName": "Боярская София Константиновна"
+						}
+					]
+				}
+			]
+		}
+	],
+	"errors": null,
+	"success": true
+}

@@ -13,6 +13,7 @@ import {
 	Button,
 } from "@mui/material";
 import { useState, useEffect } from "react";
+import RepassModal from "./repass_modal";
 
 function OutplanRepasses() {
 	useEffect(() => {
@@ -27,6 +28,8 @@ function OutplanRepasses() {
 		courseName: "Название курса",
 		outsidePlanPassings: [],
 	});
+
+	const [requestOpen, setRequestopen] = useState(false);
 
 	const statusText = (code) => {
 		const codes = [
@@ -77,20 +80,24 @@ function OutplanRepasses() {
 	};
 
 	const formatStudents = (students) => {
-		return students.map((s, index) => {
+		let _students = students.map((s) => {
 			let arr = s.value.split(" ");
-			const to = `/main/students/${s.key}`;
+			return {
+				key: s.key,
+				value:
+					arr[0] + arr[1].charAt(0) + ". " + arr[2].charAt(0) + ".",
+			};
+		});
+
+		return _students.map((s, sindex) => {
 			return (
-				<>
-					<Link href={to} key={index}>
-						{arr[0] +
-							arr[1].charAt(0) +
-							". " +
-							arr[2].charAt(0) +
-							"."}
-					</Link>
-					{"  "}
-				</>
+				<Link
+					key={sindex}
+					href={`/main/students/${s.key}`}
+					sx={{ marginRight: "6px" }}
+				>
+					{s.value}
+				</Link>
 			);
 		});
 	};
@@ -118,6 +125,19 @@ function OutplanRepasses() {
 		);
 	};
 
+	const handleCloseRepass = () => {
+		setRequestopen(false);
+	};
+
+	const handleOpenRepass = () => {
+		setRequestopen(true);
+	};
+
+	const handleSubmit = (data) => {
+		console.log(data);
+		setRequestopen(false);
+	};
+
 	return (
 		<main>
 			<section>
@@ -128,7 +148,9 @@ function OutplanRepasses() {
 						subheader="Управление внеплановыми сдачами"
 					/>
 					<div style={{ marginBottom: "2vmax" }}>
-						<Button variant="contained">Создать новую</Button>
+						<Button variant="contained" onClick={handleOpenRepass}>
+							Создать новую
+						</Button>
 					</div>
 					<Card>
 						<CardContent>
@@ -153,6 +175,11 @@ function OutplanRepasses() {
 					</Card>
 				</div>
 			</section>
+			<RepassModal
+				open={requestOpen}
+				onClose={handleCloseRepass}
+				onSubmit={handleSubmit}
+			/>
 		</main>
 	);
 }
