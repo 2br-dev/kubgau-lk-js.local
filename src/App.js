@@ -21,6 +21,8 @@ import UMUDashboard from "./pages/umu_dashboard";
 import SessionApprove from "./pages/sessionApprove";
 import OutplanRepasses from "./pages/outplan_requests";
 import DekanStatements from "./pages/dekan_statements";
+import SuspendSession from "./pages/suspendSession";
+import CreateStatement from "./pages/createStatement";
 
 function App() {
 	// Установка шрифта для приложения
@@ -96,6 +98,14 @@ function App() {
 								<Route
 									path="dekan-statements/"
 									element={<DekanStatements />}
+								/>
+								<Route
+									path="suspend-session/"
+									element={<SuspendSession />}
+								/>
+								<Route
+									path="create-statement/"
+									element={<CreateStatement />}
 								/>
 							</Route>
 						</Routes>

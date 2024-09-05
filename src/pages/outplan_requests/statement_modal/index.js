@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import { CloseRounded } from "@mui/icons-material";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
-import dayjs from "dayjs";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 StatementModal.propTypes = {

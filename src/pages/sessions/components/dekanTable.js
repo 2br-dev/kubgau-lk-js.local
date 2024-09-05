@@ -137,7 +137,11 @@ function DekanTable() {
 						<MenuItem onClick={handleClose}>
 							Редактировать расписание задач
 						</MenuItem>
-						<MenuItem onClick={handleClose}>
+						<MenuItem
+							onClick={handleClose}
+							component={Link}
+							to="/main/suspend-session"
+						>
 							Приостановить сессию
 						</MenuItem>
 						<Divider />

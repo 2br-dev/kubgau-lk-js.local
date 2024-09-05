@@ -20,8 +20,10 @@ import {
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import { LockOpenRounded, LockRounded } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 function DekanStatements() {
+	const navigate = useNavigate();
 	const [course, setCourse] = useState({
 		courseName: "Имя курса",
 		disciplines: [],
@@ -123,6 +125,10 @@ function DekanStatements() {
 		return _course;
 	};
 
+	const createStatement = () => {
+		navigate("/main/create-statement");
+	};
+
 	const statementVal = (group) => {
 		if (group) {
 			let state;
@@ -175,7 +181,11 @@ function DekanStatements() {
 						</Link>
 					);
 				} else {
-					return <Button variant="text">Создать ведомость</Button>;
+					return (
+						<Button variant="text" onClick={createStatement}>
+							Создать ведомость
+						</Button>
+					);
 				}
 			}
 		} else {

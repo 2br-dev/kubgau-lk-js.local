@@ -11,7 +11,7 @@ import {
 	Tab,
 	IconButton,
 } from "@mui/material";
-import { AddRounded, DoNotDisturbAltRounded } from "@mui/icons-material";
+import { AddRounded } from "@mui/icons-material";
 import PropTypes from "prop-types";
 
 StatementsTable.propTypes = {

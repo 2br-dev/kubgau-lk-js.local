@@ -31,6 +31,9 @@ function InfoPanel(props) {
 	let subtitle = props.subtitle !== null ? props.subtitle : null;
 	let color = "inherit";
 	let icon;
+	let titleIcon;
+	let iconDisplay = !props.open ? "inline" : "none";
+	let panelDisplay = props.open ? "block" : "none";
 
 	// Установка видимости панели по клику на кнопке
 	const setPanelOpen = () => {
@@ -59,16 +62,43 @@ function InfoPanel(props) {
 			icon = <></>;
 	}
 
-	let iconDisplay = !props.open ? "inline" : "none";
-	let panelDisplay = props.open ? "block" : "none";
-
-	return (
-		<>
-			<h1 className={color}>
+	switch (props.type) {
+		case InfoClass.INFO:
+			color = "info";
+			titleIcon = (
 				<InfoRounded
 					sx={{ display: iconDisplay }}
 					onClick={setPanelOpen}
 				/>
+			);
+			break;
+		case InfoClass.WARNING:
+			color = "warning";
+			titleIcon = (
+				<WarningRounded
+					sx={{ display: iconDisplay }}
+					onClick={setPanelOpen}
+				/>
+			);
+			break;
+		case InfoClass.ERROR:
+			color = "error";
+			titleIcon = (
+				<ErrorRounded
+					sx={{ display: iconDisplay }}
+					onClick={setPanelOpen}
+				/>
+			);
+			break;
+		default:
+			color = "inherit";
+			titleIcon = <></>;
+	}
+
+	return (
+		<>
+			<h1 className={color}>
+				{titleIcon}
 				<div>
 					{title}
 					<span className="subtitle">{subtitle}</span>

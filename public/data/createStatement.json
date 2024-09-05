@@ -1,0 +1,141 @@
+{
+	"data": {
+		"sessionId": 3003,
+		"groupName": "АИ2001",
+		"disciplineName": "Основы организации строительного  производства",
+		"statementNumber": "",
+		"deadline": null,
+		"employees": [],
+		"extraEmployees": [],
+		"students": [
+			{
+				"studentId": 189,
+				"fullName": "Бабаджанов Джахонир Джамшедович",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 190,
+				"fullName": "Бавыкин Павел Антонович",
+				"documents": [],
+				"notAllowed": true
+			},
+			{
+				"studentId": 191,
+				"fullName": "Бадалова Валерия Романовна",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 192,
+				"fullName": "Буркица Владислав Николаевич",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 193,
+				"fullName": "Гареева Любовь Ильдаровна",
+				"documents": [
+					{
+						"documentDate": "2023-04-15T00:00:00",
+						"documentNumber": "44",
+						"registryDocumentGuid": "dff2fbcf-58fb-47cf-a87d-ce805d661d12",
+						"registryDocumentId": 1912,
+						"semesters": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+						"studentFullName": "Левгеева Надежда Мергеновна",
+						"studentId": 189
+					},
+					{
+						"documentDate": "2023-04-12T00:00:00",
+						"documentNumber": "48",
+						"registryDocumentGuid": "dff2fbcf-58fb-47cf-a87d-ce805d661d12",
+						"registryDocumentId": 1912,
+						"semesters": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+						"studentFullName": "Левгеева Надежда Мергеновна",
+						"studentId": 189
+					}
+				],
+				"notAllowed": false
+			},
+			{
+				"studentId": 194,
+				"fullName": "Глушанков Алексей Дмитриевич",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 195,
+				"fullName": "Губарева Анна Дмитриевна",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 196,
+				"fullName": "Демченко Тимур Сергеевич",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 197,
+				"fullName": "Жиденко Александра Денисовна",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 198,
+				"fullName": "Ишханян Арман Гарикович",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 199,
+				"fullName": "Левгеева Надежда Мергеновна",
+				"documents": [
+					{
+						"documentDate": "2023-03-06T00:00:00",
+						"documentNumber": "51",
+						"registryDocumentGuid": "dff2fbcf-58fb-47cf-a87d-ce805d661d12",
+						"registryDocumentId": 1912,
+						"semesters": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+						"studentFullName": "Левгеева Надежда Мергеновна",
+						"studentId": 189
+					}
+				],
+				"notAllowed": false
+			},
+			{
+				"studentId": 200,
+				"fullName": "Левчук Илья Вячеславович",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 201,
+				"fullName": "Малахов Александр Сергеевич",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 202,
+				"fullName": "Маслов Максим Константинович",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 203,
+				"fullName": "Михайлов Алексей Анатольевич",
+				"documents": [],
+				"notAllowed": false
+			},
+			{
+				"studentId": 204,
+				"fullName": "Молчанов Фёдор Александрович",
+				"documents": [],
+				"notAllowed": false
+			}
+		],
+		"controlTypeId": 0
+	},
+	"errors": null,
+	"success": true
+}

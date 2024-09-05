@@ -1,0 +1,182 @@
+{
+	"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+	"disciplines": [
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Иностранный язык",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 85432,
+					"statementNumber": "3",
+					"closed": true
+				},
+				{
+					"statementId": 86080,
+					"statementNumber": "3/П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Инженерная геодезия",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 91238,
+					"statementNumber": "2",
+					"closed": true
+				},
+				{
+					"statementId": 102512,
+					"statementNumber": "2П",
+					"closed": true
+				},
+				{
+					"statementId": 90002,
+					"statementNumber": "2П/К",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Высшая математика",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 83100,
+					"statementNumber": "1",
+					"closed": true
+				},
+				{
+					"statementId": 86108,
+					"statementNumber": "1/П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Теоретическая механика",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99758,
+					"statementNumber": "9",
+					"closed": true
+				},
+				{
+					"statementId": 102435,
+					"statementNumber": "9П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Информационные технологии",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99556,
+					"statementNumber": "8",
+					"closed": true
+				},
+				{
+					"statementId": 102525,
+					"statementNumber": "8П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Инженерная геология и экология",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99551,
+					"statementNumber": "6",
+					"closed": true
+				},
+				{
+					"statementId": 102524,
+					"statementNumber": "6П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Элективные курсы по физической культуре и спорту",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99608,
+					"statementNumber": "10",
+					"closed": true
+				},
+				{
+					"statementId": 102454,
+					"statementNumber": "10П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Инженерная графика",
+			"controlType": 1,
+			"statements": [
+				{
+					"statementId": 99555,
+					"statementNumber": "7",
+					"closed": true
+				},
+				{
+					"statementId": 102367,
+					"statementNumber": "7П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "История России",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 88138,
+					"statementNumber": "4",
+					"closed": true
+				},
+				{
+					"statementId": 86180,
+					"statementNumber": "4/П",
+					"closed": true
+				}
+			]
+		},
+		{
+			"courseName": "1 курс, 08.03.01 Строительство, \"Проектирование зданий\"  - Очная ф.о.",
+			"disciplineName": "Физика",
+			"controlType": 0,
+			"statements": [
+				{
+					"statementId": 93864,
+					"statementNumber": "5",
+					"closed": true
+				},
+				{
+					"statementId": 102284,
+					"statementNumber": "5/П",
+					"closed": true
+				}
+			]
+		}
+	],
+	"errors": null,
+	"success": true
+}
