@@ -143,6 +143,7 @@ function UMUDashboard() {
 							<NumberCard
 								value={umuStats.sessionSuspendingRequests}
 								title="заявки на прерывание сессии"
+								url="/main/session-suspend-requests"
 								color="#FFF3D8"
 								icon={Prevention}
 							/>

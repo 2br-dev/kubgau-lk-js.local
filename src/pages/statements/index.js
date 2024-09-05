@@ -11,7 +11,6 @@ import React from "react";
  * Список ведомостей
  */
 function StatementsPage() {
-	const [panelOpened, setPanelOpened] = useState(false);
 	const [tabValue, setTabValue] = useState(0);
 	const [data, setData] = useState([]);
 	const [filteredData, setFilteredData] = useState([]);
@@ -30,16 +29,6 @@ function StatementsPage() {
 	 * @param {Boolean} value Состояние панели (открыта - true, закрыта - false)
 	 * @param {string} id Идентификатор панели для сохранения в localStorage
 	 */
-	const setter = (value, id) => {
-		let state = {
-			panelId: id,
-			opened: value,
-		};
-
-		let stateString = JSON.stringify(state);
-		localStorage.setItem("panelState", stateString);
-		setPanelOpened(value);
-	};
 
 	/**
 	 * Фильтрация основных данных
@@ -83,17 +72,6 @@ function StatementsPage() {
 				setData(response.disciplines);
 				setFilteredData(filterMainData(response.disciplines));
 			});
-
-		// Состояние информационной панели
-		let stateString = localStorage.getItem("panelState");
-
-		// Чтение состояния информационной панели из localStorage
-		if (stateString) {
-			let state = JSON.parse(stateString);
-			setter(state.opened, state.panelId);
-		} else {
-			setter(true, "statement-page-info");
-		}
 	}, [filterMainData]);
 
 	useEffect(() => {
@@ -130,9 +108,7 @@ function StatementsPage() {
 						id="statements-page-info"
 						title="Внимание! (Из кодекса корпоративной этики Кубанского ГАУ)"
 						message="Коррупцией считается злоупотребление служебным положением, дача взятки, получение взятки, злоупотребление полномочиями, коммерческий подкуп либо иное незаконное использование физическим лицом своего должностного положения вопреки законным интересам общества и государства в целях получения выгоды в виде денег, ценностей, иного имущества или услуг имущественного характера, иных имущественных прав для себя или для третьих лиц либо незаконное предоставление такой выгоды указанному лицу другими физическими лицами, а также совершение указанных деяний от имени или в интересах юридического лица. К коррупционным деяниям относятся следующие преступления: злоупотребление должностными полномочиями (ст. 285 УК РФ), дача взятки (ст. 291 УК РФ), получение взятки (ст. 290 УК РФ), посредничество во взяточничестве (ст. 291.1 УК РФ), мелкое взяточничество (ст. 291.2 УК РФ), злоупотребление полномочиями (ст. 201 УК РФ), коммерческий подкуп (ст. 204 УК РФ), а также иные деяния, попадающие под понятия «коррупция», указанное выше. За указанные преступления предусмотрено наказание вплоть до лишения свободы на срок до пятнадцати лет со штрафом в размере до семидесятикратной суммы взятки и с лишением права занимать определенные должности или заниматься определенной деятельностью на срок до пятнадцати лет."
-						open={panelOpened}
 						type={InfoClass.INFO}
-						setter={setter}
 					/>
 					<Box sx={{ width: "100%", marginTop: "2vmax" }}>
 						<Box

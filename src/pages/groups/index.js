@@ -68,7 +68,6 @@ const StyledSwitch = styled(Switch)(() => ({
  * @returns
  */
 export default function GroupsPage() {
-	const [panelOpen, setPanelOpen] = useState(true);
 	const [theme, setTheme] = useState("");
 	const [date, setDate] = useState(null);
 	const [pair, setPair] = useState(1);
@@ -260,18 +259,6 @@ export default function GroupsPage() {
 		navigate(-1);
 	};
 
-	// Установка состояния панели
-	const setter = (value, id) => {
-		let state = {
-			panelId: id,
-			opened: value,
-		};
-
-		let stateString = JSON.stringify(state);
-		localStorage.setItem("panelState", stateString);
-		setPanelOpen(value);
-	};
-
 	// Тема
 	const themeSetter = (newVal) => {
 		setTheme(newVal);
@@ -324,17 +311,6 @@ export default function GroupsPage() {
 	 * Монтаж компонента
 	 */
 	useEffect(() => {
-		// Состояние информационной панели
-		let stateString = localStorage.getItem("panelState");
-
-		// Чтение состояния информационной панели из localStorage
-		if (stateString) {
-			let state = JSON.parse(stateString);
-			setter(state.opened, state.panelId);
-		} else {
-			setter(true, "statement-page-info");
-		}
-
 		getData();
 	}, []);
 
@@ -382,9 +358,8 @@ export default function GroupsPage() {
 						Назад
 					</a>
 					<InfoPanel
-						id="groups-info-panel"
+						id="groups-info"
 						title="Алгоритмизация и программирование"
-						open={panelOpen}
 						message={
 							<div>
 								<ol>
@@ -423,7 +398,6 @@ export default function GroupsPage() {
 							</div>
 						}
 						type={InfoClass.INFO}
-						setter={setter}
 						subtitle={
 							<>
 								Семинрар №2{" "}
@@ -500,7 +474,7 @@ export default function GroupsPage() {
 														{group.students.map(
 															(
 																student,
-																studentIndex
+																studentIndex,
 															) => {
 																let skipping = (
 																	<TableCell>
@@ -678,7 +652,7 @@ export default function GroupsPage() {
 																				{student.values.map(
 																					(
 																						value,
-																						valueIndex
+																						valueIndex,
 																					) => {
 																						return (
 																							<ValueMenu
@@ -718,7 +692,7 @@ export default function GroupsPage() {
 																								}
 																							/>
 																						);
-																					}
+																					},
 																				)}
 																			</div>
 																		</TableCell>
@@ -754,7 +728,7 @@ export default function GroupsPage() {
 																		</TableCell>
 																	</TableRow>
 																);
-															}
+															},
 														)}
 													</TableBody>
 												</Table>

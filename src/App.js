@@ -23,6 +23,8 @@ import OutplanRepasses from "./pages/outplan_requests";
 import DekanStatements from "./pages/dekan_statements";
 import SuspendSession from "./pages/suspendSession";
 import CreateStatement from "./pages/createStatement";
+import SessionSuspendRequests from "./pages/sessionSuspendRequests";
+import SessionSuspendRequest from "./pages/sessionSuspendRequest";
 
 function App() {
 	// Установка шрифта для приложения
@@ -106,6 +108,14 @@ function App() {
 								<Route
 									path="create-statement/"
 									element={<CreateStatement />}
+								/>
+								<Route
+									path="session-suspend-requests"
+									element={<SessionSuspendRequests />}
+								/>
+								<Route
+									path="session-suspend-requests/:requestId"
+									element={<SessionSuspendRequest />}
 								/>
 							</Route>
 						</Routes>

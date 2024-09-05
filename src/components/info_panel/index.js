@@ -1,18 +1,16 @@
 import { Button } from "@mui/material";
 import { InfoClass } from "./interfaces";
 import { ErrorRounded, InfoRounded, WarningRounded } from "@mui/icons-material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import PropTypes from "prop-types";
 
 InfoPanel.propTypes = {
 	title: PropTypes.string,
-	subtitle: PropTypes.string,
-	setter: PropTypes.func,
-	open: PropTypes.bool,
+	subtitle: PropTypes.any,
 	id: PropTypes.string,
 	type: PropTypes.string,
-	message: PropTypes.string,
+	message: PropTypes.any,
 };
 
 /**
@@ -25,6 +23,8 @@ InfoPanel.propTypes = {
  * @param Тип панели / Инфо|Предупреждение|Ошибка
  */
 function InfoPanel(props) {
+	const [open, setOpen] = useState(false);
+
 	let title = props.title ? (
 		<span className="panel-header">{props.title}</span>
 	) : null;
@@ -32,16 +32,40 @@ function InfoPanel(props) {
 	let color = "inherit";
 	let icon;
 	let titleIcon;
-	let iconDisplay = !props.open ? "inline" : "none";
-	let panelDisplay = props.open ? "block" : "none";
+	let iconDisplay = !open ? "inline" : "none";
 
 	// Установка видимости панели по клику на кнопке
 	const setPanelOpen = () => {
 		// Небольшая задержка для waves-анимаций
 		setTimeout(() => {
-			props.setter?.(!props.open, props.id);
+			const states =
+				JSON.parse(localStorage.getItem("panelStates")) || [];
+
+			let state = {
+				panelId: props.id,
+				opened: !open,
+			};
+
+			setOpen(!open);
+
+			const storageStates = states.filter((s) => s.panelId !== props.id);
+			storageStates.push(state);
+			localStorage.setItem("panelStates", JSON.stringify(storageStates));
 		}, 300);
 	};
+
+	useEffect(() => {
+		// Состояние информационной панели
+		const storagePanels =
+			JSON.parse(localStorage.getItem("panelStates")) || [];
+
+		const storagePanel = storagePanels.filter(
+			(p) => p.panelId === props.id,
+		)[0];
+
+		let openVal = storagePanel ? storagePanel.opened : true;
+		setOpen(openVal);
+	}, []);
 
 	// Тип панели (INFO | WARNING | ERROR)
 	switch (props.type) {
@@ -61,6 +85,10 @@ function InfoPanel(props) {
 			color = "inherit";
 			icon = <></>;
 	}
+
+	const panelDisplay = () => {
+		return open ? "block" : "none";
+	};
 
 	switch (props.type) {
 		case InfoClass.INFO:
@@ -106,7 +134,7 @@ function InfoPanel(props) {
 			</h1>
 			<div
 				className={"info-panel " + props.type}
-				style={{ display: panelDisplay }}
+				style={{ display: panelDisplay() }}
 			>
 				<div className="panel-head">
 					<div className="icon-wrapper">{icon}</div>

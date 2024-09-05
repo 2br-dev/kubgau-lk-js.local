@@ -42,7 +42,7 @@ function DekanStatements() {
 	const [nonEmptyAnchor, setNonEmptyAnchor] = useState(null);
 	const emptyOpen = Boolean(emptyAnchor);
 	const nonEmptyOpen = Boolean(nonEmptyAnchor);
-	const isAdmin = false;
+	const isAdmin = true;
 
 	const openEmpty = (e) => {
 		setEmptyAnchor(e.currentTarget);
@@ -246,6 +246,7 @@ function DekanStatements() {
 			<MenuItem>Подробности и результаты</MenuItem>
 			<MenuItem>Изменить ведомость</MenuItem>
 			<MenuItem>Справочная ведомость</MenuItem>
+			<MenuItem>Печать ведомости</MenuItem>
 			<MenuItem>Отчёт</MenuItem>
 			{adminMenu()}
 		</Menu>
@@ -290,7 +291,7 @@ function DekanStatements() {
 												Основная
 											</TableCell>
 											<TableCell sx={{ width: "25%" }}>
-												Внеплановая
+												Дополнительная
 											</TableCell>
 											<TableCell sx={{ width: "25%" }}>
 												Комисионная

@@ -21,7 +21,6 @@ import {
 
 function SuspendSession() {
 	const navigate = useNavigate();
-	const [panelOpened, setPanelOpened] = useState(true);
 	const [requestDetails, setRequestDetails] = useState({
 		courseName: "Название курса",
 		types: [],
@@ -29,17 +28,6 @@ function SuspendSession() {
 
 	const back = () => {
 		navigate(-1);
-	};
-
-	const setter = (value, id) => {
-		let state = {
-			panelId: id,
-			opened: value,
-		};
-
-		let stateString = JSON.stringify(state);
-		localStorage.setItem("panelState", stateString);
-		setPanelOpened(value);
 	};
 
 	const groupDisciplines = (course) => {
@@ -139,7 +127,7 @@ function SuspendSession() {
 						<span>Заявка на прерывание сессии</span>
 					</div>
 					<InfoPanel
-						id="statements-page-info"
+						id="suspend-session-info"
 						title={requestDetails.courseName}
 						message={
 							<>
@@ -171,9 +159,7 @@ function SuspendSession() {
 								</p>
 							</>
 						}
-						open={panelOpened}
 						type={InfoClass.WARNING}
-						setter={setter}
 					/>
 					<Grid container spacing={4} sx={{ marginTop: ".5vmax" }}>
 						<Grid item xs={12} lg={9} md={12}>

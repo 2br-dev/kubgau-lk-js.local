@@ -26,9 +26,9 @@ ValueMenu.propTypes = {
 	sectionId: PropTypes.number,
 	studentId: PropTypes.number,
 	valueId: PropTypes.number,
-	type: EMenuType,
+	type: PropTypes.any,
 	removeHandler: PropTypes.func,
-	content: PropTypes.string,
+	content: PropTypes.any,
 };
 
 export default function ValueMenu(props) {
@@ -78,7 +78,7 @@ export default function ValueMenu(props) {
 			props.studentId,
 			props.valueId,
 			value,
-			type
+			type,
 		);
 	};
 

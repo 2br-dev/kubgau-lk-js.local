@@ -11,12 +11,11 @@ import "dayjs/locale/ru";
 import "./styles.scss";
 import React from "react";
 import PropTypes from "prop-types";
-import { Dayjs } from "dayjs";
 
 GroupFilters.propTypes = {
 	pairSetter: PropTypes.func,
 	themeSetter: PropTypes.func,
-	date: Dayjs,
+	date: PropTypes.any,
 	dateSetter: PropTypes.func,
 	pair: PropTypes.number,
 };
