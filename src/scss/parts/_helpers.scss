@@ -131,9 +131,11 @@ body {
 		box-shadow: 0 4px 46px -16px rgba(12, 21, 97, 0.051);
 		box-sizing: border-box;
 
-		& .right-side {
-			& button:last-of-type {
-				margin-left: 10px;
+		& :not(.grouped) {
+			& .right-side {
+				& button:last-of-type {
+					margin-left: 10px;
+				}
 			}
 		}
 
