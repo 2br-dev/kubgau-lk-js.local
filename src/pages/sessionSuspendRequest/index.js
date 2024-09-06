@@ -133,7 +133,10 @@ function SessionSuspendRequest() {
 						header="Заявка на прерывание сессии"
 						backLink={true}
 					/>
-					<div className="data-wrapper">
+					<div
+						className="data-wrapper"
+						style={{ marginBottom: "2vmax" }}
+					>
 						<div className="kv-pair">
 							<div className="key">Факульет</div>
 							<div className="value">{details.facultyName}</div>

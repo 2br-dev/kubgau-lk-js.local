@@ -24,13 +24,79 @@ const warningMessage = () => {
 		</ul>
 	);
 };
-
+// FDD835
 function indicator(item) {
 	switch (true) {
+		case item.approveStatus === 0:
+			return (
+				<Tooltip
+					placement="top-start"
+					title="Не отправлена на утверждение"
+				>
+					<CircleRounded sx={{ color: "#FF1744" }} />
+				</Tooltip>
+			);
 		case item.approveStatus === 1:
 			return (
-				<Tooltip placement="top-start" title={warningMessage()}>
+				<Tooltip
+					placement="top-start"
+					title="Отправлена на утверждение в УМУ"
+				>
 					<CircleRounded sx={{ color: "#FDD835" }} />
+				</Tooltip>
+			);
+		case item.approveStatus === 2:
+			return (
+				<Tooltip
+					placement="top-start"
+					title="Отправлена на утверждение в диспетчерскую"
+				>
+					<CircleRounded sx={{ color: "#FDD835" }} />
+				</Tooltip>
+			);
+		case item.approveStatus === 3:
+			return (
+				<Tooltip
+					placement="top-start"
+					title="Возвращено для внесения изменеий по решению диспетчерской"
+				>
+					<CircleRounded sx={{ color: "#FF1744" }} />
+				</Tooltip>
+			);
+		case item.approveStatus === 4:
+			return (
+				<Tooltip
+					placement="top-start"
+					title="Запрос на прерывание отправлен в УМУ"
+				>
+					<CircleRounded sx={{ color: "#FF1744" }} />
+				</Tooltip>
+			);
+		case item.approveStatus === 5:
+			return (
+				<Tooltip
+					placement="top-start"
+					title="Запрос на прерывание отправлен в диспетчерскую"
+				>
+					<CircleRounded sx={{ color: "#FF1744" }} />
+				</Tooltip>
+			);
+		case item.approveStatus === 6:
+			return (
+				<Tooltip
+					placement="top-start"
+					title="Запрос на прерывание отправлен в диспетчерскую и УМУ"
+				>
+					<CircleRounded sx={{ color: "#FF1744" }} />
+				</Tooltip>
+			);
+		case item.approveStatus === 7:
+			return (
+				<Tooltip
+					placement="top-start"
+					title="Возвращено для внесения изменеий по решению УМУ"
+				>
+					<CircleRounded sx={{ color: "#FF1744" }} />
 				</Tooltip>
 			);
 		case item.approveStatus === 100:

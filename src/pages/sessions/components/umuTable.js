@@ -41,7 +41,7 @@ function UMUTable(props) {
 				props.onLoad([...groupedData]);
 			});
 		// eslint-disable-next-line
-	}, [props.faculty]);
+	}, [props.faculty, props.requestsOnly]);
 
 	const groupUMUData = (data) => {
 		const faculties = data.map((f) => {

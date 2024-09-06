@@ -67,7 +67,7 @@ function DekanTable() {
 			return <></>;
 		}
 		switch (item.approveStatus) {
-			case 60:
+			case 0:
 				return (
 					<Menu
 						onClose={handleClose}

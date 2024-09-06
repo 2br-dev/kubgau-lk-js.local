@@ -134,7 +134,7 @@
 				"notAllowed": false
 			}
 		],
-		"controlTypeId": 0
+		"controlTypeId": 1
 	},
 	"errors": null,
 	"success": true

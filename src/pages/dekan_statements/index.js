@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import { LockOpenRounded, LockRounded } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as RouteLink } from "react-router-dom";
 
 function DekanStatements() {
 	const navigate = useNavigate();
@@ -225,18 +225,6 @@ function DekanStatements() {
 		});
 	};
 
-	const adminMenu = () => {
-		if (isAdmin) {
-			return (
-				<>
-					<Divider />
-					<MenuItem>Редактировать сдачу</MenuItem>
-					<MenuItem>Редактировать ведомость</MenuItem>
-				</>
-			);
-		}
-	};
-
 	const openStatementMenu = () => (
 		<Menu
 			open={nonEmptyOpen}
@@ -248,13 +236,17 @@ function DekanStatements() {
 			<MenuItem>Справочная ведомость</MenuItem>
 			<MenuItem>Печать ведомости</MenuItem>
 			<MenuItem>Отчёт</MenuItem>
-			{adminMenu()}
+			{isAdmin ? <Divider /> : null}
+			{isAdmin ? <MenuItem>Редактировать сдачу</MenuItem> : null}
+			{isAdmin ? <MenuItem>Редактировать ведомость</MenuItem> : null}
 		</Menu>
 	);
 
 	const emptyStatementMenu = () => (
 		<Menu open={emptyOpen} anchorEl={emptyAnchor} onClose={closeEmpty}>
-			<MenuItem>Сформировать ведомость</MenuItem>
+			<MenuItem component={RouteLink} to="/main/create-statement">
+				Сформировать ведомость
+			</MenuItem>
 			<Divider />
 			<MenuItem>Редактировать сдачу</MenuItem>
 		</Menu>

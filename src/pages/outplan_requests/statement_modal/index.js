@@ -41,9 +41,7 @@ function StatementModal(props) {
 		<div className={className} style={{ zIndex: 200 }}>
 			<div className="modal">
 				<div className="modal-header">
-					<div className="name">
-						Заявка на внеплановую сдачу сессии
-					</div>
+					<div className="name">Создание ведомости</div>
 					<IconButton onClick={props.onClose}>
 						<CloseRounded />
 					</IconButton>

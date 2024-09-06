@@ -18,11 +18,19 @@ import {
 	Link,
 	ToggleButtonGroup,
 	ToggleButton,
+	Grid,
+	ButtonGroup,
+	TextField,
+	FormControl,
+	InputLabel,
 } from "@mui/material";
 import { PrintRounded, ClearRounded, SaveRounded } from "@mui/icons-material";
 import styled from "@emotion/styled";
 import { ThemeProvider } from "@emotion/react";
 import toggleTheme from "../../components/toggleTheme";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DatePicker } from "@mui/x-date-pickers";
 
 function CreateStatement() {
 	const [statement, setStatement] = useState({
@@ -30,7 +38,7 @@ function CreateStatement() {
 		groupName: "Название группы",
 		disciplineName: "Название дисциплины",
 		statementNumber: "",
-		deadLine: null,
+		deadline: null,
 		employees: [],
 		students: [],
 		controlTypeId: null,
@@ -69,6 +77,10 @@ function CreateStatement() {
 			filter: "grayscale(1)",
 		},
 	}));
+
+	const handleDateChange = (e, val) => {
+		debugger;
+	};
 
 	const typeName = () => {
 		switch (statement.controlTypeId) {
@@ -292,6 +304,51 @@ function CreateStatement() {
 						header={statement.disciplineName}
 						subheader={`Создание${typeName()}ведомости`}
 					/>
+					<Grid container sx={{ marginBottom: "2vmax" }} spacing={2}>
+						<Grid
+							item
+							xl={2}
+							lg={3}
+							md={6}
+							sm={12}
+							xs={12}
+							spacing={2}
+						>
+							<TextField
+								label="Номер ведомости"
+								variant="standard"
+								fullWidth
+							/>
+						</Grid>
+						<Grid item xl={2} lg={3} md={6} xs={12}>
+							<LocalizationProvider
+								dateAdapter={AdapterDayjs}
+								adapterLocale="ru"
+							>
+								<DatePicker
+									size="small"
+									fullWidth
+									value={statement.deadline}
+									onChange={handleDateChange}
+									label="Дата/время"
+									variant="standard"
+									slotProps={{
+										textField: {
+											variant: "standard",
+											fullWidth: true,
+										},
+									}}
+								/>
+							</LocalizationProvider>
+						</Grid>
+						<Grid item lg={4} xs={12}>
+							<TextField
+								label="Преподаватели"
+								variant="standard"
+								fullWidth
+							/>
+						</Grid>
+					</Grid>
 					<Card>
 						<CardContent>
 							<TableContainer>
@@ -312,18 +369,20 @@ function CreateStatement() {
 						</CardContent>
 					</Card>
 					<div className="card-actions-wrapper screen desktop">
-						<div className="left-side">
-							<Button onClick={print} variant="outlined">
-								Печать
-							</Button>
-						</div>
+						<div className="left-side"></div>
 						<div className="right-side">
-							<Button variant="outlined" onClick={reset}>
-								Сброс
-							</Button>
-							<Button variant="contained" onClick={save}>
-								Сохранить
-							</Button>
+							<ButtonGroup>
+								<Button variant="outlined" onClick={reset}>
+									Сброс
+								</Button>
+								<Button
+									variant="contained"
+									onClick={save}
+									disableElevation
+								>
+									Выписать ведомость
+								</Button>
+							</ButtonGroup>
 						</div>
 					</div>
 					<div className="card-actions-wrapper mobile desktop">

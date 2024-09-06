@@ -3,7 +3,7 @@
 		{
 			"courseNumber": 1,
 			"programOfEducationName": "09.03.02 Информационные системы и технологии, \"Создание, модификация и сопровождение информационных систем, администрирование баз данных\" - Очная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 0,
 			"checksStartDate": "10.06.2024",
 			"checksEndDate": "12.06.2024",
 			"examsStartDate": "13.06.2024",
@@ -41,7 +41,7 @@
 		{
 			"courseNumber": 1,
 			"programOfEducationName": "09.03.03 Прикладная информатика, \"Менеджмент проектов в области информационных технологий, создание и поддержка информационных систем\" - Очная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 1,
 			"checksStartDate": "03.06.2024",
 			"checksEndDate": "08.06.2024",
 			"examsStartDate": "10.06.2024",
@@ -60,7 +60,7 @@
 		{
 			"courseNumber": 1,
 			"programOfEducationName": "09.04.02 Информационные системы и технологии, \"Проектно-исследовательская деятельность в области информационных технологий\" - Заочная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 2,
 			"checksStartDate": "08.04.2024",
 			"checksEndDate": "25.04.2024",
 			"examsStartDate": "23.04.2024",
@@ -79,7 +79,7 @@
 		{
 			"courseNumber": 1,
 			"programOfEducationName": "09.04.02 Информационные системы и технологии, \"Проектно-исследовательская деятельность в области информационных технологий\" - Очная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 3,
 			"checksStartDate": "03.06.2024",
 			"checksEndDate": "08.06.2024",
 			"examsStartDate": "10.06.2024",
@@ -98,7 +98,7 @@
 		{
 			"courseNumber": 1,
 			"programOfEducationName": "09.04.03 Прикладная информатика, \"Менеджмент проектов в области информационных систем\" - Очная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 4,
 			"checksStartDate": "10.06.2024",
 			"checksEndDate": "15.06.2024",
 			"examsStartDate": "17.06.2024",
@@ -117,7 +117,7 @@
 		{
 			"courseNumber": 1,
 			"programOfEducationName": "38.03.05 Бизнес-информатика - Очная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 5,
 			"checksStartDate": "27.05.2024",
 			"checksEndDate": "01.06.2024",
 			"examsStartDate": "03.06.2024",
@@ -136,7 +136,7 @@
 		{
 			"courseNumber": 2,
 			"programOfEducationName": "09.03.02 Информационные системы и технологии, \"Создание, модификация и сопровождение информационных систем, администрирование баз данных\" - Очная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 6,
 			"checksStartDate": "03.06.2024",
 			"checksEndDate": "08.06.2024",
 			"examsStartDate": "10.06.2024",
@@ -155,7 +155,7 @@
 		{
 			"courseNumber": 2,
 			"programOfEducationName": "09.03.03 Прикладная информатика, \"Менеджмент проектов в области информационных технологий, создание и поддержка информационных систем\" - Заочная ф.о.",
-			"approveStatus": 100,
+			"approveStatus": 7,
 			"checksStartDate": "08.04.2024",
 			"checksEndDate": "24.04.2024",
 			"examsStartDate": "22.04.2024",

@@ -67,7 +67,11 @@ function DekanMenu(props) {
 			<MenuItem onClick={handleClose} component={Link} to="/">
 				Управление пользователями
 			</MenuItem>
-			<MenuItem onClick={handleClose} component={Link} to="/">
+			<MenuItem
+				onClick={handleClose}
+				component={Link}
+				to="/main/group-curators/"
+			>
 				Кураторы групп
 			</MenuItem>
 			<MenuItem onClick={handleClose} component={Link} to="/">

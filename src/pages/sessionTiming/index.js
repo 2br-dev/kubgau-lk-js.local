@@ -60,7 +60,7 @@ function SessionTiming() {
 				setHeader(response.schedule.courseName);
 				setAvailableTeachers(response.chairEmployees);
 			});
-	}, [filterDisciplines]);
+	}, []);
 
 	const handleTabChange = (e, newVal) => {
 		setTabValue(newVal);
