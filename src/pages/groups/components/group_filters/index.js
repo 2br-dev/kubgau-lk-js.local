@@ -1,13 +1,7 @@
-import {
-	createTheme,
-	IconButton,
-	styled,
-	ToggleButton,
-	ToggleButtonGroup,
-} from "@mui/material";
+import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker, PickersDay } from "@mui/x-date-pickers";
+import { DatePicker } from "@mui/x-date-pickers";
 import { LocalLibraryRounded } from "@mui/icons-material";
 import { Grid, Card, CardContent, TextField } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
@@ -68,7 +62,7 @@ function GroupFilters(props) {
 								sx={{
 									width: "100%",
 								}}
-								slotProps={{
+								slot={{
 									sx: {
 										backgroundColor: "red",
 									},
