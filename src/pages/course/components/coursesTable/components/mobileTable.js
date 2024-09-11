@@ -50,6 +50,11 @@ function MobileTable(props) {
 			case "Лабораторные работы":
 				_courses[index].labs.isOpen = !_courses[index].labs.isOpen;
 				break;
+			default:
+				_courses[index].labs.isOpen = false;
+				_courses[index].lections.isOpen = false;
+				_courses[index].seminars.isOpen = false;
+				break;
 		}
 
 		setList(_courses);

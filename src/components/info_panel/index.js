@@ -65,7 +65,7 @@ function InfoPanel(props) {
 
 		let openVal = storagePanel ? storagePanel.opened : true;
 		setOpen(openVal);
-	}, []);
+	}, [props.id]);
 
 	// Тип панели (INFO | WARNING | ERROR)
 	switch (props.type) {

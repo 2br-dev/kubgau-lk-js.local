@@ -121,6 +121,8 @@ function SessionSuspendRequest() {
 						})}
 					</Fragment>
 				);
+			} else {
+				return <></>;
 			}
 		});
 	};

@@ -117,28 +117,34 @@ function MainTable(props) {
 			case row.closingDate === null &&
 				row.grades.current !== row.grades.total:
 				return (
-					<CircleRounded
-						sx={{
-							color: "#00BFA5",
-						}}
-					/>
+					<Tooltip title="Ведомость открыта" placement="top">
+						<CircleRounded
+							sx={{
+								color: "#00BFA5",
+							}}
+						/>
+					</Tooltip>
 				);
 			case row.closingDate !== null:
 				return (
-					<LockRounded
-						sx={{
-							color: "#939393",
-						}}
-					/>
+					<Tooltip title="Ведомость закрыта" placement="top">
+						<LockRounded
+							sx={{
+								color: "#939393",
+							}}
+						/>
+					</Tooltip>
 				);
 			case row.closingDate === null &&
 				row.grades.current === row.grades.total:
 				return (
-					<CircleRounded
-						sx={{
-							color: "#FF1744",
-						}}
-					/>
+					<Tooltip title="Ведомость просрочена" placement="top">
+						<CircleRounded
+							sx={{
+								color: "#FF1744",
+							}}
+						/>
+					</Tooltip>
 				);
 			default:
 				return <></>;
@@ -178,7 +184,7 @@ function MainTable(props) {
 				return progressControl(
 					row.grades.current,
 					row.grades.total,
-					"grade"
+					"grade",
 				);
 		}
 	};

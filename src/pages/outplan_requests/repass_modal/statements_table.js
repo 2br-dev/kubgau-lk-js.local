@@ -39,6 +39,7 @@ function StatementsTable(props) {
 				setFilteredStatements(filterStatements(response.data, 0));
 				props.onLoad(response.data);
 			});
+		// eslint-disable-next-line
 	}, []);
 
 	const studentsShorts = (students) => {

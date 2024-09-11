@@ -6,22 +6,25 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 
-const warningMessage = () => {
+const warningMessage = (target) => {
 	return (
-		<ul style={{ paddingLeft: "0", margin: 0, listStyle: "none" }}>
-			<li>
-				<CheckRounded sx={{ height: ".5em" }} />
-				Основная информация заполнена
-			</li>
-			<li>
-				<CheckRounded sx={{ height: ".5em" }} />
-				Расписание заполнено
-			</li>
-			<li>
-				<CachedRounded sx={{ height: ".5em" }} />
-				Ожидает утверждения
-			</li>
-		</ul>
+		<>
+			<strong>Отправлена на утверждение в {target}</strong>
+			<ul style={{ paddingLeft: "0", margin: 0, listStyle: "none" }}>
+				<li>
+					<CheckRounded sx={{ height: ".5em" }} />
+					Основная информация заполнена
+				</li>
+				<li>
+					<CheckRounded sx={{ height: ".5em" }} />
+					Расписание заполнено
+				</li>
+				<li>
+					<CachedRounded sx={{ height: ".5em" }} />
+					Ожидает утверждения
+				</li>
+			</ul>
+		</>
 	);
 };
 // FDD835
@@ -38,10 +41,7 @@ function indicator(item) {
 			);
 		case item.approveStatus === 1:
 			return (
-				<Tooltip
-					placement="top-start"
-					title="Отправлена на утверждение в УМУ"
-				>
+				<Tooltip placement="top-start" title={warningMessage("УМУ")}>
 					<CircleRounded sx={{ color: "#FDD835" }} />
 				</Tooltip>
 			);
@@ -49,7 +49,7 @@ function indicator(item) {
 			return (
 				<Tooltip
 					placement="top-start"
-					title="Отправлена на утверждение в диспетчерскую"
+					title={warningMessage("диспетчерскую")}
 				>
 					<CircleRounded sx={{ color: "#FDD835" }} />
 				</Tooltip>

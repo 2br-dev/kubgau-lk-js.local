@@ -111,6 +111,8 @@ function SuspendSession() {
 						})}
 					</Fragment>
 				);
+			} else {
+				return <></>;
 			}
 		});
 	};

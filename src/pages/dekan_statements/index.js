@@ -79,6 +79,7 @@ function DekanStatements() {
 				let filtered = filterCourse(serverCourse, 0);
 				setFilteredCourse(filtered);
 			});
+		//eslint-disable-next-line
 	}, []);
 
 	const groupByName = (groups) => {

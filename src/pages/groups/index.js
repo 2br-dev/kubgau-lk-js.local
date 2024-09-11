@@ -80,6 +80,13 @@ export default function GroupsPage() {
 	const [groupId, setGroupId] = useState(-1);
 	const navigate = useNavigate();
 
+	/**
+	 * Монтаж компонента
+	 */
+	useEffect(() => {
+		getData();
+	}, []);
+
 	// Переключение студента по клику на строке таблицы
 	const toggleStudentHere = (e) => {
 		let element = e.currentTarget;
@@ -307,13 +314,6 @@ export default function GroupsPage() {
 			.catch((error) => console.error(error));
 	};
 
-	/**
-	 * Монтаж компонента
-	 */
-	useEffect(() => {
-		getData();
-	}, []);
-
 	const hereSwitcher = (e, value) => {
 		const dataHolder =
 			e.currentTarget.parentElement?.parentElement?.parentElement;
@@ -347,6 +347,160 @@ export default function GroupsPage() {
 
 			setData(newData);
 		}
+	};
+
+	const tableBody = (group, sectionIndex) => {
+		return group.students.map((student, studentIndex) => {
+			let skipping = (
+				<TableCell>
+					{student.skipping.current}/{student.skipping.total}
+				</TableCell>
+			);
+			let skippingPercent = (
+				<TableCell>{student.skipping.percentage}%</TableCell>
+			);
+			let commentTooltip =
+				student.comment === ""
+					? "Добавить комментарий"
+					: "Изменить комментарий";
+			let commentIcon =
+				student.comment === "" ? (
+					<AddCommentRounded />
+				) : (
+					<EditRounded />
+				);
+			let isHere = student.isHere;
+
+			if (student.skipping) {
+				if (student.skipping.percentage >= 50) {
+					skipping = (
+						<TableCell
+							sx={{
+								color: "#FF1744",
+							}}
+						>
+							{student.skipping.current}/{student.skipping.total}{" "}
+						</TableCell>
+					);
+					skippingPercent = (
+						<TableCell
+							sx={{
+								color: "#FF1744",
+							}}
+						>
+							{student.skipping.percentage}%
+						</TableCell>
+					);
+				}
+			}
+
+			return (
+				<TableRow
+					key={studentIndex}
+					data-group-id={sectionIndex}
+					data-id={studentIndex}
+					hover
+					onClick={toggleStudentHere}
+				>
+					<TableCell>{studentIndex + 1}</TableCell>
+					<TableCell></TableCell>
+					<TableCell>
+						<div className="name">
+							<div
+								className="lastName"
+								style={{ textTransform: "uppercase" }}
+							>
+								<strong>{student.lastName}</strong>
+							</div>
+							<div className="restName">
+								{student.firstName} {student.middleName}
+							</div>
+						</div>
+						<div className="comment">{student.comment}</div>
+					</TableCell>
+					<TableCell>
+						<div
+							data-group={sectionIndex}
+							data-student={studentIndex}
+						>
+							<StyledSwitch
+								onChange={hereSwitcher}
+								checked={isHere}
+							/>
+						</div>
+					</TableCell>
+					{skipping}
+					{skippingPercent}
+					<TableCell>
+						<div className="values">
+							{student.values.map((value, valueIndex) => {
+								return (
+									<ValueMenu
+										sectionId={sectionIndex}
+										valueId={valueIndex}
+										studentId={studentIndex}
+										name={value.name}
+										key={valueIndex}
+										value={value.value}
+										type={EMenuType.UPDATE}
+										content={<span>{value.value}</span>}
+										changeHandler={valueSetter}
+										removeHandler={valueRemover}
+									/>
+								);
+							})}
+						</div>
+					</TableCell>
+					<TableCell
+						sx={{
+							textAlign: "right",
+						}}
+					>
+						<Tooltip title={commentTooltip} placement="top">
+							<IconButton
+								onClick={openCommentModal}
+								data-studentid={studentIndex}
+								data-groupid={sectionIndex}
+							>
+								{commentIcon}
+							</IconButton>
+						</Tooltip>
+						<ValueMenu
+							sectionId={sectionIndex}
+							studentId={studentIndex}
+							valueId={-1}
+							type={EMenuType.CREATE}
+							value={-1}
+							content={<AddRounded />}
+							changeHandler={valueSetter}
+						/>
+					</TableCell>
+				</TableRow>
+			);
+		});
+	};
+
+	const tableHead = (sectionIndex) => {
+		return (
+			<TableHead>
+				<TableRow>
+					<TableCell colSpan={3}>ФИО</TableCell>
+					<TableCell data-group={sectionIndex}>
+						<StyledSwitch onChange={switchAll} />
+					</TableCell>
+					<TableCell>Посещаемость</TableCell>
+					<TableCell>Пропуски</TableCell>
+					<TableCell>Оценка</TableCell>
+					<TableCell
+						sx={{
+							textAlign: "right",
+						}}
+					>
+						Действия
+					</TableCell>
+				</TableRow>
+			</TableHead>
+		);
 	};
 
 	return (
@@ -433,302 +587,11 @@ export default function GroupsPage() {
 											</h2>
 											<TableContainer>
 												<Table className="simple-table">
-													<TableHead>
-														<TableRow>
-															<TableCell
-																colSpan={3}
-															>
-																ФИО
-															</TableCell>
-															<TableCell
-																data-group={
-																	sectionIndex
-																}
-															>
-																<StyledSwitch
-																	onChange={
-																		switchAll
-																	}
-																/>
-															</TableCell>
-															<TableCell>
-																Посещаемость
-															</TableCell>
-															<TableCell>
-																Пропуски
-															</TableCell>
-															<TableCell>
-																Оценка
-															</TableCell>
-															<TableCell
-																sx={{
-																	textAlign:
-																		"right",
-																}}
-															>
-																Добавить оценку
-															</TableCell>
-														</TableRow>
-													</TableHead>
+													{tableHead(sectionIndex)}
 													<TableBody>
-														{group.students.map(
-															(
-																student,
-																studentIndex,
-															) => {
-																let skipping = (
-																	<TableCell>
-																		{
-																			student
-																				.skipping
-																				.current
-																		}
-																		/
-																		{
-																			student
-																				.skipping
-																				.total
-																		}
-																	</TableCell>
-																);
-																let skippingPercent =
-																	(
-																		<TableCell>
-																			{
-																				student
-																					.skipping
-																					.percentage
-																			}
-																			%
-																		</TableCell>
-																	);
-																let commentTooltip =
-																	student.comment ===
-																	""
-																		? "Добавить комментарий"
-																		: "Изменить комментарий";
-																let commentIcon =
-																	student.comment ===
-																	"" ? (
-																		<AddCommentRounded />
-																	) : (
-																		<EditRounded />
-																	);
-																let isHere =
-																	student.isHere;
-
-																if (
-																	student.skipping
-																) {
-																	if (
-																		student
-																			.skipping
-																			.percentage >=
-																		50
-																	) {
-																		skipping =
-																			(
-																				<TableCell
-																					sx={{
-																						color: "#FF1744",
-																					}}
-																				>
-																					{
-																						student
-																							.skipping
-																							.current
-																					}
-
-																					/
-																					{
-																						student
-																							.skipping
-																							.total
-																					}{" "}
-																				</TableCell>
-																			);
-																		skippingPercent =
-																			(
-																				<TableCell
-																					sx={{
-																						color: "#FF1744",
-																					}}
-																				>
-																					{
-																						student
-																							.skipping
-																							.percentage
-																					}
-
-																					%
-																				</TableCell>
-																			);
-																	}
-																}
-
-																return (
-																	<TableRow
-																		key={
-																			studentIndex
-																		}
-																		data-group-id={
-																			sectionIndex
-																		}
-																		data-id={
-																			studentIndex
-																		}
-																		hover
-																		onClick={
-																			toggleStudentHere
-																		}
-																	>
-																		<TableCell>
-																			{studentIndex +
-																				1}
-																		</TableCell>
-																		<TableCell>
-																			<Tooltip
-																				title={
-																					commentTooltip
-																				}
-																				placement="top"
-																			>
-																				<IconButton
-																					onClick={
-																						openCommentModal
-																					}
-																					data-studentid={
-																						studentIndex
-																					}
-																					data-groupid={
-																						sectionIndex
-																					}
-																				>
-																					{
-																						commentIcon
-																					}
-																				</IconButton>
-																			</Tooltip>
-																		</TableCell>
-																		<TableCell>
-																			<div className="name">
-																				{
-																					student.fullname
-																				}
-																			</div>
-																			<div className="comment">
-																				{
-																					student.comment
-																				}
-																			</div>
-																		</TableCell>
-																		<TableCell>
-																			<div
-																				data-group={
-																					sectionIndex
-																				}
-																				data-student={
-																					studentIndex
-																				}
-																			>
-																				<StyledSwitch
-																					onChange={
-																						hereSwitcher
-																					}
-																					checked={
-																						isHere
-																					}
-																				/>
-																			</div>
-																		</TableCell>
-																		{
-																			skipping
-																		}
-																		{
-																			skippingPercent
-																		}
-																		<TableCell>
-																			<div className="values">
-																				{student.values.map(
-																					(
-																						value,
-																						valueIndex,
-																					) => {
-																						return (
-																							<ValueMenu
-																								sectionId={
-																									sectionIndex
-																								}
-																								valueId={
-																									valueIndex
-																								}
-																								studentId={
-																									studentIndex
-																								}
-																								name={
-																									value.name
-																								}
-																								key={
-																									valueIndex
-																								}
-																								value={
-																									value.value
-																								}
-																								type={
-																									EMenuType.UPDATE
-																								}
-																								content={
-																									<span>
-																										{
-																											value.value
-																										}
-																									</span>
-																								}
-																								changeHandler={
-																									valueSetter
-																								}
-																								removeHandler={
-																									valueRemover
-																								}
-																							/>
-																						);
-																					},
-																				)}
-																			</div>
-																		</TableCell>
-																		<TableCell
-																			sx={{
-																				textAlign:
-																					"right",
-																			}}
-																		>
-																			<ValueMenu
-																				sectionId={
-																					sectionIndex
-																				}
-																				studentId={
-																					studentIndex
-																				}
-																				valueId={
-																					-1
-																				}
-																				type={
-																					EMenuType.CREATE
-																				}
-																				value={
-																					-1
-																				}
-																				content={
-																					<AddRounded />
-																				}
-																				changeHandler={
-																					valueSetter
-																				}
-																			/>
-																		</TableCell>
-																	</TableRow>
-																);
-															},
+														{tableBody(
+															group,
+															sectionIndex,
 														)}
 													</TableBody>
 												</Table>
