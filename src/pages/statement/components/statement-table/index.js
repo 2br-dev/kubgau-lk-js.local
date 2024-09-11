@@ -29,7 +29,12 @@ import {
 	DownloadOutlined,
 	EditOutlined,
 } from "@mui/icons-material";
-import toggleTheme from "../../../../components/toggleTheme";
+import {
+	successTheme,
+	warningTheme,
+	criticalTheme,
+	blackMarkTheme,
+} from "../../../../components/toggleTheme";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -196,7 +201,7 @@ function StatementTable() {
 			statementType === 4
 		) {
 			return (
-				<ThemeProvider theme={toggleTheme}>
+				<>
 					<ToggleButtonGroup
 						sx={disabledStyle}
 						className="screen"
@@ -204,83 +209,77 @@ function StatementTable() {
 						value={value}
 						onChange={setValue}
 					>
-						<ToggleButton
-							data-student={index}
-							selected={value === 5}
-							value={5}
-						>
-							5
-						</ToggleButton>
-						<ToggleButton
-							data-student={index}
-							selected={value === 4}
-							value={4}
-						>
-							4
-						</ToggleButton>
-						<ToggleButton
-							data-student={index}
-							selected={value === 3}
-							value={3}
-						>
-							3
-						</ToggleButton>
-						<ToggleButton
-							data-student={index}
-							selected={value === 2}
-							value={2}
-						>
-							2
-						</ToggleButton>
-						<ToggleButton
-							data-student={index}
-							selected={value === 7}
-							value={-1}
-						>
-							Неявка
-						</ToggleButton>
+						<ThemeProvider theme={successTheme}>
+							<ToggleButton data-student={index} value={5}>
+								5
+							</ToggleButton>
+						</ThemeProvider>
+						<ThemeProvider theme={successTheme}>
+							<ToggleButton data-student={index} value={4}>
+								4
+							</ToggleButton>
+						</ThemeProvider>
+						<ThemeProvider theme={warningTheme}>
+							<ToggleButton data-student={index} value={3}>
+								3
+							</ToggleButton>
+						</ThemeProvider>
+						<ThemeProvider theme={criticalTheme}>
+							<ToggleButton data-student={index} value={2}>
+								Неуд
+							</ToggleButton>
+						</ThemeProvider>
+						<ThemeProvider theme={blackMarkTheme}>
+							<ToggleButton data-student={index} value={7}>
+								Неявка
+							</ToggleButton>
+						</ThemeProvider>
 					</ToggleButtonGroup>
 					<span className="print">
 						<span className="print">{getPrintValue(value)}</span>
 					</span>
-				</ThemeProvider>
+				</>
 			);
 		}
 		return (
-			<ThemeProvider theme={toggleTheme}>
+			<>
 				<ToggleButtonGroup
 					exclusive
 					onChange={setValue}
 					className="screen"
+					value={value}
 					sx={disabledStyle}
 				>
-					<ToggleButton
-						size="small"
-						data-student={index}
-						selected={value === 5}
-						value="Зачёт"
-					>
-						Зачёт
-					</ToggleButton>
-					<ToggleButton
-						size="small"
-						data-student={index}
-						selected={value === 2}
-						value="Незачёт"
-					>
-						Незачёт
-					</ToggleButton>
-					<ToggleButton
-						size="small"
-						data-student={index}
-						selected={value === 7}
-						value="Неявка"
-					>
-						Неявка
-					</ToggleButton>
+					<ThemeProvider theme={successTheme}>
+						<ToggleButton
+							size="small"
+							data-student={index}
+							value={5}
+						>
+							Зачёт
+						</ToggleButton>
+					</ThemeProvider>
+					<ThemeProvider theme={criticalTheme}>
+						<ToggleButton
+							size="small"
+							data-student={index}
+							value={2}
+						>
+							Незачёт
+						</ToggleButton>
+					</ThemeProvider>
+					<ThemeProvider theme={blackMarkTheme}>
+						<ToggleButton
+							size="small"
+							data-student={index}
+							value={7}
+						>
+							Неявка
+						</ToggleButton>
+					</ThemeProvider>
 				</ToggleButtonGroup>
 				<span className="print">{getPrintValue(value)}</span>
-			</ThemeProvider>
+			</>
 		);
 	};
 
@@ -397,11 +396,14 @@ function StatementTable() {
 							<TableHead>
 								<TableRow>
 									<TableCell>№</TableCell>
-									<TableCell sx={{ width: "70%" }}>
+									<TableCell sx={{ width: "50%" }}>
 										ФИО
 									</TableCell>
+									<TableCell sx={{ width: "20%" }}>
+										Посещаемость
+									</TableCell>
 									{accessHeader()}
-									<TableCell sx={{ width: "220px" }}>
+									<TableCell sx={{ width: "20%" }}>
 										Оценка
 									</TableCell>
 									<TableCell
@@ -420,6 +422,9 @@ function StatementTable() {
 											{student.lastName}{" "}
 											{student.firstName}{" "}
 											{student.middleName}
+										</TableCell>
+										<TableCell>
+											{student.attendancePercentage}%
 										</TableCell>
 										{accessVal(student)}
 										<TableCell>

@@ -1022,7 +1022,7 @@
 					"grades": [
 						{
 							"grade": 3,
-							"gradeId": 0
+							"gradeType": 0
 						}
 					],
 					"lessonStudentDetailsId": 1
@@ -1429,7 +1429,7 @@
 					"grades": [
 						{
 							"grade": 5,
-							"gradeId": 0
+							"gradeType": 1
 						}
 					],
 					"lessonStudentDetailsId": 1
@@ -1461,7 +1461,7 @@
 					"grades": [
 						{
 							"grade": 5,
-							"gradeId": 0
+							"gradeType": 0
 						}
 					],
 					"lessonStudentDetailsId": 1

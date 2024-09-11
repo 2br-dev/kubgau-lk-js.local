@@ -26,7 +26,7 @@ import styled from "@emotion/styled";
 import ErrorBanner from "../../components/error_banner";
 import "./index.scss";
 import { PrintRounded, ClearRounded, SaveRounded } from "@mui/icons-material";
-import toggleTheme from "../../components/toggleTheme/index";
+import { toggleTheme } from "../../components/toggleTheme/index";
 import React from "react";
 
 /**

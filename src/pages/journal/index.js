@@ -251,6 +251,7 @@ function Journal() {
 				<colgroup>
 					<col className="num" />
 					<col className="num" />
+					<col className="num" />
 				</colgroup>
 				<thead>
 					<tr>
@@ -265,6 +266,7 @@ function Journal() {
 						})}
 						<th rowSpan={2}>Ср. балл</th>
 						<th rowSpan={2}>Ср. общ. балл</th>
+						<th rowSpan={2}>По&shy;се&shy;ща&shy;е&shy;мость</th>
 					</tr>
 					<tr>
 						{headerData.map((lesson, index) => {
@@ -305,7 +307,7 @@ function Journal() {
 						</th>
 					);
 				})}
-				<th colSpan={2}></th>
+				<th colSpan={3}></th>
 			</tr>
 		</tfoot>
 	);
@@ -332,6 +334,15 @@ function Journal() {
 		);
 	};
 
+	const attendancePercent = (student) => {
+		const total = student.lessons.length;
+		const attended = student.lessons.filter(
+			(l) => l.attended === false,
+		).length;
+		const percent = Math.round((attended / total) * 100);
+		return percent + "%";
+	};
+
 	// Таблица с оценками
 	const table = () => {
 		return students.map((student, index) => (
@@ -352,6 +363,9 @@ function Journal() {
 					<Tooltip title="Нужны значения в JSON" placement="top">
 						<span>4</span>
 					</Tooltip>
+				</th>
+				<th style={{ minWidth: "50px" }}>
+					{attendancePercent(student)}
 				</th>
 			</tr>
 		));

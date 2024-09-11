@@ -12,7 +12,11 @@ import { EMenuType } from "./interfaces";
 import { useState, useEffect } from "react";
 import { Popper } from "@mui/base";
 import "./styles.scss";
-import toggleTheme from "../../../../components/toggleTheme";
+import {
+	successTheme,
+	warningTheme,
+	criticalTheme,
+} from "../../../../components/toggleTheme";
 import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 import { CheckRounded } from "@mui/icons-material";
 import { IconButton, Snackbar } from "@mui/material";
@@ -211,26 +215,32 @@ export default function ValueMenu(props) {
 						<Header />
 						<Divider />
 						<div className="value">
-							<ThemeProvider theme={toggleTheme}>
-								<ToggleButtonGroup
-									exclusive
-									value={value}
-									onChange={handleValue}
-								>
+							<ToggleButtonGroup
+								exclusive
+								value={value}
+								onChange={handleValue}
+							>
+								<ThemeProvider theme={successTheme}>
 									<ToggleButton size="small" value={5}>
 										5
 									</ToggleButton>
+								</ThemeProvider>
+								<ThemeProvider theme={successTheme}>
 									<ToggleButton size="small" value={4}>
 										4
 									</ToggleButton>
+								</ThemeProvider>
+								<ThemeProvider theme={warningTheme}>
 									<ToggleButton size="small" value={3}>
 										3
 									</ToggleButton>
+								</ThemeProvider>
+								<ThemeProvider theme={criticalTheme}>
 									<ToggleButton size="small" value={2}>
 										Неуд
 									</ToggleButton>
-								</ToggleButtonGroup>
-							</ThemeProvider>
+								</ThemeProvider>
+							</ToggleButtonGroup>
 						</div>
 						<div className="types">
 							<MenuList>

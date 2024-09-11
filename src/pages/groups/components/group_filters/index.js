@@ -6,7 +6,7 @@ import { LocalLibraryRounded } from "@mui/icons-material";
 import { Grid, Card, CardContent, TextField } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 import { EditRounded } from "@mui/icons-material";
-import toggleTheme from "../../../../components/toggleTheme";
+import { toggleTheme } from "../../../../components/toggleTheme";
 import "dayjs/locale/ru";
 import "./styles.scss";
 import React from "react";

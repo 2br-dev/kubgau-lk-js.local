@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 CathedraMenu.propTypes = {
 	open: PropTypes.bool,
 	handleClose: PropTypes.func,
-	anchorEl: PropTypes.node,
+	anchorEl: PropTypes.any,
 };
 
 function CathedraMenu(props) {

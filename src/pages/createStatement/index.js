@@ -25,7 +25,7 @@ import {
 import { PrintRounded, ClearRounded, SaveRounded } from "@mui/icons-material";
 import styled from "@emotion/styled";
 import { ThemeProvider } from "@emotion/react";
-import toggleTheme from "../../components/toggleTheme";
+import { toggleTheme } from "../../components/toggleTheme";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers";

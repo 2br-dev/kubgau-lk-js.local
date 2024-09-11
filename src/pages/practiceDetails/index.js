@@ -25,7 +25,7 @@ import {
 	SaveRounded,
 } from "@mui/icons-material";
 import { ThemeProvider } from "@emotion/react";
-import toggleTheme from "../../components/toggleTheme";
+import { toggleTheme } from "../../components/toggleTheme";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { DatePicker } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";

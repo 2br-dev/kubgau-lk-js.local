@@ -57,7 +57,7 @@ body {
 			}
 		}
 
-		colgroup {
+		colgroup:not(:last-of-type) {
 			border-right: 1px solid #ccc;
 		}
 
@@ -169,12 +169,16 @@ body {
 							}
 						}
 
+						&:nth-last-child(-3n + 3) {
+							@include rightStickyColumn(148px, black);
+						}
+
 						&:nth-last-child(-2n + 2) {
-							@include rightStickyColumn(74px, black);
+							@include rightStickyColumn(74px, #ccc);
 						}
 
 						&:nth-last-child(-2n + 1) {
-							@include rightStickyColumn(0, transparent);
+							@include rightStickyColumn(0, #ccc);
 						}
 					}
 				}
@@ -201,7 +205,11 @@ body {
 						}
 
 						&:nth-last-child(-2n + 2) {
-							@include rightStickyColumn(74px, black);
+							@include rightStickyColumn(74px, #ccc);
+						}
+
+						&:nth-last-child(-3n + 3) {
+							@include rightStickyColumn(148px, black);
 						}
 
 						&:first-of-type {

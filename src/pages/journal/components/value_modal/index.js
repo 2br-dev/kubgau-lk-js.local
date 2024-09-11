@@ -17,7 +17,12 @@ import {
 	DeleteRounded,
 } from "@mui/icons-material";
 import "./index.scss";
-import toggleTheme from "../../../../components/toggleTheme";
+import {
+	toggleTheme,
+	criticalTheme,
+	warningTheme,
+	successTheme,
+} from "../../../../components/toggleTheme";
 import dayjs from "dayjs";
 import "dayjs/locale/ru";
 import KVPair from "../../../../components/kv_pair";
@@ -192,13 +197,13 @@ function ValueModal(props) {
 						</Select>
 					</div>
 					<div className="value">
-						<ThemeProvider theme={toggleTheme}>
-							<ToggleButtonGroup
-								sx={{ width: "100%" }}
-								exclusive
-								value={value.grade}
-								onChange={handleValue}
-							>
+						<ToggleButtonGroup
+							sx={{ width: "100%" }}
+							exclusive
+							value={value.grade}
+							onChange={handleValue}
+						>
+							<ThemeProvider theme={successTheme}>
 								<ToggleButton
 									size="small"
 									value={5}
@@ -207,6 +212,8 @@ function ValueModal(props) {
 								>
 									5
 								</ToggleButton>
+							</ThemeProvider>
+							<ThemeProvider theme={successTheme}>
 								<ToggleButton
 									size="small"
 									value={4}
@@ -215,6 +222,8 @@ function ValueModal(props) {
 								>
 									4
 								</ToggleButton>
+							</ThemeProvider>
+							<ThemeProvider theme={warningTheme}>
 								<ToggleButton
 									size="small"
 									value={3}
@@ -223,6 +232,8 @@ function ValueModal(props) {
 								>
 									3
 								</ToggleButton>
+							</ThemeProvider>
+							<ThemeProvider theme={criticalTheme}>
 								<ToggleButton
 									size="small"
 									value={2}
@@ -231,8 +242,8 @@ function ValueModal(props) {
 								>
 									Неуд
 								</ToggleButton>
-							</ToggleButtonGroup>
-						</ThemeProvider>
+							</ThemeProvider>
+						</ToggleButtonGroup>
 					</div>
 					<div className="value-actions">
 						<Button
