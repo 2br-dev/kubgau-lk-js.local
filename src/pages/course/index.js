@@ -114,6 +114,7 @@ function CoursePage() {
 					<Card>
 						<CardContent>
 							<Tabs
+								className="screen"
 								value={selectedTab}
 								onChange={switchTab}
 								variant="scrollable"

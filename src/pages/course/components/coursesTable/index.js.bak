@@ -1,18 +1,18 @@
 import {
+	Button,
 	Table,
 	TableBody,
 	TableHead,
 	TableRow,
 	TableCell,
+	TableContainer,
 } from "@mui/material";
+import CollapsibleRow from "../collapsibleRow";
 import FilterCourses from "../filter_courses";
-import React, { Fragment } from "react";
+import React from "react";
 import EditModal from "../editModal";
-import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
-import DesktopTable from "./components/desktopTable";
-import MobileTable from "./components/mobileTable";
 
 function CoursesTable() {
 	const [courses, setCourses] = useState([]);
@@ -22,7 +22,6 @@ function CoursesTable() {
 	const [globalCollapse, setGlobalCollapse] = useState(true);
 	const [editOpen, setEditOpen] = useState(false);
 	const [course2edit, setCourse2edit] = useState(null);
-	const navigate = useNavigate();
 
 	/**
 	 * Переключение открытости всех строк
@@ -35,6 +34,20 @@ function CoursesTable() {
 			c.is_open = globalCollapse;
 		});
 
+		setRowStates(states);
+	};
+
+	/**
+	 * Переключение открытости строки
+	 * @param is_open открытость строки
+	 * @param id - идентификатор строки
+	 */
+	const toggler = (is_open, id) => {
+		let states = [...rowStates];
+		let state = states.filter((c) => {
+			return c.id === id;
+		});
+		state[0].is_open = is_open;
 		setRowStates(states);
 	};
 
@@ -82,8 +95,7 @@ function CoursesTable() {
 		console.table(value);
 	};
 
-	const editHandler = (e) => {
-		let index = parseInt(e.currentTarget.dataset.id);
+	const editHandler = (index) => {
 		setCourse2edit(courses[index]);
 		setEditOpen(true);
 	};
@@ -97,18 +109,6 @@ function CoursesTable() {
 		setEditOpen(false);
 	};
 
-	const handleGroupClick = () => {
-		navigate("/main/groups");
-	};
-
-	const handleSubgroupClick = () => {
-		navigate("/main/subgroups");
-	};
-
-	const handleJournalClick = () => {
-		navigate("/main/journal");
-	};
-
 	return (
 		<>
 			<div className="courses-filters">
@@ -119,21 +119,74 @@ function CoursesTable() {
 					toggleCollapse={toggleCollapse}
 					globalCollapse={globalCollapse}
 				/>
+				<div className="toggler-wrapper">
+					<Button
+						variant="outlined"
+						sx={{ fontFamily: "Wix Madefor Text" }}
+						onClick={toggleCollapse}
+					>
+						{globalCollapse ? (
+							<span>Развернуть </span>
+						) : (
+							<span>Свернуть </span>
+						)}{" "}
+						<span
+							style={{ marginLeft: "3px" }}
+							className="hide-modal"
+						>
+							все дисциплины
+						</span>
+					</Button>
+				</div>
 			</div>
-			<DesktopTable
-				courses={courses}
-				handleGroupClick={handleGroupClick}
-				handleSubgroupClick={handleSubgroupClick}
-				handleJournalClick={handleJournalClick}
-				editHandler={editHandler}
-			/>
-			<MobileTable
-				courses={courses}
-				handleGroupClick={handleGroupClick}
-				handleSubgroupClick={handleSubgroupClick}
-				handleJournalClick={handleJournalClick}
-				editHandler={editHandler}
-			/>
+			<TableContainer>
+				<Table
+					className="simple-table screen"
+					sx={{
+						borderSpacing: 0,
+						borderCollapse: "collapse",
+					}}
+					aria-label="simple table"
+				>
+					<TableHead>
+						<TableRow>
+							<TableCell sx={{ width: "47%" }} colSpan={2}>
+								Дисциплины
+							</TableCell>
+							<TableCell sx={{ width: "12%" }}>Курс</TableCell>
+							<TableCell sx={{ width: "12%" }}>Лекции</TableCell>
+							<TableCell sx={{ width: "12%" }}>
+								Семинары
+							</TableCell>
+							<TableCell sx={{ width: "12%" }}>
+								Лаб. занятия
+							</TableCell>
+							<TableCell
+								sx={{
+									width: "5%",
+									textAlign: "right",
+								}}
+							>
+								Действия
+							</TableCell>
+						</TableRow>
+					</TableHead>
+					<TableBody>
+						{courses.map((row, index) => {
+							return (
+								<CollapsibleRow
+									row={row}
+									key={index}
+									isOpen={rowStates[index].is_open}
+									toggler={toggler}
+									index={index}
+									editHandler={editHandler}
+								/>
+							);
+						})}
+					</TableBody>
+				</Table>
+			</TableContainer>
 			<Table className="print simple-table">
 				<TableHead>
 					<TableRow>

@@ -21,8 +21,6 @@ import {
 	Grid,
 	ButtonGroup,
 	TextField,
-	FormControl,
-	InputLabel,
 } from "@mui/material";
 import { PrintRounded, ClearRounded, SaveRounded } from "@mui/icons-material";
 import styled from "@emotion/styled";
@@ -78,8 +76,9 @@ function CreateStatement() {
 		},
 	}));
 
-	const handleDateChange = (e, val) => {
-		debugger;
+	const handleDateChange = (newVal) => {
+		statement.deadline = newVal;
+		setStatement({ ...statement });
 	};
 
 	const typeName = () => {

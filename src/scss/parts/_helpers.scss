@@ -88,6 +88,18 @@ body {
 		}
 	}
 
+	& .desktop {
+		@media (max-width: 600px) {
+			display: none !important;
+		}
+	}
+
+	& .mobile {
+		@media (min-width: 601px) {
+			display: none !important;
+		}
+	}
+
 	& .context-item {
 		display: flex;
 		align-items: center;

@@ -81,6 +81,10 @@ function FilterCourses(props) {
 		props.handleApply(filters);
 	};
 
+	const toggleCollapse = () => {
+		props.toggleCollapse?.();
+	};
+
 	/**
 	 * Сброс формы
 	 */
@@ -148,9 +152,23 @@ function FilterCourses(props) {
 				/>
 			</div>
 			<div className="action">
-				<span></span>
 				<Button variant="outlined" onClick={resetForm}>
 					Сброс
+				</Button>
+				<Button
+					className="mobile-collapse"
+					variant="outlined"
+					sx={{ fontFamily: "Wix Madefor Text" }}
+					onClick={toggleCollapse}
+				>
+					{props.globalCollapse ? (
+						<span>Развернуть </span>
+					) : (
+						<span>Свернуть</span>
+					)}
+					<span style={{ marginLeft: "3px" }} className="hide-modal">
+						все дисциплины
+					</span>
 				</Button>
 			</div>
 		</div>
