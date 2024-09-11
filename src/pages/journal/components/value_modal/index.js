@@ -18,7 +18,6 @@ import {
 } from "@mui/icons-material";
 import "./index.scss";
 import {
-	toggleTheme,
 	criticalTheme,
 	warningTheme,
 	successTheme,
