@@ -1,7 +1,13 @@
-import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import {
+	createTheme,
+	IconButton,
+	styled,
+	ToggleButton,
+	ToggleButtonGroup,
+} from "@mui/material";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers";
+import { DatePicker, PickersDay } from "@mui/x-date-pickers";
 import { LocalLibraryRounded } from "@mui/icons-material";
 import { Grid, Card, CardContent, TextField } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
@@ -59,9 +65,32 @@ function GroupFilters(props) {
 							adapterLocale="ru"
 						>
 							<DatePicker
-								sx={{ width: "100%" }}
+								sx={{
+									width: "100%",
+								}}
+								slotProps={{
+									sx: {
+										backgroundColor: "red",
+									},
+								}}
 								value={props.date}
 								onChange={props.dateSetter}
+								shouldDisableDate={(date) =>
+									date.toDate().getTime() ===
+										new Date(
+											"2024-09-13T00:00",
+										).getTime() ||
+									date.toDate().getTime() ===
+										new Date(
+											"2024-09-14T00:00",
+										).getTime() ||
+									date.toDate().getTime() ===
+										new Date(
+											"2024-09-15T00:00",
+										).getTime() ||
+									date.toDate().getTime() ===
+										new Date("2024-09-16T00:00").getTime()
+								}
 								slotProps={{
 									textField: {
 										variant: "standard",

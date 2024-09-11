@@ -30,10 +30,10 @@ import {
 } from "@mui/material";
 import ValueMenu from "./components/value_menu";
 import { EMenuType } from "./components/value_menu/interfaces";
-import "./styles.scss";
 import CommentModal from "./components/comment_modal";
 import React from "react";
 import styled from "@emotion/styled";
+import "./styles.scss";
 
 const StyledSwitch = styled(Switch)(() => ({
 	"& .MuiSwitch-switchBase": {
